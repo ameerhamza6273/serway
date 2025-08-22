@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+</head>
+<body>
+
+    <h1 id="welcomeMessage" style=" font-family: 'Helvetica medium', Sans-serif; font-size: 50px; font-weight: 500; color: #2D303F; margin: 10px 0;">Welcome!</h1>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let savedUserName = localStorage.getItem("page_5") || ""; // LocalStorage se naam get karo
+            if (savedUserName) {
+                document.getElementById("welcomeMessage").innerText = "Welcome, " + savedUserName + ".";
+            } else {
+                document.getElementById("welcomeMessage").innerText = "Welcome, Guest.";
+            }
+        });
+    </script>
+
+</body>
+</html>

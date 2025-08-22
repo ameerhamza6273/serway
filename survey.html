@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healing Journey</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+
+        .hidden {
+            display: none;
+        }
+
+        .main-div {
+            display: flex;
+            width: 100%;
+            background: #fff;
+        }
+
+        .left {
+            width: 40%;
+        }
+
+        .right {
+            width: 60%;
+            padding: 70px 20px;
+            display: flex;
+            flex-direction: column;
+            max-width: 690px;
+            margin: 0 auto;
+        }
+
+        .progress {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 50px;
+        }
+
+        .progress div {
+            width: 13%;
+            height: 8px;
+            border-radius: 100px;
+            background: #D9D9D9;
+        }
+
+        .progress div.active {
+            background: #2D303F;
+        }
+
+        h2 {
+            margin-bottom: 30px;
+            margin-top: 5px;
+            color: #2D303F;
+            font-size: 55px;
+            font-weight: 700;
+            letter-spacing: -3px;
+        }
+
+        p {
+            color: #000;
+            font-size: 25px;
+            font-weight: 300;
+            letter-spacing: -0.8px;
+            margin-bottom: 15px;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-width: 400px;
+            max-width: 100%;
+            padding: 18px;
+            border: 2px solid #2D303F;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: 0.3s ease;
+            position: relative;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            border-radius: 10px;
+            border: 2px solid #2D303F;
+            background: #FFF;
+            color: #2D303F;
+            font-size: 30px;
+            padding: 15px;
+            width: 100%;
+            font-weight: 300;
+            letter-spacing: -0.5px;
+        }
+
+        .option span {
+            color: #2D303F;
+            font-size: 27px;
+            font-weight: 300;
+            letter-spacing: -0.8px;
+        }
+
+        .option input {
+            display: none;
+        }
+
+        /* Circle on the right */
+        .checkmark {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 2px solid #2D303F;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s ease;
+        }
+
+        /* Default radio button styling */
+        input[type="radio"] {
+            accent-color: #555;
+            transform: scale(1.2);
+        }
+
+        /* Tick inside circle */
+        .checkmark::after {
+            content: "✓";
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            display: none;
+        }
+
+        /* When radio is checked */
+        .option input:checked+.checkmark {
+            background: #2D303F;
+            border-color: #2D303F;
+        }
+
+        .option input:checked+.checkmark::after {
+            display: block;
+        }
+
+        .checkbox-label {
+            margin-top: 18px !important;
+            display: block;
+        }
+
+        .btn {
+            border-radius: 200px;
+            background: #2D303F;
+            color: #FFF;
+            font-family: "Poppins";
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 7.5px;
+            text-transform: uppercase;
+            transition: 0.3s ease;
+            text-align: center;
+            padding: 10px 30px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #444;
+        }
+
+        ul {
+            padding-left: 35px;
+        }
+
+        .checkbox-label,
+        li {
+            color: #2D303F;
+            font-size: 26px;
+            font-weight: 300;
+            line-height: 50px;
+            letter-spacing: -0.5px;
+        }
+
+        .checkbox-large {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+
+        .return {
+            cursor: pointer;
+            color: #2D303F;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 35px;
+            letter-spacing: -0.5px;
+            width: 50%;
+        }
+
+        .return:hover {
+            color: #000;
+        }
+
+        #subtitle {
+            color: #BABABA;
+            font-family: "Poppins";
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+        }
+
+
+        @media screen and (max-width:780px) {
+            .main-div {
+                display: block !important;
+            }
+
+            .left {
+                display: none !important;
+            }
+
+            .right {
+                width: 100%;
+                padding: 60px 15px;
+                display: flex;
+                flex-direction: column;
+                max-width: 690px;
+                margin: 0 auto;
+            }
+
+            h2 {
+                margin-bottom: 20px;
+                font-size: 45px;
+                font-weight: 700;
+                letter-spacing: -3px;
+            }
+
+            .progress {
+                margin-bottom: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="quiz-container">
+            <div class="main-div">
+                <div class="left">
+                    <img id="question-image" src="" alt="Question Image" style="width: 100%;">
+                </div>
+                <div class="right">
+                    <div class="progress" id="progress-bar"></div>
+                    <div id="subtitle"></div>
+                    <h2 id="question-text"></h2>
+                    <p id="question-des"></p>
+                    <div id="options-container"></div>
+                    <div id="button-container"
+                        style="display: flex;align-items: center; justify-content: space-between; margin-top: 20px; flex-direction: row; gap: 20px;">
+                        <div class="btn" onclick="nextPage()">START THE QUIZ</div>
+                        <div class="return" onclick="prevPage()">← Return</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                image: "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b981237c922f1b3b3db0d1.png",
+                title: "Discover Your Path to Healing, Transformation, and Service",
+                subtitle: "",
+                text: "Take this quick quiz to uncover your unique path to healing yourself, others, or the world with Tao Wisdom.",
+                options: [],
+            },
+            {
+                image: "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b981237c922f65cc3db0d0.png",
+                title: "What brings you here today?",
+                subtitle: "",
+                text: "",
+                options: ["Heal Myself", "Heal Others", "Heal the World"]
+            },
+            {
+                image: "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b98123162c1559133773d5.png", // Default banner
+                title: "What area of life would you like to focus on?",
+                subtitle: "",
+                text: "",
+                options: [] // Will be updated dynamically
+            },
+            {
+                image: "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b981238c2b8259df1688f0.png", // Default banner
+                title: "What area of life would you like to focus on?",
+                subtitle: "",
+                text: "",
+                options: [] // Will be updated dynamically
+            },
+            {
+                image: "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b981238c2b8244a81688f1.png", // Default banner
+                title: "How open are you to using spiritual tools?",
+                subtitle: "",
+                text: "(For example: Tao Calligraphy, sound healing, or light transmissions)",
+                options: [] // Will be updated dynamically
+            },
+            {
+                image: "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b98123fbaeaba571978578.png", // Default banner
+                title: "What is your name?",
+                subtitle: "",
+                text: "",
+                options: [] // Will be updated dynamically
+            },
+            {
+                image: "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b98123fbaeaba571978578.png", // Default banner
+                title: "What is your email?",
+                subtitle: "",
+                text: "",
+                options: [] // Will be updated dynamically
+            },
+            {
+                image: "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b981238c2b8268881688ef.png", // Default banner
+                title: "Thank you,",
+                subtitle: "",
+                text: "Here’s a summary of your answers:",
+                options: [] // Will be updated dynamically
+            }
+        ];
+
+        let currentPage = 0;
+        let selectedOption = ""; // Store selected option from page 2
+
+        function handleSelection(event) {
+            const selectedValue = event.target.value;
+            const currentKey = `page_${currentPage}`; // Store data using a unique key per page
+
+            // Save the selected value in localStorage
+            localStorage.setItem(currentKey, selectedValue);
+
+            console.log(`Saved: ${currentKey} = ${selectedValue}`);
+        }
+
+        function loadSavedSelections() {
+            const currentKey = `page_${currentPage}`;
+            const savedValue = localStorage.getItem(currentKey);
+
+            if (savedValue) {
+                // Auto-select the saved option if the user navigates back
+                document.querySelectorAll('input[name="choice"]').forEach(input => {
+                    if (input.value === savedValue) {
+                        input.checked = true;
+                    }
+                });
+            }
+        }
+
+        function renderPage() {
+            const buttonContainer = document.getElementById("button-container");
+
+            // ✅ Page 1 → Column Direction
+            if (currentPage === 0) {
+                buttonContainer.style.flexDirection = "column";
+                buttonContainer.style.alignItems = "flex-start"; // ✅ Align left like the design
+            } else {
+                buttonContainer.style.flexDirection = "row";
+                buttonContainer.style.alignItems = "center";
+            }
+            const questionData = { ...questions[currentPage] };
+            let bannerImage = questionData.image;
+            let previousSelection = localStorage.getItem("page_1"); // Get Page 1 selection
+            let selectedOption = localStorage.getItem(`page_${currentPage}`); // Get saved value for current page
+
+            const optionsContainer = document.getElementById("options-container");
+            optionsContainer.innerHTML = ""; // Clear previous options
+            // PAGE 2 - Show correct options & restore selection
+            if (currentPage === 2) {
+                if (previousSelection === "Heal Myself") {
+                    bannerImage = "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b98123162c1559133773d5.png";
+                    questionData.title = "What area of life would you like to focus on?";
+                    questionData.subtitle = "Heal Myself";
+
+                    questionData.options = [
+                        { id: 1, name: "Health" },
+                        { id: 2, name: "Relationship" },
+                        { id: 3, name: "Finances" }
+                    ];
+                } else if (previousSelection === "Heal Others") {
+                    bannerImage = "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b98123162c15af843773d4.png";
+                    questionData.title = "Where are you on your healing journey?";
+                    questionData.subtitle = "Heal Others";
+
+                    questionData.options = [
+                        { id: 1, name: "Brand New to Healing" },
+                        { id: 2, name: "Have Some Understanding" },
+                        { id: 3, name: "Practitioner of Another Healing Form" }
+                    ];
+                } else if (previousSelection === "Heal the World") {
+                    bannerImage = "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b98123162c1559133773d5.png";
+                    questionData.title = "How would you like to contribute to global healing?";
+
+                }
+            }
+
+            // PAGE 3 - Update options based on Page 2 selection
+            if (currentPage === 3) {
+                let page2Selection = localStorage.getItem("page_2"); // Get saved value from Page 2
+
+                if (["Brand New to Healing", "Have Some Understanding", "Practitioner of Another Healing Form"].includes(page2Selection)) {
+                    currentPage = 4; // Directly jump to Page 4
+                    renderPage();
+                    return;
+                }
+
+                if (page2Selection === "Health") {
+                    bannerImage = "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b981238c2b8259df1688f0.png";
+                    questionData.title = "What type of health improvement are you seeking?";
+                    questionData.subtitle = "Heal myself » HEALTH";
+
+                    questionData.options = [
+                        { id: 1, name: "Physical" },
+                        { id: 2, name: "Emotional" },
+                        { id: 3, name: "Mental" }
+                    ];
+                } else if (page2Selection === "Relationship") {
+                    bannerImage = "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b981338c2b8208331688f9.png";
+                    questionData.title = "What type of relationship would you like to improve?";
+                    questionData.subtitle = "Heal myself » Relationship";
+
+                    questionData.options = [
+                        { id: 1, name: "Love" },
+                        { id: 2, name: "Family" },
+                        { id: 3, name: "Friends" }
+                    ];
+                } else if (page2Selection === "Finances") {
+                    bannerImage = "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b98123fa0e0bca1baaa0d5.png";
+                    questionData.title = "What area of finances would you like to grow in?";
+                    questionData.subtitle = "Heal myself » Finances";
+
+                    questionData.options = [
+                        { id: 1, name: "Personal" },
+                        { id: 2, name: "Business" }
+                    ];
+                }
+            }
+            // PAGE 3 - Update options based on Page 2 selection
+            if (currentPage === 4) {
+
+                bannerImage = "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b981238c2b8244a81688f1.png";
+                questionData.options = [
+                    { id: 1, name: "Very Open" },
+                    { id: 2, name: "Curious" },
+                    { id: 3, name: "Not Sure" }
+                ];
+            }
+            // PAGE 5 - Save Name Input in LocalStorage
+            if (currentPage === 5) {
+                bannerImage = "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b98123fbaeaba571978578.png";
+                questionData.title = "What is your name?";
+
+                const inputField = document.createElement("input");
+                inputField.type = "text";
+                inputField.name = "full_name";
+                inputField.placeholder = "Enter your name";
+                inputField.classList.add("input-field");
+
+                // Restore saved name if exists
+                inputField.value = localStorage.getItem("page_5") || "";
+
+                // Save name in LocalStorage on input change
+                inputField.oninput = () => {
+                    localStorage.setItem("page_5", inputField.value);
+                };
+
+                optionsContainer.appendChild(inputField);
+            }
+
+            // PAGE 6 - Save Email Input in LocalStorage
+            else if (currentPage === 6) {
+                bannerImage = "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b98123fbaeaba571978578.png";
+                questionData.title = "What is your email?";
+
+                const emailField = document.createElement("input");
+                emailField.type = "email";
+                emailField.name = "email";
+                emailField.placeholder = "Enter your email";
+                emailField.classList.add("input-field");
+
+                // Restore saved email if exists
+                emailField.value = localStorage.getItem("page_6") || "";
+
+                // Save email in LocalStorage on input change
+                emailField.oninput = () => {
+                    localStorage.setItem("page_6", emailField.value);
+                };
+
+                optionsContainer.appendChild(emailField);
+
+                // Checkbox for sending a copy of answers
+                const checkboxLabel = document.createElement("label");
+                checkboxLabel.classList.add("checkbox-label");
+                checkboxLabel.innerHTML = `
+        <input type="checkbox" id="terms-checkbox" class="checkbox-large"> I would like a copy of my answers sent to my email.
+    `;
+
+                // Restore saved checkbox state
+                const checkbox = checkboxLabel.querySelector("#terms-checkbox");
+                checkbox.checked = localStorage.getItem("terms-checkbox") === "true";
+                checkbox.onchange = () => {
+                    localStorage.setItem("terms-checkbox", checkbox.checked);
+                };
+
+                optionsContainer.appendChild(checkboxLabel);
+            }
+
+            // PAGE 7 - Thank You Page (Show Name & Email)
+            else if (currentPage === 7) {
+                let userName = localStorage.getItem("page_5") || "";
+                let userEmail = localStorage.getItem("page_6") || "";
+
+                // Set Title with Name
+                if (userName) {
+                    questionData.title = `Thank you, ${userName}`;
+                } else {
+                    questionData.title = "Thank you!";
+                }
+
+                let uniqueResponses = new Set(); // Store only unique responses
+                let resultHTML = `<ul>`; // Start the unordered list
+
+                function addAnswer(textTemplate, key) {
+                    let value = localStorage.getItem(key);
+                    if (value && !uniqueResponses.has(value)) { // Check for duplicates
+                        uniqueResponses.add(value); // Add to Set to prevent duplicates
+                        resultHTML += `<li>${textTemplate.replace("{value}", `<strong>${value}</strong>`)}</li>`;
+                    }
+                }
+
+                // Add responses with correct text format
+                addAnswer("You’re here to: {value}", "page_1");
+                addAnswer("You want to focus on: {value}", "page_2");
+                addAnswer("The relationship you want to improve is {value}", "page_3");
+                addAnswer("You are {value} to using spiritual tools", "page_4");
+                addAnswer("You want to improve your: {value} Health", "page_3");
+
+
+                // if (localStorage.getItem("terms-checkbox") === "true") {
+                //     resultHTML += `<li><strong>Subscribed</strong>: Yes</li>`;
+                // }
+
+                resultHTML += `</ul>`; // Close the unordered list
+
+                let resultDiv = document.createElement("div");
+                resultDiv.innerHTML = resultHTML;
+                optionsContainer.appendChild(resultDiv);
+            }
+
+            else if (questionData.options && questionData.options.length > 0) {
+                questionData.options.forEach(option => {
+                    const label = document.createElement("label");
+                    label.classList.add("option");
+
+                    let isChecked = selectedOption === option.name ? "checked" : "";
+
+                    label.innerHTML = `
+                <span>${option.name || option}</span>
+                <input type="radio" name="choice" value="${option.name || option}" ${isChecked} onchange="handleSelection(event)">
+                <div class="checkmark"></div>
+            `;
+                    optionsContainer.appendChild(label);
+                });
+            } else {
+                console.warn(`No options found for page ${currentPage}`);
+            }
+
+            document.getElementById("question-image").src = bannerImage;
+            document.getElementById("question-text").innerText = questionData.title || "";
+            document.getElementById("subtitle").innerText = questionData.subtitle || "";
+            document.getElementById("question-des").innerText = questionData.text || "";
+
+            document.getElementById("progress-bar").innerHTML = "";
+            for (let i = 1; i < questions.length; i++) {
+                const progressStep = document.createElement("div");
+                if (i <= currentPage) progressStep.classList.add("active");
+                document.getElementById("progress-bar").appendChild(progressStep);
+            }
+
+            const nextButton = document.querySelector(".btn");
+            if (currentPage === 0) {
+                nextButton.innerText = "START THE QUIZ";
+            } else if (currentPage === questions.length - 1) {
+                nextButton.innerText = "SUBMIT";
+            } else {
+                nextButton.innerText = "NEXT";
+            }
+        }
+
+        function handleSelection(event) {
+            let selectedValue = event.target.value;
+            localStorage.setItem(`page_${currentPage}`, selectedValue);
+        }
+
+        function nextPage() {
+            if ([1, 2, 3, 4].includes(currentPage)) {
+                let selected = document.querySelector('input[name="choice"]:checked');
+                if (!selected) {
+                    alert("Please select an option before proceeding.");
+                    return;
+                }
+            }
+
+            if (currentPage === 5) {
+                let nameInput = document.querySelector('input[name="full_name"]');
+                if (!nameInput.value.trim()) {
+                    alert("Please enter your name.");
+                    return;
+                }
+                localStorage.setItem("page_5", nameInput.value.trim());
+            }
+
+            if (currentPage === 6) {
+                let emailInput = document.querySelector('input[name="email"]');
+                let emailValue = emailInput.value.trim();
+                let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if (!emailValue) {
+                    alert("Please enter your email.");
+                    return;
+                }
+                if (!emailPattern.test(emailValue)) {
+                    alert("Please enter a valid email address.");
+                    return;
+                }
+                localStorage.setItem("page_6", emailValue);
+            }
+
+            // ✅ Last Page: Send Email via EmailJS
+            if (currentPage === questions.length - 1) {
+                alert("Submitting...");
+                sendEmail();
+                return;
+            }
+
+            // ✅ Page skipping logic
+            if (currentPage < questions.length - 1) {
+                let selectedOption = localStorage.getItem("page_1");
+                let page2Selection = localStorage.getItem("page_2");
+
+                if (currentPage === 1 && selectedOption === "Heal the World") {
+                    localStorage.removeItem("page_2");
+                    localStorage.removeItem("page_3");
+                    currentPage = 4;
+                } else if (currentPage === 2 && ["Brand New to Healing", "Have Some Understanding", "Practitioner of Another Healing Form"].includes(page2Selection)) {
+                    currentPage = 4;
+                } else {
+                    currentPage++;
+                }
+                renderPage();
+            }
+        }
+
+        function sendEmail() {
+            const serviceID = "service_4a8wlsn";
+            const templateID = "template_9wwb6wc";
+            const publicKey = "UwO4Bru00ZROuS6lc";
+
+            let userData = {};
+            for (let i = 1; i <= 6; i++) {
+                let answer = localStorage.getItem(`page_${i}`);
+                if (answer) {
+                    userData[`${i}`] = answer;
+                }
+            }
+
+            const emailParams = {
+                from_name: userData.page_5 || "User",
+                user_email: userData.page_6 || "No Email Provided",
+                message: JSON.stringify(userData, null, 2)
+            };
+
+            console.log("📤 Sending email with params:", emailParams);
+
+            fetch("https://api.emailjs.com/api/v1.0/email/send", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    service_id: serviceID,
+                    template_id: templateID,
+                    user_id: publicKey,
+                    template_params: emailParams
+                })
+            })
+                .then(response => response.text()) // Read response as text
+                .then(text => {
+                    console.log("🔎 Raw Response:", text); // Debugging
+
+                    if (text.trim() === "OK") {
+                        alert("✅ Email sent successfully!");
+
+                        // ✅ Check localStorage value of page_1 to determine redirection
+                        let page1Value = localStorage.getItem("page_1");
+
+                        if (page1Value === "Heal Myself") {
+                            window.location.href = "https://stagingdrsha.ghlking.com/?page_id=1928"; // Redirect for 'Heal Myself'
+                        } else if (page1Value === "Heal Others") {
+                            window.location.href = "https://stagingdrsha.ghlking.com/?page_id=1916"; // Redirect for 'Heal Others'
+                        } else {
+                            window.location.href = "https://stagingdrsha.ghlking.com/?page_id=644"; // Default redirect
+                        }
+                    } else {
+                        try {
+                            let data = JSON.parse(text); // Try to parse JSON if it's not "OK"
+                            console.log("✅ Parsed JSON Response:", data);
+                            alert("✅ Email sent successfully!");
+
+                            // ✅ Same redirection logic after successful JSON response
+                            let page1Value = localStorage.getItem("page_1");
+
+                            if (page1Value === "Heal Myself") {
+                                window.location.href = "https://stagingdrsha.ghlking.com/?page_id=1928";
+                            } else if (page1Value === "Heal Others") {
+                                window.location.href = "https://stagingdrsha.ghlking.com/?page_id=1916";
+                            } else {
+                                window.location.href = "https://stagingdrsha.ghlking.com/?page_id=644";
+                            }
+                        } catch (error) {
+                            console.error("❌ JSON Parsing Error:", error);
+                            alert("❌ Email sent, but received an unexpected response.");
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error("❌ Fetch Error:", error);
+                    alert("❌ Failed to send email. Please try again.");
+                });
+        }
+
+        function prevPage() {
+            if (currentPage === 0) {
+                window.location.href = "https://stagingdrsha.ghlking.com/";
+                return;
+            }
+
+            if (currentPage > 0) {
+                let selectedOption = localStorage.getItem("page_1"); // Page 1 selection
+                let page2Selection = localStorage.getItem("page_2"); // Page 2 selection
+                if (currentPage === 4 && selectedOption === "Heal the World") {
+                    currentPage = 1; // Go back to Page 1
+                }
+                else if (currentPage === 4 && ["Brand New to Healing", "Have Some Understanding", "Practitioner of Another Healing Form"].includes(page2Selection)) {
+                    currentPage = 2; // Go back to Page 2
+                }
+                else {
+                    currentPage--;
+                }
+                renderPage();
+            }
+        }
+
+        // Initialize First Page
+        renderPage();
+
+    </script>
+</body>
+
+</html>
