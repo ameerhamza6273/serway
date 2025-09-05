@@ -561,7 +561,7 @@
         steps.forEach((s, i) => s.classList.toggle("hidden", i !== currentStep));
         document.getElementById("backBtn").disabled = currentStep === 0;
         document.getElementById("nextBtn").style.display = (currentStep === steps.length - 1) ? "none" : "block";
-        progress.style.width = ((currentStep + 1) / steps.length * 100) + "%";
+        progress.style.width = ((currentStep + 0) / steps.length * 100) + "%";
     }
 
     function validateStep() {
