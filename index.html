@@ -1,809 +1,661 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healing Journey</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Life Insurance Survey</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
         }
 
-
-        .hidden {
-            display: none;
+        body {
+            font-family: sans-serif;
+            min-height: 100vh;
+            background: #000;
         }
 
-        .main-div {
+        .header {
             display: flex;
-            width: 100%;
-            background: #fff;
-        }
-
-        .left {
-            width: 40%;
-        }
-
-        .right {
-            width: 60%;
-            padding: 70px 20px;
-            display: flex;
-            flex-direction: column;
-            max-width: 690px;
-            margin: 0 auto;
-        }
-
-        .progress {
-            display: flex;
-            gap: 6px;
-            margin-bottom: 50px;
-        }
-
-        .progress div {
-            width: 13%;
-            height: 8px;
-            border-radius: 100px;
-            background: #D9D9D9;
-        }
-
-        .progress div.active {
-            background: #2D303F;
-        }
-
-        h2 {
-            margin-bottom: 30px;
-            margin-top: 5px;
-            color: #2D303F;
-            font-size: 55px;
-            font-weight: 700;
-            letter-spacing: -3px;
-        }
-
-        p {
-            color: #000;
-            font-size: 25px;
-            font-weight: 300;
-            letter-spacing: -0.8px;
-            margin-bottom: 15px;
-        }
-
-        .option {
-            display: flex;
-            align-items: center;
             justify-content: space-between;
-            min-width: 400px;
-            max-width: 100%;
-            padding: 18px;
-            border: 2px solid #2D303F;
-            border-radius: 8px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-bottom: 10px;
-            transition: 0.3s ease;
-            position: relative;
-        }
-
-        input[type="text"],
-        input[type="email"] {
-            border-radius: 10px;
-            border: 2px solid #2D303F;
-            background: #FFF;
-            color: #2D303F;
-            font-size: 30px;
             padding: 15px;
+            align-items: center;
+        }
+
+        .progress-container {
             width: 100%;
-            font-weight: 300;
-            letter-spacing: -0.5px;
+            height: 8px;
+            background: #e5e7eb;
+            border-radius: 4px;
+            margin-bottom: 20px;
         }
 
-        .option span {
-            color: #2D303F;
-            font-size: 27px;
-            font-weight: 300;
-            letter-spacing: -0.8px;
+        .progress-bar {
+            height: 8px;
+            background: #065f46;
+            width: 0%;
+            border-radius: 4px;
+            transition: width 0.3s;
         }
 
-        .option input {
-            display: none;
+        .container {
+            max-width: 500px;
+            margin: 10px auto 40px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
 
-        /* Circle on the right */
-        .checkmark {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            border: 2px solid #2D303F;
+        .title {
+            font-size: 25px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 20px;
+        }
+
+        /* option card style (multi select) */
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .option-card {
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+            cursor: pointer;
+            transition: .2s;
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: 0.3s ease;
+            flex-direction: column;
+            gap: 10px;
         }
 
-        /* Default radio button styling */
-        input[type="radio"] {
-            accent-color: #555;
-            transform: scale(1.2);
+        .option-card:hover {
+            border-color: #cbd5e0;
         }
 
-        /* Tick inside circle */
-        .checkmark::after {
-            content: "✓";
+        .option-card.selected {
+            border-color: #10b981;
+            background: #f0fdf4;
+        }
+
+        .option-card.selected::after {
+            content: '✓';
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            width: 20px;
+            height: 20px;
+            background: #10b981;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        /* list option style (single select) */
+        .list-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .list-option {
+            padding: 14px;
+            border-radius: 6px;
+            background: #f1f5f9;
+            cursor: pointer;
             font-size: 16px;
-            font-weight: bold;
-            color: white;
-            display: none;
+            font-weight: 500;
+            color: #111827;
+            transition: .2s;
         }
 
-        /* When radio is checked */
-        .option input:checked+.checkmark {
-            background: #2D303F;
-            border-color: #2D303F;
+        .list-option:hover {
+            background: #e2e8f0;
         }
 
-        .option input:checked+.checkmark::after {
+        .list-option.selected {
+            background: #065f46;
+            color: #fff;
+        }
+
+        /* form style */
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        label {
             display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
         }
 
-        .checkbox-label {
-            margin-top: 18px !important;
-            display: block;
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+        }
+
+        pre {
+            background: #f3f4f6;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        /* buttons */
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .submit-btn {
+            width: 100%;
         }
 
         .btn {
-            border-radius: 200px;
-            background: #2D303F;
-            color: #FFF;
-            font-family: "Poppins";
-            font-size: 20px;
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
             font-weight: 600;
-            letter-spacing: 7.5px;
-            text-transform: uppercase;
-            transition: 0.3s ease;
-            text-align: center;
-            padding: 10px 22px;
             cursor: pointer;
         }
 
-        .btn:hover {
-            background: #444;
+        .btn.next {
+            background: #111827;
+            color: white;
         }
 
-        ul {
-            padding-left: 35px;
+        .btn.back {
+            background: #e5e7eb;
+            color: #111827;
         }
 
-        .checkbox-label,
-        li {
-            color: #2D303F;
-            font-size: 26px;
-            font-weight: 300;
-            line-height: 50px;
-            letter-spacing: -0.5px;
+        .btn:disabled {
+            background: #a0aec0;
+            cursor: not-allowed;
         }
 
-        .checkbox-large {
-            width: 20px;
-            height: 20px;
-            cursor: pointer;
-        }
-
-
-        .return {
-            cursor: pointer;
-            color: #2D303F;
-            font-size: 20px;
-            font-weight: 700;
-            line-height: 35px;
-            letter-spacing: -0.5px;
-            width: 50%;
-        }
-
-        .return:hover {
-            color: #000;
-        }
-
-        #subtitle {
-            color: #BABABA;
-            font-family: "Poppins";
-            font-size: 16px;
-            font-weight: 600;
-            margin: 0;
-            letter-spacing: 8px;
-            text-transform: uppercase;
-        }
-
- .left {
-                display: none !important;
-            }
-        @media screen and (max-width:780px) {
-            .main-div {
-                display: block !important;
-            }
-
-           
-
-            .right {
-                width: 100%;
-                padding: 60px 15px;
-                display: flex;
-                flex-direction: column;
-                max-width: 690px;
-                margin: 0 auto;
-            }
-
-            h2 {
-                margin-bottom: 20px;
-                font-size: 45px;
-                font-weight: 700;
-                letter-spacing: -3px;
-            }
-
-            .progress {
-                margin-bottom: 35px;
-            }
+        .hidden {
+            display: none;
         }
     </style>
 </head>
 
 <body>
+    <div class="header">
+        <div><img src="https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/68baba262398ef1f95c14a77.webp"
+                alt="user" style="max-width: 200px;"></div>
+        <div style="color: #fff;">Need help? <a href="tel:(866) 846-1270">(866) 846-1270</a></div>
+    </div>
+
     <div class="container">
-        <div id="quiz-container">
-            <div class="main-div">
-                <div class="left">
-                    <img id="question-image" src="" alt="Question Image" style="width: 100%;">
-                </div>
-                <div class="right">
-                    <div class="progress" id="progress-bar"></div>
-                    <div id="subtitle"></div>
-                    <h2 id="question-text"></h2>
-                    <p id="question-des"></p>
-                    <div id="options-container"></div>
-                    <div id="button-container"
-                        style="display: flex;align-items: center; justify-content: space-between; margin-top: 20px; flex-direction: row; gap: 20px;">
-                        <div class="btn" onclick="nextPage()">START THE QUIZ</div>
-                        <div class="return" onclick="prevPage()">← Return</div>
+        <div class="progress-container">
+            <div class="progress-bar" id="progress"></div>
+        </div>
+
+        <!-- Steps -->
+        <div id="steps">
+
+            <!-- Step 1 -->
+            <div class="step">
+                <h1 class="title">Let’s get started! What are your goals for life insurance?</h1>
+                <p class="subtitle">Select all that apply.</p>
+                <div class="options-grid">
+                    <div class="option-card" onclick="toggleOption(this,'goals','protect')">
+                        <span>👨‍👩‍👧‍👦</span>
+                        <span>I want to protect my loved ones</span>
                     </div>
+
+                    <div class="option-card" onclick="toggleOption(this,'goals','mortgage')">
+                        <span>🏠</span>
+                        <span>I want to pay off my mortgage</span>
+                    </div>
+
+                    <div class="option-card" onclick="toggleOption(this,'goals','future')">
+                        <span>💰</span>
+                        <span>I want to prepare for my family’s future</span>
+                    </div>
+
+                    <div class="option-card" onclick="toggleOption(this,'goals','peace')">
+                        <span>🧘</span>
+                        <span>I'm looking for peace of mind</span>
+                    </div>
+
+                    <div class="option-card" onclick="toggleOption(this,'goals','expenses')">
+                        <span>⚰️</span>
+                        <span>I want to cover my final expenses</span>
+                    </div>
+
+                    <div class="option-card" onclick="toggleOption(this,'goals','not_sure')">
+                        <span>❓</span>
+                        <span>I’m not sure</span>
+                    </div>
+
                 </div>
             </div>
+
+            <!-- Step 2 (custom / blank) -->
+            <div class="step hidden">
+                <h1 class="title">Who depends on you financially?</h1>
+                <p class="subtitle">This helps us customize your plan. Select all that apply.</p>
+                <div class="options-grid">
+                    <div class="option-card" onclick="toggleOption(this,'goals','spouse')">
+                        <span>💑</span>
+                        <span>Spouse or partner</span>
+                    </div>
+
+                    <div class="option-card" onclick="toggleOption(this,'goals','children')">
+                        <span>👶</span>
+                        <span>Children</span>
+                    </div>
+
+                    <div class="option-card" onclick="toggleOption(this,'goals','parent')">
+                        <span>👴</span>
+                        <span>Parent</span>
+                    </div>
+
+                    <div class="option-card" onclick="toggleOption(this,'goals','other')">
+                        <span>➕</span>
+                        <span>Other</span>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Step 3 (custom / blank) -->
+            <div class="step hidden">
+                <h1 class="title">Great! We’ll get your coverage options in as little as 5 minutes.</h1>
+                <!-- HOW IT WORKS BUTTON -->
+                <div style="margin-bottom:20px;">
+                    <button
+                        style="border:1px solid #2d3748; background:transparent; color:#2d3748; font-size:12px; font-weight:600; padding:4px 10px; border-radius:4px; cursor:default;">
+                        HOW IT WORKS
+                    </button>
+                </div>
+
+                <!-- PROGRESS STEPS -->
+                <div style="margin-bottom:30px;">
+                    <div style="display:flex;align-items:flex-start;margin-bottom:20px;">
+                        <div
+                            style="width:28px;height:28px;border-radius:50%;background:#059669;color:#fff;font-weight:600;display:flex;align-items:center;justify-content:center;margin-right:10px;">
+                            1</div>
+                        <div style="font-size:16px;color:#2d3748;font-weight:600;">Tell us about your needs</div>
+                    </div>
+                    <div style="display:flex;align-items:flex-start;margin-bottom:20px;">
+                        <div
+                            style="width:28px;height:28px;border-radius:50%;border:2px solid #cbd5e0;color:#718096;font-weight:600;display:flex;align-items:center;justify-content:center;margin-right:10px;">
+                            2</div>
+                        <div style="font-size:16px;color:#718096;font-weight:500;">Add your basic details</div>
+                    </div>
+                    <div style="display:flex;align-items:flex-start;">
+                        <div
+                            style="width:28px;height:28px;border-radius:50%;border:2px solid #cbd5e0;color:#718096;font-weight:600;display:flex;align-items:center;justify-content:center;margin-right:10px;">
+                            3</div>
+                        <div style="font-size:16px;color:#718096;font-weight:500;">Provide health info and get your
+                            final rate</div>
+                    </div>
+                </div>
+
+                <!-- TESTIMONIAL BOX -->
+                <div style="border-radius:8px;padding:20px;background:#f8fafc; border:1px solid #e2e8f0;">
+                    <div style="font-size:32px;line-height:0.8;color:#10b981;margin-bottom:12px;">❝</div>
+                    <p style="font-size:16px;color:#2d3748;margin-bottom:16px;">
+                        Holy cow! I’m still blown away by how easy this was.
+                    </p>
+                    <div style="display:flex;align-items:center;gap:6px;font-size:14px;color:#2d3748;font-weight:600;">
+                        Tim Witte
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google"
+                            style="height:16px;">
+                        <span style="color:#fbbf24;">★★★★★</span>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step hidden">
+                <h1 class="title">When would you like to be covered by life insurance?</h1>
+                <div class="list-options">
+                    <div class="list-option" onclick="selectSingle(this,'coverage','today')">I'm ready today</div>
+                    <div class="list-option" onclick="selectSingle(this,'coverage','week')">Within a week</div>
+                    <div class="list-option" onclick="selectSingle(this,'coverage','months')">In a few months</div>
+                    <div class="list-option" onclick="selectSingle(this,'coverage','not_sure')">I'm not sure</div>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step hidden">
+                <h1 class="title">Provide your sex at birth</h1>
+                <div class="list-options">
+                    <div class="list-option" onclick="selectSingle(this,'gender','male')">Male</div>
+                    <div class="list-option" onclick="selectSingle(this,'gender','female')">Female</div>
+                </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="step hidden">
+                <h1 class="title">How is your health?</h1>
+                <div class="list-options">
+                    <div class="list-option" onclick="selectSingle(this,'health','average')">Average</div>
+                    <div class="list-option" onclick="selectSingle(this,'health','great')">Great</div>
+                </div>
+            </div>
+
+
+
+
+            <!-- Step 7 -->
+            <div class="step hidden">
+                <h1 class="title">Do you currently use nicotine products?</h1>
+                <div class="list-options">
+                    <div class="list-option" onclick="selectSingle(this,'already','yes')">Yes</div>
+                    <div class="list-option" onclick="selectSingle(this,'already','no')">No</div>
+                </div>
+            </div>
+            <!-- Step 8 -->
+            <div class="step hidden">
+                <h1 class="title">How many children do you have under 18?</h1>
+                <div class="list-options">
+                    <div class="list-option" onclick="selectSingle(this,'children','1')">1</div>
+                    <div class="list-option" onclick="selectSingle(this,'children','2')">2</div>
+                    <div class="list-option" onclick="selectSingle(this,'children','3')">3</div>
+                    <div class="list-option" onclick="selectSingle(this,'children','4+')">4+</div>
+                </div>
+            </div>
+
+            <!-- Step 9 -->
+            <div class="step hidden">
+                <h1 class="title">Do you have an Estate Plan or Will in place?</h1>
+                <div class="list-options">
+                    <div class="list-option" onclick="selectSingle(this,'estate_plan','yes')">Yes</div>
+                    <div class="list-option" onclick="selectSingle(this,'estate_plan','no')">No</div>
+                    <div class="list-option" onclick="selectSingle(this,'estate_plan','not_sure')">I'm not sure</div>
+                </div>
+            </div>
+
+            <!-- Step 10 -->
+            <div class="step hidden">
+                <h1 class="title">About how much remaining debt/mortgage do you have?</h1>
+
+                <label for="debtRange" class="subtitle" style="display:block;margin-bottom:8px;">
+                    Debt/mortgage amount
+                </label>
+                <div
+                    style="display:flex;justify-content:space-between;font-size:14px;color:#2d3748;font-weight:600;margin-bottom:6px;">
+                    <span id="debtValue">$0</span>
+                </div>
+
+                <input type="range" id="debtRange" min="0" max="1000000" step="10000" value="0"
+                    style="width:100%;margin-bottom:20px;cursor:pointer;">
+
+                <!-- Help box -->
+                <div
+                    style="display:flex;align-items:flex-start;gap:8px;border:1px solid #cbd5e0;background:#f8fafc;padding:12px;border-radius:6px;font-size:14px;color:#2d3748;">
+                    <span style="color:#2563eb;font-size:18px;">ℹ️</span>
+                    <span>Getting an estimate of your debt helps us understand your coverage needs.</span>
+                </div>
+            </div>
+
+            <!-- Step 11 -->
+            <div class="step hidden">
+                <h1 class="title">Great! We’ll get your coverage options in as little as 5 minutes.</h1>
+
+                <!-- PROGRESS STEPS -->
+                <div style="margin-bottom:30px;">
+
+                    <!-- Step 1 (Completed with tick) -->
+                    <div style="display:flex;align-items:flex-start;margin-bottom:20px;">
+                        <div
+                            style="width:28px;height:28px;border-radius:50%;background:#059669;color:#fff;font-weight:600;display:flex;align-items:center;justify-content:center;margin-right:10px;">
+                            ✓
+                        </div>
+                        <div style="font-size:16px;color:#2d3748;font-weight:600;">Tell us about your needs</div>
+                    </div>
+
+                    <!-- Step 2 (Active now, same style as old step 1) -->
+                    <div style="display:flex;align-items:flex-start;margin-bottom:20px;">
+                        <div
+                            style="width:28px;height:28px;border-radius:50%;background:#059669;color:#fff;font-weight:600;display:flex;align-items:center;justify-content:center;margin-right:10px;">
+                            2
+                        </div>
+                        <div style="font-size:16px;color:#2d3748;font-weight:600;">Add your basic details</div>
+                    </div>
+
+                    <!-- Step 3 (Pending, grey style) -->
+                    <div style="display:flex;align-items:flex-start;">
+                        <div
+                            style="width:28px;height:28px;border-radius:50%;border:2px solid #cbd5e0;color:#718096;font-weight:600;display:flex;align-items:center;justify-content:center;margin-right:10px;">
+                            3
+                        </div>
+                        <div style="font-size:16px;color:#718096;font-weight:500;">Provide health info and get your
+                            final rate</div>
+                    </div>
+
+                </div>
+
+
+                <!-- TESTIMONIAL BOX -->
+                <div style="border-radius:8px;padding:20px;background:#f8fafc; border:1px solid #e2e8f0;">
+                    <div style="font-size:32px;line-height:0.8;color:#10b981;margin-bottom:12px;">❝</div>
+                    <p style="font-size:16px;color:#2d3748;margin-bottom:16px;">
+                        Holy cow! I’m still blown away by how easy this was.
+                    </p>
+                    <div style="display:flex;align-items:center;gap:6px;font-size:14px;color:#2d3748;font-weight:600;">
+                        Tim Witte
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google"
+                            style="height:16px;">
+                        <span style="color:#fbbf24;">★★★★★</span>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Step 12 (Country) -->
+            <div class="step hidden">
+                <h1 class="title">Select your country</h1>
+                <div class="form-group">
+                    <select id="country" onchange="saveSelect('country',this.value)">
+                        <option value="">Select Country</option>
+                        <option value="USA">USA</option>
+                        <option value="UK">UK</option>
+                        <option value="Pakistan">Pakistan</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Step 13 (City) -->
+            <div class="step hidden">
+                <h1 class="title">Select your city</h1>
+                <div class="form-group">
+                    <select id="city" onchange="saveSelect('city',this.value)">
+                        <option value="">Select City</option>
+                        <option value="New York">New York</option>
+                        <option value="London">London</option>
+                        <option value="Lahore">Lahore</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Step 14 (Zipcode) -->
+            <div class="step hidden">
+                <h1 class="title">Enter your zip code</h1>
+                <div class="form-group"><input type="text" id="zipcode" placeholder="Zip Code"></div>
+            </div>
+
+            <!-- Step 15 (Form + Summary) -->
+            <div class="step hidden">
+                <h1 class="title">Enter your details</h1>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" id="name" placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="email" placeholder="Enter your email address">
+                </div>
+
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" id="phone" placeholder="Enter your phone number">
+                </div>
+
+                <div class="form-group">
+                    <label>Date of Birth</label>
+                    <input type="date" id="dob" placeholder="Select your date of birth">
+                </div>
+
+                <button class="btn next submit-btn" onclick="finishSurvey()">Submit</button>
+                <!-- <div id="result"></div> -->
+            </div>
+
+
+        </div>
+
+        <!-- Nav buttons -->
+        <div class="buttons">
+            <button class="btn back" id="backBtn" onclick="prevStep()" disabled>Back</button>
+            <button class="btn next" id="nextBtn" onclick="nextStep()">Next</button>
         </div>
     </div>
 
     <script>
-        const questions = [
-            {
-                image: "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b981237c922f1b3b3db0d1.png",
-                title: "Discover Your Path to Healing, Transformation, and Service",
-                subtitle: "",
-                text: "Are you familiar with Dr. & Master Sha’s Teachings?",
-                options: ["No, brand new", "Yes, I am familiar with Master Sha's Teachings", "Yes, I am an advanced student"],
-            },
-            {
-                image: "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b981237c922f65cc3db0d0.png",
-                title: "What brings you here today?",
-                subtitle: "",
-                text: "",
-                options: ["Heal Myself", "Heal Others", "Heal the World"]
-            },
-            {
-                image: "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b98123162c1559133773d5.png", // Default banner
-                title: "What area of life would you like to focus on?",
-                subtitle: "",
-                text: "",
-                options: [] // Will be updated dynamically
-            },
-            {
-                image: "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b981238c2b8259df1688f0.png", // Default banner
-                title: "What area of life would you like to focus on?",
-                subtitle: "",
-                text: "",
-                options: [] // Will be updated dynamically
-            },
-            {
-                image: "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b981238c2b8244a81688f1.png", // Default banner
-                title: "How open are you to using spiritual tools?",
-                subtitle: "",
-                text: "(For example: Tao Calligraphy, sound healing, or light transmissions)",
-                options: [] // Will be updated dynamically
-            },
-            {
-                image: "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b98123fbaeaba571978578.png", // Default banner
-                title: "What is your name?",
-                subtitle: "",
-                text: "",
-                options: [] // Will be updated dynamically
-            },
-            {
-                image: "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b98123fbaeaba571978578.png", // Default banner
-                title: "What is your email?",
-                subtitle: "",
-                text: "",
-                options: [] // Will be updated dynamically
-            },
-            {
-                image: "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b981238c2b8268881688ef.png", // Default banner
-                title: "Thank you,",
-                subtitle: "",
-                text: "Here’s a summary of your answers:",
-                options: [] // Will be updated dynamically
-            }
-        ];
+    let currentStep = 0;
+    const steps = document.querySelectorAll(".step");
+    const progress = document.getElementById("progress");
+    const debtRange = document.getElementById('debtRange');
+    const debtValue = document.getElementById('debtValue');
+    const surveyData = {};
 
-        let currentPage = 0;
-        let selectedOption = ""; // Store selected option from page 2
+    function updateStep() {
+        steps.forEach((s, i) => s.classList.toggle("hidden", i !== currentStep));
+        document.getElementById("backBtn").disabled = currentStep === 0;
+        document.getElementById("nextBtn").style.display = (currentStep === steps.length - 1) ? "none" : "block";
+        progress.style.width = ((currentStep + 1) / steps.length * 100) + "%";
+    }
 
-        function handleSelection(event) {
-            const selectedValue = event.target.value;
-            const currentKey = `page_${currentPage}`; // Store data using a unique key per page
+    function validateStep() {
+        const step = steps[currentStep];
+        let valid = true;
 
-            // Save the selected value in localStorage
-            localStorage.setItem(currentKey, selectedValue);
+        // check option cards
+        const optionCards = step.querySelectorAll(".option-card.selected");
+        const listOptions = step.querySelectorAll(".list-option.selected");
+        const selectEl = step.querySelector("select");
+        const inputEl = step.querySelector("input");
 
-            console.log(`Saved: ${currentKey} = ${selectedValue}`);
+        if (step.querySelector(".option-card") && optionCards.length === 0) valid = false;
+        if (step.querySelector(".list-option") && listOptions.length === 0) valid = false;
+        if (selectEl && !selectEl.value) valid = false;
+        if (inputEl && inputEl.type !== "range" && !inputEl.value) valid = false;
+
+        if (!valid) {
+            alert("Please select or fill this step before continuing.");
+        }
+        return valid;
+    }
+
+    function nextStep() {
+        if (currentStep < steps.length - 1) {
+            if (!validateStep()) return;
+            currentStep++;
+            updateStep();
+        }
+    }
+
+    function prevStep() {
+        if (currentStep > 0) {
+            currentStep--;
+            updateStep();
+        }
+    }
+
+    function toggleOption(card, key, value) {
+        card.classList.toggle("selected");
+        if (!surveyData[key]) surveyData[key] = [];
+        if (card.classList.contains("selected")) {
+            surveyData[key].push(value);
+        } else {
+            surveyData[key] = surveyData[key].filter(v => v !== value);
+        }
+        localStorage.setItem("surveyData", JSON.stringify(surveyData));
+    }
+
+    function selectSingle(el, key, value) {
+        const siblings = el.parentElement.querySelectorAll(".list-option");
+        siblings.forEach(s => s.classList.remove("selected"));
+        el.classList.add("selected");
+        surveyData[key] = value;
+        localStorage.setItem("surveyData", JSON.stringify(surveyData));
+    }
+
+    function saveSelect(key, val) {
+        surveyData[key] = val;
+        localStorage.setItem("surveyData", JSON.stringify(surveyData));
+    }
+
+    function finishSurvey() {
+        surveyData.name = document.getElementById("name").value;
+        surveyData.email = document.getElementById("email").value;
+        surveyData.phone = document.getElementById("phone").value;
+        surveyData.dob = document.getElementById("dob").value;
+        surveyData.zipcode = document.getElementById("zipcode").value;
+
+        if (!surveyData.name || !surveyData.email || !surveyData.phone || !surveyData.dob || !surveyData.zipcode) {
+            alert("Please fill all fields before submitting.");
+            return;
         }
 
-        function loadSavedSelections() {
-            const currentKey = `page_${currentPage}`;
-            const savedValue = localStorage.getItem(currentKey);
+        localStorage.setItem("surveyData", JSON.stringify(surveyData));
+        document.getElementById("result").innerHTML = "<h3>Saved Data:</h3><pre>" + JSON.stringify(surveyData, null, 2) + "</pre>";
+    }
 
-            if (savedValue) {
-                // Auto-select the saved option if the user navigates back
-                document.querySelectorAll('input[name="choice"]').forEach(input => {
-                    if (input.value === savedValue) {
-                        input.checked = true;
-                    }
-                });
-            }
+    // Range slider ka event
+    debtRange.addEventListener('input', () => {
+        let val = parseInt(debtRange.value);
+        if (val >= 1000000) {
+            debtValue.textContent = '$1M+';
+        } else {
+            debtValue.textContent = `$${val.toLocaleString()}`;
         }
+        surveyData.debt = debtRange.value;
+        localStorage.setItem("surveyData", JSON.stringify(surveyData));
+    });
 
-        function renderPage() {
-            const buttonContainer = document.getElementById("button-container");
-
-            // ✅ Page 1 → Column Direction
-            if (currentPage === 0) {
-                buttonContainer.style.flexDirection = "row";
-                buttonContainer.style.alignItems = "center"; // ✅ Align left like the design
-            } else {
-                buttonContainer.style.flexDirection = "row";
-                buttonContainer.style.alignItems = "center";
-            }
-            const questionData = { ...questions[currentPage] };
-            let bannerImage = questionData.image;
-            let previousSelection = localStorage.getItem("page_1"); // Get Page 1 selection
-            let selectedOption = localStorage.getItem(`page_${currentPage}`); // Get saved value for current page
-
-            const optionsContainer = document.getElementById("options-container");
-            optionsContainer.innerHTML = ""; // Clear previous options
-            // PAGE 2 - Show correct options & restore selection
-            if (currentPage === 2) {
-                if (previousSelection === "Heal Myself") {
-                    bannerImage = "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b98123162c1559133773d5.png";
-                    questionData.title = "What area of life would you like to focus on?";
-                    questionData.subtitle = "Heal Myself";
-
-                    questionData.options = [
-                        { id: 1, name: "Health" },
-                        { id: 2, name: "Relationship" },
-                        { id: 3, name: "Finances" }
-                    ];
-                } else if (previousSelection === "Heal Others") {
-                    bannerImage = "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b98123162c15af843773d4.png";
-                    questionData.title = "Where are you on your healing journey?";
-                    questionData.subtitle = "Heal Others";
-
-                    questionData.options = [
-                        { id: 1, name: "Brand New to Healing" },
-                        { id: 2, name: "Have Some Understanding" },
-                        { id: 3, name: "Practitioner of Another Healing Form" }
-                    ];
-                } else if (previousSelection === "Heal the World") {
-                    bannerImage = "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b98123162c1559133773d5.png";
-                    questionData.title = "How would you like to contribute to global healing?";
-
-                }
-            }
-
-            // PAGE 3 - Update options based on Page 2 selection
-            if (currentPage === 3) {
-                let page2Selection = localStorage.getItem("page_2"); // Get saved value from Page 2
-
-                if (["Brand New to Healing", "Have Some Understanding", "Practitioner of Another Healing Form"].includes(page2Selection)) {
-                    currentPage = 4; // Directly jump to Page 4
-                    renderPage();
-                    return;
-                }
-
-                if (page2Selection === "Health") {
-                    bannerImage = "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b981238c2b8259df1688f0.png";
-                    questionData.title = "What type of health improvement are you seeking?";
-                    questionData.subtitle = "Heal myself » HEALTH";
-
-                    questionData.options = [
-                        { id: 1, name: "Physical" },
-                        { id: 2, name: "Emotional" },
-                        { id: 3, name: "Mental" }
-                    ];
-                } else if (page2Selection === "Relationship") {
-                    bannerImage = "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b981338c2b8208331688f9.png";
-                    questionData.title = "What type of relationship would you like to improve?";
-                    questionData.subtitle = "Heal myself » Relationship";
-
-                    questionData.options = [
-                        { id: 1, name: "Love" },
-                        { id: 2, name: "Family" },
-                        { id: 3, name: "Friends" }
-                    ];
-                } else if (page2Selection === "Finances") {
-                    bannerImage = "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b98123fa0e0bca1baaa0d5.png";
-                    questionData.title = "What area of finances would you like to grow in?";
-                    questionData.subtitle = "Heal myself » Finances";
-
-                    questionData.options = [
-                        { id: 1, name: "Personal" },
-                        { id: 2, name: "Business" }
-                    ];
-                }
-            }
-            // PAGE 3 - Update options based on Page 2 selection
-            if (currentPage === 4) {
-
-                bannerImage = "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b981238c2b8244a81688f1.png";
-                questionData.options = [
-                    { id: 1, name: "Very Open" },
-                    { id: 2, name: "Curious" },
-                    { id: 3, name: "Not Sure" }
-                ];
-            }
-            // PAGE 5 - Save Name Input in LocalStorage
-            if (currentPage === 5) {
-                bannerImage = "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b98123fbaeaba571978578.png";
-                questionData.title = "What is your name?";
-
-                const inputField = document.createElement("input");
-                inputField.type = "text";
-                inputField.name = "full_name";
-                inputField.placeholder = "Enter your name";
-                inputField.classList.add("input-field");
-
-                // Restore saved name if exists
-                inputField.value = localStorage.getItem("page_5") || "";
-
-                // Save name in LocalStorage on input change
-                inputField.oninput = () => {
-                    localStorage.setItem("page_5", inputField.value);
-                };
-
-                optionsContainer.appendChild(inputField);
-            }
-
-            // PAGE 6 - Save Email Input in LocalStorage
-            else if (currentPage === 6) {
-                bannerImage = "https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/67b98123fbaeaba571978578.png";
-                questionData.title = "What is your email?";
-
-                const emailField = document.createElement("input");
-                emailField.type = "email";
-                emailField.name = "email";
-                emailField.placeholder = "Enter your email";
-                emailField.classList.add("input-field");
-
-                // Restore saved email if exists
-                emailField.value = localStorage.getItem("page_6") || "";
-
-                // Save email in LocalStorage on input change
-                emailField.oninput = () => {
-                    localStorage.setItem("page_6", emailField.value);
-                };
-
-                optionsContainer.appendChild(emailField);
-
-                // Checkbox for sending a copy of answers
-                const checkboxLabel = document.createElement("label");
-                checkboxLabel.classList.add("checkbox-label");
-                checkboxLabel.innerHTML = `
-                    <input type="checkbox" id="terms-checkbox" class="checkbox-large"> I would like a copy of my answers sent to my email.
-                `;
-
-                // Restore saved checkbox state
-                const checkbox = checkboxLabel.querySelector("#terms-checkbox");
-                checkbox.checked = localStorage.getItem("terms-checkbox") === "true";
-                checkbox.onchange = () => {
-                    localStorage.setItem("terms-checkbox", checkbox.checked);
-                };
-
-                optionsContainer.appendChild(checkboxLabel);
-            }
-
-            // PAGE 7 - Thank You Page (Show Name & Email)
-            else if (currentPage === 7) {
-                let userName = localStorage.getItem("page_5") || "";
-                let userEmail = localStorage.getItem("page_6") || "";
-
-                // Set Title with Name
-                if (userName) {
-                    questionData.title = `Thank you, ${userName}`;
-                } else {
-                    questionData.title = "Thank you!";
-                }
-
-                let uniqueResponses = new Set(); // Store only unique responses
-                let resultHTML = `<ul>`; // Start the unordered list
-
-                function addAnswer(textTemplate, key) {
-                    let value = localStorage.getItem(key);
-                    if (value && !uniqueResponses.has(value)) { // Check for duplicates
-                        uniqueResponses.add(value); // Add to Set to prevent duplicates
-                        resultHTML += `<li>${textTemplate.replace("{value}", `<strong>${value}</strong>`)}</li>`;
-                    }
-                }
-
-                // Add responses with correct text format
-                addAnswer("Are you familiar with Dr. & Master Sha’s Teachings? {value}", "page_0");
-                addAnswer("You’re here to: {value}", "page_1");
-                addAnswer("You want to focus on: {value}", "page_2");
-                let page3Value = localStorage.getItem("page_3");
-                if (page3Value === "Physical") {
-                    addAnswer("The health improvement you are seeking is {value}", "page_3");
-                } else if (page3Value === "Emotional") {
-                    addAnswer("The health improvement you are seeking is {value}", "page_3");
-                } else if (page3Value === "Mental") {
-                    addAnswer("The health improvement you are seeking is {value}", "page_3");
-                } else if (page3Value === "Personal") {
-                    addAnswer("The area of finances you want to grow in is {value}", "page_3");
-                } else if (page3Value === "Business") {
-                    addAnswer("The area of finances you want to grow in is {value}", "page_3");
-                } else {
-                    addAnswer("The relationship you want to improve is {value}", "page_3");
-                }
-                addAnswer("You are {value} to using spiritual tools", "page_4");
+    updateStep();
+</script>
 
 
-                // if (localStorage.getItem("terms-checkbox") === "true") {
-                //     resultHTML += `<li><strong>Subscribed</strong>: Yes</li>`;
-                // }
-
-                resultHTML += `</ul>`; // Close the unordered list
-
-                let resultDiv = document.createElement("div");
-                resultDiv.innerHTML = resultHTML;
-                optionsContainer.appendChild(resultDiv);
-            }
-
-            else if (questionData.options && questionData.options.length > 0) {
-                questionData.options.forEach(option => {
-                    const label = document.createElement("label");
-                    label.classList.add("option");
-
-                    let isChecked = selectedOption === option.name ? "checked" : "";
-
-                    label.innerHTML = `
-                <span>${option.name || option}</span>
-                <input type="radio" name="choice" value="${option.name || option}" ${isChecked} onchange="handleSelection(event)">
-                <div class="checkmark"></div>
-            `;
-                    optionsContainer.appendChild(label);
-                });
-            } else {
-                console.warn(`No options found for page ${currentPage}`);
-            }
-
-            document.getElementById("question-image").src = bannerImage;
-            document.getElementById("question-text").innerText = questionData.title || "";
-            document.getElementById("subtitle").innerText = questionData.subtitle || "";
-            document.getElementById("question-des").innerText = questionData.text || "";
-
-            document.getElementById("progress-bar").innerHTML = "";
-            for (let i = 1; i < questions.length; i++) {
-                const progressStep = document.createElement("div");
-                if (i <= currentPage) progressStep.classList.add("active");
-                document.getElementById("progress-bar").appendChild(progressStep);
-            }
-
-            const nextButton = document.querySelector(".btn");
-            if (currentPage === 0) {
-                nextButton.innerText = "START THE QUIZ";
-            } else if (currentPage === questions.length - 1) {
-                nextButton.innerText = "SUBMIT";
-            } else {
-                nextButton.innerText = "NEXT";
-            }
-        }
-
-        function handleSelection(event) {
-            let selectedValue = event.target.value;
-            localStorage.setItem(`page_${currentPage}`, selectedValue);
-        }
-
-        function nextPage() {
-            if ([1, 2, 3, 4].includes(currentPage)) {
-                let selected = document.querySelector('input[name="choice"]:checked');
-                if (!selected) {
-                    alert("Please select an option before proceeding.");
-                    return;
-                }
-            }
-
-            if (currentPage === 5) {
-                let nameInput = document.querySelector('input[name="full_name"]');
-                if (!nameInput.value.trim()) {
-                    alert("Please enter your name.");
-                    return;
-                }
-                localStorage.setItem("page_5", nameInput.value.trim());
-            }
-
-            if (currentPage === 6) {
-                let emailInput = document.querySelector('input[name="email"]');
-                let emailValue = emailInput.value.trim();
-                let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-                if (!emailValue) {
-                    alert("Please enter your email.");
-                    return;
-                }
-                if (!emailPattern.test(emailValue)) {
-                    alert("Please enter a valid email address.");
-                    return;
-                }
-                localStorage.setItem("page_6", emailValue);
-            }
-
-            // ✅ Last Page: Send data to GoHighLevel API
-            if (currentPage === questions.length - 1) {
-                // alert("Submitting...");
-                sendToGoHighLevel();
-                return;
-            }
-
-            // ✅ Page skipping logic
-            if (currentPage < questions.length - 1) {
-                let selectedOption = localStorage.getItem("page_1");
-                let page2Selection = localStorage.getItem("page_2");
-
-                if (currentPage === 1 && selectedOption === "Heal the World") {
-                    localStorage.removeItem("page_2");
-                    localStorage.removeItem("page_3");
-                    currentPage = 4;
-                } else if (currentPage === 2 && ["Brand New to Healing", "Have Some Understanding", "Practitioner of Another Healing Form"].includes(page2Selection)) {
-                    currentPage = 4;
-                } else {
-                    currentPage++;
-                }
-                renderPage();
-            }
-        }
-
-        async function sendToGoHighLevel() {
-            const url = "https://rest.gohighlevel.com/v1/contacts/";
-
-            let fullName = localStorage.getItem("page_5") || "";
-            let email = localStorage.getItem("page_6") || "";
-            let uniqueResponses = new Set();
-            let formattedAnswers = [];
-
-            function addAnswer(textTemplate, key) {
-                let value = localStorage.getItem(key);
-                if (value && !uniqueResponses.has(value)) {
-                    uniqueResponses.add(value);
-                    formattedAnswers.push(textTemplate.replace("{value}", value));
-                }
-            }
-            addAnswer("Are you familiar with Dr. & Master Sha’s Teachings? {value}", "page_0");
-            addAnswer("You,re here to: {value}", "page_1");
-            addAnswer("You want to focus on: {value}", "page_2");
-            let page3Value = localStorage.getItem("page_3");
-            if (page3Value === "Physical") {
-                addAnswer("The health improvement you are seeking is {value}", "page_3");
-            } else if (page3Value === "Emotional") {
-                addAnswer("The health improvement you are seeking is {value}", "page_3");
-            } else if (page3Value === "Mental") {
-                addAnswer("The health improvement you are seeking is {value}", "page_3");
-            } else if (page3Value === "Personal") {
-                addAnswer("The area of finances you want to grow in is {value}", "page_3");
-            } else if (page3Value === "Business") {
-                addAnswer("The area of finances you want to grow in is {value}", "page_3");
-            } else {
-                addAnswer("The relationship you want to improve is {value}", "page_3");
-            }
-            addAnswer("You are {value} to using spiritual tools", "page_4");
-
-            let data = {
-                firstName: fullName,
-                email: email,
-                customField: [
-                    { key: "survey_answer", value: formattedAnswers.join(" | ") }
-                ]
-            };
-
-            console.log("📨 Sending Data:", JSON.stringify(data, null, 2));
-
-            try {
-                let response = await fetch(url, {
-                    method: "POST",
-                    headers: {
-                        "Authorization": `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2NhdGlvbl9pZCI6Ik5hT2dORVR4SE5IaFBSTFRsZWM1IiwiY29tcGFueV9pZCI6IjhNbnU4ZXNITHUzVDV2d25GeGFrIiwidmVyc2lvbiI6MSwiaWF0IjoxNjkwNTYxNzc5OTkyLCJzdWIiOiJ1c2VyX2lkIn0.oj-bctQvctKuoEAHWWKRYWekZVJBHxEhw1aZ41Vg3XE`,
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify(data)
-                });
-
-                let result = await response.json();
-                console.log("🔍 API Response:", result);
-
-                if (response.ok) {
-                    // alert("Survey Submitted Successfully!");
-                    let page1Value = localStorage.getItem("page_1");
-                    let page2Value = localStorage.getItem("page_2");
-                    let page3Value = localStorage.getItem("page_3");
-                    if (page2Value === "Relationship") {
-                        // Relationship link here
-                        window.location.href = "https://staging2.mastersha.com/dashboard-heal-myself-relationship-health/";
-                    }
-                    else if (page2Value === "Finances") {
-                         // Finances link here
-                        window.location.href = "https://staging2.mastersha.com/dashboard-heal-myself-finance/";
-                    }
-                    else if (page3Value === "Physical") {
-                        // Physical link here
-                        window.location.href = "https://staging2.mastersha.com/dashboard-heal-myself-physical-health/";
-                    }
-                    else if (page3Value === "Emotional") {
-                        // Emotional link here
-                        window.location.href = "https://staging2.mastersha.com/tailored-dashboard-heal-myself-health/";
-                    }
-                    else if (page3Value === "Mental") {
-                        // Mental link here
-                        window.location.href = "https://staging2.mastersha.com/dashboard-heal-myself-mental-health/";
-                    }
-                     else if (page1Value === "Heal Others") {
-                        window.location.href = "https://stagingdrsha.ghlking.com/?page_id=1916";
-                    }
-                     else {
-                        window.location.href = "https://stagingdrsha.ghlking.com/?page_id=644";
-                    }
-                } else {
-                    throw new Error(result.message || "Submission Failed!");
-                }
-            } catch (error) {
-                console.error("❌ Error Sending Data:", error);
-                alert("Failed to submit survey. Please try again.");
-            }
-        }
-
-
-
-
-        function prevPage() {
-            if (currentPage === 0) {
-                window.location.href = "https://stagingdrsha.ghlking.com/";
-                return;
-            }
-            if (currentPage > 0) {
-                let selectedOption = localStorage.getItem("page_1"); // Page 1 selection
-                let page2Selection = localStorage.getItem("page_2"); // Page 2 selection
-                if (currentPage === 4 && selectedOption === "Heal the World") {
-                    currentPage = 1; // Go back to Page 1
-                }
-                else if (currentPage === 4 && ["Brand New to Healing", "Have Some Understanding", "Practitioner of Another Healing Form"].includes(page2Selection)) {
-                    currentPage = 2; // Go back to Page 2
-                }
-                else {
-                    currentPage--;
-                }
-                renderPage();
-            }
-        }
-
-        // Initialize First Page
-        renderPage();
-
-    </script>
 </body>
 
 </html>
