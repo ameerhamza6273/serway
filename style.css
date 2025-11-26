@@ -40,7 +40,6 @@ body {
     letter-spacing: 2px;
     text-align: center !important;
     display: block;
-    margin-top: 15px;
 }
 
 .nav-link {
@@ -83,7 +82,7 @@ body {
 
 p.hero-subtitle {
     font-size: 1.1rem;
-    color: #666;
+    color: #fff;
     margin-top: 1rem;
 }
 
@@ -410,7 +409,7 @@ footer {
 .feature p {
     margin: 0;
     font-size: 13px;
-    color: #555;
+    color: #fff;
 }
 
 .sep {
@@ -435,31 +434,6 @@ footer {
 @media (min-width: 992px) {
     .call-btn {
         display: none;
-    }
-}
-
-/* Desktop: Show top logo, hide navbar logo */
-.top-desktop-logo {
-    display: block;
-}
-
-.navbar-brand.mobile-logo {
-    display: none !important;
-}
-
-/* Mobile: Hide top logo, show navbar logo */
-@media (max-width: 991px) {
-
-    .top-desktop-logo {
-        display: none !important;
-    }
-
-    .navbar-brand.mobile-logo {
-        display: block !important;
-    }
-
-    .navbar-brand {
-        margin-top: 5px !important;
     }
 }
 

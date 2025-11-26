@@ -12,86 +12,77 @@
 </head>
 
 <body>
-    <!-- Navigation -->
-    <a class="navbar-brand text-center mt-4 top-desktop-logo" href="index.html">
-        <img src="images/SEAHAWK lgo.png" width="200" alt="">
+   
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid px-4 px-lg-5 d-flex align-items-center">
+
+    <!-- Mobile Left: Menu Toggle -->
+    <button class="navbar-toggler d-lg-none order-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Logo (center on mobile, left on desktop) -->
+    <a class="navbar-brand mx-auto order-2 order-lg-1" href="index.html">
+        <img src="images/SEAHAWK lgo.png" width="160" alt="">
     </a>
 
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid px-4 px-lg-5 d-flex align-items-center justify-content-between">
+    <!-- Desktop Menu (right on desktop) -->
+    <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="chauffeurs.html">Chauffeur Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="corporate-travel.html">Corporate Travel</a></li>
+            <li class="nav-item"><a class="nav-link" href="airport-transfers.html">Airport Transfers</a></li>
+            <li class="nav-item"><a class="nav-link" href="events.html">Event Chauffeurs</a></li>
+            <li class="nav-item"><a class="nav-link" href="fleet.html">Our Fleets</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
 
-            <!-- Left: Menu Toggle -->
-            <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <!-- Mobile Right: Phone Icon -->
+    <a class="call-btn d-lg-none order-3" style="background: #e8e5e399; border-radius: 50px; padding:6px 10px;" href="tel:+447885496931">
+        <i class="fa-solid fa-phone text-black"></i>
+    </a>
 
-            <!-- Center: Logo -->
-            <a class="navbar-brand mx-auto order-2 mobile-logo" href="index.html">
-                <img src="images/SEAHAWK lgo.png" width="160" alt="">
-            </a>
+</div>
 
-            <!-- Right: Phone Icon -->
-            <a class="call-btn d-lg-none order-3 " style="background: #e8e5e399;border-radius: 50px;padding:6px 10px;"
-                href="tel:+447885496931">
-                <i class="fa-solid fa-phone text-black"></i>
-            </a>
-
-            <!-- Desktop Menu -->
-            <div class="collapse navbar-collapse order-lg-3 mt-lg-0 mt-3" id="navbarNav">
-                <ul class="navbar-nav mx-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="chauffeurs.html">Chauffeur Services</a></li>
-                    <!-- <li class="nav-item"><a class="nav-link" href="#ourHeritage">Our Heritage</a></li> -->
-                    <li class="nav-item"><a class="nav-link" href="corporate-travel.html">Corporate Travel</a></li>
-                    <li class="nav-item"><a class="nav-link" href="airport-transfers.html">Airport Transfers</a></li>
-                    <li class="nav-item"><a class="nav-link" href="events.html">Event chauffeurs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="fleet.html">Our Fleets</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-                    <li class="nav-item"><a class="nav-link"
-                            style="background: #e8e5e399;font-size: 13px;border-radius: 50px;padding: 5px 10px;"
-                            href="tel:+447885496931"><i class="fa-solid fa-phone"></i> +44 7885 496931</a></li>
-                </ul>
-            </div>
-        </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="pb-5" style=" background: #fffbec;padding: 10px;">
-        <div class="hero">
-            <div class="hero-content">
-                <h1>The Art of Chauffeured Excellence</h1>
-                <p class="hero-subtitle pt-4">Across the United Kingdom</p>
+<section style="background: url('images/hero-image.jpg') center/cover no-repeat;">
+    <div class="hero" style="background: #d9832885; padding: 100px; border-radius: 12px;">
+        <div class="hero-content" style="text-align: center; max-width: 900px; margin: 0 auto;">
+            <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 20px;">The Art of Chauffeured Excellence</h1>
+            <p class="hero-subtitle pt-4" style="font-size: 1.5rem; margin-bottom: 40px;">Across the United Kingdom</p>
 
-                <div class="container">
-                    <div class="features" role="list" aria-label="Service features">
-                        <div class="feature" role="listitem">
-                            <h3>Luxury</h3>
-                            <p>Premium Service</p>
-                        </div>
-
-                        <div class="sep" aria-hidden="true"></div>
-
-                        <div class="feature" role="listitem">
-                            <h3>Precision</h3>
-                            <p>On-Time Delivery</p>
-                        </div>
-
-                        <div class="sep" aria-hidden="true"></div>
-
-                        <div class="feature" role="listitem">
-                            <h3>Professionalism</h3>
-                            <p>Expert Drivers</p>
-                        </div>
+            <div class="container">
+                <div class="features" role="list" aria-label="Service features" style="display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap;">
+                    
+                    <div class="feature" role="listitem" style="text-align: center;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Luxury</h3>
+                        <p>Premium Service</p>
                     </div>
+
+                    <div class="sep" aria-hidden="true" style="width:1px; background:#d97706; height:40px; align-self:center;"></div>
+
+                    <div class="feature" role="listitem" style="text-align: center;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Precision</h3>
+                        <p>On-Time Delivery</p>
+                    </div>
+
+                    <div class="sep" aria-hidden="true" style="width:1px; background:#d97706; height:40px; align-self:center;"></div>
+
+                    <div class="feature" role="listitem" style="text-align: center;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Professionalism</h3>
+                        <p>Expert Drivers</p>
+                    </div>
+
                 </div>
             </div>
         </div>
+    </div>
+</section>
 
-        <img src="images/hero-image.jpg"
-            style="max-width: 1200px; height: auto;margin: 0 auto; display: block; border-radius: 12px;"
-            alt="Executive Transport" class="section-image">
-
-    </section>
 
     <section class="services-first-sec">
         <img src="images/service-2.jpg" alt="Executive Driving">
