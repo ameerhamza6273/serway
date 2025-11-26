@@ -475,6 +475,68 @@
                 position: relative;
             }
         }
+        .faq-header {
+            padding: 3rem 0 1rem 0;
+            border-bottom: 1px solid #e0d5c7;
+        }
+
+        /* FAQ Container */
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Accordion Styles */
+        .accordion-item {
+            border: none;
+            border-bottom: 1px solid #e0d5c7;
+            margin-bottom: 1.5rem;
+            background-color: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-item:hover {
+            background-color: #fffbf5;
+            border-radius: 8px;
+            border-bottom: 1px solid #e17100;
+        }
+
+        .accordion-button {
+            background-color: transparent;
+            border: none;
+            color: #1a1a1a;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 1.5rem 1rem;
+            box-shadow: none;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: transparent;
+            color: #e17100;
+            box-shadow: none;
+        }
+
+        .accordion-button:focus {
+            border-color: #e17100;
+            box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.15);
+        }
+
+        .accordion-button::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23e17100'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+
+        .accordion-body {
+            padding: 0 1rem 1.5rem 1rem;
+            background-color: transparent;
+            border: none;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+        }
     </style>
 </head>
 
@@ -643,6 +705,90 @@
         </div>
     </section>
 
+         <!-- FAQ Header -->
+    <section style="background: #fffbeb;">
+        <div class="faq-header">
+            <div class="container">
+                <h2 class="text-center">Frequently Asked Questions</h2>
+            </div>
+        </div>
+
+        <!-- FAQ Content -->
+        <div class="faq-container">
+            <div class="accordion" id="faqAccordion">
+                <!-- FAQ 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            Do you offer airport transfers from all UK airports?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes — we cover all London airports, regional airports, private jet centres and FBOs. Our comprehensive airport transfer service includes real-time flight tracking and flexible pickup/drop-off arrangements to ensure you arrive on time, every time.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            Can I hire a chauffeur for a full day?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Absolutely. We provide hourly, daily and multi-day chauffeur hire packages tailored to your specific needs. Whether you need a few hours for business meetings or extended coverage for a multi-day event, our professional chauffeurs are ready to serve you with excellence.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            Do you offer multilingual chauffeurs?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes — we can arrange this upon request. Our network includes experienced chauffeurs fluent in multiple languages, ensuring seamless communication and personalized service for international clients and visitors.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                            Is your service suitable for groups?
+                        </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Our Mercedes V Class and luxury vans accommodate up to 7 passengers with full comfort and style. Perfect for corporate events, celebrations, or group travel, our fleet ensures everyone travels in luxury with premium amenities and professional service.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                            Do you provide corporate invoicing?
+                        </button>
+                    </h2>
+                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes — tailored corporate accounts and monthly invoicing are available. We work with businesses of all sizes to provide flexible payment solutions, detailed reporting, and dedicated account management for seamless billing and service coordination.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
     <!-- Footer -->
     <footer id="contact">
         <div class="container">
