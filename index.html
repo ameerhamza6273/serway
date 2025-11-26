@@ -1,12 +1,12 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Life Insurance Survey</title>
+    <title>Seahawks Services - Luxury Chauffeur Service UK</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -14,648 +14,646 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: sans-serif;
-            min-height: 100vh;
-            background: #000;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #1a1a1a;
+            background-color: #ffffff;
+            overflow-x: hidden;
         }
 
-        .header {
-            display: flex;
-            justify-content: space-between;
-            padding: 15px;
-            align-items: center;
+        /* Navigation */
+        .navbar {
+            padding: 1rem 0;
         }
 
-        .progress-container {
-            width: 100%;
-            height: 8px;
-            background: #e5e7eb;
-            border-radius: 4px;
-            margin-bottom: 20px;
-        }
-
-        .progress-bar {
-            height: 8px;
-            background: #065f46;
-            width: 0%;
-            border-radius: 4px;
-            transition: width 0.3s;
-        }
-
-        .container {
-            max-width: 500px;
-            margin: 10px auto 40px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .title {
-            font-size: 25px;
-            font-weight: 600;
-            margin-bottom: 10px;
-            line-height: 1.4;
-        }
-
-        .subtitle {
-            font-size: 14px;
-            color: #6b7280;
-            margin-bottom: 20px;
-        }
-
-        /* option card style (multi select) */
-        .options-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-bottom: 24px;
-        }
-
-        .option-card {
-            border: 2px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 16px;
-            text-align: center;
-            cursor: pointer;
-            transition: .2s;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .option-card:hover {
-            border-color: #cbd5e0;
-        }
-
-        .option-card.selected {
-            border-color: #10b981;
-            background: #f0fdf4;
-        }
-
-        .option-card.selected::after {
-            content: '✓';
-            position: absolute;
-            top: 6px;
-            right: 6px;
-            width: 20px;
-            height: 20px;
-            background: #10b981;
-            color: #fff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-        }
-
-        /* list option style (single select) */
-        .list-options {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-bottom: 24px;
-        }
-
-        .list-option {
-            padding: 14px;
-            border-radius: 6px;
-            background: #f1f5f9;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 500;
-            color: #111827;
-            transition: .2s;
-        }
-
-        .list-option:hover {
-            background: #e2e8f0;
-        }
-
-        .list-option.selected {
-            background: #065f46;
-            color: #fff;
-        }
-
-        /* form style */
-        .form-group {
-            margin-bottom: 16px;
-        }
-
-        label {
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a1a1a !important;
+            letter-spacing: 2px;
+            text-align: center !important;
             display: block;
-            margin-bottom: 6px;
-            font-weight: 500;
-        }
-
-        input,
-        select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #d1d5db;
-            border-radius: 6px;
-        }
-
-        pre {
-            background: #f3f4f6;
-            padding: 10px;
-            border-radius: 6px;
-            font-size: 14px;
-        }
-
-        /* buttons */
-        .buttons {
-            display: flex;
-            justify-content: space-between;
-            gap: 10px;
             margin-top: 15px;
         }
 
-        .submit-btn {
+        .nav-link {
+            color: #1a1a1a !important;
+            margin: 0 1rem;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .nav-link:hover {
+            color: #e17100 !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        .hero-content p {
+            font-size: 1.4rem;
+            color: #e17100;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        p.hero-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-top: 1rem;
+        }
+
+
+
+        .section-image {
+            width: 100%;
+            height: 650px;
+            /* adjustable */
+            object-fit: cover;
+            display: block;
+        }
+
+
+
+        /* ===============================
+   Services First Section (Isolated)
+================================ */
+
+        .services-first-sec {
+            position: relative;
+            max-width: 1200px;
+            height: 100vh;
+            /* full screen like example */
+            overflow: hidden;
+            margin: 50px auto 0px auto;
+            border-radius: 12px;
+        }
+
+        .services-first-sec img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Center Content */
+        .services-first-sec .content-box {
+            position: absolute;
+            bottom: 40px;
+            /* ⭐ Bottom se distance */
+            left: 50%;
+            transform: translateX(-50%);
+            /* ⭐ Sirf X-axis center */
+            text-align: center;
+            color: #fff;
+            padding: 20px;
             width: 100%;
         }
 
-        .btn {
-            flex: 1;
-            padding: 12px;
-            border: none;
-            border-radius: 8px;
-            font-size: 15px;
+        .services-first-sec .content-box h2 {
+            font-size: 2.6rem;
             font-weight: 600;
+            line-height: 1.3;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .services-first-sec .content-box .date {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        /* Button */
+        .services-first-sec .btn-discover {
+            padding: 12px 35px;
+            border: 1px solid #fff;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .services-first-sec .btn-discover:hover {
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .services-first-sec {
+                height: 80vh;
+            }
+
+            .services-first-sec .content-box h2 {
+                font-size: 1.8rem;
+            }
+
+            .section-image {
+                margin: 0 10px 0 10px;
+            }
+
+            .services-first-sec {
+                margin: 50px 10px 0px 10px;
+            }
+
+        }
+
+
+        /* Why Choose Section */
+        .why-choose {
+            background-color: #fffbeb;
+            padding: 80px 0;
+        }
+
+        .why-choose-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 4rem;
+            color: #1a1a1a;
+        }
+
+        .value-card {
+            text-align: center;
+            padding: 40px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .value-card h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #e37500;
+            margin-bottom: 1rem;
+        }
+
+        .value-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin: 1rem 0;
+        }
+
+        .stat-box {
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #e17100;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn-light-custom:nth-child(1) {
+            color: #fff !important;
+            background-color: #e17100;
+
+        }
+
+        .btn-light-custom:nth-child(1):hover {
+            color: #e17100 !important;
+            background-color: #fff;
+
+        }
+
+        .btn-light-custom {
+            background-color: white;
+            color: #e17100;
+            padding: 12px 40px;
+            font-weight: 600;
+            border-radius: 4px;
+            border: 2px solid #e17100;
+            text-decoration: none;
+            transition: all 0.3s;
             cursor: pointer;
+            display: inline-block;
         }
 
-        .btn.next {
-            background: #111827;
-            color: white;
+        .btn-light-custom:hover {
+            background-color: #e17100;
+            color: #fff;
         }
 
-        .btn.back {
-            background: #e5e7eb;
-            color: #111827;
+        /* Footer */
+        footer {
+            background-color: #0d0d0d;
+            color: #ccc;
+            padding: 60px 0 20px;
         }
 
-        .btn:disabled {
-            background: #a0aec0;
-            cursor: not-allowed;
+        .footer-section h5 {
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #e17100;
         }
 
-        .hidden {
-            display: none;
+        .footer-section p {
+            margin-bottom: 0.8rem;
+            line-height: 1.8;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #e17100;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            text-align: center;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 991px) {
+
+
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-content h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+
+            .navbar-brand {
+                font-size: 1.3rem;
+            }
+
+            .nav-link {
+                margin: 0.5rem 0;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+
+            .section-content {
+                padding: 40px 20px;
+            }
+
+            .stats-container {
+                gap: 1.5rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .stat-box {
+                padding: 1rem;
+            }
+        }
+
+        .hero-content .container {
+            max-width: 900px;
+            margin: 40px auto 10px auto;
+            padding: 0 16px;
+        }
+
+        .features {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+
+        .feature {
+            text-align: center;
+            min-width: 150px;
+        }
+
+        .feature h3 {
+            margin: 0 0 8px 0;
+            font-size: 18px;
+            color: #d98100;
+            font-weight: 700;
+        }
+
+        .feature p {
+            margin: 0;
+            font-size: 13px;
+            color: #555;
+        }
+
+        .sep {
+            width: 6px;
+            height: 6px;
+            background: #c7c7c7;
+            border-radius: 50%;
+            flex: 0 0 auto;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 680px) {
+            .features {
+                gap: 20px;
+            }
+
+            .sep {
+                display: none;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="header">
-        <div><img src="https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/68baba262398ef1f95c14a77.webp"
-                alt="user" style="max-width: 200px;"></div>
-        <div style="color: #fff;">Need help? <a href="tel:(866) 846-1270">(866) 846-1270</a></div>
-    </div>
+    <!-- Navigation -->
+    <a class="navbar-brand text-center mt-4" href="#"><img src="images/SEAHAWK lgo.png" width="200" alt=""></a>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid px-4 px-lg-5">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about ">About </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#chauffeurs">Chauffeurs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ourHeritage">Our Heritage</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#corporateTravel">Corporate Travel</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#airportTransfers">Airport Transfers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ourFleet">Our Fleet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
+
+    <section class="pb-5" style=" background: #fffbec;padding: 10px;">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>The Art of Chauffeured Excellence</h1>
+                <p class="hero-subtitle pt-4">Across the United Kingdom</p>
+
+                <div class="container">
+                    <div class="features" role="list" aria-label="Service features">
+                        <div class="feature" role="listitem">
+                            <h3>Luxury</h3>
+                            <p>Premium Service</p>
+                        </div>
+
+                        <div class="sep" aria-hidden="true"></div>
+
+                        <div class="feature" role="listitem">
+                            <h3>Precision</h3>
+                            <p>On-Time Delivery</p>
+                        </div>
+
+                        <div class="sep" aria-hidden="true"></div>
+
+                        <div class="feature" role="listitem">
+                            <h3>Professionalism</h3>
+                            <p>Expert Drivers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <img src="images/hero-image.jpg"
+            style="max-width: 1200px; height: auto;margin: 0 auto; display: block; border-radius: 12px;"
+            alt="Executive Transport" class="section-image">
+
+    </section>
+
+    <section class="services-first-sec">
+        <img src="images/service-2.jpg" alt="Executive Driving">
+
+        <div class="content-box">
+            <h2>EVENT CHAUFFEUR</h2>
+            <p class="date">Elegant transportation for weddings and special events</p>
+            <a href="#" class="btn-discover">Learn More</a>
+        </div>
+    </section>
+    <section class="services-first-sec">
+        <img src="images/service-3.jpg" alt="Executive Driving">
+
+        <div class="content-box">
+            <h2>PREMIUM COMFORT</h2>
+            <p class="date">Experience ultimate comfort with our premium fleet</p>
+            <a href="#" class="btn-discover">Learn More</a>
+        </div>
+    </section>
+    <section class="services-first-sec">
+        <img src="images/service-img-5.png" alt="Executive Driving">
+
+        <div class="content-box">
+            <h2>AIRPORT TRANSFER</h2>
+            <p class="date">Reliable and timely airport transportation services</p>
+            <a href="#" class="btn-discover">Learn More</a>
+        </div>
+    </section>
+
+
+
+    <!-- Why Choose Section -->
+    <section class="why-choose mt-5" id="why">
+        <div class="container">
+            <h2 class="why-choose-title">Why Choose Seahawks Services</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="value-card">
+                        <h3>Luxury</h3>
+                        <p>Premium fleet of immaculately maintained vehicles designed for ultimate comfort.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="value-card">
+                        <h3>Precision</h3>
+                        <p>Expert route planning, punctual arrivals, and meticulous attention to detail in every aspect.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="value-card">
+                        <h3>Professionalism</h3>
+                        <p>Extensively trained drivers, courteous service, and unwavering discretion that consistently
+                            exceeds expectations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="booking">
+        <div class="container">
+            <h2>Ready to Experience Excellence?</h2>
+            <p>Book your luxury transportation with Seahawks Services today</p>
+            <div class="cta-buttons">
+                <button class="btn-light-custom" onclick="alert('Booking system coming soon!')">Book Now</button>
+                <button class="btn-light-custom"
+                    onclick="alert('Phone: +44 (0)20 XXXX XXXX\nEmail: info@seahawks.co.uk')">Get In Touch</button>
+            </div>
+            <div class="stats-container">
+                <div class="stat-box">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Happy Clients</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Support</span>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer id="contact">
     <div class="container">
-        <div class="progress-container">
-            <div class="progress-bar" id="progress"></div>
-        </div>
+        <div class="row mb-4">
 
-        <!-- Steps -->
-        <div id="steps">
-
-            <!-- Step 1 -->
-            <div class="step">
-                <h1 class="title">Let’s get started! What are your goals for life insurance?</h1>
-                <p class="subtitle">Select all that apply.</p>
-                <div class="options-grid">
-                    <div class="option-card" onclick="toggleOption(this,'goals','protect')">
-                        <span>👨‍👩‍👧‍👦</span>
-                        <span>I want to protect my loved ones</span>
-                    </div>
-
-                    <div class="option-card" onclick="toggleOption(this,'goals','mortgage')">
-                        <span>🏠</span>
-                        <span>I want to pay off my mortgage</span>
-                    </div>
-
-                    <div class="option-card" onclick="toggleOption(this,'goals','future')">
-                        <span>💰</span>
-                        <span>I want to prepare for my family’s future</span>
-                    </div>
-
-                    <div class="option-card" onclick="toggleOption(this,'goals','peace')">
-                        <span>🧘</span>
-                        <span>I'm looking for peace of mind</span>
-                    </div>
-
-                    <div class="option-card" onclick="toggleOption(this,'goals','expenses')">
-                        <span>⚰️</span>
-                        <span>I want to cover my final expenses</span>
-                    </div>
-
-                    <div class="option-card" onclick="toggleOption(this,'goals','not_sure')">
-                        <span>❓</span>
-                        <span>I’m not sure</span>
-                    </div>
-
+            <div class="col-md-3">
+                <div class="footer-section">
+                    <h5> SEAHAWKS SERVICES</h5>
+                    <p><i class="fa-solid fa-gem"></i> The Art of Chauffeured Excellence</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Premium luxury transportation across the United Kingdom.</p>
                 </div>
             </div>
 
-            <!-- Step 2 (custom / blank) -->
-            <div class="step hidden">
-                <h1 class="title">Who depends on you financially?</h1>
-                <p class="subtitle">This helps us customize your plan. Select all that apply.</p>
-                <div class="options-grid">
-                    <div class="option-card" onclick="toggleOption(this,'goals','spouse')">
-                        <span>💑</span>
-                        <span>Spouse or partner</span>
-                    </div>
-
-                    <div class="option-card" onclick="toggleOption(this,'goals','children')">
-                        <span>👶</span>
-                        <span>Children</span>
-                    </div>
-
-                    <div class="option-card" onclick="toggleOption(this,'goals','parent')">
-                        <span>👴</span>
-                        <span>Parent</span>
-                    </div>
-
-                    <div class="option-card" onclick="toggleOption(this,'goals','other')">
-                        <span>➕</span>
-                        <span>Other</span>
-                    </div>
-                </div>
-
-            </div>
-            <!-- Step 3 (custom / blank) -->
-            <div class="step hidden">
-                <h1 class="title">Great! We’ll get your coverage options in as little as 5 minutes.</h1>
-                <!-- HOW IT WORKS BUTTON -->
-                <div style="margin-bottom:20px;">
-                    <button
-                        style="border:1px solid #2d3748; background:transparent; color:#2d3748; font-size:12px; font-weight:600; padding:4px 10px; border-radius:4px; cursor:default;">
-                        HOW IT WORKS
-                    </button>
-                </div>
-
-                <!-- PROGRESS STEPS -->
-                <div style="margin-bottom:30px;">
-                    <div style="display:flex;align-items:flex-start;margin-bottom:20px;">
-                        <div
-                            style="width:28px;height:28px;border-radius:50%;background:#059669;color:#fff;font-weight:600;display:flex;align-items:center;justify-content:center;margin-right:10px;">
-                            1</div>
-                        <div style="font-size:16px;color:#2d3748;font-weight:600;">Tell us about your needs</div>
-                    </div>
-                    <div style="display:flex;align-items:flex-start;margin-bottom:20px;">
-                        <div
-                            style="width:28px;height:28px;border-radius:50%;border:2px solid #cbd5e0;color:#718096;font-weight:600;display:flex;align-items:center;justify-content:center;margin-right:10px;">
-                            2</div>
-                        <div style="font-size:16px;color:#718096;font-weight:500;">Add your basic details</div>
-                    </div>
-                    <div style="display:flex;align-items:flex-start;">
-                        <div
-                            style="width:28px;height:28px;border-radius:50%;border:2px solid #cbd5e0;color:#718096;font-weight:600;display:flex;align-items:center;justify-content:center;margin-right:10px;">
-                            3</div>
-                        <div style="font-size:16px;color:#718096;font-weight:500;">Provide health info and get your
-                            final rate</div>
-                    </div>
-                </div>
-
-                <!-- TESTIMONIAL BOX -->
-                <div style="border-radius:8px;padding:20px;background:#f8fafc; border:1px solid #e2e8f0;">
-                    <div style="font-size:32px;line-height:0.8;color:#10b981;margin-bottom:12px;">❝</div>
-                    <p style="font-size:16px;color:#2d3748;margin-bottom:16px;">
-                        Holy cow! I’m still blown away by how easy this was.
-                    </p>
-                    <div style="display:flex;align-items:center;gap:6px;font-size:14px;color:#2d3748;font-weight:600;">
-                        Tim Witte
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google"
-                            style="height:16px;">
-                        <span style="color:#fbbf24;">★★★★★</span>
-                    </div>
-                </div>
-
-
-            </div>
-
-            <!-- Step 4 -->
-            <div class="step hidden">
-                <h1 class="title">When would you like to be covered by life insurance?</h1>
-                <div class="list-options">
-                    <div class="list-option" onclick="selectSingle(this,'coverage','today')">I'm ready today</div>
-                    <div class="list-option" onclick="selectSingle(this,'coverage','week')">Within a week</div>
-                    <div class="list-option" onclick="selectSingle(this,'coverage','months')">In a few months</div>
-                    <div class="list-option" onclick="selectSingle(this,'coverage','not_sure')">I'm not sure</div>
+            <div class="col-md-3">
+                <div class="footer-section">
+                    <h5><i class="fa-solid fa-list"></i> Services</h5>
+                    <p><a href="#services"> EVENT CHAUFFEUR</a></p>
+                    <p><a href="#services"> Airport Transfers</a></p>
+                    <p><a href="#services"> PREMIUM COMFORT</a></p>
                 </div>
             </div>
 
-            <!-- Step 5 -->
-            <div class="step hidden">
-                <h1 class="title">Provide your sex at birth</h1>
-                <div class="list-options">
-                    <div class="list-option" onclick="selectSingle(this,'gender','male')">Male</div>
-                    <div class="list-option" onclick="selectSingle(this,'gender','female')">Female</div>
+            <div class="col-md-3">
+                <div class="footer-section">
+                    <h5><i class="fa-solid fa-address-book"></i> Contact Info</h5>
+                    <p><i class="fa-solid fa-phone"></i> +44 7885 496931</p>
+                    <p><i class="fa-solid fa-envelope"></i> Info@seahawksservices.com</p>
+                    <p><i class="fa-solid fa-globe"></i> https://seahawksservices.com</p>
                 </div>
             </div>
 
-            <!-- Step 6 -->
-            <div class="step hidden">
-                <h1 class="title">How is your health?</h1>
-                <div class="list-options">
-                    <div class="list-option" onclick="selectSingle(this,'health','average')">Average</div>
-                    <div class="list-option" onclick="selectSingle(this,'health','great')">Great</div>
+            <div class="col-md-3">
+                <div class="footer-section">
+                    <h5><i class="fa-solid fa-hashtag"></i> Follow Us</h5>
+                    <p><a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a></p>
+                    <p><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></p>
+                    <p><a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></p>
                 </div>
             </div>
-
-
-
-
-            <!-- Step 7 -->
-            <div class="step hidden">
-                <h1 class="title">Do you currently use nicotine products?</h1>
-                <div class="list-options">
-                    <div class="list-option" onclick="selectSingle(this,'already','yes')">Yes</div>
-                    <div class="list-option" onclick="selectSingle(this,'already','no')">No</div>
-                </div>
-            </div>
-            <!-- Step 8 -->
-            <div class="step hidden">
-                <h1 class="title">How many children do you have under 18?</h1>
-                <div class="list-options">
-                    <div class="list-option" onclick="selectSingle(this,'children','1')">1</div>
-                    <div class="list-option" onclick="selectSingle(this,'children','2')">2</div>
-                    <div class="list-option" onclick="selectSingle(this,'children','3')">3</div>
-                    <div class="list-option" onclick="selectSingle(this,'children','4+')">4+</div>
-                </div>
-            </div>
-
-            <!-- Step 9 -->
-            <div class="step hidden">
-                <h1 class="title">Do you have an Estate Plan or Will in place?</h1>
-                <div class="list-options">
-                    <div class="list-option" onclick="selectSingle(this,'estate_plan','yes')">Yes</div>
-                    <div class="list-option" onclick="selectSingle(this,'estate_plan','no')">No</div>
-                    <div class="list-option" onclick="selectSingle(this,'estate_plan','not_sure')">I'm not sure</div>
-                </div>
-            </div>
-
-            <!-- Step 10 -->
-            <div class="step hidden">
-                <h1 class="title">About how much remaining debt/mortgage do you have?</h1>
-
-                <label for="debtRange" class="subtitle" style="display:block;margin-bottom:8px;">
-                    Debt/mortgage amount
-                </label>
-                <div
-                    style="display:flex;justify-content:space-between;font-size:14px;color:#2d3748;font-weight:600;margin-bottom:6px;">
-                    <span id="debtValue">$0</span>
-                </div>
-
-                <input type="range" id="debtRange" min="0" max="1000000" step="10000" value="0"
-                    style="width:100%;margin-bottom:20px;cursor:pointer;">
-
-                <!-- Help box -->
-                <div
-                    style="display:flex;align-items:flex-start;gap:8px;border:1px solid #cbd5e0;background:#f8fafc;padding:12px;border-radius:6px;font-size:14px;color:#2d3748;">
-                    <span style="color:#2563eb;font-size:18px;">ℹ️</span>
-                    <span>Getting an estimate of your debt helps us understand your coverage needs.</span>
-                </div>
-            </div>
-
-            <!-- Step 11 -->
-            <div class="step hidden">
-                <h1 class="title">Great! We’ll get your coverage options in as little as 5 minutes.</h1>
-
-                <!-- PROGRESS STEPS -->
-                <div style="margin-bottom:30px;">
-
-                    <!-- Step 1 (Completed with tick) -->
-                    <div style="display:flex;align-items:flex-start;margin-bottom:20px;">
-                        <div
-                            style="width:28px;height:28px;border-radius:50%;background:#059669;color:#fff;font-weight:600;display:flex;align-items:center;justify-content:center;margin-right:10px;">
-                            ✓
-                        </div>
-                        <div style="font-size:16px;color:#2d3748;font-weight:600;">Tell us about your needs</div>
-                    </div>
-
-                    <!-- Step 2 (Active now, same style as old step 1) -->
-                    <div style="display:flex;align-items:flex-start;margin-bottom:20px;">
-                        <div
-                            style="width:28px;height:28px;border-radius:50%;background:#059669;color:#fff;font-weight:600;display:flex;align-items:center;justify-content:center;margin-right:10px;">
-                            2
-                        </div>
-                        <div style="font-size:16px;color:#2d3748;font-weight:600;">Add your basic details</div>
-                    </div>
-
-                    <!-- Step 3 (Pending, grey style) -->
-                    <div style="display:flex;align-items:flex-start;">
-                        <div
-                            style="width:28px;height:28px;border-radius:50%;border:2px solid #cbd5e0;color:#718096;font-weight:600;display:flex;align-items:center;justify-content:center;margin-right:10px;">
-                            3
-                        </div>
-                        <div style="font-size:16px;color:#718096;font-weight:500;">Provide health info and get your
-                            final rate</div>
-                    </div>
-
-                </div>
-
-
-                <!-- TESTIMONIAL BOX -->
-                <div style="border-radius:8px;padding:20px;background:#f8fafc; border:1px solid #e2e8f0;">
-                    <div style="font-size:32px;line-height:0.8;color:#10b981;margin-bottom:12px;">❝</div>
-                    <p style="font-size:16px;color:#2d3748;margin-bottom:16px;">
-                        Holy cow! I’m still blown away by how easy this was.
-                    </p>
-                    <div style="display:flex;align-items:center;gap:6px;font-size:14px;color:#2d3748;font-weight:600;">
-                        Tim Witte
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google"
-                            style="height:16px;">
-                        <span style="color:#fbbf24;">★★★★★</span>
-                    </div>
-                </div>
-
-
-            </div>
-
-            <!-- Step 12 (Country) -->
-            <div class="step hidden">
-                <h1 class="title">Select your country</h1>
-                <div class="form-group">
-                    <select id="country" onchange="saveSelect('country',this.value)">
-                        <option value="">Select Country</option>
-                        <option value="USA">USA</option>
-                        <option value="UK">UK</option>
-                        <option value="Pakistan">Pakistan</option>
-                    </select>
-                </div>
-            </div>
-
-            <!-- Step 13 (City) -->
-            <div class="step hidden">
-                <h1 class="title">Select your city</h1>
-                <div class="form-group">
-                    <select id="city" onchange="saveSelect('city',this.value)">
-                        <option value="">Select City</option>
-                        <option value="New York">New York</option>
-                        <option value="London">London</option>
-                        <option value="Lahore">Lahore</option>
-                    </select>
-                </div>
-            </div>
-
-            <!-- Step 14 (Zipcode) -->
-            <div class="step hidden">
-                <h1 class="title">Enter your zip code</h1>
-                <div class="form-group"><input type="text" id="zipcode" placeholder="Zip Code"></div>
-            </div>
-
-            <!-- Step 15 (Form + Summary) -->
-            <div class="step hidden">
-                <h1 class="title">Enter your details</h1>
-                <div class="form-group">
-                    <label>Name</label>
-                    <input type="text" id="name" placeholder="Enter your full name">
-                </div>
-
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" id="email" placeholder="Enter your email address">
-                </div>
-
-                <div class="form-group">
-                    <label>Phone Number</label>
-                    <input type="tel" id="phone" placeholder="Enter your phone number">
-                </div>
-
-                <div class="form-group">
-                    <label>Date of Birth</label>
-                    <input type="date" id="dob" placeholder="Select your date of birth">
-                </div>
-
-                <button class="btn next submit-btn" onclick="finishSurvey()">Submit</button>
-                <!-- <div id="result"></div> -->
-            </div>
-
 
         </div>
 
-        <!-- Nav buttons -->
-        <div class="buttons">
-            <button class="btn back" id="backBtn" onclick="prevStep()" disabled>Back</button>
-            <button class="btn next" id="nextBtn" onclick="nextStep()">Next</button>
+        <div class="footer-bottom">
+            <p style="margin: 0;">
+                <i class="fa-regular fa-copyright"></i>
+                2025 Seahawks Services. All rights reserved.
+            </p>
         </div>
     </div>
+</footer>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-    let currentStep = 0;
-    const steps = document.querySelectorAll(".step");
-    const progress = document.getElementById("progress");
-    const debtRange = document.getElementById('debtRange');
-    const debtValue = document.getElementById('debtValue');
-    const surveyData = {};
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
 
-    function updateStep() {
-        steps.forEach((s, i) => s.classList.toggle("hidden", i !== currentStep));
-        document.getElementById("backBtn").disabled = currentStep === 0;
-        document.getElementById("nextBtn").style.display = (currentStep === steps.length - 1) ? "none" : "block";
-        progress.style.width = ((currentStep + 0) / steps.length * 100) + "%";
-    }
-
-    function validateStep() {
-        const step = steps[currentStep];
-        let valid = true;
-
-        // check option cards
-        const optionCards = step.querySelectorAll(".option-card.selected");
-        const listOptions = step.querySelectorAll(".list-option.selected");
-        const selectEl = step.querySelector("select");
-        const inputEl = step.querySelector("input");
-
-        if (step.querySelector(".option-card") && optionCards.length === 0) valid = false;
-        if (step.querySelector(".list-option") && listOptions.length === 0) valid = false;
-        if (selectEl && !selectEl.value) valid = false;
-        if (inputEl && inputEl.type !== "range" && !inputEl.value) valid = false;
-
-        if (!valid) {
-            alert("Please select or fill this step before continuing.");
-        }
-        return valid;
-    }
-
-    function nextStep() {
-        if (currentStep < steps.length - 1) {
-            if (!validateStep()) return;
-            currentStep++;
-            updateStep();
-        }
-    }
-
-    function prevStep() {
-        if (currentStep > 0) {
-            currentStep--;
-            updateStep();
-        }
-    }
-
-    function toggleOption(card, key, value) {
-        card.classList.toggle("selected");
-        if (!surveyData[key]) surveyData[key] = [];
-        if (card.classList.contains("selected")) {
-            surveyData[key].push(value);
-        } else {
-            surveyData[key] = surveyData[key].filter(v => v !== value);
-        }
-        localStorage.setItem("surveyData", JSON.stringify(surveyData));
-    }
-
-    function selectSingle(el, key, value) {
-        const siblings = el.parentElement.querySelectorAll(".list-option");
-        siblings.forEach(s => s.classList.remove("selected"));
-        el.classList.add("selected");
-        surveyData[key] = value;
-        localStorage.setItem("surveyData", JSON.stringify(surveyData));
-    }
-
-    function saveSelect(key, val) {
-        surveyData[key] = val;
-        localStorage.setItem("surveyData", JSON.stringify(surveyData));
-    }
-
-    function finishSurvey() {
-        surveyData.name = document.getElementById("name").value;
-        surveyData.email = document.getElementById("email").value;
-        surveyData.phone = document.getElementById("phone").value;
-        surveyData.dob = document.getElementById("dob").value;
-        surveyData.zipcode = document.getElementById("zipcode").value;
-
-        if (!surveyData.name || !surveyData.email || !surveyData.phone || !surveyData.dob || !surveyData.zipcode) {
-            alert("Please fill all fields before submitting.");
-            return;
-        }
-
-        localStorage.setItem("surveyData", JSON.stringify(surveyData));
-        document.getElementById("result").innerHTML = "<h3>Saved Data:</h3><pre>" + JSON.stringify(surveyData, null, 2) + "</pre>";
-    }
-
-    // Range slider ka event
-    debtRange.addEventListener('input', () => {
-        let val = parseInt(debtRange.value);
-        if (val >= 1000000) {
-            debtValue.textContent = '$1M+';
-        } else {
-            debtValue.textContent = `$${val.toLocaleString()}`;
-        }
-        surveyData.debt = debtRange.value;
-        localStorage.setItem("surveyData", JSON.stringify(surveyData));
-    });
-
-    updateStep();
-</script>
-
-
+        // Close mobile menu on link click
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                const navbarToggle = document.querySelector('.navbar-toggler');
+                if (window.getComputedStyle(navbarToggle).display !== 'none') {
+                    navbarToggle.click();
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
