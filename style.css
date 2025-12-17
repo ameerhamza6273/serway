@@ -47,7 +47,6 @@ body {
     margin: 0 0.5rem;
     font-weight: 500;
     transition: color 0.3s;
-    font-size: 0.95rem;
 }
 
 .nav-link:hover {
