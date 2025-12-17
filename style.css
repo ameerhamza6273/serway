@@ -1,5 +1,5 @@
 :root {
-    --amber-600: #00d3f3;
+    --amber-600: #02803f;
     --gray-900: #111827;
     --gray-800: #1f2937;
     --gray-600: #4b5563;
@@ -51,7 +51,7 @@ body {
 }
 
 .nav-link:hover {
-    color: #00d3f3 !important;
+    color: #02803f !important;
 }
 
 /* Hero Section */
@@ -72,7 +72,7 @@ body {
 
 .hero-content p {
     font-size: 1.4rem;
-    color: #00d3f3;
+    color: #02803f;
     margin-bottom: 0.5rem;
     letter-spacing: 2px;
 }
@@ -133,7 +133,7 @@ p.hero-subtitle {
     line-height: 1.7;
 }
 .value-card span {
-    background: #00d3f3;
+    background: #02803f;
     padding: 10px 20px;
     color: #fff;
     font-weight: 700;
@@ -145,31 +145,13 @@ p.hero-subtitle {
 .cta-section {
     padding: 60px 0;
     text-align: center;
+    background: #02803f;
 }
 
 .cta-section h2 {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-}
-
-.stats-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 3rem;
-    margin: 1rem 0;
-}
-
-.stat-box {
-    padding: 2rem;
-}
-
-.stat-number {
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #00d3f3;
-    display: block;
-    margin-bottom: 0.5rem;
 }
 
 .cta-buttons {
@@ -181,24 +163,24 @@ p.hero-subtitle {
 }
 
 .btn-light-custom:nth-child(1) {
-    color: #fff !important;
-    background-color: #00d3f3;
+    color: #000 !important;
+    background-color: #fff;
 
 }
 
 .btn-light-custom:nth-child(1):hover {
-    color: #00d3f3 !important;
-    background-color: #fff;
+    color: #fff !important;
+    background-color: #101828;
 
 }
 
 .btn-light-custom {
     background-color: white;
-    color: #00d3f3;
+    color: #000;
     padding: 12px 40px;
     font-weight: 600;
     border-radius: 4px;
-    border: 2px solid #00d3f3;
+    border: 2px solid #02803f;
     text-decoration: none;
     transition: all 0.3s;
     cursor: pointer;
@@ -206,7 +188,7 @@ p.hero-subtitle {
 }
 
 .btn-light-custom:hover {
-    background-color: #00d3f3;
+    background-color: #101828;
     color: #fff;
 }
 
@@ -237,7 +219,7 @@ footer {
 }
 
 .footer-section a:hover {
-    color: #00d3f3;
+    color: #02803f;
 }
 
 .footer-bottom {
@@ -354,7 +336,7 @@ footer {
 .accordion-item:hover {
     background-color: #fffbf5;
     border-radius: 8px;
-    border-bottom: 1px solid #00d3f3;
+    border-bottom: 1px solid #02803f;
 }
 
 .accordion-button {
@@ -369,17 +351,17 @@ footer {
 
 .accordion-button:not(.collapsed) {
     background-color: transparent;
-    color: #00d3f3;
+    color: #02803f;
     box-shadow: none;
 }
 
 .accordion-button:focus {
-    border-color: #00d3f3;
+    border-color: #02803f;
     box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.15);
 }
 
 .accordion-button::after {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2300d3f3'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2302803f'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
     width: 1.25rem;
     height: 1.25rem;
 }
@@ -397,7 +379,7 @@ footer {
 .hero-section {
     padding-top: 120px;
     padding-bottom: 80px;
-    background: #fffbec;
+    background: linear-gradient(#0000008c, #0000008c), url('images/ser-bg-2.png') center/cover no-repeat;
     text-align: center;
 }
 
@@ -473,7 +455,7 @@ footer {
 /* Highlights Grid */
 .highlights-section {
     padding: 80px 0;
-    background-color: #fffbec;
+    background-color: #dddddd3d;
 }
 
 .highlights-grid {
