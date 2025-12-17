@@ -845,7 +845,7 @@ footer {
     background: transparent;
     color: var(--amber-600);
     font-weight: 700;
-    border: 1.5px solid rgba(217, 119, 6, 0.12);
+    border: 1.5px solid #8bc53f9e;
     transition: background .18s, color .18s, transform .12s;
 }
 
