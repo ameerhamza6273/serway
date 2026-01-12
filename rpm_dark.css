@@ -1,5 +1,8 @@
+/* @import url("https://dashboard.ghlking.com/rpm_light.css"); */
+/* @import url("https://dashboard.ghlking.com/clairly-light.css"); */
 
-@import url("https://fonts.googleapis.com/css?family=Plus Jakarta Sans");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
 body,
 a,
 span.search-placeholder,
@@ -14,322 +17,326 @@ h6,
 span,
 p,
 div {
-    font-family: "Plus Jakarta Sans" !important;
+  font-family: "Plus Jakarta Sans" !important;
 }
 
 
 /* login style */
 .hl_login--body p.foot-note:before {
-    content: var(--footer-note);
-    color: var(--footer-note-color);
-    font-size: 12px;
-    display: block;
-    margin-bottom: 20px;
+  content: var(--footer-note);
+  color: var(--footer-note-color);
+  font-size: 12px;
+  display: block;
+  margin-bottom: 20px;
 }
 
 .hl_login--header {
-    display: none;
+  display: none;
 }
 
 .hl_login--body .card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100vh;
-    max-width: 40% !important;
-    border: none !important;
-    box-shadow: none !important;
-    background: var(--main-login-bg) !important;
-    border-radius: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  max-width: 40% !important;
+  border: none !important;
+  box-shadow: none !important;
+  background: var(--main-login-bg) !important;
+  border-radius: 0 !important;
 }
+
 .hl_login--body .card .card-body .bg-white,
 .hl_login--body .card .card-body {
-    background: var(--main-login-bg) !important;
+  background: var(--main-login-bg) !important;
 }
-.hl_login--body .card .card-body .text-curious-blue-500{
+
+.hl_login--body .card .card-body .text-curious-blue-500 {
   color: #ddd !important;
 }
+
 .hl_login--body .card .card-body .login-ui-alert div,
 .hl_login--body .card .card-body p,
-.hl_login--body .card .card-body .bg-white{
+.hl_login--body .card .card-body .bg-white {
   color: #000 !important;
 }
+
 .hl_login--body .card .card-body {
-    display: block;
-    margin-top: 150px !important;
-    padding: 60px !important;
-    box-sizing: border-box;
-    width: 100% !important;
-    max-width: 80% !important;
-    text-align: left;
+  display: block;
+  margin-top: 150px !important;
+  padding: 60px !important;
+  box-sizing: border-box;
+  width: 100% !important;
+  max-width: 80% !important;
+  text-align: left;
 }
 
 /* FORM */
 .hl_login--body .heading2 {
-    font-weight: 600;
-    color: var(--login-heading-color);
-    font-size: 23px !important;
+  font-weight: 600;
+  color: var(--login-heading-color);
+  font-size: 23px !important;
 }
 
 .hl_login--body .card .card-body label,
 .hl_login--body .card .card-body span.hl-text-input-label {
-    display: none !important;
+  display: none !important;
 }
 
 .hl_login--body .card .card-body input::placeholder {
-    color: var(--login-input-color) !important;
-    opacity: 0.6;
+  color: var(--login-input-color) !important;
+  opacity: 0.6;
 }
 
 .hl_login--body .card .card-body input:-ms-input-placeholder {
-    color: var(--login-input-color) !important;
+  color: var(--login-input-color) !important;
 }
 
 .hl_login--body .card .card-body .error,
 .hl_login--body .card .card-body .hl-input-error,
 .hl_login--body .card .card-body i {
-    color: var(--login-error-color) !important;
+  color: var(--login-error-color) !important;
 }
 
 .hl_login--body .card .card-body .forgot-password {
-    color: var(--login-forgot-pass-color);
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 400;
+  color: var(--login-forgot-pass-color);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
 }
 
 .hl_login--body .card .card-body .hl-btn {
-    padding: 15px 25px !important;
-    background-color: var(--login-button-bg);
-    font-family: var(--main-font) !important;
-    color: var(--login-button-color);
-    font-size: 16px;
-    text-transform: uppercase;
+  padding: 15px 25px !important;
+  background-color: var(--login-button-bg);
+  font-family: var(--main-font) !important;
+  color: var(--login-button-color);
+  font-size: 16px;
+  text-transform: uppercase;
 }
 
 .hl_login--body .card .card-body .hl-btn:hover {
-    background-color: var(--login-button-hover-bg);
-    color: var(--login-button-hover-color);
-    -webkit-transform: translateY(-10px);
-    transform: translateY(-10px);
-    box-shadow: 0 8px 5px -5px rgba(0, 0, 0, 0.25);
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
+  background-color: var(--login-button-hover-bg);
+  color: var(--login-button-hover-color);
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px);
+  box-shadow: 0 8px 5px -5px rgba(0, 0, 0, 0.25);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .hl_login--body .card .card-body .foot-note {
-    font-size: 14px;
-    color: var(--login-foot-note-color);
+  font-size: 14px;
+  color: var(--login-foot-note-color);
 }
 
 .hl_login--body .card .card-body .foot-note a {
-    color: var(--login-foot-note-link-color);
+  color: var(--login-foot-note-link-color);
 }
 
 .hl_login--body .container-fluid>div:not(.card) .card-body .flex p.ml-2 {
-    color: var(--login-foot-note-color);
+  color: var(--login-foot-note-color);
 }
 
 .hl_login--body .container-fluid>div:not(.card) .card-body .form-group input+span {
-    color: var(--login-foot-note-color);
+  color: var(--login-foot-note-color);
 }
 
 .hl_login--body .container-fluid .card-body .form-group .g_id_signin iframe {
-    margin: 5px auto 0px !important;
+  margin: 5px auto 0px !important;
 }
 
 @media only screen and (max-width: 1400px) {
-    .hl_login--body .card {
-        max-width: 50% !important;
-    }
+  .hl_login--body .card {
+    max-width: 50% !important;
+  }
 
-    .hl_login--body .container-fluid::before {
-        max-width: 50%;
-    }
+  .hl_login--body .container-fluid::before {
+    max-width: 50%;
+  }
 
-    .hl_login--body .container-fluid::after {
-        max-width: 50%;
-    }
+  .hl_login--body .container-fluid::after {
+    max-width: 50%;
+  }
 
-    .hl_login--body .container-fluid:after,
-    .hl_login--body .container-fluid>div:not(.card):after {
-        width: 50%;
-    }
+  .hl_login--body .container-fluid:after,
+  .hl_login--body .container-fluid>div:not(.card):after {
+    width: 50%;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
-    .hl_login--body .card {
-        max-width: 100% !important;
-    }
+  .hl_login--body .card {
+    max-width: 100% !important;
+  }
 
-    .hl_login--body .container-fluid::before,
-    .hl_login--body .container-fluid::after {
-        display: none;
-    }
+  .hl_login--body .container-fluid::before,
+  .hl_login--body .container-fluid::after {
+    display: none;
+  }
 
-    .hl_login--body .card .card-body {
-        max-width: 80% !important;
-    }
+  .hl_login--body .card .card-body {
+    max-width: 80% !important;
+  }
 
-    .hl_login--body .card:before {
-        left: 0px;
-        border-right: 100px solid transparent;
-        border-top: 100px solid var(--main-login-bg);
-        border-left: 0px solid transparent;
-    }
+  .hl_login--body .card:before {
+    left: 0px;
+    border-right: 100px solid transparent;
+    border-top: 100px solid var(--main-login-bg);
+    border-left: 0px solid transparent;
+  }
 
-    .hl_login--body .card:after {
-        left: initial;
-        right: 0;
-        bottom: 0;
-        border-left: 100px solid transparent;
-        border-bottom: 100px solid var(--main-login-bg);
-    }
+  .hl_login--body .card:after {
+    left: initial;
+    right: 0;
+    bottom: 0;
+    border-left: 100px solid transparent;
+    border-bottom: 100px solid var(--main-login-bg);
+  }
 }
 
 @media only screen and (max-width: 980px) {
-    .hl_login--body .card {
-        height: 100vh !important;
-    }
+  .hl_login--body .card {
+    height: 100vh !important;
+  }
 
-    .hl_login--body .card .card-body {
-        max-width: 100% !important;
-        margin-top: 0 !important;
-        padding: 100px 40px !important;
-    }
+  .hl_login--body .card .card-body {
+    max-width: 100% !important;
+    margin-top: 0 !important;
+    padding: 100px 40px !important;
+  }
 
-    .hl_login--body .container-fluid:after,
-    .hl_login--body .container-fluid>div:not(.card):after {
-        display: none !important;
-    }
+  .hl_login--body .container-fluid:after,
+  .hl_login--body .container-fluid>div:not(.card):after {
+    display: none !important;
+  }
 
-    .hl_login--body .container-fluid:before,
-    .hl_login--body .container-fluid>div:not(.card):before {
-        width: 0px !important;
-    }
+  .hl_login--body .container-fluid:before,
+  .hl_login--body .container-fluid>div:not(.card):before {
+    width: 0px !important;
+  }
 }
 
 @media only screen and (max-width: 767px) {
-    #app {
-        margin-top: 0 !important;
-    }
+  #app {
+    margin-top: 0 !important;
+  }
 
-    .hl_login--body .card .card-body {
-        padding: 40px !important;
-    }
+  .hl_login--body .card .card-body {
+    padding: 40px !important;
+  }
 }
 
 .hl_login--body .container-fluid,
 .hl_login--body .container-fluid>div:not(.card) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 !important;
 }
 
 .hl_login--body .container-fluid:before,
 .hl_login--body .container-fluid>div:not(.card):before {
-    content: "";
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    height: 100vh;
-    max-width: 60%;
-    background-image: var(--main-body-image);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  content: "";
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  max-width: 60%;
+  background-image: var(--main-body-image);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hl_login--body .container-fluid:after,
 .hl_login--body .container-fluid>div:not(.card):after {
-    content: "";
-    position: absolute !important;
-    left: 0 !important;
-    top: 0 !important;
-    width: 60% !important;
-    height: 100vh !important;
-    background-color: var(--main-body-image-overlay) !important;
+  content: "";
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 60% !important;
+  height: 100vh !important;
+  background-color: var(--main-body-image-overlay) !important;
 }
 
 .hl_login--body .container-fluid>div:not(.card) {
-    width: 100vw !important;
-    height: 100vh !important;
-    position: absolute !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  position: absolute !important;
 }
 
 
 :root {
-    --main-font: "Poppins";
-    --main-body-bg: linear-gradient(45deg, #292929 0%, #18191a 54%) !important;
-    --main-body-image: url("https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/68c18dd36462633a43464c93.svg") !important;
-    --main-body-image-overlay: #ececec00(0 0 0 / 0) !important;
-    --main-login-bg: #ededed00 !important;
-    /* --login-logo: url("https://storage.googleapis.com/msgsndr/0BNXRaTTusQGAfcHLyfN/media/661d36d2b8837d16f6b4b8f4.svg") !important; */
-    --login-heading-color: #000 !important;
-    --login-input-color: #000 !important;
-    --login-input-bg: #E7246F !important;
-    --login-input-border: #bbbbbb !important;
-    --login-error-color: #000 !important;
-    --login-forgot-pass-color: #ffffff !important;
-    --login-button-bg: #5B4CF6 !important;
-    --login-button-color: #ffffff !important;
-    --login-button-hover-bg: #000 !important;
-    --login-button-hover-color: #ffffff !important;
-    --login-foot-note-color: #000 !important;
-    --login-foot-note-link-color: #000 !important;
-    --header-note-color: #000 !important;
-    --footer-note: "Having trouble logging in? Email us at support@8bitcreative.com or call us at (414)310-7103" !important;
-    --footer-note-color: #000 !important;
+  --main-font: "Poppins";
+  --main-body-bg: linear-gradient(45deg, #292929 0%, #18191a 54%) !important;
+  --main-body-image: url("https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/68c18dd36462633a43464c93.svg") !important;
+  --main-body-image-overlay: #ececec00(0 0 0 / 0) !important;
+  --main-login-bg: #ededed00 !important;
+  /* --login-logo: url("https://storage.googleapis.com/msgsndr/0BNXRaTTusQGAfcHLyfN/media/661d36d2b8837d16f6b4b8f4.svg") !important; */
+  --login-heading-color: #000 !important;
+  --login-input-color: #000 !important;
+  --login-input-bg: #E7246F !important;
+  --login-input-border: #bbbbbb !important;
+  --login-error-color: #000 !important;
+  --login-forgot-pass-color: #ffffff !important;
+  --login-button-bg: #5B4CF6 !important;
+  --login-button-color: #ffffff !important;
+  --login-button-hover-bg: #000 !important;
+  --login-button-hover-color: #ffffff !important;
+  --login-foot-note-color: #000 !important;
+  --login-foot-note-link-color: #000 !important;
+  --header-note-color: #000 !important;
+  --footer-note: "Having trouble logging in? Email us at support@8bitcreative.com or call us at (414)310-7103" !important;
+  --footer-note-color: #000 !important;
 }
 
 .hl_login--body .card .card-body .forgot-password {
-    color: #E7246F !important;
+  color: #E7246F !important;
 }
 
 .hl_login--body .card .card-body .foot-note a {
-    color: #E7246F !important;
-    font-weight: 400 !important;
-    text-decoration: underline !important;
+  color: #E7246F !important;
+  font-weight: 400 !important;
+  text-decoration: underline !important;
 }
 
 .hl_login--body .card .card-body .hl-btn {
-    font-size: 18px !important;
-    text-transform: uppercase !important;
-    border: 1px solid #E7246F !important;
-    font-family: "Plus Jakarta Sans" !important;
-    border-radius: 10px !important;
-    font-weight: 700;
+  font-size: 18px !important;
+  text-transform: uppercase !important;
+  border: 1px solid #E7246F !important;
+  font-family: "Plus Jakarta Sans" !important;
+  border-radius: 10px !important;
+  font-weight: 700;
 }
 
 .hl_login--body .card {
-    background: #fff !important;
+  background: #fff !important;
 }
 
 .hl_login--body .card .card-body input[type="password"],
 .hl_login--body .card .card-body input[type="text"] {
-    border: 1px solid rgba(40, 44, 55, 0.20) !important;
-    background: rgba(40, 44, 55, 0.05) !important;
-    color: #323232 !important;
-    padding: 15px 20px !important;
-    border-radius: 10px !important;
-    font-size: 14px !important;
-    line-height: 20px !important;
+  border: 1px solid rgba(40, 44, 55, 0.20) !important;
+  background: rgba(40, 44, 55, 0.05) !important;
+  color: #323232 !important;
+  padding: 15px 20px !important;
+  border-radius: 10px !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
 }
 
 button:disabled {
-    cursor: not-allowed;
-    opacity: 1 !important
+  cursor: not-allowed;
+  opacity: 1 !important
 }
 
 .hl_login--body .card button.hl-btn.justify-center.w-full.inline-flex.items-center.px-4.py-2.border.border-transparent.text-sm.font-medium.rounded.text-white.bg-curious-blue-500.hover\:bg-curious-blue-600.focus\:outline-none.focus\:ring-2.focus\:ring-offset-2.focus\:ring-curious-blue-600 {
-    background-color: #E7246F !important;
-    color: #fff !important;
+  background-color: #E7246F !important;
+  color: #fff !important;
 }
 
 
@@ -625,7 +632,7 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 
 .n-input .n-input-wrapper,
 #whatsapp-settings .n-input .n-input-wrapper {
-  background-color: #090417 !important;
+  background-color: #1e172d !important;
   border-radius: 8px !important;
 }
 
@@ -705,9 +712,12 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
   display: none !important;
 }
 
-.bottom-stats li,
-.hl_header--controls {
+.bottom-stats li {
   gap: 20px !important;
+}
+
+.hl_header--controls {
+  gap: 10px !important;
 }
 
 .sidebar-v2-agency #sidebar-v2 .hl_nav-header a img {
@@ -724,8 +734,16 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
   filter: brightness(2.5) !important;
 }
 
+#sidebar-v2 a span.nav-title {
+  text-transform: uppercase !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+
+}
+
 #sb_settings img,
 .sidebar-v2-location #sidebar-v2 .hl_nav-header a img,
+#sidebar-v2 a#sb_divider-1 p,
 .pending-task-value-col i,
 .search-shortcut,
 .topmenu-nav a.divider,
@@ -749,7 +767,7 @@ header .pl-2 {
 }
 
 .container-fluid>.hl_header--controls {
-  margin-right: 30px !important;
+  margin-right: 50px !important;
 }
 
 a .fa-phone {
@@ -814,7 +832,7 @@ div#quickActions {
 }
 
 div#quickActions::before {
-  content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/68bff52f839785c5dc542b02.svg) !important;
+  content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/68cedcabbeb02735a182e608.svg) !important;
   width: 21px !important;
   height: 24px !important;
   position: absolute !important;
@@ -856,7 +874,7 @@ span.search-placeholder::before {
 
 /* sidebar start */
 .agency-logo-container img {
-  max-width: 200px !important
+  max-width: 150px !important
 }
 
 #sb_sites::after,
@@ -886,15 +904,24 @@ span.search-placeholder::before {
 
 }
 
+.v2-open #sidebar-v2 {
+  min-width: 237px !important;
+  padding: 0px !important;
+}
+
+.v2-open #sidebar-v2 .h-screen {
+  min-width: 237px !important;
+}
+
 #sidebar-v2 nav a {
   margin: 5px auto !important;
   opacity: 1 !important;
-  max-width: 195px !important;
+  max-width: 210px !important;
 }
 
 .v2-collapse #sidebar-v2 nav a {
   max-width: 45px !important;
-  padding-left: 12px !important;
+  padding: 20% !important;
 }
 
 .v2-collapse #location-switcher-sidbar-v2::after {
@@ -928,10 +955,6 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 }
 
 #sidebar-v2 a {
-  margin: 7px 0 !important;
-  opacity: 1 !important;
-  padding-left: 10px !important;
-  padding-right: 10px !important;
   font-size: 13px !important;
   font-weight: 500 !important;
 }
@@ -942,10 +965,24 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
   opacity: 0.3 !important;
 }
 
+.sidebar-v2-agency #sidebar-v2 .hl_nav-header nav a::before {
+  width: 20px !important;
+}
+
+.sidebar-v2-location #sidebar-v2.default-bg-color.hl_fixed-width #sb_calendars::before {
+  display: none !important;
+}
+
+.sidebar-v2-location #sidebar-v2 .hl_nav-header-without-footer nav a:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255/var(--tw-text-opacity));
+  opacity: 1;
+  background: #E7246F !important;
+}
+
 #sb_settings::before,
 #sidebar-v2 .hl_nav-header a::before {
   margin-right: 10px !important;
-  width: 24px !important;
   height: 24px !important;
   filter: brightness(.3) sepia(0) contrast(1.9) opacity(.6) !important;
   -webkit-filter: brightness(.5) sepia(0) contrast(1.9) opacity() !important
@@ -1066,6 +1103,7 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
   border-radius: 50px !important;
   background-color: #FFF !important;
 }
+
 .flex.flex-col.overflow-y-auto.overflow-x-hidden.w-full.hl_nav-header::-webkit-scrollbar-thumb,
 .mce-menu.mce-in.mce-animate::-webkit-scrollbar-thumb,
 #mceu_611::-webkit-scrollbar-thumb,
@@ -1094,7 +1132,8 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
   border: 2px solid rgba(255, 255, 255, 0.10) !important;
   background: radial-gradient(340.32% 136.38% at 0% 3.35%, rgba(107, 75, 244, 0.06) 0%, rgba(107, 75, 244, 0.00) 100%) !important;
   background-color: #0b051c !important;
-
+  min-width: 60px !important;
+  padding: 0px !important;
 }
 
 .sidebar-v2-location .hl_header .container-fluid {
@@ -1195,8 +1234,7 @@ text {
 }
 
 .n-input:not(.n-input--autosize) {
-  border: 1px solid rgba(234, 234, 234, 0.10) !important;
-  background: #0e0923 !important;
+  background: #1e172d !important;
 }
 
 #location-dashboard_date-picker {
@@ -1684,9 +1722,10 @@ tr {
   background-color: #090417 !important;
 }
 
-div{
+div {
   color: #FFF !important;
 }
+
 span,
 #sidebar-v2 a:hover span,
 #sidebar-v2 a.active span,
@@ -2017,7 +2056,7 @@ button,
 
 #FunnelList .n-input .n-input-wrapper,
 #OpportunitiesList .n-input .n-input-wrapper {
-  background-color: #090417 !important;
+  background-color: #1e172d !important;
   border-radius: 8px !important;
 }
 
@@ -2068,8 +2107,8 @@ table th {
 .hl-statistic {
   background: #0e0923 !important;
   border-left: 1px solid rgba(212, 206, 230, 0.20) !important;
-    border-right: 1px solid rgba(212, 206, 230, 0.20) !important;
-    border-bottom: 1px solid rgba(212, 206, 230, 0.20) !important;
+  border-right: 1px solid rgba(212, 206, 230, 0.20) !important;
+  border-bottom: 1px solid rgba(212, 206, 230, 0.20) !important;
   border-top: 2px solid #E7246F !important;
 }
 
@@ -2561,8 +2600,8 @@ html [type=button] {
 #conversations div[title].cursor-pointer::before {
   content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/6887ca02eefde67e6d731c9c.svg);
   position: absolute !important;
-  top: 53px !important;
-  right: 10px !important;
+  top: 15px !important;
+  right: 8px !important;
 }
 
 .hl_topbar-tabs #OpportunitiesList .overflow-x-scroll .opportunities-scroll {
@@ -2586,10 +2625,9 @@ html [type=button] {
 }
 
 table td {
-  opacity: 0.8;
+
   background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(113, 61, 223, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%), rgba(10, 3, 24, 0.70);
-  box-shadow: 0 0 100px -20px rgba(212, 206, 230, 0.15) inset;
-  backdrop-filter: blur(26px);
+
 }
 
 #campaign-picker .v-select .vs__actions svg path {
@@ -2640,12 +2678,15 @@ table td {
 #OpportunitiesList button.d-flex.manage-fields.cursor-pointer span {
   color: #000 !important;
 }
+
 #right-panel .bg-primary-50 svg path {
-  stroke:#fff !important;
+  stroke: #fff !important;
 }
+
 #right-panel .bg-primary-50 {
-  color:#fff !important;
+  color: #fff !important;
 }
+
 #OpportunitiesList .opportunityPage .ml-3.mr-3.overflow-x-scroll .tabulator-header div {
   background: #000 !important;
 }
@@ -2701,7 +2742,7 @@ table td {
 }
 
 #paymentProductsInvoicesApp .n-data-table-base-table td {
-  opacity: 0.8 !important;
+  opacity: 1 !important;
   background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(113, 61, 223, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%), rgba(10, 3, 24, 0.70);
   box-shadow: 0 0 100px -20px rgba(212, 206, 230, 0.15) inset !important;
   backdrop-filter: blur(26px) !important;
@@ -2900,7 +2941,7 @@ table td {
 #phone-integration .agency-setting-tab-pane[data-v-00394ccc] .hl-card.lc-phone-linked,
 #platform-billing .text-gray-500,
 #settings .n-radio-button,
-#settings .Í¼2 .cm-activeLineGutter,
+#settings .ͼ2 .cm-activeLineGutter,
 #settings .cm-gutters,
 .loader-backdrop,
 .view-achivement-div,
@@ -3000,7 +3041,8 @@ tr:hover td span,
 .n-modal.hl-modal .border-t.border-gray-200.flex.items-center.h-\[88px\].pt-\[18px\] {
   padding: 10px !important;
 }
-#center-panel  .view-button .n-button__content,
+
+#center-panel .view-button .n-button__content,
 #conversations .view-button .n-button__content {
   margin-left: 0px !important;
 }
@@ -3195,22 +3237,6 @@ table td .n-avatar,
   color: #fff !important;
 }
 
-#location-dashboard svg g path[d="M146 4.1A77.9 77.9 0 1 1 145.9922 4.1M146 17.1A64.9 64.9 0 1 0 146.0065 17.1Z"] {
-  fill: #090417 !important;
-}
-
-#location-dashboard div[style="height: calc(100% - 108px);"] #chart svg path:hover,
-#location-dashboard svg path[fill="rgb(91,194,255)"],
-#location-dashboard svg path[fill="rgb(83,177,253)"],
-#location-dashboard svg path[fill="#53B1FD"] {
-  fill: #6B4BF4 !important;
-}
-
-#location-dashboard div[style="height: calc(100% - 108px);"] #chart svg path {
-  fill: rgba(255, 255, 255, 0.05) !important;
-  fill-opacity: 0.7 !important;
-}
-
 .n-config-provider .soai-promo-top-banner {
   padding-top: 20px;
   background: #1e1836 !important;
@@ -3264,18 +3290,6 @@ table td .n-avatar,
   }
 }
 
-body:has(.sidebar-v2-location #dashboard .card-group) .main_container1012 {
-  display: block !important;
-}
-
-.main_container1012 {
-  display: none;
-  border-radius: 15px;
-  background: linear-gradient(90deg, #E7246F -0.01%, #4628C5 100%) !important;
-  padding: 40px 50px !important;
-  position: absolute;
-}
-
 .inside_container1012 {
   display: flex;
   justify-content: space-between;
@@ -3314,6 +3328,7 @@ body:has(.sidebar-v2-location #dashboard .card-group) .main_container1012 {
   -moz-border-radius: 10px !important;
   -ms-border-radius: 10px !important;
   -o-border-radius: 10px !important;
+  display: none !Important;
 }
 
 .another_one12347 a:nth-child(2) {
@@ -3352,30 +3367,12 @@ body:has(.sidebar-v2-location #dashboard .card-group) .main_container1012 {
   margin: -65px 0 0 !important;
 }
 
-body:has(.sidebar-v2-location #location-dashboard) .main_container1012 {
-  display: block !important;
-  z-index: -0 !important;
-
-}
-
 #sidebar-v2 a:hover i {
   color: #fff !important;
 }
 
 #OpportunitiesList a {
   color: #1e0000 !important;
-}
-
-.main_container1012 {
-  transform: translate(1%, 0) scale(0.73) !important;
-  width: 110vw !important;
-  top: 5rem !important;
-}
-
-body:has(.v2-collapse) .main_container1012 {
-  transform: translate(-6%, 0) scale(0.73) !important;
-  width: 120vw !important;
-  top: 5rem !important;
 }
 
 #reputation-settings-container .n-radio-button,
@@ -3410,9 +3407,7 @@ button p,
   color: #fff !important;
 }
 
-#date-picker-input,
-#CalendarPage table tr,
-#CalendarPage table td {
+#date-picker-input{
   border: none !important;
   background: transparent !important;
 }
@@ -3474,7 +3469,6 @@ button p,
 
 #CustomObjectAssociations .wrapper.pt-4.pl-4.pr-4,
 .hl_settings--body input,
-.hl-wrapper-container,
 .v2-open div#wordpress-management-app,
 #seo-module-federated-app,
 .hr-table-header-container,
@@ -3488,6 +3482,10 @@ button p,
 #list-view-sort-btn,
 .quick-filter-bar .quick-filter {
   background: #0e0923 !important;
+}
+
+.hl-wrapper-container {
+  background: #090417 !important;
 }
 
 #date-picker-picker-container-DatePicker button {
@@ -3522,9 +3520,15 @@ button p,
   margin-left: 0 !important;
 }
 
-#OpportunitiesList .scrollable .card .cardWrapper {
-  border-top: 2px solid #E7246F !important;
+#OpportunitiesList .scrollable .card .cardWrapper .opportunitiesCard {
   border-radius: 20px !important;
+  border: 1px solid rgba(212, 206, 230, 0.20) !important;
+  background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(113, 61, 223, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%), rgba(10, 3, 24, 0.70) !important;
+  box-shadow: 0 0 100px -20px rgba(212, 206, 230, 0.15) inset !important;
+  backdrop-filter: blur(22px) !important;
+}
+#OpportunitiesList .scrollable .card .cardWrapper{
+  border: none !important;
 }
 
 .documents-list-container svg,
@@ -3565,7 +3569,7 @@ div#fc-calendar-container {
 
 #CalendarPage button#today,
 #CalendarPage button#btn {
-  background-color: #7c4cf7 !important;
+  background-color: #E7246F !important;
 }
 
 button#email-add-attachment,
@@ -3573,13 +3577,13 @@ button#sms-add-attachment,
 #central-panel .n-button--default-type:not(.icon-only):not(.hl-active-btn),
 #right-panel .n-button--default-type:not(.icon-only):not(.hl-active-btn),
 button#snippets-header-btn-secondary {
-  background-color: #6b4cf4 !important;
+  background-color: #E7246F !important;
 }
 
 button#snippets-table-next,
 button#snippets-table-previous,
 button.n-button.n-button--default-type.n-button--large-type.hl-table-filter-btn {
-  background-color: #6b4df4 !important;
+  background-color: #E7246F !important;
 }
 
 #right-panel .bg-primary-50 {
@@ -3787,14 +3791,7 @@ button.n-button.n-button--default-type.n-button--large-type.hl-table-filter-btn 
   background: #140d26 !important;
 }
 
-#conversations .message-body--conversation .messages-group .messages-group-inner .message-wrapper .new-email-thread-view .new-email-thread-view--transition,
-.hl-card {
-  border-radius: 20px !important;
-  border: 1px solid rgba(212, 206, 230, 0.20) !important;
-  background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(113, 61, 223, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%), rgba(10, 3, 24, 0.70) !important;
-  box-shadow: 0 0 100px -20px rgba(212, 206, 230, 0.15) inset !important;
-  backdrop-filter: blur(22px) !important;
-}
+
 
 #SettingCurrentProvider .n-radio-button,
 .container-fluid.w-full.mx-auto.bg-white.pt-4.min-h-screen.pl-3.mt-12 .container-fluid.w-full .mt-5.w-full.flex.flex-col.items-center.bg-white.rounded-lg.shadow-md.md\:flex-row.hover\:bg-gray-100.dark\:border-gray-700.dark\:bg-gray-800.dark\:hover\:bg-gray-700,
@@ -3818,63 +3815,67 @@ button.n-button.n-button--default-type.n-button--large-type.hl-table-filter-btn 
   border-bottom: 1px solid rgba(212, 206, 230, 0.20) !important;
 }
 
-#launchpad .mobile-container .form-group label{
+#launchpad .mobile-container .form-group label {
   margin-bottom: 4px !important;
   color: #fff !important;
 }
-#launchpad .mobile-container .form-group input{
+
+#launchpad .mobile-container .form-group input {
   background: #140d26 !important;
 }
 
-.btn-primary.disabled, 
-.btn-primary:disabled{
+.btn-primary.disabled,
+.btn-primary:disabled {
   background: #6a4bf483 !important;
 }
-#launchpad-lc-mobile span{
+
+#launchpad-lc-mobile span {
   color: #fff !important;
 }
 
-.sidebar-v2-location #sidebar-v2 .hl_collapse-button{
-  background : #fff !important;
+.sidebar-v2-location #sidebar-v2 .hl_collapse-button {
+  background: #fff !important;
   color: #E7246F !important;
 }
- 
- table tr:hover td p {
+
+table tr:hover td p {
   color: #000 !important;
 }
-#copilot-drawer .n-drawer-content-wrapper .copilot-drawer-header{
+
+#copilot-drawer .n-drawer-content-wrapper .copilot-drawer-header {
   background-color: #0d041e !important;
 }
-#copilot-drawer .n-drawer-content-wrapper
-.input-container,
-#copilot-drawer .n-drawer-content-wrapper .chat-container{
+
+#copilot-drawer .n-drawer-content-wrapper .input-container,
+#copilot-drawer .n-drawer-content-wrapper .chat-container {
   background-color: #0d041e !important;
 }
-#copilot-drawer
-.copilot-drawer-beta-badge,
-#copilot-drawer
-.n-input-wrapper,
-#copilot-drawer
-.suggestion-button,
-#copilot-drawer
-.info-badge{
-background: #140d26 !important;
+
+#copilot-drawer .copilot-drawer-beta-badge,
+#copilot-drawer .n-input-wrapper,
+#copilot-drawer .suggestion-button,
+#copilot-drawer .info-badge {
+  background: #140d26 !important;
 }
-#copilot-drawer .n-drawer-content-wrapper .copilot-drawer-header
-button img{
+
+#copilot-drawer .n-drawer-content-wrapper .copilot-drawer-header button img {
   filter: brightness(6.5) !important;
 }
+
 #got-it-btn .n-button__content,
-#learn-more-btn .n-button__content{
+#learn-more-btn .n-button__content {
   background: transparent !important;
-  border:none !important;
-  color:#000 !important;
+  border: none !important;
+  color: #000 !important;
 }
-table tr td{
+
+table tr td {
   background: transparent !important;
 }
+
 #location_dashboard-pagination-table_chart-next,
-#location_dashboard-pagination-table_chart-previous,#location_dashboard-btn-export_table{
+#location_dashboard-pagination-table_chart-previous,
+#location_dashboard-btn-export_table {
   background: #E7246F !important;
   border: none !important;
   color: #fff !important;
@@ -3882,223 +3883,1678 @@ table tr td{
 
 #book-appt-custom span,
 button.n-button.n-button--default-type .n-button__content,
-#drawer .n-tag .n-tag__content div{
-  color:#000 !important;
+#drawer .n-tag .n-tag__content div {
+  color: #000 !important;
 }
-.n-popover__content{
-  border:none !important;
+
+.n-popover__content {
+  border: none !important;
 }
+
 .hl_contact-details-right,
-.messages-group-inner .opportunityCard.hl-card{
-background: #140d26 !important;
+.messages-group-inner .opportunityCard.hl-card {
+  background: #140d26 !important;
 }
+
 #date-label,
 #right-panel .n-config-provider .avatar-container.w-6.h-6 div,
-#right-panel .n-config-provider .avatar-container.w-6.h-6{
-color: #000 !important;
+#right-panel .n-config-provider .avatar-container.w-6.h-6 {
+  color: #000 !important;
 }
+
 #customers .vs__dropdown-toggle input,
-#customers .vs__dropdown-toggle{
-background: #140d26 !important;
+#customers .vs__dropdown-toggle {
+  background: #140d26 !important;
 }
-.bg-apple-500:disabled{
+
+.bg-apple-500:disabled {
   background: #6a4bf483 !important;
   border: 2px solid#6a4bf483 !important
 }
+
 .page-item.disabled .page-link {
-   background: #E7246F !important;
+  background: #E7246F !important;
   color: #fff !important;
 }
-.messages-group-inner .leading-6.border{
-   background: #140d26 !important;
+
+.messages-group-inner .leading-6.border {
+  background: #140d26 !important;
   border: 1px solid rgba(212, 206, 230, 0.20) !important;
 }
 
 .campaigns_triggers-bar-action.btn.btn-light,
 button.bg-apple-500,
-#sort-filter-component__button{
+#sort-filter-component__button {
   background: #E7246F !important;
 }
-.pipeline-ribbon{
+
+.pipeline-ribbon {
   margin-top: 5px !important;
 }
 
 .hr-card,
 #reviews-rating-filter,
-#folders .folder-card-wrapper{
-   background: #140d26 !important;
+#folders .folder-card-wrapper {
+  background: #140d26 !important;
 }
-body[data-theme=default] .sidebar-v2-location #sidebar-v2 .default-bg-color{
-  color:#000 !important;
+
+body[data-theme=default] .sidebar-v2-location #sidebar-v2 .default-bg-color {
+  color: #000 !important;
 }
+
 #ai-summary-button.ai-summary-btn[data-v-d06ffcca],
 #btn-2,
 #media-header-dropdown,
 #hl-media-create-folder,
-#hl-connect-google-drive{
+#hl-connect-google-drive {
   background: #E7246F !important;
 }
 
-.n-dropdown-option-body__label:hover .hl-text-sm-regular{
-color:#000 !important;
-}
-#reporting-adwords-dashboard .flex-child svg path:nth-child(4){
-fill: #000 !important;
+.n-dropdown-option-body__label:hover .hl-text-sm-regular {
+  color: #000 !important;
 }
 
-#CalendarPage .n-tabs .n-tabs-rail .n-tabs-tab-wrapper .n-tabs-tab.n-tabs-tab--active{
+#reporting-adwords-dashboard .flex-child svg path:nth-child(4) {
+  fill: #000 !important;
+}
+
+#CalendarPage .n-tabs .n-tabs-rail .n-tabs-tab-wrapper .n-tabs-tab.n-tabs-tab--active {
   background: #fff !important;
 }
 
 .n-button--default-type:not(.icon-only):not(.hl-active-btn) span,
 #pg-invoices_btn-settings span,
-#import-btn span{
+#import-btn span {
   color: #fff !important;
 }
+
 .n-button--default-type:not(.icon-only):not(.hl-active-btn),
 #table-export-csd,
 #pg-invoices_btn-settings,
-#import-btn{
+#import-btn {
   background: #E7246F !important;
 }
 
-#triggers .dropdown-toggle{
-background: #0f1638 !important;
+#triggers .dropdown-toggle {
+  background: #0f1638 !important;
 }
-button.n-button--default-type:not(.icon-only):not(.hl-active-btn){
+
+button.n-button--default-type:not(.icon-only):not(.hl-active-btn) {
   background: #E7246F !important;
 }
-#location-billing{
+
+#location-billing {
   background: #140d26 !important;
 }
+
 .n-base-selection-label,
 #primary-field-type .n-base-selection-label,
-#empty-custom-objects-list-btn-primary .n-button__content ,
-#connections-users .n-base-selection-label{
+#empty-custom-objects-list-btn-primary .n-button__content,
+#connections-users .n-base-selection-label {
   background: #1a1428 !important;
 }
+
 table tr td .n-tag__content span,
 table tr td .n-tag__content svg,
-table tr:hover .n-data-table-td{
-  color:#000 !important; 
-}
-.n-card.n-modal.hl-modal .rounded-lg.mb-3.bg-gray-100.py-4.px-3,
-.contactCard.hl-card{
-    background: #140d26 !important;
-}
-.custom-dropdown-item:hover span{
-color:#000 !important;
+table tr:hover .n-data-table-td {
+  color: #000 !important;
 }
 
-.hl_settings--body .btn.dropdown-toggle.btn-light{
+.n-card.n-modal.hl-modal .rounded-lg.mb-3.bg-gray-100.py-4.px-3,
+.contactCard.hl-card {
+  background: #140d26 !important;
+}
+
+.custom-dropdown-item:hover span {
+  color: #000 !important;
+}
+
+.hl_settings--body .btn.dropdown-toggle.btn-light {
   background: #0f1638 !important;
 }
 
 #OpportunitiesList .min-h-0 .h-full.flex.flex-col .opportunitiesCard.max-h-2xl.borderColor.mb-\[16px\].max-h-28.\!rounded.\!border-0.\!border-t-2.\!border-solid.ui-card {
   border: none !important;
-  background: url("https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/68c064747f917b0ea0b4a821.svg") center center no-repeat !important;
+  /*background: url("https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/68c064747f917b0ea0b4a821.svg") center center no-repeat !important;*/
   color: #fff !important;
   box-shadow: none !important;
-  padding: 15px 20px 15px 40px !important;
   min-width: max-content !important
 }
-#OpportunitiesList .hr-base-select-option__content:hover p{
-  color:#000 !important;
-}
-.hr-base-select-option,
-#OpportunitiesList .hr-base-selection-input,
-#OpportunitiesList .min-h-0 .h-full.flex.flex-col .opportunitiesCard{
-    background: #140d26 !important;
-}
 
-#OpportunitiesList .wrapper.opportunityPage{
-background: #090417 !important;
-}
-
-.border-t.border-gray-200.flex.items-center.h-\[88px\].pt-\[18px\] button span{
+#OpportunitiesList .hr-base-select-option__content:hover p {
   color: #000 !important;
 }
-#secondary-action-button{
+
+.hr-base-select-option,
+#OpportunitiesList .hr-base-selection-input,
+#OpportunitiesList .min-h-0 .h-full.flex.flex-col .opportunitiesCard {
+  background: #140d26 !important;
+}
+
+#OpportunitiesList .wrapper.opportunityPage {
+  background: #090417 !important;
+}
+
+.border-t.border-gray-200.flex.items-center.h-\[88px\].pt-\[18px\] button span {
+  color: #000 !important;
+}
+
+#secondary-action-button {
   background: #155eef !important;
 }
+
 .hr-base-selection--selected,
 .hr-select.ui-select,
 .hr-form-item-blank,
 .hr-base-selection,
-#opportunitiesModel input{
+#opportunitiesModel input {
   background: #0d041e !important;
 }
-a#canny_logs-toggle{
+
+a#canny_logs-toggle {
   position: relative !important;
 }
 
 #sb_opportunities span,
 #sb_contacts span,
 #sb_launchpad span {
-    display: none !important;
+  display: none !important;
 }
 
 .v2-collapse #sb_opportunities:after,
 .v2-collapse #sb_contacts:after,
 .v2-collapse #sb_launchpad:after {
-   display: none !important;
+  display: none !important;
 }
+
 #sb_opportunities:after {
-    Content: 'Pipeline' !important;
+  Content: 'Pipeline' !important;
 }
+
 #sb_launchpad:after {
-    Content: 'OnRamp' !important;
+  Content: 'OnRamp' !important;
 }
+
 #sb_contacts:after {
-    Content: 'clients' !important;
+  Content: 'clients' !important;
 }
+
 #sb_opportunities:after,
 #sb_contacts:after,
 #sb_launchpad:after {
-    Visibility: visible !important;
-    Top: 0 !important;
-    Left: 0 !important;
-    Position: relative !important;
-    font-size: 14px !important;
-    color: rgb(128, 128, 128) !important;
-    font-weight: 400 !important;
-    line-height: 24px !important;
-    text-transform: uppercase !important;
+  Visibility: visible !important;
+  Top: 0 !important;
+  Left: 0 !important;
+  Position: relative !important;
+  font-size: 14px !important;
+  color: rgb(128, 128, 128) !important;
+  font-weight: 500 !important;
+  line-height: 24px !important;
+  text-transform: uppercase !important;
 }
 
 #sb_opportunities:hover:after,
 #sb_contacts:hover:after,
 #sb_launchpad:hover:after {
-    color: #fff !important;
+  color: #fff !important;
 }
 
 #sb_opportunities.active:after,
 #sb_contacts.active:after,
 #sb_launchpad.active:after {
+  color: #fff !important;
+}
+
+
+body:has(#bulkActionsList) .topmenu-navtitle,
+body:has(#crm-opportunities-pipelines-view) .topmenu-navtitle,
+body:has(#OpportunitiesList) .topmenu-navtitle,
+body:has(#smartlists) .topmenu-navtitle ,
+body:has(#contact-restore-dashboard) .topmenu-navtitle ,
+body:has(#CustomObjectsList) .topmenu-navtitle ,
+body:has(#BusinessList) .topmenu-navtitle ,
+body:has(#bulkActionsList) .topmenu-navtitle {
+  color: transparent !important;
+  position: relative !important;
+}
+
+body:has(#contact-restore-dashboard) .topmenu-navtitle::before ,
+body:has(#CustomObjectsList) .topmenu-navtitle::before ,
+body:has(#BusinessList) .topmenu-navtitle::before ,
+body:has(#bulkActionsList) .topmenu-navtitle::before ,
+body:has(#smartlists) .topmenu-navtitle::before {
+  content: "clients" !important;
+  color: #fff !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  text-transform: uppercase !important;
+}
+
+body:has(#bulkActionsList) .topmenu-navtitle::before ,
+body:has(#crm-opportunities-pipelines-view) .topmenu-navtitle::before ,
+body:has(#OpportunitiesList) .topmenu-navtitle::before {
+  content: "pipeline" !important;
+  color: #fff !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  text-transform: uppercase !important;
+}
+
+.topmenu-navtitle {
+  text-transform: uppercase !important;
+}
+
+#add-record-btn {
+  background: #E7246F !important;
+}
+
+#add-record-btn .hr-button__border {
+  border: none !important;
+}
+
+#opportunitiesModel .hr-base-selection-tags,
+#opportunitiesModel .hr-base-selection-label,
+#opportunitiesModel .hr-input {
+  background: #0d041e !important;
+}
+
+.hr-base-select-option:hover p {
+  color: #000 !important;
+}
+
+#opportunitiesModel .hr-base-selection-input__content {
+  color: #ddd !important;
+}
+
+#OpportunitiesList .min-h-0 .h-full.flex.flex-col .opportunitiesCard {
+    border: 1px solid #47474708!important;
+}
+
+.hl_wrapper.hl_contact--details .hl_contact-details-right .hr-button {
+  background: #E7246F !important;
+}
+
+.hr-drawer-content-wrapper {
+  background: #0e0923 !important;
+}
+
+.hl_wrapper.hl_contact--details .hl_contact-details-left .dropdown button,
+.hl_wrapper.hl_contact--details .hl_contact-details-left input {
+  background: #0d041e !important;
+  border: 1px solid #fff !important;
+}
+
+.hl_wrapper.hl_contact--details .hl_contact-details-right .hr-input-wrapper,
+.hr-drawer-content-wrapper .hr-button.hr-button--default-type.hr-button--medium-type.ui-button,
+.hr-drawer-content-wrapper .hr-base-selection-label,
+.hr-drawer-content-wrapper .hr-input-wrapper {
+  background: #0d041e !important;
+}
+
+.hl_contact-details-right .hr-button--default-type span,
+#notes-list-container-contact button span {
+  color: #000 !important;
+}
+
+#notes-list-container-contact button svg path {
+  fill: #000 !important;
+}
+
+.hl_contact-details-right a .hr-tag {
+  background: #0d041e !important;
+}
+
+#hl-table-calendar-list-table-filter-text-search input {
+  background: transparent !important;
+}
+
+#location-switcher-sidbar-v2 .switcher-caret-holder,
+#location-switcher-sidbar-v2 svg {
+  display: none !important;
+}
+
+.n-tabs .n-tabs-bar {
+  background-color: #E7246F !important;
+}
+
+#BusinessList .wrapper,
+#CustomObjectsList .wrapper {
+  background-color: #090417 !important;
+}
+
+#BusinessList .tabulator-tableholder,
+#BusinessList .tabulator-tableholder div,
+#CustomObjectsList .tabulator-tableholder div {
+  background: #140d26 !important;
+}
+
+.n-card .message-card:hover div,
+.n-card .message-card:hover h5 {
+  color: #000 !important;
+}
+
+#quickFilterDropdownLi .selected-current-filter {
+  background: #ef246f !important;
+  border: none !important;
+}
+
+#conversations .messages-group {
+  background: #0c061c !important;
+}
+
+#conversations .message-body--conversation .messages-group .messages-group-inner .message-wrapper .new-email-thread-view .new-email-thread-view--transition {
+  border-radius: 20px !important;
+  border: 1px solid rgba(212, 206, 230, 0.20) !important;
+  background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(113, 61, 223, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%), rgba(10, 3, 24, 0.70) !important;
+  box-shadow: 0 0 100px -20px rgba(212, 206, 230, 0.15) inset !important;
+  backdrop-filter: blur(22px) !important;
+}
+
+.hl-card {
+  border-radius: 20px !important;
+  border: 1px solid rgba(212, 206, 230, 0.20) !important;
+  background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(113, 61, 223, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%), rgba(10, 3, 24, 0.70) !important;
+  box-shadow: 0 0 100px -20px rgba(212, 206, 230, 0.15) inset !important;
+  backdrop-filter: blur(22px) !important;
+}
+
+.sidebar-v2-location .hl_wrapper #conversations,
+.sidebar-v2-location .hl_wrapper #conversations-lmp {
+  height: calc(101vh - 92px) !important;
+}
+
+.new-email-thread-view--collapsed-container[data-v-6ef82e29] {
+  background: #0c061c !important;
+}
+
+#conversations {
+  padding-top: 0px !important;
+}
+
+#schedule-later svg {
+  fill: transparent !important;
+}
+
+#quickFilterDropdownLi .inline-flex.items-center.px-4.py-1\.5.border.border-gray-300.shadow-sm.text-sm.font-medium.rounded.text-gray-700.mr-3 {
+  background-color: #ef246f !important;
+  border: none !important;
+}
+
+#message-composer .n-avatar {
+  background: #e7246f !important;
+}
+
+.hl-header-content .title {
+  font-weight: 700 !important;
+}
+
+#location-dashboard_btn--edit-dashboard svg {
+  stroke: #fff !important;
+}
+
+#pipeline-table-wrapper-header-global-filter {
+  background: #090417 !important;
+}
+
+#OpportunitiesList .bulk-action,
+#OpportunitiesList .bulk-action .inner-count,
+#OpportunitiesList .opportunitiesCard .hr-avatar {
+  background: #e7246f !important;
+}
+
+#pipeline-table {
+  background-color: #0e0923 !important;
+}
+
+.opportunitiesCard .hr-avatar .hr-avatar__text svg {
+  stroke: #fff !important;
+}
+
+#add-field-btn {
+  background: #e7246f !important;
+}
+
+#add-field-btn .hr-button__border {
+  border: none !important;
+}
+
+.hr-collapse-item__content-inner .field:hover {
+  background: #e7246f !important;
+}
+
+#modal-footer-btn-negative-action span,
+.hr-base-select-option--pending p {
+  color: #000 !important;
+}
+
+#drawer-component .hr-base-select-menu.hr-select-menu.ui-select__menu {
+  background: black !important;
+}
+
+#drawer-component .hr-base-selection .hr-base-selection-label .hr-base-selection-input .hr-base-selection-input__content {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: white !important;
+}
+
+#drawer-component .hr-base-selection-tags {
+  background: #0d041e !important;
+}
+
+#drawer-component .hr-base-selection-input__content {
+  color: #fff !important;
+}
+
+#info {
+  background-color: #090417 !important;
+}
+
+.hr-alert-container .hr-alert-body,
+#action-name {
+  background: #090417 !important;
+}
+
+#drawer-component .hr-tag.hr-tag--closable {
+  background: black !important;
+}
+
+.hr-alert-container .hr-alert-body {
+  background-color: #090417 !important;
+  border: none !important;
+  padding: 20px !important;
+}
+
+#bulkImport .text-black.hl-text-sm-medium {
+  color: white !important;
+}
+
+#manage-fields .bg-gray-100 {
+  background: #0e0923 !important;
+}
+
+#manage-fields .ui-card-content {
+  background: #090417 !important;
+}
+
+#manage-fields .add-fields[data-v-c0e7be5e] .hr-collapse-item__header-main {
+  color: #fff !important;
+  font-weight: 400 !important;
+  font-family: Inter;
+  font-size: 14px;
+}
+
+#manage-fields tr:hover td span {
+  color: #ddd !important;
+}
+
+#manage-fields .ui-avatar__default.hr-avatar {
+  background: #a1194d !important;
+  color: var(--gray-600);
+}
+
+#menuPopOverDiv {
+  background: #0e0923 !important;
+}
+
+#manage-fields .opportunitiesCard {
+  border: none !important;
+}
+
+#OpportunitiesList .tabulator .tabulator-paginator .tabulator-page[aria-label='Next Page']::after #OpportunitiesList .tabulator .tabulator-paginator .tabulator-page[aria-label='Prev Page']::before {
+  filter: invert(1);
+}
+
+#OpportunitiesList .tabulator-page-size {
+  background: #e7246f !important;
+  color: #fff !important;
+}
+
+.hr-card.hr-modal.ui-modal .hr-tag.hr-tag--round.hr-tag--closable.ui-tag.ui-default.ui-border-hidden.flex.w-full {
+  background: black !important;
+}
+
+.hr-card.hr-modal.ui-modal .hr-base-selection-label {
+  background: black !important;
+}
+
+.hr-card.hr-modal.ui-modal .hr-input-wrapper {
+  background: black !important;
+}
+
+.hr-card.hr-modal.ui-modal .hr-base-selection-input__content {
+  color: #736d6d !important;
+}
+
+.hr-card.hr-modal.ui-modal .hr-button__content {
+  color: black !important;
+}
+
+#task-container-opportunity .hr-button.hr-button--tertiary-type.hr-button--medium-type.ui-button.w-full {
+  background: #e7246f !important;
+}
+
+.hr-card.hr-modal.ui-modal .hr-button__content {
+  color: white !important;
+}
+
+.hr-card.hr-modal.ui-modal .hr-popover.hr-popover-shared.hr-popover--show-header-or-footer.ui-popover {
+  background: black !Important;
+}
+
+.hr-card.hr-modal.ui-modal .hr-base-selection-tags {
+  background: black !important;
+}
+
+.hr-card.hr-modal.ui-modal .hr-tag.hr-tag--round.hr-tag--closable.ui-tag.ui-default {
+  background: black !important;
+}
+
+.hr-card.hr-modal.ui-modal .bg-gray-100.\!p-4.rounded-lg {
+  background: black !important;
+}
+
+.hr-card.hr-modal.ui-modal .hr-input__textarea-el {
+  color: white !important;
+}
+
+.hr-card.hr-modal.ui-modal .hr-input-group-label__border {
+  background: black !important;
+}
+
+.hr-card.hr-modal.ui-modal .hr-date-panel.hr-date-panel--date.hr-date-panel--shadow {
+  background: black !important;
+}
+
+.hr-card.hr-modal.ui-modal .hr-time-picker-panel {
+  background: black !important;
+}
+
+.hr-card.hr-modal.ui-modal .hr-time-picker-col__item:hover {
+  color: black !important;
+}
+
+.hr-card.hr-modal.ui-modal .\!pt-6.\!pb-5.\!px-4 {
+  background: black !important;
+}
+
+.hr-card.hr-modal.ui-modal .hr-tag.hr-tag--round.ui-tag.ui-default.\!rounded-md.\!bg-white.\!cursor-pointer {
+  background: black !important;
+}
+
+.hr-card.hr-modal.ui-modal .filter-bar {
+  background: #1a132b !important;
+}
+
+.v-binder-follower-content,
+.hr-card.hr-modal.ui-modal .hr-data-table-empty {
+  background: #1a132b !important;
+}
+
+.hr-card.hr-modal.ui-modal .v-vl-items {
+  background: black !important;
+}
+
+#associations-trigger {
+  background: #e7246f !important;
+}
+
+#item-menu-dropdown {
+  background: #1a132b !important;
+}
+
+#redirect_to_subs svg {
+  stroke: white !important;
+}
+
+.n-avatar.cursor-pointer.cell-element.ui-avatar__default.default-avatar {
+  background: #e7246f !important;
+}
+
+#opportunity-RHhbLKN8D6nfIkBMqTkq .hr-tag.hr-tag--round.hr-tag--closable.ui-tag.ui-default.\!rounded-md.\!bg-white.\!cursor-pointer {
+  background: black !important;
+}
+
+#item-menu-dropdown .hr-dropdown-option:hover div {
+  color: black !important;
+}
+
+.hr-data-table-wrapper-footer {
+  background: #0e0923 !important;
+}
+
+#hr-prev-button {
+  background: black !important;
+}
+
+#next-button {
+  background: black !important;
+}
+
+.hr-scrollbar .hr-base-select-option--selected div {
+  color: #000 !important;
+}
+
+.hr-scrollbar .hr-base-select-option:hover div {
+  color: #000 !important;
+}
+
+#location-dashboard .dashboard-divider {
+  display: none !important;
+}
+
+.hr-dialog.hr-dialog--closable.hr-dialog--icon-left.hr-modal.hr-modal--close-on-esc.hr-modal--mask-closable.hr-modal--show-close.hr-modal--show-footer.hr-modal--show-header.hr-modal--default.className {
+  border-radius: 20px !important;
+  border: 1px solid rgba(212, 206, 230, 0.20) !important;
+  background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(113, 61, 223, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%), rgba(10, 3, 24, 0.70) !important;
+  box-shadow: 0 0 100px -20px rgba(212, 206, 230, 0.15) inset !important;
+  backdrop-filter: blur(22px) !important;
+}
+
+.main_container1012 {
+  display: none !important;
+border-radius: 15px!Important;
+background: linear-gradient(90deg, #6B4BF4 -0.01%, #4628C5 100%) !Important;
+  padding: 40px 50px !important;
+  position: absolute !important;
+}
+
+.main_container1012 {
+  transform: translate(1%, 0) scale(0.73) !important;
+  width: 110vw !important;
+  top: 4rem !important;
+}
+
+body:has(.v2-collapse) .main_container1012 {
+  transform: translate(-6%, 0) scale(0.73) !important;
+  width: 120vw !important;
+  top: 4rem !important;
+}
+
+.location-dashboard-wrapper.hl-wrapper-container .n-config-provider {
+  margin-top: 225px !important;
+}
+
+body:has(.sidebar-v2-location #location-dashboard) .main_container1012 {
+  display: block !important;
+  z-index: -0 !important;
+}
+
+@media screen and (min-width:1800px) {
+  .main_container1012 {
+    transform: translate(0%, 0) scale(0.73) !important;
+    width: 112vw !important;
+    top: 5rem !important;
+  }
+
+  body:has(.v2-collapse) .main_container1012 {
+    transform: translate(-7%, 0) scale(0.73) !important;
+    width: 122vw !important;
+    top: 5rem !important;
+  }
+}
+
+@media screen and (max-width:1700px) {
+  .main_container1012 {
+    transform: translate(3%, 0) scale(0.73) !important;
+    width: 107vw !important;
+    top: 5rem !important;
+
+  }
+
+  body:has(.v2-collapse) .main_container1012 {
+    transform: translate(-5%, 0) scale(0.73) !important;
+    width: 118vw !important;
+    top: 5rem !important;
+  }
+}
+
+
+@media screen and (max-width:1500px) {
+  .main_container1012 {
+    transform: translate(5%, 0) scale(0.73) !important;
+    width: 105vw !important;
+    top: 5rem !important;
+  }
+
+  body:has(.v2-collapse) .main_container1012 {
+    transform: translate(-4%, 0) scale(0.73) !important;
+    width: 116vw !important;
+    top: 5rem !important;
+  }
+}
+
+@media screen and (max-width:1300px) {
+  .main_container1012 {
+    transform: translate(8%, 0) scale(0.73) !important;
+    width: 101vw !important;
+    top: 5rem !important;
+  }
+
+  body:has(.v2-collapse) .main_container1012 {
+    transform: translate(-3%, 0) scale(0.73) !important;
+    width: 115vw !important;
+    top: 5rem !important;
+  }
+}
+
+@media screen and (max-width:1200px) {
+  .main_container1012 {
+    transform: translate(11%, 0) scale(0.73) !important;
+    width: 98vw !important;
+    top: 5rem !important;
+  }
+
+  body:has(.v2-collapse) .main_container1012 {
+    transform: translate(-1%, 0) scale(0.73) !important;
+    width: 112vw !important;
+    top: 5rem !important;
+  }
+}
+
+@media screen and (max-width:1050px) {
+  .main_container1012 {
+    transform: translate(11%, 0) scale(0.73) !important;
+    width: 100vw !important;
+    top: 5rem !important;
+  }
+
+  body:has(.v2-collapse) .main_container1012 {
+    transform: translate(2%, 0) scale(0.73) !important;
+    width: 107vw !important;
+    top: 5rem !important;
+  }
+}
+
+#pipeline-table tr:hover td span {
+  color: #fff !important;
+}
+
+#primary-blue {
+  background: #E7246F !important;
+}
+
+#primary-blue .hr-button__border {
+  border: none !important;
+}
+
+button.hr-button--secondary p {
+  color: #000 !important;
+}
+
+#location-dashboard .hl-card-header .hl-text-md-medium {
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+}
+
+.agency-logo-container img {
+  opacity: 0 !important;
+}
+
+.agency-logo-container {
+  position: relative !important;
+}
+
+.agency-logo-container::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 18% !important;
+  width: 150px !important;
+  height: 100% !important;
+  background: url(https://storage.googleapis.com/msgsndr/jy2CakbntNUtQfQg4zZx/media/68c5a0d8ccedb2bbfaf77f07.png) no-repeat center/contain !important;
+}
+
+body:has(#bulkActionsList) .topmenu-navtitle ,
+body:has(#crm-opportunities-pipelines-view) .topmenu-navtitle ,
+body:has(#OpportunitiesList) .topmenu-navtitle {
+  max-width: 100px !important;
+}
+
+#newTopBar .pipeline-ribbon{
+border: 1px solid #D4CEE633 !important;
+border-radius: 20px !important;
+max-width: 98% !important;
+margin: 0 auto !important;
+}
+#newTopBar .pipeline-ribbon .count{
+border-radius: 10px !important;
+padding: 18px !important;
+}
+#newTopBar .pipeline-ribbon .hr-base-selection-input{
+background: #1e172d !important;
+border-radius: 10px !important;
+
+}
+#newTopBar .pipeline-ribbon .hr-base-selection__border,
+#newTopBar .pipeline-ribbon .hr-base-selection__state-border{
+border: none !important;
+}
+
+#import-btn .hr-button__border{
+border: none !important;
+}
+
+#listInvoices #payment-integration-alert .n-alert__border{
+  border:none !important;
+}
+#listInvoices #payment-integration-alert .n-alert-body{
+  border-radius: 10px !important;
+}
+.v2-collapse #sidebar-v2 .hl_nav-header a::before {
+    margin-right: 0px !important;
+}
+
+#sb_payments + div + a::before {
+  content: url("https://storage.googleapis.com/msgsndr/jy2CakbntNUtQfQg4zZx/media/68c6738951406ee4d8c0ba16.svg");
+}
+
+.v2-collapse .hl_nav-settings{
+  margin-left: 0px !important;
+}
+
+
+#drawer .n-popover .n-popover__footer {
+
+	background: #090417 !important;
+}
+
+#hl_smartlists-main div.card-like {
+
+	border-top-left-radius: 0px !important;
+	border-top-right-radius: 0px !important;
+}
+
+#hl_smartlists-main .flex-page-bar{
+  background: #1a132b !important;
+  padding-top: 10px !important;
+}
+
+#hl_smartlists-main .flex-page-bar .barsection span{
+  color: #fff !important;
+}
+
+#filter-drawer .nav-item-base.cursor-pointer.flex {
+	background-color: #a1194d !important;
+	border: none !important;
+}
+
+
+ #contact-create-form .shadow-sm {
+	border-radius: 10px !important;
+	background: rgba(255, 255, 255, 0.05) !important;
+}
+
+
+ #contact-create-form .btn.dropdown-toggle.btn-light {
+	border-radius: 10px !important;
+	background: rgba(255, 255, 255, 0.05) !important;
+}
+
+
+#hl_smartlists-main .flex-page-bar .barsection2 span{
     color: #fff !important;
 }
 
-body:has(#OpportunitiesList) .topmenu-navtitle ,
-body:has(#smartlists) .topmenu-navtitle {
-    color: transparent !important;
-    position: relative !important;
+#smartlists .bulk-actions-list button.btn:enabled svg path {
+  stroke: #fff; /* white color */
 }
-body:has(#smartlists) .topmenu-navtitle::before {
-    content: "Clients" !important; 
-    color: #fff !important; 
-    position: absolute !important;
-    left: 0 !important;
-    top: 0 !important;
-    text-transform: uppercase !important;
+
+.btn.btn-light2 {
+	background: #e7246f !important;
 }
-body:has(#OpportunitiesList) .topmenu-navtitle::before {
-    content: "Pipeline" !important; 
-    color: #fff !important; 
-    position: absolute !important;
-    left: 0 !important;
-    top: 0 !important;
-    text-transform: uppercase !important;
+
+
+#customer_photo_dropzone.picture {
+
+	background: #201c2d url(https://static.leadconnectorhq.com/pmd/img/icon-cross.svg) no-repeat 50% !important;
+
 }
-.topmenu-navtitle {
-  text-transform: uppercase !important;
+
+
+#smartlists .bulk-actions-list button[aria-label="Bulk WhatsApp"]:enabled svg path {
+  fill: #fff !important;
+}
+
+.modal .modal-content {
+	border-radius: 20px !important;
+	border: 1px solid rgba(212, 206, 230, 0.20) !important;
+	background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(113, 61, 223, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%), #0A0318 !important;
+	box-shadow: 0 0 100px -20px rgba(212, 206, 230, 0.15) inset !important;
+	backdrop-filter: blur(26px) !important;
+}
+
+.modal .modal-content .px-2.--blue.info-blue.margin-30, .card {
+		border-radius: 20px !important;
+	border: 1px solid rgba(212, 206, 230, 0.20) !important;
+	background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(113, 61, 223, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%), #0A0318 !important;
+	box-shadow: 0 0 100px -20px rgba(212, 206, 230, 0.15) inset !important;
+	backdrop-filter: blur(26px) !important;
+}
+
+
+.modal .modal-content .hover\:bg-curious-blue-100:hover {
+	--tw-bg-opacity: 1 !important;
+	background-color: #E7246F !important;
+	border: none !important;
+}
+
+.modal .modal-content .hover\:bg-gray-50:hover {
+	--tw-bg-opacity: 1 !important;
+	background-color: #E7246F !important;
+	border: none !important;
+}
+
+
+.n-form-item-blank .add-fields-container {
+  background-color: #1a1428;
+}
+
+.n-avatar-group .n-avatar.bg-red-600.default-avatar {
+	background: #e7246f !important;
+}
+
+.n-avatar-group .n-avatar.default-avatar {
+	background: #e7246f !important;
+}
+
+.n-card.n-modal.hl-modal.action-modal-docs {
+		border-radius: 20px !important;
+	border: 1px solid rgba(212, 206, 230, 0.20) !important;
+	background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(113, 61, 223, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%), #0A0318 !important;
+	box-shadow: 0 0 100px -20px rgba(212, 206, 230, 0.15) inset !important;
+	backdrop-filter: blur(26px) !important;
+}
+
+#task .tabulator-tableholder {
+	background: #090417!important;
+}
+
+#task .tabulator-header-contents {
+	background: #090417 !important;
+}
+
+.manage-fields-body .add-fields[data-v-bc38fb1c] .hr-collapse-item__header-main {
+	color: #fff !important;
+	font-weight: 400 !important;
+	font-family: Inter;
+	font-size: 14px;
+}
+
+.hr-base-select-option.hr-base-select-option--pending.hr-base-select-option--show-checkmark:hover {
+	background: black !important;
+}
+
+#bulk-action-form .n-form-item-blank .toolbar_button:hover img {
+filter: invert(0)  !important;
+}
+#bulk-action-form .n-form-item-blank .toolbar_button:hover svg path {
+stroke: #000 !important;
+}
+#bulk-action-form .n-form-item-blank .toolbar_button img {
+    filter: invert(1)  !important;
+}
+
+#task .bulk-action.d-flex, .inner-count {
+      background-color: #221e30 !important;
+}
+
+#delete-task-alert .hr-alert-body.hr-alert-body--bordered {
+	border-radius: 10px;
+	background: rgb(20, 13, 38) !important;
+}
+
+#modal-footer-btn-positive-action {
+	background: #E7246F !important;
+}
+
+#relations-drawer-component-btn-positive-action {
+	background: #E7246F !important;
+}
+
+#business .bulk-action.d-flex {
+	background: #221e30 !Important;
+}
+
+#BusinessList .my-table button,
+#CustomObjectsList .my-table button{
+  color: #000 !important;
+}
+#BusinessList .my-table button{
+  background: #fff !important;
+}
+
+#drawer .hr-base-select-option:hover .hr-base-select-option__content  div span {
+color: #000 !important;
+}
+
+.hr-modal .ui-modal-content .hr-alert{
+background: #000 !important;
+}
+.hr-modal .ui-modal-content .hr-alert .hr-alert__border{
+border: #000 !important;
+}
+#square-live .bg-gray-100,
+#square-test .bg-gray-100{
+  background: #000 !important;
+  border: none !important;
+}
+#parent-container #estimates-notes-preview-section,
+#parent-container #left-section{
+  background: #0e0923 !important;
+}
+#items-and-summary .border-gray-300 .flex.pl-2{
+  background: #14152c !important;
+  border-radius: 10px;
+}
+
+#page-email-builder-template__btn-actions{
+  background: #e7246f !important;
+}
+#back-to-coupons span,
+#Additional-Options .n-button__content{
+  color: #fff !important;
+}
+#inventory .hr-pages-cntr button{
+background: #fff !important;
+}
+#inventory .hr-pages-cntr button p{
+color: #000 !important;
+}
+
+#calendarSetupPage .h-full.w-full {
+	 background: white !important; 
+}
+
+#appointment-drawer .n-avatar.default-avatar {
+	background: #a1194d !important;
+}
+
+#search-input {
+	background: rgba(255, 255, 255, 0.05) !important;
+}
+
+#open-obj-settings-btn {
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 0.05) !important;
+}
+
+#note-input .hr-input-wrapper {
+	background: #171421 !important;
+}
+
+#note-input .hr-input__textarea-el {
+	color: white !important;
+}
+
+#NotesListWithStates-appointment-modal .hr-button.hr-button--default-type.hr-button--medium-type.ui-button {
+	background: black !important;
+}
+
+#notes-form-save-btn {
+	background: #a1194d !important;
+	border: none;
+}
+
+.hr-button__border {
+	border: none !important;
+}
+
+#task-actions-dropdown {
+	background: rgba(255, 255, 255, 0.05) !important;
+}
+
+#NotesListWithStates-appointment-modal .hr-popover.hr-popover-shared.hr-popover--show-header-or-footer.ui-popover {
+	background: rgba(255, 255, 255, 0.05) !important;
+}
+
+#NotesListWithStates-appointment-modal .hr-base-selection-label {
+	background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.bookAppointmentFormContainer .rounded-lg.mb-3.bg-gray-100.py-3.px-1\.5 {
+	background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.bookAppointmentFormContainer .py-1.px-2.rounded-xl.w-fit.bg-blue-50.text-center.text-blue-700.font-medium {
+	background: #171421 !important;
+}
+
+.hr-dropdown-option:hover span,
+.hr-dropdown-option:hover div{
+  color: #000 !important;
+}
+
+#CalendarPage nav .max-w-40 button#btn{
+  background: black !important;
+}
+#CalendarPage nav .max-w-40 button#btn span{
+  color: #fff !important;
+}
+
+#CalendarPage .n-tab-pane span.h-4.w-4.min-w-\[16px\].block.border.rounded.border-black\/50{
+  border:1px solid #fff !important;
+}
+
+#AppointmentList table tr:hover .n-select div{
+  color: #fff !important;
+}
+#AppointmentList table tr:hover .n-select i svg path{
+  stroke: #fff !important;
+}
+
+.v-binder-follower-content .ui-advanced-select__container {
+	border-radius: 20px !important;
+	border: 1px solid rgba(212, 206, 230, 0.20) !important;
+	background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(113, 61, 223, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%), #0A0318 !important;
+	box-shadow: 0 0 100px -20px rgba(212, 206, 230, 0.15) inset !important;
+	backdrop-filter: blur(26px) !important;
+}
+
+.v-binder-follower-content .ui-advanced-select__search {
+	background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(113, 61, 223, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%), #0A0318 !important;
+}
+
+#ui-advanced-select-search {
+	background: #1e1a2b !important;
+}
+
+#OpportunitiesList .card {
+    border-radius: 20px !important;
+    border: none !important;
+    background: none !important;
+    box-shadow: none !important;
+    backdrop-filter: blur(0px) !important;
+}
+
+#properties\.dueDate-datepicker {
+	background: #0c071e !important;
+}
+
+#task .quick-filter-container {
+	background: #0c071e !important;
+}
+
+#advanced-fitler-drawer .hr-space.bg-gray-100.py-4.overflow-hidden.border-l.cursor-pointer {
+	background: #171421 !important;
+}
+
+#sort-select .hr-base-selection-label {
+	background: #1e1a2b !important;
+}
+
+#data-add-filter {
+	background: #a1194d !important;
+}
+
+#companyName {
+	background: none !important;
+}
+
+#source {
+	background: none !important;
+}
+
+#monetaryValue {
+	background: none !important;
+}
+
+#dateUpdated {
+	background: none !important;
+}
+
+#pipeline-name {
+	background: rgba(255, 255, 255, 0.05) !important;
+}
+
+#draggable-stage {
+	border-radius: 10px!Important;
+	background: rgba(255, 255, 255, 0.05)!Important;
+}
+
+.dragArea .hr-input {
+	background-color: rgb(25, 16, 41) !important;
+}
+
+#save {
+	background: #E7246F !important;
+}
+
+.hr-dialog.hr-dialog--closable.hr-dialog--icon-left.hr-modal.hr-modal--close-on-esc.hr-modal--mask-closable.hr-modal--show-close.hr-modal--show-footer.hr-modal--show-header.hr-modal--show-header-icon.hr-modal--warning {
+	border-radius: 20px !important;
+	border: 1px solid rgba(212, 206, 230, 0.20)!important;
+	background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(113, 61, 223, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%), rgba(10, 3, 24, 0.70)!important;
+	box-shadow: 0 0 100px -20px rgba(212, 206, 230, 0.15) inset!important;
+	backdrop-filter: blur(22px)!important;
+}
+
+#sort-filter .sort-filter-component__heading {
+	background: black !important;
+}
+
+#advanced-fitler-drawer .hover\:bg-gray-50:hover p,
+.v-binder-follower-content .hr-base-select-option:hover div,
+.hr-popover .hr-popover__content .item.default:hover span{
+color: #000 !important;
+}
+#CustomObjectsList .hr-date-panel:not(.hr-date-panel--week) .hr-date-panel-dates .hr-date-panel-date:not(.hr-date-panel-date--disabled):not(.hr-date-panel-date--selected):hover{
+  background: rgb(31 27 43) !important;
+}
+#advanced-fitler-drawer .hover\:bg-gray-50:hover{
+  background: #fff !important;
+}
+
+#marketplace-app .hr-wrapper-container.platform-ui__highrise {
+	background: #090417 !Important;
+}
+
+#marketplace-app .ai-contest-banner-leaderboard-button {
+	background: #E7246F !important;
+}
+
+#bot-search-input {
+	border-radius: 10px !important;
+	background: rgba(255, 255, 255, 0.05) !important;
+}
+
+#marketplace-app .ui-table-container__wrapper {
+background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(113, 61, 223, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%), #0A0318 !important;
+box-shadow: 0 0 100px -20px rgba(212, 206, 230, 0.15) inset !important;
+backdrop-filter: blur(26px) !important;
+}
+
+#social-planner-mf .p-2.bg-blue-50.rounded-lg.border.border-blue-300.md\:max-w-md.cta-box {
+
+	background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(113, 61, 223, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%), #0A0318!important;
+	box-shadow: 0 0 100px -20px rgba(212, 206, 230, 0.15) inset!important;
+}
+
+#marketplace-app .hr-data-table.hr-data-table--bottom-bordered.hr-data-table--single-line {
+	background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(113, 61, 223, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%), #0A0318 !important;
+}
+
+.n-config-provider .space-y-4 div[style*="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);"] span,
+.n-config-provider .space-y-4 div[style*="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);"] p,
+.n-config-provider .space-y-4 div[style*="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);"] h2 {
+  color: black !important;
+}
+
+#marketplace-app {
+	background: #090417 !important;
+}
+
+#ui-table-sandbox-accounts-filter-text-search {
+	border-radius: 10px !important;
+	background: rgba(255, 255, 255, 0.05) !important;
+}
+
+#calendarSetupPage .h-full.w-full {
+	 background: white !important; 
+}
+
+#appointment-drawer .n-avatar.default-avatar {
+	background: #a1194d !important;
+}
+
+#event-type {
+	background: #171421;
+}
+
+#add-note-button {
+	background: rgba(255, 255, 255, 0.05) !important;
+}
+
+#center-panel .cardUi.hl-card {
+	border-radius: 20px !important;
+	border: 1px solid rgba(212, 206, 230, 0.20) !important;
+	background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(113, 61, 223, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%), #0A0318 !important;
+	box-shadow: 0 0 100px -20px rgba(212, 206, 230, 0.15) inset !important;
+	backdrop-filter: blur(26px) !important;
+}
+
+.messages-group-inner .flex.items-start.gap-x-2\.5 {
+	border-radius: 20px !important;
+	border: 1px solid rgba(212, 206, 230, 0.20) !important;
+	background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(113, 61, 223, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%), #0A0318 !important;
+	box-shadow: 0 0 100px -20px rgba(212, 206, 230, 0.15) inset !important;
+	backdrop-filter: blur(26px) !important;
+}
+
+.messages-group-inner .flex.cursor-pointer.bg-gray-custom.subject-line.hover\:bg-gray-200.new-email-thread-view--transition {
+	background: #0e0923;
+}
+
+.hr-popover.hr-popover-shared.hr-popover--show-header-or-footer.ui-popover {
+	border-radius: 20px !important;
+	border: 1px solid rgba(212, 206, 230, 0.20) !important;
+	background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(113, 61, 223, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%), #0A0318 !important;
+	box-shadow: 0 0 100px -20px rgba(212, 206, 230, 0.15) inset !important;
+	backdrop-filter: blur(26px) !important;
+}
+
+#task-container-contact .v-binder-follower-content {
+	border-radius: 105px!Important;
+}
+
+#task-container-contact .hr-base-selection-tags {
+	background: #1a132b !important;
+}
+
+#task-container-contact .hr-base-selection-label {
+	background: #1a132b !important;
+}
+
+i.scroll-down-shortcut3.fa.fa-lg.fa-angle-double-down {
+    background: black !important;
+}
+
+.hl_tasks--appointment-detail {
+	background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(113, 61, 223, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%), #0A0318 !important;
+	backdrop-filter: blur(26px) !important;
+}
+
+#teamsPage {
+	background: white !important;
+}
+
+#marketplace-app .hr-tag,
+#marketplace-app .hr-tag__content{
+  background: #fff !important;
+}
+.hr-tag__content div,
+#marketplace-app,
+#knowledge-base-listing .n-tab-pane .n-tag__content div,
+.ai-contest-banner-container .ai-contest-banner-leaderboard-button{
+color: #000 !important;
+}
+
+#knowledge-base-listing .font-semibold.text-gray-900 .n-tag__content div{
+color: #fff !important;
+}
+.hr-radio-button{
+  background: #090417 !important;
+}
+#rating-info-card,
+#marketplace-app .ui-card-content,
+#marketplace-app .ui-card-content .ui-card-header,
+#marketplace-app{
+  background: #090417 !important;
+}
+
+#CRMSettings .hr-wrapper-container.platform-ui__highrise.h-full.w-full {
+	background: #090417 !important;
+}
+
+#CRMSettings .w-\[700px\].p-1\.5.ui-card {
+	border-radius: 20px !important;
+	border: 1px solid rgba(212, 206, 230, 0.20) !important;
+	background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(113, 61, 223, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%), #0A0318 !important;
+	box-shadow: 0 0 100px -20px rgba(212, 206, 230, 0.15) inset !important;
+	backdrop-filter: blur(26px) !important;
+}
+
+div#cpSettingsPage {
+    background: white !important;
+}
+
+div#tagsCRMBuilder {
+    background: white !important;
+}
+
+.v-binder-follower-container .hr-dropdown-menu .hr-dropdown-option:hover span,
+.v-binder-follower-container .hr-dropdown-menu .hr-dropdown-option:hover div{
+  color: #000 !important;
+}
+
+#conversations .messages-group .cardUi.hl-card {
+    border-radius: 20px !important;
+    border: 1px solid rgba(212, 206, 230, 0.20) !important;
+    background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(113, 61, 223, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%), #0A0318 !important;
+    box-shadow: 0 0 100px -20px rgba(212, 206, 230, 0.15) inset !important;
+    backdrop-filter: blur(26px) !important;
+}
+
+
+#contact-details .v-binder-follower-content .hr-popover__content .hr-form-item-blank .hr-select .hr-base-selection p,
+#contact-details .v-binder-follower-content .hr-popover__content .hr-form-item-blank .hr-select .hr-base-selection div{
+color: #000 !important;
+}
+
+body:has(#notification_banner-top_bar) .main_container1012{
+  top: 7rem !important;
+}
+body:has(#notification_banner-top_bar) #tooglecss{
+  top: 66px !important;
+}
+body:has(#notification_banner-top_bar) .flex.mb-4.h-7.flex-row.md\:flex-col.lg\:flex-row.xl\:flex-row.items-start.justify-between.px-2{
+  top: 57px !important;
+}
+
+#notification_banner-top_bar button{
+  color:#000 !important
+}
+
+#manage-fields .hr-collapse-item__header-main{
+  color: #fff !important;
+}
+
+#data-filter .mb-3.flex.h-12.cursor-pointer.items-center.rounded-md.bg-gray-100 {
+    background: #a21a4d !important;
+}
+
+a#sb_sites {
+    display: none !important;
+}
+
+#OpportunitiesList .min-h-0 .h-full.flex.flex-col 
+.opportunitiesCard.max-h-2xl.borderColor.mb-\[16px\].max-h-28.\!rounded.\!border-0.\!border-t-2.\!border-solid.ui-card {
+  position: relative;
+  background: linear-gradient(
+    to right,
+    #090417 0px,          /* left 30px black */
+    #090417 30px,
+    #6366f1 30px,      /* purple center */
+    #6366f1 calc(100% - 30px),
+    #090417 calc(100% - 30px), /* right 30px black */
+    #090417 100%
+  ) !important;
+  padding: 15px 20px 15px 70px !important;
+  margin-left: -40px;
+}
+#OpportunitiesList .scrollable .target .min-h-0:nth-child(1) .opportunitiesCard.max-h-2xl.borderColor.mb-\[16px\].max-h-28.\!rounded.\!border-0.\!border-t-2.\!border-solid.ui-card::before{
+display: none !important;
+}
+
+#OpportunitiesList .min-h-0 .h-full.flex.flex-col 
+.opportunitiesCard.max-h-2xl.borderColor.mb-\[16px\].max-h-28.\!rounded.\!border-0.\!border-t-2.\!border-solid.ui-card::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 41px solid transparent;
+  border-bottom: 42px solid transparent;
+  border-left: 30px solid #090417; 
+}
+
+#OpportunitiesList .min-h-0 .h-full.flex.flex-col 
+.opportunitiesCard.max-h-2xl.borderColor.mb-\[16px\].max-h-28.\!rounded.\!border-0.\!border-t-2.\!border-solid.ui-card::after {
+  content: '';
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 43px solid transparent;
+  border-bottom: 43px solid transparent;
+  border-left: 30px solid #6366f1;
+  z-index: 5 !important;
+}
+
+button:hover .hr-button__state-border{
+  border: 1px solid transparent !important;
+}
+
+
+#location-dashboard svg g path[d="M146 4.1A77.9 77.9 0 1 1 145.9922 4.1M146 17.1A64.9 64.9 0 1 0 146.0065 17.1Z"] {
+  fill: #090417 !important;
+}
+
+#location-dashboard {
+  padding-top: 0px !important;
+}
+
+#location-dashboard svg path[fill="#22CCEE"],
+#location-dashboard svg path[fill="rgb(34,204,238)"],
+#location-dashboard svg path[fill="rgb(37,224,255)"] {
+  fill: #9CD7EC !important;
+  stroke: none !important;
+}
+
+#location-dashboard svg path[fill="rgb(128,152,249)"],
+#location-dashboard svg path[fill="rgb(140,167,255)"],
+#location-dashboard svg path[fill="#8098F9"] {
+  fill: #217D99 !important;
+  stroke: none !important;
+}
+
+#location-dashboard svg path[fill="rgb(164,138,251)"],
+#location-dashboard svg path[fill="rgb(180,151,255)"],
+#location-dashboard svg path[fill="#A48AFB"] {
+  fill: #224BA1 !important;
+  stroke: none !important;
+}
+#location-dashboard div[style="height: calc(100% - 108px);"] #chart svg path:hover,
+#location-dashboard svg path[fill="rgb(91,194,255)"],
+#location-dashboard svg path[fill="rgb(83,177,253)"],
+#location-dashboard svg path[fill="#53B1FD"] {
+  fill: #6B4BF4 !important;
+  stroke: none !important;
+}
+
+#location-dashboard div[aria-label="titleOpportunityStageDistribution"] svg path {
+  stroke: none !important;
+}
+
+
+#location-dashboard div[style="height: calc(100% - 108px);"] #chart svg path {
+  fill: rgba(255, 255, 255, 0.05) !important;
+  fill-opacity: 0.7 !important;
+}
+
+body:has(#notification_banner-top_bar) #OpportunitiesList {
+  padding-top: 3rem !important;
+}
+body:has(#notification_banner-top_bar) #social-planner-mf {
+    padding-top: 2rem !important;
+}
+body:has(#notification_banner-top_bar) .hl_allphonenumber--container.notification-banner-wrapper {
+    padding-top: 7rem !important;
+}
+body:has(#notification_banner-top_bar) #smartlists {
+  padding-top: 3rem !important;
+}
+body:has(#notification_banner-top_bar) #CRMSettings {
+  padding-top: 5rem !important;
+}
+body:has(#notification_banner-top_bar) .hl_settings--body.hl_v2_stettings--body.notification-banner-wrapper {
+  padding-top: 11rem !important;
+}
+
+body:has(#notification_banner-top_bar) #location-custom-reports,
+body:has(#notification_banner-top_bar) #workflowBuilder {
+  padding-top: 1rem !important;
+}
+
+body:has(#notification_banner-top_bar) #snippets-app-container{
+  padding-top:140px !important;
+}
+body:has(#notification_banner-top_bar) #trigger-links,
+body:has(#notification_banner-top_bar) #customers{
+  padding-top:40px !important;
+}
+body:has(#notification_banner-top_bar) #BusinessList ,
+body:has(#notification_banner-top_bar) #CustomObjectsList {
+    padding-top:20px !important;
+}
+body:has(#notification_banner-top_bar) #bulkActionsList .n-config-provider ,
+body:has(#notification_banner-top_bar) #pipeline-page {
+  padding-top: 1rem !important;
+}
+body:has(#notification_banner-top_bar) #location_prospect_micro_app {
+  padding-top: 4rem !important;
+}
+body:has(#notification_banner-top_bar) #certificates ,
+body:has(#notification_banner-top_bar) #ProposalEstimatesTemplateListApp ,
+body:has(#notification_banner-top_bar) #ProposalEstimatesListApp ,
+body:has(#notification_banner-top_bar) #reporting-agent-dashboard {
+    padding-top: 3rem !important;
+}
+
+body:has(#notification_banner-top_bar) #recurring_listing ,
+body:has(#notification_banner-top_bar) #invoice_listing {
+  padding-top: 1rem !important;
+}
+
+body:has(#notification_banner-top_bar) #paymentlinksDashboardApp {
+    padding-top: 11rem !important;
+}
+
+body:has(#notification_banner-top_bar) #widgets-container ,
+body:has(#notification_banner-top_bar) #reviews-container ,
+body:has(#notification_banner-top_bar) #review-requests-container ,
+body:has(#notification_banner-top_bar) #reputation-dashboard-container ,
+body:has(#notification_banner-top_bar) #knowledge-base-listing{
+    padding-top: 10rem !important;
+}
+
+body:has(#notification_banner-top_bar) #SubscriptionsListPage ,
+body:has(#notification_banner-top_bar) #CouponsListPage,
+body:has(#notification_banner-top_bar) #OrdersListPage ,
+body:has(#notification_banner-top_bar) #estimatesDashboardApp {
+  padding-top: 9rem !important;
+}
+
+#sidebar-v2 nav a i.fas.fa-globe{
+color: #70747d  !important;
+font-size: 20px !important;
+}
+
+#notification_banner-top_bar{
+  background: purple !important;
+}
+#notification_banner-top_bar svg path{
+  fill: #fff !important;
+}
+
+#notification_banner-top_bar button {
+ padding: 0 !important;
+}
+
+#associations-trigger span,
+#associations-trigger svg,#tasks-list-container-opportunity .bg-primary-50 span,
+#tasks-list-container-opportunity .bg-primary-50 {
+color: #000 !important;
+}
+.hl-title-container .hl-text-lg-medium{
+font-size:15px !important
+}
+
+#OpportunitiesList .wrapper.opportunityPage {
+  background: #090417 url("https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/68ced973ee40408a27d044bc.svg")
+    no-repeat center top !important;
+  background-size: 1050px auto !important; 
+}
+
+#hl_header--copilot-icon svg circle{
+  fill: #1a142d !important;
+}
+
+#conversations .hl_conversations--wrap .relative.border-r.border-gray-200.hl_conversations--messages-list-v2-left-most-panel section .space-y-2 .flex.flex-col {
+    margin-left: 0px !important;
 }
