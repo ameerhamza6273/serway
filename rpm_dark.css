@@ -736,7 +736,7 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 
 #sidebar-v2 a span.nav-title {
   text-transform: uppercase !important;
-  font-size: 14px !important;
+  font-size: 12px !important;
   font-weight: 600 !important;
 
 }
@@ -905,12 +905,12 @@ span.search-placeholder::before {
 }
 
 .v2-open #sidebar-v2 {
-  min-width: 237px !important;
+  min-width: 238px !important;
   padding: 0px !important;
 }
 
 .v2-open #sidebar-v2 .h-screen {
-  min-width: 237px !important;
+  min-width: 238px !important;
 }
 
 #sidebar-v2 nav a {
@@ -4086,9 +4086,9 @@ a#canny_logs-toggle {
   Top: 0 !important;
   Left: 0 !important;
   Position: relative !important;
-  font-size: 14px !important;
+  font-size: 12px !important;
   color: rgb(128, 128, 128) !important;
-  font-weight: 500 !important;
+  font-weight: 600 !important;
   line-height: 24px !important;
   text-transform: uppercase !important;
 }
