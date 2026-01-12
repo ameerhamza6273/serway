@@ -5350,18 +5350,19 @@ a#sb_sites {
 
 #OpportunitiesList .min-h-0 .h-full.flex.flex-col 
 .opportunitiesCard.max-h-2xl.borderColor.mb-\[16px\].max-h-28.\!rounded.\!border-0.\!border-t-2.\!border-solid.ui-card {
-  position: relative;
-  background: linear-gradient(
-    to right,
-    #090417 0px,          /* left 30px black */
-    #090417 30px,
-    #6366f1 30px,      /* purple center */
-    #6366f1 calc(100% - 30px),
-    #090417 calc(100% - 30px), /* right 30px black */
-    #090417 100%
-  ) !important;
-  padding: 15px 20px 15px 70px !important;
-  margin-left: -40px;
+    position: relative;
+    background: linear-gradient(
+  to right,
+  #8C67F5 0 15px,                /* pehle 15px red */
+  #8C67F5 15px 30px,         /* agle 15px #f9fafb */
+  #8C67F5 30px,              /* gradient start */
+  #4628C5 calc(100% - 30px), /* gradient end */
+  #f9fafb calc(100% - 30px) 100% /* right 30px same */
+);
+
+    padding: 15px 20px 15px 60px !important;
+    margin-left: -10px !important;
+    z-index: 0 !important;
 }
 #OpportunitiesList .scrollable .target .min-h-0:nth-child(1) .opportunitiesCard.max-h-2xl.borderColor.mb-\[16px\].max-h-28.\!rounded.\!border-0.\!border-t-2.\!border-solid.ui-card::before{
 display: none !important;
@@ -5371,28 +5372,28 @@ display: none !important;
 .opportunitiesCard.max-h-2xl.borderColor.mb-\[16px\].max-h-28.\!rounded.\!border-0.\!border-t-2.\!border-solid.ui-card::before {
   content: '';
   position: absolute;
-  left: 30px;
+  left: -2px;
   top: 50%;
   transform: translateY(-50%);
   width: 0;
   height: 0;
-  border-top: 41px solid transparent;
-  border-bottom: 42px solid transparent;
-  border-left: 30px solid #090417; 
+  border-top: 50px solid transparent;
+  border-bottom: 52px solid transparent;
+  border-left: 40px solid #f9fafb; 
 }
 
 #OpportunitiesList .min-h-0 .h-full.flex.flex-col 
 .opportunitiesCard.max-h-2xl.borderColor.mb-\[16px\].max-h-28.\!rounded.\!border-0.\!border-t-2.\!border-solid.ui-card::after {
   content: '';
   position: absolute;
-  right: 0px;
+  right: 2px;
   top: 50%;
   transform: translateY(-50%);
   width: 0;
   height: 0;
-  border-top: 43px solid transparent;
-  border-bottom: 43px solid transparent;
-  border-left: 30px solid #6366f1;
+  border-top: 45px solid transparent;
+  border-bottom: 45px solid transparent;
+  border-left: 30px solid #4628C5;
   z-index: 5 !important;
 }
 
