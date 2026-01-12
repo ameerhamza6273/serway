@@ -5556,6 +5556,17 @@ font-size:15px !important
   fill: #1a142d !important;
 }
 
+#hl_header--copilot-icon svg path{
+  stroke: #555a64c2   !important;
+}
+#hl_header--copilot-icon svg {
+    background: #1a142d !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50px !important;
+    margin-top: -4px !important;
+    margin-left: -3px !important;
+}
 #conversations .hl_conversations--wrap .relative.border-r.border-gray-200.hl_conversations--messages-list-v2-left-most-panel section .space-y-2 .flex.flex-col {
     margin-left: 0px !important;
 }
