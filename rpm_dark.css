@@ -905,12 +905,12 @@ span.search-placeholder::before {
 }
 
 .v2-open #sidebar-v2 {
-  min-width: 239px !important;
+  min-width: 237px !important;
   padding: 0px !important;
 }
 
 .v2-open #sidebar-v2 .h-screen {
-  min-width: 239px !important;
+  min-width: 236px !important;
 }
 
 #sidebar-v2 nav a {
