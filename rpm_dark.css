@@ -5377,9 +5377,9 @@ display: none !important;
   transform: translateY(-50%);
   width: 0;
   height: 0;
-  border-top: 50px solid transparent;
-  border-bottom: 52px solid transparent;
-  border-left: 40px solid #f9fafb; 
+  border-top: 45px solid transparent;
+  border-bottom: 45px solid transparent;
+  border-left: 40px solid #090417; 
 }
 
 #OpportunitiesList .min-h-0 .h-full.flex.flex-col 
@@ -5391,8 +5391,8 @@ display: none !important;
   transform: translateY(-50%);
   width: 0;
   height: 0;
-  border-top: 45px solid transparent;
-  border-bottom: 45px solid transparent;
+  border-top: 45px solid #090417;
+  border-bottom: 45px solid #090417;
   border-left: 30px solid #4628C5;
   z-index: 5 !important;
 }
