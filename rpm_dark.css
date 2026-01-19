@@ -5358,7 +5358,7 @@ a#sb_sites {
   #8C67F5 30px,              /* gradient start */
   #4628C5 calc(100% - 30px), /* gradient end */
   #f9fafb calc(100% - 30px) 100% /* right 30px same */
-);
+) !important;
 
     padding: 15px 20px 15px 60px !important;
     margin-left: -10px !important;
@@ -5569,4 +5569,8 @@ font-size:15px !important
 }
 #conversations .hl_conversations--wrap .relative.border-r.border-gray-200.hl_conversations--messages-list-v2-left-most-panel section .space-y-2 .flex.flex-col {
     margin-left: 0px !important;
+}
+
+.hl_conversations--wrap .space-y-2 .flex.items-center.cursor-pointer.p-1\.5.px-2.rounded.text-sm.bg-gray-100.text-gray-800.font-medium span{
+  color: black !important;
 }
