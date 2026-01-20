@@ -3161,7 +3161,6 @@ table td .n-avatar,
 
 .n-base-select-menu .n-base-select-option--pending span,
 .n-base-select-option:hover span,
-#CalendarPage .truncate,
 #conversation-ai-settings-v2 tr:hover td svg,
 #conversation-ai-settings-v2 div[style*="rgb(239, 244, 255)"] {
   color: #000 !important;
@@ -5573,4 +5572,14 @@ font-size:15px !important
 
 .hl_conversations--wrap .space-y-2 .flex.items-center.cursor-pointer.p-1\.5.px-2.rounded.text-sm.bg-gray-100.text-gray-800.font-medium span{
   color: black !important;
+}
+
+#CalendarPage .mx-2.p-3.rounded-lg.bg-primary-25.flex.flex-col.gap-3{
+  background: #1e172d !important;
+}
+#CalendarPage .truncate{
+  color: #fff !important;
+}
+#CalendarPage button .border-black\/50{
+border-color: #fff !important;
 }
