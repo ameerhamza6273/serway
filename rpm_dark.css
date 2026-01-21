@@ -5583,3 +5583,14 @@ font-size:15px !important
 #CalendarPage button .border-black\/50{
 border-color: #fff !important;
 }
+
+.tabulator-tableholder .tabulator-table div.tabulator-cell{
+background: #0e0923 !important;
+}
+
+.tabulator-tableholder .tabulator-table .tabulator-row:hover div.tabulator-cell div{
+color: #000 !important;
+}
+.tabulator-tableholder .tabulator-table .tabulator-row div.tabulator-cell div[style="height:24px; border-radius:16px;padding: 2px 8px 2px 8px; background:#F2F4F7;"]{
+color: #000 !important;
+}
