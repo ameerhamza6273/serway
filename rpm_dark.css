@@ -5580,13 +5580,22 @@ font-size:15px !important
 border-color: #fff !important;
 }
 
+.tabulator-tableholder, 
 .tabulator-tableholder .tabulator-table div.tabulator-cell{
 background: #0e0923 !important;
 }
 
 .tabulator-tableholder .tabulator-table .tabulator-row:hover div.tabulator-cell div{
-color: #000 !important;
+  color: #000 !important;
 }
+
 .tabulator-tableholder .tabulator-table .tabulator-row div.tabulator-cell div[style="height:24px; border-radius:16px;padding: 2px 8px 2px 8px; background:#F2F4F7;"]{
-color: #000 !important;
+  color: #000 !important;
+}
+
+#social-planner-mf button span.hr-button__content{
+  color: #000 !important;
+}
+#user-query-search{
+  background: #1e172d !important;
 }
