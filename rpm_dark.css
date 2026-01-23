@@ -5602,5 +5602,5 @@ background: #0e0923 !important;
 
 #marketplace-app .hr-button__content,
 #marketplace-app .hr-tag__content span{
-  color: black;
+  color: black !important;
 }
