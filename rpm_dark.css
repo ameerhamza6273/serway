@@ -5604,3 +5604,15 @@ background: #0e0923 !important;
 #marketplace-app .hr-tag__content span{
   color: black !important;
 }
+.hr-base-selection-overlay__wrapper{
+  color: #000 !important;
+}
+#manual-actions-data-table-wrapper .flex.items-center.gap-3,
+#trigger-links-edit-modal,
+#trigger-link-search{
+  background: #1e172d !important;
+}
+#next-button,
+#hr-prev-button p{
+  color:#fff !important;
+}
