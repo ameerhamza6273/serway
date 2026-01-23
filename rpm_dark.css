@@ -5599,3 +5599,8 @@ background: #0e0923 !important;
 #user-query-search{
   background: #1e172d !important;
 }
+
+#marketplace-app .hr-button__content,
+#marketplace-app .hr-tag__content span{
+  color: black;
+}
