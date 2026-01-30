@@ -1213,8 +1213,8 @@ body:has(.sidebar-v2-location #dashboard .card-group) .main_container1012 {
 .main_container1012 {
     display: none;
     border-radius: 15px;
-    background: linear-gradient(90deg, #FD9501 -0.01%, #4628C5 100%) !important;
-    padding: 40px 50px !important;
+    background: url("https://storage.googleapis.com/msgsndr/vHCSEErR6q4hNIvutmYI/media/697d07371f68d1f60056c836.png")
+    no-repeat center center / cover !important;    padding: 40px 50px !important;
     position: absolute;
 }
 
