@@ -335,8 +335,8 @@ button:disabled {
 }
 
 .hl_login--body .card button.hl-btn.justify-center.w-full.inline-flex.items-center.px-4.py-2.border.border-transparent.text-sm.font-medium.rounded.text-white.bg-curious-blue-500.hover\:bg-curious-blue-600.focus\:outline-none.focus\:ring-2.focus\:ring-offset-2.focus\:ring-curious-blue-600 {
-  background-color: #E7246F !important;
-  color: #fff !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
+  color: #000 !important;
 }
 
 h1,
@@ -373,21 +373,24 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 }
 
 #location-dashboard .n-data-table-tbody .n-data-table-tr td {
-  background: #0f0723 !important;
+  background: #1D1E20 !important;
   color: #838383 !important;
   border-radius: 0px !important;
 }
 
 #location-dashboard .n-button--default-type:not(.icon-only):not(.hl-active-btn) {
-  background-color: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
+#location-dashboard .n-button--default-type:not(.icon-only):not(.hl-active-btn) svg{
+  stroke:#000 !important;
 
+}
 .wrapper[data-v-486680ff] {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 #pendo-guide-container {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 .hover\:bg-gray-100:hover {
@@ -399,7 +402,7 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 }
 
 .n-popover:not(.n-popover--raw):not(.n-popover--scrollable):not(.n-popover--show-header-or-footer) {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 #quickActions .hl_v2-quick-actions-list {
@@ -443,11 +446,11 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 }
 
 #dropdown-add-number .bg-gray-100 {
-  background-color: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 #conversation-ai-settings .w-full {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 #tgl-show-in-funnel .pointer-events-none,
@@ -463,7 +466,7 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 }
 
 #ManageNumbers .n-input-wrapper {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
   border-radius: 8px !important;
 }
 
@@ -486,11 +489,11 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 
 #CalendarPage .rounded-md {
   border: none !important;
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 #CalendarPage .rounded-md button {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
   color: #FFF !important;
 }
 
@@ -534,12 +537,12 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 }
 
 #TabSMSProvider .n-radio-group .n-radio-button.n-radio-button--checked {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 /* whatsapp style */
 .whatsapp-payment .card .card-body .two-part .billing .invoice-container .agency-details .agency-logo-container[data-v-3d9ae48d] {
-  background-color: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 .whatsapp-payment .card .card-body .two-part .billing .invoice-container .agency-details .agency-logo-container[data-v-3d9ae48d] .fa-store {
@@ -613,7 +616,7 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 }
 
 .whatsapp-payment .card .card-body .two-part .part-common[data-v-3d9ae48d] {
-  background-color: #090417 !important
+  background-color: #101213 !important
 }
 
 .whatsapp-payment .card .card-body .two-part .billing .invoice-container .invoice-body .section-header[data-v-3d9ae48d],
@@ -655,7 +658,7 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 }
 
 .create-user-btn {
-  background-color: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 #mceu_1324 {
@@ -674,13 +677,13 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 #__bv_popover_141__,
 #__bv_popover_147__,
 #__bv_popover_145__ {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
   border: 1px solid rgba(255, 255, 255, 0.20) !important;
 }
 
 /* navbar */
 .modal-content {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 a .fa-phone::before {
@@ -691,7 +694,7 @@ a .fa-phone::before {
 }
 
 .sidebar-v2-location #sidebar-v2 .globalSearchModal {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
   border: 1px solid rgba(255, 255, 255, 0.20) !important;
 }
 
@@ -783,7 +786,7 @@ a#canny_logs-toggle::after {
 }
 
 header.hl_header #template-power-dialer button.h-8.w-8 {
-  background: #1a142d !important;
+  background: #28292B !important;
   border-radius: 50px !important;
   height: 40px !important;
   width: 40px !important;
@@ -807,7 +810,7 @@ a#hl_header--help-icon::after {
 div#globalSearchOpener {
   width: 370px !important;
   height: 40px !important;
-  background: rgba(255, 255, 255, 0.05) !important;
+  background: #28292B !important;
   border: none !important;
   mix-blend-mode: normal !important;
   border-radius: 50px !important;
@@ -816,7 +819,7 @@ div#globalSearchOpener {
 }
 
 div#quickActions {
-  background: rgba(255, 255, 255, 0.05) !important;
+  background: #28292B !important;
   border-radius: 100% !important;
   width: 40px !important;
   border: none !important;
@@ -974,7 +977,7 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
   --tw-text-opacity: 1;
   color: rgb(255 255 255/var(--tw-text-opacity));
   opacity: 1;
-  background: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 #sb_settings::before,
@@ -1106,7 +1109,7 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 #mceu_611::-webkit-scrollbar-thumb,
 .messages-group::-webkit-scrollbar-thumb,
 #conversation-list::-webkit-scrollbar-thumb {
-  background-color: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
   /* border: 1px solid #FFF !important; */
 }
 
@@ -1126,15 +1129,13 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 
 /* dashboard & sidebar style is here ------------------------------ */
 #sidebar-v2 {
-  border: 2px solid rgba(255, 255, 255, 0.10) !important;
-  background: radial-gradient(340.32% 136.38% at 0% 3.35%, rgba(107, 75, 244, 0.06) 0%, rgba(107, 75, 244, 0.00) 100%) !important;
-  background-color: #0b051c !important;
+  background: #09090A !important;
   min-width: 60px !important;
   padding: 0px !important;
 }
 
 .sidebar-v2-location .hl_header .container-fluid {
-  background-color: #0E0822 !important;
+  background-color: #09090A !important;
 }
 
 .help-section,
@@ -1174,12 +1175,12 @@ text {
 #mceu_1228,
 #mceu_727 {
   border: none !important;
-  background: #090417 !important;
+  background: #101213 !important;
 }
 
 #location-dashboard-header,
 #location-dashboard .hl-wrapper-container:not(.full-screen) {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 .mce-menu-item:hover {
@@ -1204,12 +1205,12 @@ text {
 
 #sidebar-v2 a:hover {
   border-radius: 10px !important;
-  background: linear-gradient(90deg, #E7246F -0.01%, #E7246F 100%) !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 #sidebar-v2 a.active {
   border-radius: 10px !important;
-  background: linear-gradient(90deg, #E7246F -0.01%, #E7246F 100%) !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 #sidebar-v2 .active.divider {
@@ -1231,7 +1232,7 @@ text {
 }
 
 .n-input:not(.n-input--autosize) {
-  background: #1e172d !important;
+  background: #14152C !important;
 }
 
 #location-dashboard_date-picker {
@@ -1331,7 +1332,7 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 #mceu_2255::-webkit-scrollbar-thumb,
 #mceu_1178::-webkit-scrollbar-thumb,
 .sidebar-v2-location #sidebar-v2 #location-switcher-sidbar-v2 .hl_v2-location_switcher #location-list::-webkit-scrollbar-thumb {
-  background-color: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
   border: 1px solid #FFF !important;
 }
 
@@ -1341,7 +1342,7 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 
 /* dropdown style */
 .n-base-select-menu {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 .n-base-select-menu .n-base-select-option__content {
@@ -1354,7 +1355,7 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 
 /* contacts page style is here ------------------------- */
 .sidebar-v2-location .hl_wrapper.hl_topbar-tabs {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 #dashboard .card-header {
@@ -1363,7 +1364,7 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 }
 
 #filter-drawer .nav-item-base[data-v-1d4d66b4] {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 .fit-screen[data-v-42f6a805] {
@@ -1404,7 +1405,7 @@ tr {
 }
 
 .hl_header .flex-row {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 .hl_controls .hl_controls--right .bootstrap-select>.btn.dropdown-toggle,
@@ -1433,7 +1434,7 @@ tr {
 
 .sidebar-v2-location .hl_header .topmenu-nav .topmenu-navitem a {
   color: #FFF !important;
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 .topmenu-nav .topmenu-navtitle {
@@ -1495,7 +1496,7 @@ tr {
 }
 
 #conversations #central-panel-header {
-  background-color: #6B4BF4 !important;
+  background-color: #9D1792 !important;
   margin-top: 0px !important;
 }
 
@@ -1508,12 +1509,12 @@ tr {
 }
 
 #conversations .hl_conversations--wrap .message-box {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
   border-radius: 10px !important;
 }
 
 #conversations .messages-single .message-bubble:before {
-  border-color: transparent #090417 transparent transparent !important;
+  border-color: transparent #101213 transparent transparent !important;
 }
 
 #conversations .messages-single.\--own-message .message-bubble:before {
@@ -1526,7 +1527,7 @@ tr {
 }
 
 #conversations .mini-panel[data-v-28bfd2c5] {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
   border-radius: 0px !important;
 }
 
@@ -1535,7 +1536,7 @@ tr {
 }
 
 #conversations .mini-panel[data-v-28bfd2c5] .text-primary-600 {
-  background-color: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 #conversations .mini-panel[data-v-28bfd2c5] .text-primary-600 .cursor-pointer svg:not(:root) {
@@ -1543,13 +1544,13 @@ tr {
 }
 
 #mceu_611 {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
   border: none !important;
 }
 
 #conversations .hl_conversations--message-body {
   gap: 4px !important;
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 #conversations .message-body--conversation--height-fix[data-v-76fb0af9] {
@@ -1675,7 +1676,7 @@ tr {
 }
 
 #menu-button {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
   margin-left: 0 !important;
 }
 
@@ -1689,7 +1690,7 @@ tr {
 }
 
 #conversations .bg-gray-200 {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 #mceu_569,
@@ -1716,7 +1717,7 @@ tr {
 }
 
 #conversations .mce-btn button {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 div {
@@ -1746,11 +1747,11 @@ ul.header-ul li.active a[data-v-3ac5829a],
 }
 
 #hCyZ5WC5xf2HlTueNwYF .bg-gray-custom[data-v-c63206c2] {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 #quickFilterDropdownLi footer {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 #conversations .place-content-evenly a[aria-current] {
@@ -1768,7 +1769,7 @@ ul.header-ul li.active a[data-v-3ac5829a],
 
 #conversations .hl_conversations--message .rounded-md {
   border: none !important;
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 #conversations #search_conversations {
@@ -1795,11 +1796,11 @@ ul.header-ul li.active a[data-v-3ac5829a],
 .update-styling-for-new-right-panel[data-v-1f4114d0],
 #search_conversations,
 #conversations .hl_conversations--wrap {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 .messages-single .message-bubble {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
   border-radius: 12px !important;
 }
 
@@ -1824,8 +1825,8 @@ ul.header-ul li.active a[data-v-3ac5829a],
 }
 
 .sidebar-v2-location .hl_header .topmenu-nav a.active {
-  background-color: #E7246F !important;
-  color: #fff !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
+  color: #000 !important;
 }
 
 .right-panel-width[data-v-e022d5c0],
@@ -1841,11 +1842,11 @@ ul.header-ul li.active a[data-v-3ac5829a],
 }
 
 #app {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 #triggerLinksPage {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 .border-gray-100 {
@@ -1927,11 +1928,11 @@ ul.header-ul li.active a[data-v-3ac5829a],
 }
 
 #attribution-dashboard .n-input {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 #call-reporting-dashboard_drawer--filters .n-base-selection-tags {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 #call-reporting-dashboard .n-input-wrapper {
@@ -1966,7 +1967,7 @@ ul.header-ul li.active a[data-v-3ac5829a],
 #dropdown,
 .launchpad-item-container,
 .dropdown-menu {
-  background: #090417 !important;
+  background: #101213 !important;
   border: 1px solid #2B2B2B !important;
 }
 
@@ -1990,7 +1991,7 @@ ul.header-ul li.active a[data-v-3ac5829a],
 }
 
 .dropdown .dropdown-menu .bg-gray-200 {
-  background-color: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 .dropdown .dropdown-menu .bg-gray-200 .sort-option-item {
@@ -2060,7 +2061,7 @@ button,
 th {
   color: #FFF !important;
   font-weight: 600 !important;
-  background-color: #1a132b !important;
+  background-color: #000 !important;
 }
 
 table th {
@@ -2094,11 +2095,11 @@ table th {
 #online-listings-container .absolute,
 #online-listings-container[data-v-a155c742],
 .hl_reputation--body {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 .n-button-group:not(.n-button-group--vertical) button {
-  background-color: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 .hl-statistic {
@@ -2167,7 +2168,7 @@ table th {
 
 /* reporting style ------------- */
 #call-reporting-dashboard .p-3 {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 .n-progress .n-progress-graph .n-progress-graph-circle .n-progress-graph-circle-rail {
@@ -2201,7 +2202,7 @@ table th {
 }
 
 #pg-survey-builder__dtpk--filter-date .n-input {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 #pg-survey-builder__dtpk--filter-date input {
@@ -2216,11 +2217,11 @@ table th {
 
 #undefined-wrapper,
 #undefined-input {
-  background-color: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 #reporting-agent-dashboard button {
-  background-color: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 #reporting-agent-dashboard {
@@ -2344,11 +2345,20 @@ button.bg-primary-50,
 .agent_reporting_main .hl_datepicker,
 .attributions-report div.hl_datepicker,
 .header-picker[data-v-6d49f11d] {
-  background: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
   border: none !important;
-  color: #fff !important;
+  color: #000 !important;
 }
+[type=reset] svg,
+[type=submit] svg,
+button span svg path,
+button span p,
+button p,
+html [type=button] svg {
+    stroke: #000 !important;
+    color: #000 !important;
 
+}
 .message-header-actions button {
   border: none !important;
 }
@@ -2377,7 +2387,7 @@ button.bg-primary-50,
 }
 
 .hl_wrapper-text-widget--root {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 .sidebar-v2-location .hl_wrapper .hl_wrapper-text-widget--root.hl_wrapper-text-widget--root .mb-1 {
@@ -2420,7 +2430,7 @@ button.bg-primary-50,
 }
 
 .highcharts-series-group path {
-  fill: #090417 !important;
+  fill: #101213 !important;
 }
 
 #review-requests-container .n-space {
@@ -2467,7 +2477,7 @@ button.bg-primary-50,
 }
 
 .warning-text[data-v-f7a2c608] {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
   padding: 6px !important;
   border-radius: 8px !important;
 }
@@ -2480,7 +2490,7 @@ button.bg-primary-50,
 
 /* manage scrolling style */
 #scoring .wrapper {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 #scoring .wrapper .page-heading {
@@ -2490,7 +2500,7 @@ button.bg-primary-50,
 
 #scoring .wrapper .sub-heading,
 #scoring .wrapper .profile-name {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 #scoring .wrapper .rules-section {
@@ -2505,7 +2515,7 @@ button.bg-primary-50,
 }
 
 #customValuesPage .n-data-table .n-data-table-table td {
-  background: #0f0723 !important;
+  background: #1D1E20 !important;
 }
 
 #customValuesPage .hl-header-content .description {
@@ -2728,7 +2738,7 @@ table td {
 }
 
 #recent_activities-toggle {
-  background-color: #1a142d !important;
+  background-color: #28292B !important;
   padding: 19px !important;
   margin-top: 5px !important;
 }
@@ -2856,7 +2866,7 @@ table td {
 }
 
 #right-panel .flex.flex-col.overflow-y-auto.flex-grow.flex-grow::-webkit-scrollbar-thumb {
-  background-color: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
   border: 1px solid #FFF !important;
   border-radius: 50px !important;
 }
@@ -2890,7 +2900,7 @@ table td {
 #ContactsClientPortal,
 #contact-details .uppercase.bg-gray-100,
 #contact-details .hl_contact-details-left {
-  background: #090417 !important;
+  background: #101213 !important;
 }
 
 .v3-sticky,
@@ -2970,7 +2980,7 @@ table td {
 #tab-header,
 #locations-list .bg-\[\#FCFCFD\],
 #locations-list {
-  background: #090417 !important;
+  background: #101213 !important;
 }
 
 #agency-reselling {
@@ -3055,7 +3065,7 @@ table td .n-avatar,
 #backButtonv2,
 #conversations .right-0.origin-top-right.absolute.z-50.w-56.mt-1.text-gray-900.bg-white.rounded-md.shadow-lg.ring-1.ring-black.ring-opacity-5.focus\:outline-none,
 #conversations #menu-button {
-  background: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 #funnel-step-details {
@@ -3452,7 +3462,7 @@ button p,
 .file-upload-empty-state,
 #list-view-record-search,
 .search-box.d-flex {
-  background: #090417 !important;
+  background: #101213 !important;
 }
 
 #CustomObjectsList .tabulator-footer .tabulator-page {
@@ -3477,7 +3487,7 @@ button p,
 }
 
 .hl-wrapper-container {
-  background: #090417 !important;
+  background: #101213 !important;
 }
 
 #date-picker-picker-container-DatePicker button {
@@ -3562,7 +3572,7 @@ div#fc-calendar-container {
 
 #CalendarPage button#today,
 #CalendarPage button#btn {
-  background-color: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 button#email-add-attachment,
@@ -3570,13 +3580,13 @@ button#sms-add-attachment,
 #central-panel .n-button--default-type:not(.icon-only):not(.hl-active-btn),
 #right-panel .n-button--default-type:not(.icon-only):not(.hl-active-btn),
 button#snippets-header-btn-secondary {
-  background-color: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 button#snippets-table-next,
 button#snippets-table-previous,
 button.n-button.n-button--default-type.n-button--large-type.hl-table-filter-btn {
-  background-color: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 #right-panel .bg-primary-50 {
@@ -3590,7 +3600,7 @@ button.n-button.n-button--default-type.n-button--large-type.hl-table-filter-btn 
 }
 
 #fc-calendar-container {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 #disable-summer-of-ai-btn {
@@ -3631,7 +3641,7 @@ button.n-button.n-button--default-type.n-button--large-type.hl-table-filter-btn 
 }
 
 .hl-card-content .n-button--default-type:not(.icon-only):not(.hl-active-btn) {
-  background-color: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 .n-button.n-button--disabled {
@@ -3662,7 +3672,7 @@ button.n-button.n-button--default-type.n-button--large-type.hl-table-filter-btn 
 #opt-in-button .hl-text-lg-medium,
 #notification_banner-top_bar,
 #PaymentsHistoryPreviousButton {
-  background: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 #defaultEmailsList .hl-text-lg-medium #no-apps-found-btn-negative-action span,
@@ -3737,11 +3747,11 @@ button.n-button.n-button--default-type.n-button--large-type.hl-table-filter-btn 
 }
 
 .affiliate-portal-section[data-v-10d47832] .complianceCard {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 .affiliate-portal-section[data-v-10d47832] .affiliateFeatureCard {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 .n-tabs-tab.n-tabs-tab--active span div,
@@ -3800,7 +3810,7 @@ button.n-button.n-button--default-type.n-button--large-type.hl-table-filter-btn 
 #funnels .hl-wrapper-container,
 #listInvoices .hl-wrapper-container,
 #CalendarPage .hl-wrapper-container {
-  background: #090417 !important;
+  background: #101213 !important;
 }
 
 #reputation-dashboard-container .rounded-lg.border.border-gray-200.bg-white.shadow .hl-card {
@@ -3869,7 +3879,7 @@ table tr td {
 #location_dashboard-pagination-table_chart-next,
 #location_dashboard-pagination-table_chart-previous,
 #location_dashboard-btn-export_table {
-  background: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
   border: none !important;
   color: #fff !important;
 }
@@ -3906,7 +3916,7 @@ button.n-button.n-button--default-type .n-button__content,
 }
 
 .page-item.disabled .page-link {
-  background: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
   color: #fff !important;
 }
 
@@ -3918,7 +3928,7 @@ button.n-button.n-button--default-type .n-button__content,
 .campaigns_triggers-bar-action.btn.btn-light,
 button.bg-apple-500,
 #sort-filter-component__button {
-  background: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 .pipeline-ribbon {
@@ -3940,7 +3950,7 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 .default-bg-color {
 #media-header-dropdown,
 #hl-media-create-folder,
 #hl-connect-google-drive {
-  background: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 .n-dropdown-option-body__label:hover .hl-text-sm-regular {
@@ -3965,7 +3975,7 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 .default-bg-color {
 #table-export-csd,
 #pg-invoices_btn-settings,
 #import-btn {
-  background: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 #triggers .dropdown-toggle {
@@ -3973,7 +3983,7 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 .default-bg-color {
 }
 
 button.n-button--default-type:not(.icon-only):not(.hl-active-btn) {
-  background: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 #location-billing {
@@ -3984,7 +3994,7 @@ button.n-button--default-type:not(.icon-only):not(.hl-active-btn) {
 #primary-field-type .n-base-selection-label,
 #empty-custom-objects-list-btn-primary .n-button__content,
 #connections-users .n-base-selection-label {
-  background: #1a1428 !important;
+  background: #28292b !important;
 }
 
 table tr td .n-tag__content span,
@@ -4025,7 +4035,7 @@ table tr:hover .n-data-table-td {
 }
 
 #OpportunitiesList .wrapper.opportunityPage {
-  background: #090417 !important;
+  background: #101213 !important;
 }
 
 .border-t.border-gray-200.flex.items-center.h-\[88px\].pt-\[18px\] button span {
@@ -4140,7 +4150,7 @@ body:has(#OpportunitiesList) .topmenu-navtitle::before {
 }
 
 #add-record-btn {
-  background: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 #add-record-btn .hr-button__border {
@@ -4166,7 +4176,7 @@ body:has(#OpportunitiesList) .topmenu-navtitle::before {
 }
 
 .hl_wrapper.hl_contact--details .hl_contact-details-right .hr-button {
-  background: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 .hr-drawer-content-wrapper {
@@ -4209,12 +4219,12 @@ body:has(#OpportunitiesList) .topmenu-navtitle::before {
 }
 
 .n-tabs .n-tabs-bar {
-  background-color: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 #BusinessList .wrapper,
 #CustomObjectsList .wrapper {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 #BusinessList .tabulator-tableholder,
@@ -4246,9 +4256,8 @@ body:has(#OpportunitiesList) .topmenu-navtitle::before {
 }
 
 .hl-card {
-  border-radius: 20px !important;
-  border: 1px solid rgba(212, 206, 230, 0.20) !important;
-  background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(113, 61, 223, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%), rgba(10, 3, 24, 0.70) !important;
+  border-radius: 15px !important;
+  background: #1D1E20 !important;
   box-shadow: 0 0 100px -20px rgba(212, 206, 230, 0.15) inset !important;
   backdrop-filter: blur(22px) !important;
 }
@@ -4288,7 +4297,7 @@ body:has(#OpportunitiesList) .topmenu-navtitle::before {
 }
 
 #pipeline-table-wrapper-header-global-filter {
-  background: #090417 !important;
+  background: #101213 !important;
 }
 
 #OpportunitiesList .bulk-action,
@@ -4342,12 +4351,12 @@ body:has(#OpportunitiesList) .topmenu-navtitle::before {
 }
 
 #info {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
 }
 
 .hr-alert-container .hr-alert-body,
 #action-name {
-  background: #090417 !important;
+  background: #101213 !important;
 }
 
 #drawer-component .hr-tag.hr-tag--closable {
@@ -4355,7 +4364,7 @@ body:has(#OpportunitiesList) .topmenu-navtitle::before {
 }
 
 .hr-alert-container .hr-alert-body {
-  background-color: #090417 !important;
+  background-color: #101213 !important;
   border: none !important;
   padding: 20px !important;
 }
@@ -4369,7 +4378,7 @@ body:has(#OpportunitiesList) .topmenu-navtitle::before {
 }
 
 #manage-fields .ui-card-content {
-  background: #090417 !important;
+  background: #101213 !important;
 }
 
 #manage-fields .add-fields[data-v-c0e7be5e] .hr-collapse-item__header-main {
@@ -4549,7 +4558,7 @@ body:has(#OpportunitiesList) .topmenu-navtitle::before {
 .main_container1012 {
   display: none !important;
   border-radius: 15px !Important;
-  background: linear-gradient(90deg, #6B4BF4 -0.01%, #4628C5 100%) !Important;
+  background: linear-gradient(90deg, #9D1792 -0.01%, #4628C5 100%) !Important;
   padding: 40px 50px !important;
   position: absolute !important;
 }
@@ -4666,7 +4675,7 @@ body:has(.sidebar-v2-location #location-dashboard) .main_container1012 {
 }
 
 #primary-blue {
-  background: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 #primary-blue .hr-button__border {
@@ -4756,7 +4765,7 @@ body:has(#OpportunitiesList) .topmenu-navtitle {
 
 #drawer .n-popover .n-popover__footer {
 
-  background: #090417 !important;
+  background: #101213 !important;
 }
 
 #hl_smartlists-main div.card-like {
@@ -4802,7 +4811,7 @@ body:has(#OpportunitiesList) .topmenu-navtitle {
 }
 
 .btn.btn-light2 {
-  background: #e7246f !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 
@@ -4837,19 +4846,19 @@ body:has(#OpportunitiesList) .topmenu-navtitle {
 
 .modal .modal-content .hover\:bg-curious-blue-100:hover {
   --tw-bg-opacity: 1 !important;
-  background-color: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
   border: none !important;
 }
 
 .modal .modal-content .hover\:bg-gray-50:hover {
   --tw-bg-opacity: 1 !important;
-  background-color: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
   border: none !important;
 }
 
 
 .n-form-item-blank .add-fields-container {
-  background-color: #1a1428;
+  background-color: #28292b;
 }
 
 .n-avatar-group .n-avatar.bg-red-600.default-avatar {
@@ -4869,11 +4878,11 @@ body:has(#OpportunitiesList) .topmenu-navtitle {
 }
 
 #task .tabulator-tableholder {
-  background: #090417 !important;
+  background: #101213 !important;
 }
 
 #task .tabulator-header-contents {
-  background: #090417 !important;
+  background: #101213 !important;
 }
 
 .manage-fields-body .add-fields[data-v-bc38fb1c] .hr-collapse-item__header-main {
@@ -4910,11 +4919,11 @@ body:has(#OpportunitiesList) .topmenu-navtitle {
 }
 
 #modal-footer-btn-positive-action {
-  background: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 #relations-drawer-component-btn-positive-action {
-  background: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 #business .bulk-action.d-flex {
@@ -4959,7 +4968,7 @@ body:has(#OpportunitiesList) .topmenu-navtitle {
 }
 
 #page-email-builder-template__btn-actions {
-  background: #e7246f !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 #back-to-coupons span,
@@ -5132,7 +5141,7 @@ body:has(#OpportunitiesList) .topmenu-navtitle {
 }
 
 #save {
-  background: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 .hr-dialog.hr-dialog--closable.hr-dialog--icon-left.hr-modal.hr-modal--close-on-esc.hr-modal--mask-closable.hr-modal--show-close.hr-modal--show-footer.hr-modal--show-header.hr-modal--show-header-icon.hr-modal--warning {
@@ -5162,11 +5171,11 @@ body:has(#OpportunitiesList) .topmenu-navtitle {
 }
 
 #marketplace-app .hr-wrapper-container.platform-ui__highrise {
-  background: #090417 !Important;
+  background: #101213 !Important;
 }
 
 #marketplace-app .ai-contest-banner-leaderboard-button {
-  background: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 #bot-search-input {
@@ -5197,7 +5206,7 @@ body:has(#OpportunitiesList) .topmenu-navtitle {
 }
 
 #marketplace-app {
-  background: #090417 !important;
+  background: #101213 !important;
 }
 
 #ui-table-sandbox-accounts-filter-text-search {
@@ -5291,18 +5300,18 @@ i.scroll-down-shortcut3.fa.fa-lg.fa-angle-double-down {
 }
 
 .hr-radio-button {
-  background: #090417 !important;
+  background: #101213 !important;
 }
 
 #rating-info-card,
 #marketplace-app .ui-card-content,
 #marketplace-app .ui-card-content .ui-card-header,
 #marketplace-app {
-  background: #090417 !important;
+  background: #101213 !important;
 }
 
 #CRMSettings .hr-wrapper-container.platform-ui__highrise.h-full.w-full {
-  background: #090417 !important;
+  background: #101213 !important;
 }
 
 #CRMSettings .w-\[700px\].p-1\.5.ui-card {
@@ -5402,7 +5411,7 @@ a#sb_sites {
   height: 0;
   border-top: 45px solid transparent;
   border-bottom: 45px solid transparent;
-  border-left: 40px solid #090417;
+  border-left: 40px solid #101213;
 }
 
 #OpportunitiesList .min-h-0 .h-full.flex.flex-col .opportunitiesCard.max-h-2xl.borderColor.mb-\[16px\].max-h-28.\!rounded.\!border-0.\!border-t-2.\!border-solid.ui-card::after {
@@ -5413,8 +5422,8 @@ a#sb_sites {
   transform: translateY(-50%);
   width: 0;
   height: 0;
-  border-top: 45px solid #090417;
-  border-bottom: 45px solid #090417;
+  border-top: 45px solid #101213;
+  border-bottom: 45px solid #101213;
   border-left: 30px solid #4628C5;
   z-index: 5 !important;
 }
@@ -5425,7 +5434,7 @@ button:hover .hr-button__state-border {
 
 
 #location-dashboard svg g path[d="M146 4.1A77.9 77.9 0 1 1 145.9922 4.1M146 17.1A64.9 64.9 0 1 0 146.0065 17.1Z"] {
-  fill: #090417 !important;
+  fill: #101213 !important;
 }
 
 #location-dashboard {
@@ -5457,7 +5466,7 @@ button:hover .hr-button__state-border {
 #location-dashboard svg path[fill="rgb(91,194,255)"],
 #location-dashboard svg path[fill="rgb(83,177,253)"],
 #location-dashboard svg path[fill="#53B1FD"] {
-  fill: #6B4BF4 !important;
+  fill: #9D1792 !important;
   stroke: none !important;
 }
 
@@ -5583,12 +5592,12 @@ body:has(#notification_banner-top_bar) #estimatesDashboardApp {
 }
 
 #OpportunitiesList .wrapper.opportunityPage {
-  background: #090417 url("https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/68ced973ee40408a27d044bc.svg") no-repeat center top !important;
+  background: #101213 url("https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/68ced973ee40408a27d044bc.svg") no-repeat center top !important;
   background-size: 1050px auto !important;
 }
 
 #hl_header--copilot-icon svg circle {
-  fill: #1a142d !important;
+  fill: #28292B !important;
 }
 
 #hl_header--copilot-icon svg path {
@@ -5596,7 +5605,7 @@ body:has(#notification_banner-top_bar) #estimatesDashboardApp {
 }
 
 #hl_header--copilot-icon svg {
-  background: #1a142d !important;
+  background: #28292B !important;
   width: 40px !important;
   height: 40px !important;
   border-radius: 50px !important;
@@ -5705,7 +5714,7 @@ body:has(#notification_banner-top_bar) #estimatesDashboardApp {
 }
 
 #send-button-copilot-chat-input {
-  background: #E7246F !important;
+  background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
 
 #add-snippet-dropdown,
