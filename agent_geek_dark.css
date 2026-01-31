@@ -4557,9 +4557,10 @@ body:has(#OpportunitiesList) .topmenu-navtitle::before {
 
 .main_container1012 {
   display: none !important;
-  border-radius: 15px !Important;
-  background: linear-gradient(90deg, #9D1792 -0.01%, #4628C5 100%) !Important;
-  padding: 40px 50px !important;
+  border-radius: 15px !important;
+  background: url("https://storage.googleapis.com/msgsndr/vHCSEErR6q4hNIvutmYI/media/697d07371f68d1f60056c836.png")
+    no-repeat center center / cover !important;    
+    padding: 40px 50px !important; 
   position: absolute !important;
 }
 
