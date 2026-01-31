@@ -1852,7 +1852,7 @@ body:has(#BusinessList) .topmenu-navtitle::before,
 body:has(#bulkActionsList) .topmenu-navtitle::before,
 body:has(#smartlists) .topmenu-navtitle::before {
     content: "clients" !important;
-    color: #fff !important;
+    color: #000 !important;
     position: absolute !important;
     left: 0 !important;
     top: 0 !important;
@@ -1863,7 +1863,7 @@ body:has(#bulkActionsList) .topmenu-navtitle::before,
 body:has(#crm-opportunities-pipelines-view) .topmenu-navtitle::before,
 body:has(#OpportunitiesList) .topmenu-navtitle::before {
     content: "pipeline" !important;
-    color: #fff !important;
+    color: #000 !important;
     position: absolute !important;
     left: 0 !important;
     top: 0 !important;
