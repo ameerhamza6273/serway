@@ -62,10 +62,12 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 #location-dashboard .n-button--default-type:not(.icon-only):not(.hl-active-btn) {
   background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
 }
-#location-dashboard .n-button--default-type:not(.icon-only):not(.hl-active-btn) svg{
-  stroke:#000 !important;
+
+#location-dashboard .n-button--default-type:not(.icon-only):not(.hl-active-btn) svg {
+  stroke: #000 !important;
 
 }
+
 .wrapper[data-v-486680ff] {
   background-color: #101213 !important;
 }
@@ -261,9 +263,12 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 }
 
 .add-payment-method[data-v-f7a2c608],
-.sidebar-v2-location .hl_header .topmenu-nav a.active span,
 .n-dropdown-menu .n-dropdown-option .n-dropdown-option-body.n-dropdown-option-body--disabled:hover .n-dropdown-option-body__label {
   color: #fff !important;
+}
+
+.sidebar-v2-location .hl_header .topmenu-nav a.active span {
+  color: #000 !important;
 }
 
 #bulkActionsList table tr:hover p,
@@ -675,7 +680,7 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 #sidebar-v2 .hl_nav-header a:hover::before,
 .hl_nav-settings nav a#sb_settings:hover::before {
   filter: brightness(2.5) sepia(0) contrast(1.9) opacity(.6) !important;
-  -webkit-filter: brightness(2.5) sepia(0) contrast(1.9) opacity() !important
+  -webkit-filter: brightness(0) sepia(0) contrast(1.9) opacity() !important
 }
 
 #sb_launchpad::before {
@@ -1406,8 +1411,6 @@ div {
 }
 
 span,
-#sidebar-v2 a:hover span,
-#sidebar-v2 a.active span,
 ul.header-ul li.active a[data-v-3ac5829a],
 #conversations #central-panel-header h2,
 #conversations .messages-single .message-bubble p span a,
@@ -1417,6 +1420,11 @@ ul.header-ul li.active a[data-v-3ac5829a],
 #conversations .mce-btn i,
 #conversations .mce-btn button span {
   color: #FFF !important;
+}
+
+#sidebar-v2 a:hover span,
+#sidebar-v2 a.active span {
+  color: #000 !important;
 }
 
 #conversations .new-email-thread-view--collapsed-container[data-v-c63206c2] {
@@ -1461,16 +1469,16 @@ ul.header-ul li.active a[data-v-3ac5829a],
 }
 
 .topmenu-nav a {
-  background: #221e30 !important;
+  background: #282a2b !important;
   font-size: 14px !important;
-  color: #1e202d !important;
+  color: #fff !important;
   border-radius: 18px !important;
   padding: 6px 10px 6px 10px !important;
   margin: 5px !important;
-  -webkit-border-radius: 18px !important;
-  -moz-border-radius: 18px !important;
-  -ms-border-radius: 18px !important;
-  -o-border-radius: 18px !important
+  -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+  -ms-border-radius: 10px !important;
+  -o-border-radius: 10px !important
 }
 
 .topmenu-nav,
@@ -1508,6 +1516,7 @@ ul.header-ul li.active a[data-v-3ac5829a],
 .sidebar-v2-location .hl_header .topmenu-nav a.active {
   background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
   color: #000 !important;
+  border-radius: 10px !important;
 }
 
 .right-panel-width[data-v-e022d5c0],
@@ -2030,16 +2039,18 @@ button.bg-primary-50,
   border: none !important;
   color: #000 !important;
 }
+
 [type=reset] svg,
 [type=submit] svg,
 button span svg path,
 button span p,
 button p,
 html [type=button] svg {
-    stroke: #000 !important;
-    color: #000 !important;
+  stroke: #000 !important;
+  color: #000 !important;
 
 }
+
 .message-header-actions button {
   border: none !important;
 }
@@ -2257,8 +2268,7 @@ html [type=button] {
   background-color: transparent !important;
 }
 
-.add-payment-method[data-v-f7a2c608],
-.sidebar-v2-location .hl_header .topmenu-nav a.active a span {
+.add-payment-method[data-v-f7a2c608] {
   color: #fff !important;
 }
 
@@ -3519,7 +3529,7 @@ button.n-button.n-button--default-type.n-button--large-type.hl-table-filter-btn 
 
 .sidebar-v2-location #sidebar-v2 .hl_collapse-button {
   background: #fff !important;
-  color: #E7246F !important;
+  color: #FEB701 !important;
 }
 
 table tr:hover td p {
@@ -3780,13 +3790,13 @@ a#canny_logs-toggle {
 #sb_opportunities:hover:after,
 #sb_contacts:hover:after,
 #sb_launchpad:hover:after {
-  color: #fff !important;
+  color: #000 !important;
 }
 
 #sb_opportunities.active:after,
 #sb_contacts.active:after,
 #sb_launchpad.active:after {
-  color: #fff !important;
+  color: #000 !important;
 }
 
 
@@ -4239,9 +4249,8 @@ body:has(#OpportunitiesList) .topmenu-navtitle::before {
 .main_container1012 {
   display: none !important;
   border-radius: 15px !important;
-  background: url("https://storage.googleapis.com/msgsndr/vHCSEErR6q4hNIvutmYI/media/697d07371f68d1f60056c836.png")
-    no-repeat center center / cover !important;    
-    padding: 40px 50px !important; 
+  background: url("https://storage.googleapis.com/msgsndr/vHCSEErR6q4hNIvutmYI/media/697d07371f68d1f60056c836.png") no-repeat center center / cover !important;
+  padding: 40px 50px !important;
   position: absolute !important;
 }
 
@@ -5413,70 +5422,77 @@ body:has(#notification_banner-top_bar) #estimatesDashboardApp {
   color: #000 !important;
 }
 
-#hr-tag-count-wrapper-undefined{
+#hr-tag-count-wrapper-undefined {
   color: #fff !important;
 }
 
 #conversations-layout,
 #conversations-layout .relative.flex.flex-col.bg-\[\#ECEEF2\].px-2.pt-3.pb-2.h-full.overflow-visible.transition-all.duration-300.inbox-panel,
 #conversations-workspace,
-#conversations-content{
+#conversations-content {
   background: #101213 !important;
 }
+
 #conversation-panel .m-3,
-#conversation-panel ,
-#conversations-list .conversation-list-container .flex.flex-col.w-full.h-full.gap-5.bg-\[\#F7F9FD\].px-3.pt-3.pb-3{
-  background: #1D1E20 !important ;
+#conversation-panel,
+#conversations-list .conversation-list-container .flex.flex-col.w-full.h-full.gap-5.bg-\[\#F7F9FD\].px-3.pt-3.pb-3 {
+  background: #1D1E20 !important;
 }
 
-#conversation-panel .chat-bubble-outbound{
+#conversation-panel .chat-bubble-outbound {
   background: #282a2b !important;
   border: none !important;
 }
 
-#conversation-panel .hr-tag__container{
+#conversation-panel .hr-tag__container {
   background: #343436 !important;
   padding: 15px !important;
   border-radius: 50px !important;
 }
+
 #conversation-panel .chat-bubble-outbound a,
 #conversation-panel .hr-tag__container svg,
-#conversation-panel .hr-tag__container div{
-  color:#fff !important;
+#conversation-panel .hr-tag__container div {
+  color: #fff !important;
 }
 
-.flex.flex-col.relative.bg-\[\#F7F9FD\].flex-none{
-    background: #1D1E20 !important ;
+.flex.flex-col.relative.bg-\[\#F7F9FD\].flex-none {
+  background: #1D1E20 !important;
 
 }
+
 #conv-composer-inline-expand-trigger,
-#mail-composer-footer{
+#mail-composer-footer {
   background: #101213 !important;
 }
 
 .flex.w-full.border-1.border-solid.border-gray-200.rounded-lg.overflow-hidden,
-.conversation-list-header{
+.conversation-list-header {
   background: #1D1E20 !important;
 }
-#conversations-messages .flex.justify-between.items-center.px-3.border-b.border-gray-200{
+
+#conversations-messages .flex.justify-between.items-center.px-3.border-b.border-gray-200 {
   background: #9D1792 !important;
   border-radius: 0 !important;
 }
+
 .conversation-list-header svg,
-#conversations-messages .flex.justify-between.items-center.px-3.border-b.border-gray-200 svg{
+#conversations-messages .flex.justify-between.items-center.px-3.border-b.border-gray-200 svg {
   color: #fff !important;
 }
-#conversations-layout .hr-text{
+
+#conversations-layout .hr-text {
   color: #000 !important;
 }
 
-.conversation-list-header button{
+.conversation-list-header button {
   background: #343436 !important;
 }
 
-#crm-contacts-view  a:not(.btn){
+#crm-contacts-view a:not(.btn) {
   color: #fff !important;
 }
-#crm-contacts-view .tabulator-row:hover a:not(.btn){
+
+#crm-contacts-view .tabulator-row:hover a:not(.btn) {
   color: #000 !important;
 }
