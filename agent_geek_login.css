@@ -1,0 +1,190 @@
+/* toggle style */
+#tooglecss {
+    position: absolute !important;
+    right: 370px !important;
+    top: 18px !important;
+    z-index: 999 !important;
+    display: none;
+  }
+
+  body:has(#location-dashboard) #tooglecss {
+    display: block !important;
+  }
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 80px !important;
+    height: 45px !important;
+    right: 73px !important;
+    top: -12px !important;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0; 
+    right: 0;
+    bottom: 0;
+    background: #1a142d;
+    border: 1px solid #1a142d !important;
+
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+
+
+  input:checked+.slider:before {
+    -webkit-transform: translateX(25px);
+    -ms-transform: translateX(25px);
+    transform: translateX(32px);
+    background-color: #FFF;
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .slider:after {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    right: 5px;
+    bottom: 6px;
+    background-image: url('https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/68c1afc944a663d0d2109728.svg');
+    background-size: cover;
+
+  }
+
+  input:checked+.slider:after {
+
+    background-image: url('https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/68c1aff1353d1388bef7c8dd.svg') !important;
+    right: 43px;
+
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 35px;
+    width: 35px;
+    left: 6px;
+    bottom: 4px;
+    background-image: url('https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/68c1afcb83b9825ad294cde1.svg');
+    background-size: cover;
+
+  }
+
+  input:checked+.slider {
+    background: #fff;
+    border: 1px solid #ddd !important;
+  }
+
+  input:checked+.slider:before {
+
+    background-image: url('https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/68c1afcd6880bfaabdd0cac0.svg');
+
+  }
+
+
+/*login css  */
+
+.hl_login--header{
+    background-color: transparent !important;
+    border-bottom: none !important;
+   }
+   .hl_login--body p.foot-note:before {
+       content: 'Having trouble logging in? Email us at support@company.com or call us at 000 000 0000';
+       font-size: 13px;
+       display: block;
+       margin-bottom: 15px;
+   }
+   .hl_login--body .login-card-heading {
+       margin-bottom: 35px !important;
+   }
+   .hl_login--body .login-card-heading .heading2{
+       font-size: 25px !important;
+       font-weight: 600 !important;
+   }
+   .hl_login--body .form-group .hl-text-input-label {
+       display: none !important;
+   }
+   .hl_login--body .form-group input {
+   padding: 12px !important;
+   }
+   .hl_login--body .form-group {
+     margin-bottom: 16px !important;
+   }
+   #forgot_passowrd_btn{
+     margin-top: 12px !important;
+   }
+   .hl_login--header .container-fluid a{
+    margin: 0 auto !important;
+    display: block !important;
+    margin-bottom: -80px !important;
+    margin-top: 80px;
+   }
+   #app:has(.hl_login){
+     background: url("https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/697e0f5166e7ca3acb588363.jpg")
+  no-repeat center center / cover !important;
+
+   }
+   
+   .hl_login .card {
+   max-width: 500px  !important;
+     border-radius: 20px !important;
+     border: 20px solid transparent;
+     background: linear-gradient(#fff, #fff) padding-box,
+     linear-gradient(to right, #ffffff21  0%, #ffffff21  0%, #ffffff21  200%) border-box !important;
+   }
+   
+   body[data-theme=default-dark-v1] a:not(.btn){
+     color: #000 !important;
+   }
+   .hl_login .card button{
+     border-radius: 10px !important;
+   background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
+   color:#000 !important;
+   text-transform: uppercase !important;
+   }
+   
+   #app .hl_login--header .container-fluid a img {
+       filter: invert(1) !important;
+       filter: invert(1) !important;
+   }
+   .hl_login--header .container-fluid a img{
+       max-width:180px !important;
+   margin-top:35px !important;
+   }
+   
+   .hl_login--body .card .card-body .forgot-password {
+    color: #9D1792 !important;
+}
+
+.hl_login--body .card .card-body .foot-note a {
+    color: #9D1792 !important;
+}
+
+.hl_login--body .card .card-body input[type="password"],
+.hl_login--body .card .card-body input[type="text"] {
+    border: 1px solid #ddd !important;
+    background: #fff !important;
+}
+.language-dropdown-container[data-v-a5b84904]{
+  display: none !important;
+}
+ 

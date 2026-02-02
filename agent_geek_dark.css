@@ -5416,3 +5416,18 @@ body:has(#notification_banner-top_bar) #estimatesDashboardApp {
 #hr-tag-count-wrapper-undefined{
   color: #fff !important;
 }
+
+#conversations-layout,
+#conversations-layout .relative.flex.flex-col.bg-\[\#ECEEF2\].px-2.pt-3.pb-2.h-full.overflow-visible.transition-all.duration-300.inbox-panel,
+#conversations-workspace,
+#conversations-content{
+  background: #101213 !important;
+}
+#conversation-panel .m-3,
+#conversation-panel ,
+#conversations-list .conversation-list-container .flex.flex-col.w-full.h-full.gap-5.bg-\[\#F7F9FD\].px-3.pt-3.pb-3{
+  background: #1D1E20 !important ;
+}
+.conversation-list-header button{
+background: #1D1E20 !important;
+}
