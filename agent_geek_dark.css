@@ -5428,9 +5428,7 @@ body:has(#notification_banner-top_bar) #estimatesDashboardApp {
 #conversations-list .conversation-list-container .flex.flex-col.w-full.h-full.gap-5.bg-\[\#F7F9FD\].px-3.pt-3.pb-3{
   background: #1D1E20 !important ;
 }
-.conversation-list-header button{
-background: #1D1E20 !important;
-}
+
 #conversation-panel .chat-bubble-outbound{
   background: #282a2b !important;
   border: none !important;
@@ -5454,4 +5452,24 @@ background: #1D1E20 !important;
 #conv-composer-inline-expand-trigger,
 #mail-composer-footer{
   background: #101213 !important;
+}
+
+.flex.w-full.border-1.border-solid.border-gray-200.rounded-lg.overflow-hidden,
+.conversation-list-header{
+  background: #1D1E20 !important;
+}
+#conversations-messages .flex.justify-between.items-center.px-3.border-b.border-gray-200{
+  background: #9D1792 !important;
+  border-radius: 0 !important;
+}
+.conversation-list-header svg,
+#conversations-messages .flex.justify-between.items-center.px-3.border-b.border-gray-200 svg{
+  color: #fff !important;
+}
+#conversations-layout .hr-text{
+  color: #000 !important;
+}
+
+.conversation-list-header button{
+  background: #343436 !important;
 }
