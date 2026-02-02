@@ -5431,3 +5431,27 @@ body:has(#notification_banner-top_bar) #estimatesDashboardApp {
 .conversation-list-header button{
 background: #1D1E20 !important;
 }
+#conversation-panel .chat-bubble-outbound{
+  background: #282a2b !important;
+  border: none !important;
+}
+
+#conversation-panel .hr-tag__container{
+  background: #343436 !important;
+  padding: 15px !important;
+  border-radius: 50px !important;
+}
+#conversation-panel .chat-bubble-outbound a,
+#conversation-panel .hr-tag__container svg,
+#conversation-panel .hr-tag__container div{
+  color:#fff !important;
+}
+
+.flex.flex-col.relative.bg-\[\#F7F9FD\].flex-none{
+    background: #1D1E20 !important ;
+
+}
+#conv-composer-inline-expand-trigger,
+#mail-composer-footer{
+  background: #101213 !important;
+}
