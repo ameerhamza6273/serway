@@ -2007,3 +2007,7 @@ button svg,
 html [type=button] svg {
     stroke: #000 !important;
 }
+
+#sb_launchpad{
+display: none !important;
+}
