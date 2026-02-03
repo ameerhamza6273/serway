@@ -5491,3 +5491,11 @@ body:has(#notification_banner-top_bar) #estimatesDashboardApp {
 #sb_launchpad{
 display: none !important;
 }
+
+#add-record-btn span{
+  color: #000 !important;
+}
+#OpportunitiesList button.d-flex.manage-fields.cursor-pointer span#list-view-manage-field
+{
+  color: #fff !important;
+}
