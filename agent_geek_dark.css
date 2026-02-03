@@ -3655,7 +3655,7 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 .default-bg-color {
 #CalendarPage .n-tabs .n-tabs-rail .n-tabs-tab-wrapper .n-tabs-tab.n-tabs-tab--active {
   background: #fff !important;
 }
-button span,
+
 .n-button--default-type:not(.icon-only):not(.hl-active-btn) span,
 #pg-invoices_btn-settings span,
 #import-btn span {
