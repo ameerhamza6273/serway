@@ -70,7 +70,7 @@ div {
    body[data-theme=default-dark-v1] a:not(.btn){
      color: #000 !important;
    }
-   .hl_login .card button{
+   .hl_login .card .form-group.button-holder button{
      border-radius: 10px !important;
    background: linear-gradient(90deg, #FEB701, #FFCA00, #FEF53B) !important;
    color:#000 !important;
