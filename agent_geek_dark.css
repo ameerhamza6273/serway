@@ -4382,22 +4382,8 @@ button.hr-button--secondary p {
   text-transform: uppercase !important;
 }
 
-.agency-logo-container img {
-  opacity: 0 !important;
-}
-
 .agency-logo-container {
   position: relative !important;
-}
-
-.agency-logo-container::before {
-  content: "" !important;
-  position: absolute !important;
-  top: 0 !important;
-  left: 18% !important;
-  width: 150px !important;
-  height: 100% !important;
-  background: url(https://storage.googleapis.com/msgsndr/jy2CakbntNUtQfQg4zZx/media/68c5a0d8ccedb2bbfaf77f07.png) no-repeat center/contain !important;
 }
 
 body:has(#bulkActionsList) .topmenu-navtitle,
