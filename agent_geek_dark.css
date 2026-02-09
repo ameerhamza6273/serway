@@ -578,7 +578,7 @@ span.search-placeholder::before {
 }
 
 .n-drawer.n-drawer--native-scrollbar .n-drawer-content-wrapper {
-  background-color: #0d041e !important;
+  background-color: #000 !important;
   border-left: 1px solid rgba(255, 255, 255, 0.20) !important;
 }
 
@@ -828,7 +828,7 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 #help-drawer,
 .hl_recent-activities.--open,
 .hl-modal {
-  background-color: #0d041e !important;
+  background-color: #000 !important;
   border: 1px solid rgba(255, 255, 255, 0.20) !important;
 }
 
@@ -909,7 +909,7 @@ text {
 
 .hl_header--controls a {
   border-radius: 50px;
-  background-color: #0d041e !important;
+  background-color: #000 !important;
 }
 
 .hl_header--controls span {
@@ -947,11 +947,11 @@ text {
 }
 
 .no-data-message {
-  background-color: #0d041e !important;
+  background-color: #000 !important;
 }
 
 .hl_v2-location_switcher {
-  background-color: #0d041e !important;
+  background-color: #000 !important;
 }
 
 .hl-card .hl-card-header {
@@ -1081,7 +1081,7 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 }
 
 div.no-border-radius[data-v-3ac5829a] {
-  background-color: #0d041e !important;
+  background-color: #000 !important;
 }
 
 thead,
@@ -1559,7 +1559,7 @@ ul.header-ul li.active a[data-v-3ac5829a],
 }
 
 .hl_customers--table {
-  background-color: #0d041e !important;
+  background-color: #000 !important;
 }
 
 #content-ai-dashboard {
@@ -1954,12 +1954,12 @@ table th {
 }
 
 #reporting-agent-dashboard .info-blue {
-  background-color: #0d041e !important;
+  background-color: #000 !important;
   border-radius: 7px !important;
 }
 
 #report-dropdown-filters .dropdown-menu {
-  background-color: #0d041e !important;
+  background-color: #000 !important;
 }
 
 .highcharts-root rect {
@@ -2017,7 +2017,7 @@ button:hover {
 .date-time-picker .justify-content-end,
 .date-time-picker .justify-content-right,
 .datetimepicker .datepicker .pickers-container[data-v-17c053f2] {
-  background-color: #0d041e !important;
+  background-color: #000 !important;
 }
 
 .datepicker-buttons-container .datepicker-button.validate[data-v-601c6e79],
@@ -3537,12 +3537,12 @@ table tr:hover td p {
 }
 
 #copilot-drawer .n-drawer-content-wrapper .copilot-drawer-header {
-  background-color: #0d041e !important;
+  background-color: #000 !important;
 }
 
 #copilot-drawer .n-drawer-content-wrapper .input-container,
 #copilot-drawer .n-drawer-content-wrapper .chat-container {
-  background-color: #0d041e !important;
+  background-color: #000 !important;
 }
 
 #copilot-drawer .copilot-drawer-beta-badge,
@@ -3742,7 +3742,7 @@ table tr:hover .n-data-table-td {
 .hr-form-item-blank,
 .hr-base-selection,
 #opportunitiesModel input {
-  background: #0d041e !important;
+  background: #000 !important;
 }
 
 a#canny_logs-toggle {
@@ -3851,7 +3851,7 @@ body:has(#OpportunitiesList) .topmenu-navtitle::before {
 #opportunitiesModel .hr-base-selection-tags,
 #opportunitiesModel .hr-base-selection-label,
 #opportunitiesModel .hr-input {
-  background: #0d041e !important;
+  background: #000 !important;
 }
 
 .hr-base-select-option:hover p {
@@ -3876,7 +3876,7 @@ body:has(#OpportunitiesList) .topmenu-navtitle::before {
 
 .hl_wrapper.hl_contact--details .hl_contact-details-left .dropdown button,
 .hl_wrapper.hl_contact--details .hl_contact-details-left input {
-  background: #0d041e !important;
+  background: #000 !important;
   border: 1px solid #fff !important;
 }
 
@@ -3884,7 +3884,7 @@ body:has(#OpportunitiesList) .topmenu-navtitle::before {
 .hr-drawer-content-wrapper .hr-button.hr-button--default-type.hr-button--medium-type.ui-button,
 .hr-drawer-content-wrapper .hr-base-selection-label,
 .hr-drawer-content-wrapper .hr-input-wrapper {
-  background: #0d041e !important;
+  background: #000 !important;
 }
 
 .hl_contact-details-right .hr-button--default-type span,
@@ -3897,7 +3897,7 @@ body:has(#OpportunitiesList) .topmenu-navtitle::before {
 }
 
 .hl_contact-details-right a .hr-tag {
-  background: #0d041e !important;
+  background: #000 !important;
 }
 
 #hl-table-calendar-list-table-filter-text-search input {
@@ -4034,7 +4034,7 @@ body:has(#OpportunitiesList) .topmenu-navtitle::before {
 }
 
 #drawer-component .hr-base-selection-tags {
-  background: #0d041e !important;
+  background: #000 !important;
 }
 
 #drawer-component .hr-base-selection-input__content {
@@ -5484,4 +5484,13 @@ display: none !important;
 #OpportunitiesList button.d-flex.manage-fields.cursor-pointer span#list-view-manage-field
 {
   color: #fff !important;
+}
+
+#record-details-new-ui .bg-background {
+  background: #101213 !important;
+}
+#record-details-lhs .bg-gray-50,
+#record-details-lhs .bg-contacts-panel,
+#record-details-lhs {
+  background: #1d1e20 !important;
 }
