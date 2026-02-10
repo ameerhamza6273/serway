@@ -5727,21 +5727,21 @@ body:has(#notification_banner-top_bar) #estimatesDashboardApp {
 }
 
 .dialer{
-  border: 1px solid #fff;
-  border-radius: 10px;
+  border: 1px solid #fff !important;
+  border-radius: 10px !important;
 }
 .dialer .dialer-navigation,
 .dialer .max-h-34.min-h-29.flex.flex-col.gap-3.p-3.bg-gray-25,
 .dialer .keypad,
 .dialer{
-  background: #0D041E;
+  background: #0D041E !important;
 }
 #search-contact-id,
 #dialer-phone-numbers-search,
 .dialer .type .bg-gray-100,
 .dialer .dial-numbers .bg-gray-200,
 #dialer-input{
-  background: #141414;
+  background: #141414 !important;
 }
 #search-contact-id span,
 #dialer-phone-numbers-search .hr-input__input span,
