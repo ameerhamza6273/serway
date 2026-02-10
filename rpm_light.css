@@ -1729,7 +1729,7 @@ body:has(.v2-collapse) .main_container1012 {
     border-radius: 10px !important;
 }
 
-header .hl_header--controls #template-power-dialer button::before {
+header .hl_header--controls #template-power-dialer button.bg-success-600::before {
     content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/68c1b67f7886d6b5294e1d05.svg) !important;
     margin-top: 8px !important;
 }

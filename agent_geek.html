@@ -1,0 +1,145 @@
+<script>
+(function () {
+
+  var lightCss = "https://dashboard-code.netlify.app/agent_geek_light.css";
+  var darkCss  = "https://dashboard-code.netlify.app/agent_geek_dark.css";
+
+  var linkId     = "styleSheet"; 
+  var toggleId   = "tooglecss";
+  var welcomeId  = "welcome1012";
+  var toggleLocationId = "vHCSEErR6q4hNIvutmYI";
+
+  function isLoginPage() {
+    return (
+      window.location.pathname === "/" ||
+      window.location.pathname.includes("/login")
+    );
+  }
+
+  function isSubAccount() {
+    return /\/location\/[^/]+/.test(window.location.href);
+  }
+
+  function isTargetLocation() {
+    return window.location.href.includes("/location/" + toggleLocationId);
+  }
+
+  function injectCss() {
+    var stylesheet = document.getElementById(linkId);
+    if (!stylesheet) {
+      stylesheet = document.createElement("link");
+      stylesheet.id = linkId;
+      stylesheet.rel = "stylesheet";
+      stylesheet.href = lightCss;
+      document.head.appendChild(stylesheet);
+    }
+
+    if (!isTargetLocation()) {
+      if (!document.getElementById("customHideCss")) {
+        var style = document.createElement("style");
+        style.id = "customHideCss";
+        style.innerHTML = `
+          #tb_payment-integrations,
+          #tb_payment-settings,
+          #tb_gift-cards,
+          #tb_payments-coupons,
+          #tb_payments-products,
+          #tb_payment-transactions-new,
+          #tb_payment-links,
+          #tb_payment-subscriptions,
+          #tb_payment-orders-new,
+          #tb_payment-invoices {
+            display: none !important;
+          }
+        `;
+        document.head.appendChild(style);
+      }
+      if (stylesheet.href !== lightCss) stylesheet.href = lightCss;
+    } else {
+      var existingStyle = document.getElementById("customHideCss");
+      if (existingStyle) existingStyle.remove();
+    }
+  }
+
+  function applyUi() {
+    injectCss();
+
+    var existingToggle  = document.getElementById(toggleId);
+    var existingWelcome = document.getElementById(welcomeId);
+
+    if (isTargetLocation()) {
+      if (!existingToggle) {
+        var toggleDiv = document.createElement("div");
+        toggleDiv.id = toggleId;
+        toggleDiv.innerHTML = `
+          <label class="switch">
+            <input type="checkbox" onclick="toggleStylesheet()" />
+            <span class="slider round"></span>
+          </label>
+        `;
+        document.body.appendChild(toggleDiv);
+      }
+    } else {
+      if (existingToggle) existingToggle.remove();
+    }
+
+    if (isSubAccount()) {
+      if (!existingWelcome) {
+        var welcomeDiv = document.createElement("div");
+        welcomeDiv.id = welcomeId;
+        welcomeDiv.innerHTML = `
+          <div class="main_container1012">
+            <div class="inside_container1012">
+              <div class="left_side1012">
+                <h2 class="helloow1012">Hey {{user.name}} 👋</h2>
+                <h4 class="dashboard101224">
+                  Relationship Performance Management dashboard.
+                </h4>
+              </div>
+            </div>
+          </div>
+        `;
+        document.body.appendChild(welcomeDiv);
+      }
+    } else {
+      if (existingWelcome) existingWelcome.remove();
+    }
+
+    /* ===== REDIRECT LOGIC ===== */
+    if (!isTargetLocation() && window.location.pathname.includes("/payments/invoices")) {
+      try {
+        // Extract current sub-account ID
+        const locId = window.location.pathname.split('/location/')[1].split('/')[0];
+        window.location.href = `/v2/location/${locId}/payments/proposals-estimates`;
+      } catch (e) {
+        console.warn("Redirect failed: ", e);
+      }
+    }
+  }
+
+  window.toggleStylesheet = function () {
+    var stylesheet = document.getElementById(linkId);
+    if (!stylesheet) return;
+
+    if (isTargetLocation()) {
+      stylesheet.href =
+        stylesheet.href.includes(lightCss)
+          ? darkCss
+          : lightCss;
+    } else {
+      stylesheet.href = lightCss;
+    }
+  };
+
+  applyUi();
+
+  let lastUrl = location.href;
+  new MutationObserver(() => {
+    if (location.href !== lastUrl) {
+      lastUrl = location.href;
+      applyUi();
+    }
+  }).observe(document, { childList: true, subtree: true });
+
+})();
+</script>
