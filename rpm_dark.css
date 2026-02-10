@@ -5752,3 +5752,7 @@ body:has(#notification_banner-top_bar) #estimatesDashboardApp {
 background: transparent !important;
 border: none !important;
 }
+
+.dialer .number-config-header.ui-display-sm-semibold{
+color: #fff !important;
+}
