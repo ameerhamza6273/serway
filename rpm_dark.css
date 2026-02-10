@@ -5725,3 +5725,30 @@ body:has(#notification_banner-top_bar) #estimatesDashboardApp {
 #hr-tag-count-wrapper-undefined{
   color: #fff !important;
 }
+
+.dialer{
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+.dialer .dialer-navigation,
+.dialer .max-h-34.min-h-29.flex.flex-col.gap-3.p-3.bg-gray-25,
+.dialer .keypad,
+.dialer{
+  background: #0D041E;
+}
+#search-contact-id,
+#dialer-phone-numbers-search,
+.dialer .type .bg-gray-100,
+.dialer .dial-numbers .bg-gray-200,
+#dialer-input{
+  background: #141414;
+}
+#search-contact-id span,
+#dialer-phone-numbers-search .hr-input__input span,
+.dialer .type .bg-gray-100  span{
+  border: none !important;
+}
+.dialer .dialer-body .flex.w-10 .rounded-full span{
+background: transparent !important;
+border: none !important;
+}
