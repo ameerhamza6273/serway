@@ -5364,10 +5364,6 @@ body:has(#notification_banner-top_bar) .flex.mb-4.h-7.flex-row.md\:flex-col.lg\:
   background: #a21a4d !important;
 }
 
-a#sb_sites {
-  display: none !important;
-}
-
 #OpportunitiesList .min-h-0 .h-full.flex.flex-col .opportunitiesCard.max-h-2xl.borderColor.mb-\[16px\].max-h-28.\!rounded.\!border-0.\!border-t-2.\!border-solid.ui-card {
   position: relative;
   background: linear-gradient(to right,
