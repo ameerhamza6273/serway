@@ -3749,12 +3749,14 @@ a#canny_logs-toggle {
   position: relative !important;
 }
 
+#sb_payments span,
 #sb_opportunities span,
 #sb_contacts span,
 #sb_launchpad span {
   display: none !important;
 }
 
+.v2-collapse #sb_payments:after,
 .v2-collapse #sb_opportunities:after,
 .v2-collapse #sb_contacts:after,
 .v2-collapse #sb_launchpad:after {
@@ -3773,6 +3775,11 @@ a#canny_logs-toggle {
   Content: 'clients' !important;
 }
 
+#sb_payments:after {
+    Content: 'Documents' !important;
+}
+
+#sb_payments:after,
 #sb_opportunities:after,
 #sb_contacts:after,
 #sb_launchpad:after {
@@ -3787,12 +3794,14 @@ a#canny_logs-toggle {
   text-transform: uppercase !important;
 }
 
+#sb_payments:hover:after,
 #sb_opportunities:hover:after,
 #sb_contacts:hover:after,
 #sb_launchpad:hover:after {
   color: #000 !important;
 }
 
+#sb_payments.active:after,
 #sb_opportunities.active:after,
 #sb_contacts.active:after,
 #sb_launchpad.active:after {
@@ -5050,10 +5059,6 @@ body:has(#notification_banner-top_bar) .flex.mb-4.h-7.flex-row.md\:flex-col.lg\:
   background: #a21a4d !important;
 }
 
-a#sb_sites {
-  display: none !important;
-}
-
 #OpportunitiesList .min-h-0 .h-full.flex.flex-col .opportunitiesCard.max-h-2xl.borderColor.mb-\[16px\].max-h-28.\!rounded.\!border-0.\!border-t-2.\!border-solid.ui-card {
   position: relative;
   background: linear-gradient(to right,
@@ -5493,4 +5498,8 @@ display: none !important;
 #record-details-lhs .bg-contacts-panel,
 #record-details-lhs {
   background: #1d1e20 !important;
+}
+
+.hl_nav-header nav .divider{
+  display: none !important;
 }

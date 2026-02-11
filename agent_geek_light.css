@@ -1470,12 +1470,14 @@ header .hl_header--controls #template-power-dialer button::before {
     border: none !important;
 }
 
+#sb_payments span,
 #sb_opportunities span,
 #sb_contacts span,
 #sb_launchpad span {
     display: none !important;
 }
 
+.v2-collapse #sb_payments:after,
 .v2-collapse #sb_opportunities:after,
 .v2-collapse #sb_contacts:after,
 .v2-collapse #sb_launchpad:after {
@@ -1493,7 +1495,11 @@ header .hl_header--controls #template-power-dialer button::before {
 #sb_contacts:after {
     Content: 'clients' !important;
 }
+#sb_payments:after {
+    Content: 'Documents' !important;
+}
 
+#sb_payments:after,
 #sb_opportunities:after,
 #sb_contacts:after,
 #sb_launchpad:after {
@@ -1508,12 +1514,14 @@ header .hl_header--controls #template-power-dialer button::before {
     text-transform: uppercase !important;
 }
 
+#sb_payments:hover:after,
 #sb_opportunities:hover:after,
 #sb_contacts:hover:after,
 #sb_launchpad:hover:after {
     color: #42454a !important;
 }
 
+#sb_payments.active:after,
 #sb_opportunities.active:after,
 #sb_contacts.active:after,
 #sb_launchpad.active:after {
