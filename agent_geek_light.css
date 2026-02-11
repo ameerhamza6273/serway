@@ -1930,5 +1930,9 @@ html [type=button] svg {
 }
 
 #sb_launchpad{
-display: none !important;
+    display: none !important;
+}
+
+.hl_nav-header nav .divider{
+  display: none !important;
 }
