@@ -2152,3 +2152,7 @@ a[id="3f2485c4-068c-40b7-965b-1945cbf4d194"] span.nav-title{
     no-repeat center top !important;
   background-size: 1050px auto !important; 
 }
+
+#OpportunitiesList .cardWrapper.h-full.relative .absolute.inset-0.z-10.flex.items-center.justify-center.pointer-events-none.mt-\[60px\].bg-\[\#f9fafb\] {
+  margin-top:85px !important;
+}
