@@ -869,11 +869,6 @@ span.search-placeholder::before {
   }
 }
 
-/* sidebar start */
-.agency-logo-container img {
-  max-width: 150px !important
-}
-
 #sb_sites::after,
 .nav-title:not(#location-switcher-sidbar-v2 span) {
   color: #808080 !important
@@ -4680,6 +4675,10 @@ button.hr-button--secondary p {
 #location-dashboard .hl-card-header .hl-text-md-medium {
   font-weight: 700 !important;
   text-transform: uppercase !important;
+}
+/* sidebar start */
+.agency-logo-container img {
+  max-width: 150px !important
 }
 
 .agency-logo-container img {

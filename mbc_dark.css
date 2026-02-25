@@ -4356,8 +4356,22 @@ button.hr-button--secondary p {
   text-transform: uppercase !important;
 }
 
+.agency-logo-container img {
+  opacity: 0 !important;
+}
+
 .agency-logo-container {
   position: relative !important;
+}
+
+.agency-logo-container::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 18% !important;
+  width: 150px !important;
+  height: 100% !important;
+  background: url(https://assets.cdn.filesafe.space/MLvKvVyGos8j4OV4y4Zt/media/699f1dea590acb3c5e73b1ca.png) no-repeat center/contain !important;
 }
 
 body:has(#bulkActionsList) .topmenu-navtitle,
