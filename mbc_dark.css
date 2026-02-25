@@ -3749,17 +3749,11 @@ a#canny_logs-toggle {
   position: relative !important;
 }
 
-#sb_payments span,
-#sb_opportunities span,
-#sb_contacts span,
-#sb_launchpad span {
+#sb_opportunities span{
   display: none !important;
 }
 
-.v2-collapse #sb_payments:after,
-.v2-collapse #sb_opportunities:after,
-.v2-collapse #sb_contacts:after,
-.v2-collapse #sb_launchpad:after {
+.v2-collapse #sb_opportunities:after {
   display: none !important;
 }
 
@@ -3767,44 +3761,23 @@ a#canny_logs-toggle {
   Content: 'Pipeline' !important;
 }
 
-#sb_launchpad:after {
-  Content: 'OnRamp' !important;
-}
-
-#sb_contacts:after {
-  Content: 'clients' !important;
-}
-
-#sb_payments:after {
-    Content: 'Documents' !important;
-}
-
-#sb_payments:after,
-#sb_opportunities:after,
-#sb_contacts:after,
-#sb_launchpad:after {
+#sb_opportunities:after {
   Visibility: visible !important;
   Top: 0 !important;
   Left: 0 !important;
   Position: relative !important;
   font-size: 12px !important;
-  color: rgb(128, 128, 128) !important;
+  color: #fff !important;
   font-weight: 600 !important;
   line-height: 24px !important;
   text-transform: uppercase !important;
 }
 
-#sb_payments:hover:after,
-#sb_opportunities:hover:after,
-#sb_contacts:hover:after,
-#sb_launchpad:hover:after {
+#sb_opportunities:hover:after{
   color: #000 !important;
 }
 
-#sb_payments.active:after,
-#sb_opportunities.active:after,
-#sb_contacts.active:after,
-#sb_launchpad.active:after {
+#sb_opportunities.active:after{
   color: #000 !important;
 }
 
@@ -3819,19 +3792,6 @@ body:has(#BusinessList) .topmenu-navtitle,
 body:has(#bulkActionsList) .topmenu-navtitle {
   color: transparent !important;
   position: relative !important;
-}
-
-body:has(#contact-restore-dashboard) .topmenu-navtitle::before,
-body:has(#CustomObjectsList) .topmenu-navtitle::before,
-body:has(#BusinessList) .topmenu-navtitle::before,
-body:has(#bulkActionsList) .topmenu-navtitle::before,
-body:has(#smartlists) .topmenu-navtitle::before {
-  content: "clients" !important;
-  color: #fff !important;
-  position: absolute !important;
-  left: 0 !important;
-  top: 0 !important;
-  text-transform: uppercase !important;
 }
 
 body:has(#bulkActionsList) .topmenu-navtitle::before,
