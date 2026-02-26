@@ -815,9 +815,10 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 
 /* dashboard & sidebar style is here ------------------------------ */
 #sidebar-v2 {
-  background: #09090A !important;
+  background: #040d1c !important;
   min-width: 60px !important;
   padding: 0px !important;
+  border-right: 1px solid #28292b !important;
 }
 
 .sidebar-v2-location .hl_header .container-fluid {
