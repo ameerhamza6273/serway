@@ -42,7 +42,7 @@ p {
 
 body[data-theme=default] .sidebar-v2-agency #sidebar-v2 #location-switcher-sidbar-v2 .hl_v2-location_switcher .hl_account,
 body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sidbar-v2 .hl_v2-location_switcher .hl_account .bg-gray-200 #location-list div[role=listitem] .hl_swicher {
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
 }
 
 .sidebar-v2-location #sidebar-v2 .default-bg-color {
@@ -54,7 +54,7 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 }
 
 #location-dashboard .n-data-table-tbody .n-data-table-tr td {
-  background: #1D1E20 !important;
+  background: #051526 !important;
   color: #838383 !important;
   border-radius: 0px !important;
 }
@@ -77,7 +77,7 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 }
 
 .hover\:bg-gray-100:hover {
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
 }
 
 #pg-appt__btn--appt-add {
@@ -89,7 +89,7 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 }
 
 #quickActions .hl_v2-quick-actions-list {
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
 }
 
 .appointment-reporting-header,
@@ -120,7 +120,7 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 }
 
 #quickActions .hl_v2-quick-actions-list .hl_v2_tip-arrow {
-  border-right: 10px solid #1D1E20 !important;
+  border-right: 10px solid #051526 !important;
 }
 
 [type=reset],
@@ -291,12 +291,12 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 }
 
 .whatsapp-payment .card .card-body .two-part .cc_card_info .cc_card_container[data-v-3d9ae48d] {
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
   border-radius: 10px !important;
 }
 
 .whatsapp-payment .card .card-body .two-part .billing .invoice-container[data-v-3d9ae48d] {
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
   border-radius: 10px !important;
   padding: 10px !important;
 }
@@ -332,7 +332,7 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 
 .hl_team-management--modal .text-title-wrap,
 .hl_team-management--modal .text-title-wrap button {
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
 }
 
 .hl_team-management--modal .custom-card .card-header {
@@ -352,7 +352,7 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 }
 
 #mceu_1333 {
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
 }
 
 .popover,
@@ -928,7 +928,7 @@ text {
 
 .n-date-picker .n-input .n-input__input-el {
   color: #FFF !important;
-  background: #1D1E20 !important;
+  background: #051526 !important;
   border: none !important;
 }
 
@@ -979,7 +979,7 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
   border: none !important;
   border-radius: 10px !important;
   padding-left: 10px !important;
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
 }
 
 body[data-theme=default] .sidebar-v2-agency #sidebar-v2 #location-switcher-sidbar-v2 .hl_v2-location_switcher .hl_account,
@@ -1046,7 +1046,7 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 }
 
 #dashboard .card-header {
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
   border-bottom: 1px solid #474747 !important;
 }
 
@@ -1059,7 +1059,7 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 }
 
 .flex-page-bar[data-v-05a07f3d] {
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
   border-bottom: 1px solid #242527 !important;
 }
 
@@ -1077,7 +1077,7 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 
 .hl_controls .hl_controls--right .search-form input,
 .hl_smartlists--controls .hl_controls--left .btn {
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
   color: #838383 !important;
 }
 
@@ -1088,7 +1088,7 @@ div.no-border-radius[data-v-3ac5829a] {
 thead,
 tr {
   border-bottom: 3px solid #242527 !important;
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
 }
 
 .hl_header .flex-row {
@@ -1160,7 +1160,7 @@ tr {
 
 #newTopBar {
   border-radius: 10px !important;
-  background: #1D1E20 !important;
+  background: #051526 !important;
   margin: 7px 10px !important;
 }
 
@@ -1219,7 +1219,7 @@ tr {
 }
 
 #conversations .mini-panel[data-v-28bfd2c5] .p-\[9px\] {
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
 }
 
 #conversations .mini-panel[data-v-28bfd2c5] .text-primary-600 {
@@ -1241,7 +1241,7 @@ tr {
 }
 
 #conversations .message-body--conversation--height-fix[data-v-76fb0af9] {
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
   border: none !important;
   border-radius: 10px !important;
 }
@@ -1251,7 +1251,7 @@ tr {
 }
 
 #conversations .mini-panel-padding[data-v-e1dd1d84] {
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
   border-radius: 10px !important;
 }
 
@@ -1323,7 +1323,7 @@ tr {
 
 .messages-list--item-v2 {
   background: #141414 !important;
-  border-left-color: #1D1E20 !important;
+  border-left-color: #051526 !important;
 }
 
 #message-composer section div:nth-child(4) .ease-in-out.cursor-pointer svg {
@@ -1399,7 +1399,7 @@ tr {
 #mceu_176,
 #mceu_178,
 #mceu_176-body {
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
   border: none !important;
 }
 
@@ -1429,7 +1429,7 @@ ul.header-ul li.active a[data-v-3ac5829a],
 }
 
 #conversations .new-email-thread-view--collapsed-container[data-v-c63206c2] {
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
 }
 
 #hCyZ5WC5xf2HlTueNwYF .right-\[-5px\] {
@@ -1499,11 +1499,11 @@ ul.header-ul li.active a[data-v-3ac5829a],
 .hl_conversations--message,
 .messages-group,
 .border-gray-200 {
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
 }
 
 #search_conversations {
-  background: #1D1E20 !important;
+  background: #051526 !important;
   border-radius: 10px !important;
   padding-top: 4px !important;
   padding-bottom: 3px !important;
@@ -1527,7 +1527,7 @@ ul.header-ul li.active a[data-v-3ac5829a],
 
 .pt-\[24px\],
 .bg-white {
-  background: #1D1E20 !important;
+  background: #051526 !important;
   border: 1px solid #2B2B2B !important;
   border-radius: 10px 10px 0px 0px !important;
 }
@@ -1568,7 +1568,7 @@ ul.header-ul li.active a[data-v-3ac5829a],
 }
 
 #triggers .hl_triggers--wrap div {
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
 }
 
 #content-ai-dashboard .hl-display-sm-medium {
@@ -1585,7 +1585,7 @@ ul.header-ul li.active a[data-v-3ac5829a],
 }
 
 #reporting-agent-dashboard .card-header {
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
 }
 
 #marketplace-app ul li:hover {
@@ -1614,7 +1614,7 @@ ul.header-ul li.active a[data-v-3ac5829a],
 }
 
 #attribution-dashboard .n-radio-group .n-radio-button.n-radio-button--checked {
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
   margin: 2px !important;
 }
 
@@ -1674,7 +1674,7 @@ ul.header-ul li.active a[data-v-3ac5829a],
 #bookAppointment,
 #hl_smartlists--filter-btn,
 .n-tabs .n-tabs-rail .n-tabs-tab-wrapper .n-tabs-tab.n-tabs-tab--active {
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
 }
 
 .location-dashboard_header .n-divider.n-divider--vertical {
@@ -1698,11 +1698,11 @@ ul.header-ul li.active a[data-v-3ac5829a],
 .card-body,
 .n-date-panel-calendar,
 .table-container {
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
 }
 
 .n-date-panel .n-date-panel-actions {
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
 }
 
 #smartlists {
@@ -1766,7 +1766,7 @@ table th {
 
 .n-data-table-tr,
 .ghl-table-container {
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
 }
 
 .n-scrollbar {
@@ -1794,7 +1794,7 @@ table th {
 }
 
 .hl-statistic {
-  background: #1D1E20 !important;
+  background: #051526 !important;
   border-left: 1px solid rgba(212, 206, 230, 0.20) !important;
   border-right: 1px solid rgba(212, 206, 230, 0.20) !important;
   border-bottom: 1px solid rgba(212, 206, 230, 0.20) !important;
@@ -1889,7 +1889,7 @@ table th {
 }
 
 .hl_wrapper-text-widget--root .card-header {
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
 }
 
 #pg-survey-builder__dtpk--filter-date .n-input {
@@ -1951,7 +1951,7 @@ table th {
 .agent_reporting .card,
 .card-group.--wide-gutter>.card,
 .top-row>.flex-child[data-v-0b74e46f] {
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
 }
 
 #reporting-agent-dashboard .info-blue {
@@ -1964,7 +1964,7 @@ table th {
 }
 
 .highcharts-root rect {
-  fill: #1D1E20 !important;
+  fill: #051526 !important;
 }
 
 [data-v-2e1232d2] .hl-empty-actions>.n-button--primary-type,
@@ -2062,7 +2062,7 @@ html [type=button] svg {
 }
 
 .hl_team-management--modal .custom-card .card-header {
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
 }
 
 .hl-wrapper-container:not(.full-screen),
@@ -2178,7 +2178,7 @@ html [type=button] svg {
 .add-payment-warning[data-v-f7a2c608],
 .hl_settings--body .container-fluid .row .card-integration {
   border-top: 2px solid #E7246F !important;
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
 }
 
 /* manage scrolling style */
@@ -2197,18 +2197,18 @@ html [type=button] svg {
 }
 
 #scoring .wrapper .rules-section {
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
   border-radius: 10px !important;
   padding: 10px !important;
 }
 
 #scoring .wrapper .rule-body .rule-wrapper {
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
   border: 1px solid #474747 !important;
 }
 
 #customValuesPage .n-data-table .n-data-table-table td {
-  background: #1D1E20 !important;
+  background: #051526 !important;
 }
 
 #customValuesPage .hl-header-content .description {
@@ -2274,7 +2274,7 @@ html [type=button] {
 }
 
 #conversations div[data-tooltip="tooltip"] {
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
 }
 
 #mediaCenter #folders button {
@@ -2513,7 +2513,7 @@ table td {
 #OpportunitiesList .tabulator-tableholder,
 #OpportunitiesList .tabulator-footer,
 #OpportunitiesList .tabulator-tableholder div {
-  background: #1D1E20 !important;
+  background: #051526 !important;
 }
 
 #reputation-dashboard-container .hl-card svg path,
@@ -2608,7 +2608,7 @@ table td {
 .advanced-select__search,
 .advanced-select__container,
 #OwnersComponent .hl-wrapper-container {
-  background: #1D1E20 !important;
+  background: #051526 !important;
 }
 
 #user-list div span,
@@ -2627,7 +2627,7 @@ table td {
 #hl_v2-user_switcher,
 .hl_header--controls .hl_header--dropdown .dropdown-item:hover {
   color: #fff !important;
-  background: #1D1E20 !important;
+  background: #051526 !important;
 }
 
 .only-agency-sections,
@@ -2651,7 +2651,7 @@ table td {
 #products .card-header,
 #saas .banner[data-v-5479793e],
 #saas .banner[data-v-8526a940] {
-  background: #1D1E20 !important;
+  background: #051526 !important;
 }
 
 .ad-reporting-container .search {
@@ -3175,7 +3175,7 @@ button p,
 #list-view-advance-filter-btn,
 #list-view-sort-btn,
 .quick-filter-bar .quick-filter {
-  background: #1D1E20 !important;
+  background: #051526 !important;
 }
 
 .hl-wrapper-container {
@@ -3409,7 +3409,7 @@ button.n-button.n-button--default-type.n-button--large-type.hl-table-filter-btn 
 }
 
 #pg-agency-locations-container .footer {
-  background: #1D1E20 !important;
+  background: #051526 !important;
   border-radius: 0 0 20px 20px !important;
 }
 
@@ -3431,7 +3431,7 @@ button.n-button.n-button--default-type.n-button--large-type.hl-table-filter-btn 
 }
 
 #account-snapshots table tr td {
-  background: #1D1E20 !important;
+  background: #051526 !important;
 }
 
 #account-snapshots .ghl-table-footer .n-button__content {
@@ -3458,7 +3458,7 @@ button.n-button.n-button--default-type.n-button--large-type.hl-table-filter-btn 
 #private-integration-app .hl-empty,
 #location-setting table tr td,
 #phone-integration table tr td {
-  background: #1D1E20 !important;
+  background: #051526 !important;
 }
 
 #private-integration-app .hl-empty {
@@ -3483,7 +3483,7 @@ button.n-button.n-button--default-type.n-button--large-type.hl-table-filter-btn 
 .sidebar-v2-location #sidebar-v2 .globalSearchModal #globalSearch .search-area,
 #settings .hr-config-provider .hr-card,
 #settings .container-fluid .card .p-4 {
-  background: #1D1E20 !important;
+  background: #051526 !important;
 }
 
 
@@ -3516,7 +3516,7 @@ button.n-button.n-button--default-type.n-button--large-type.hl-table-filter-btn 
 }
 
 #launchpad .mobile-container .form-group input {
-  background: #1D1E20 !important;
+  background: #051526 !important;
 }
 
 .btn-primary.disabled,
@@ -3550,7 +3550,7 @@ table tr:hover td p {
 #copilot-drawer .n-input-wrapper,
 #copilot-drawer .suggestion-button,
 #copilot-drawer .info-badge {
-  background: #1D1E20 !important;
+  background: #051526 !important;
 }
 
 #copilot-drawer .n-drawer-content-wrapper .copilot-drawer-header button img {
@@ -3588,7 +3588,7 @@ button.n-button.n-button--default-type .n-button__content,
 
 .hl_contact-details-right,
 .messages-group-inner .opportunityCard.hl-card {
-  background: #1D1E20 !important;
+  background: #051526 !important;
 }
 
 #date-label,
@@ -3599,7 +3599,7 @@ button.n-button.n-button--default-type .n-button__content,
 
 #customers .vs__dropdown-toggle input,
 #customers .vs__dropdown-toggle {
-  background: #1D1E20 !important;
+  background: #051526 !important;
 }
 
 .bg-apple-500:disabled {
@@ -3613,7 +3613,7 @@ button.n-button.n-button--default-type .n-button__content,
 }
 
 .messages-group-inner .leading-6.border {
-  background: #1D1E20 !important;
+  background: #051526 !important;
   border: 1px solid rgba(212, 206, 230, 0.20) !important;
 }
 
@@ -3630,7 +3630,7 @@ button.bg-apple-500,
 .hr-card,
 #reviews-rating-filter,
 #folders .folder-card-wrapper {
-  background: #1D1E20 !important;
+  background: #051526 !important;
 }
 
 body[data-theme=default] .sidebar-v2-location #sidebar-v2 .default-bg-color {
@@ -3679,7 +3679,7 @@ button.n-button--default-type:not(.icon-only):not(.hl-active-btn) {
 }
 
 #location-billing {
-  background: #1D1E20 !important;
+  background: #051526 !important;
 }
 
 .n-base-selection-label,
@@ -3697,7 +3697,7 @@ table tr:hover .n-data-table-td {
 
 .n-card.n-modal.hl-modal .rounded-lg.mb-3.bg-gray-100.py-4.px-3,
 .contactCard.hl-card {
-  background: #1D1E20 !important;
+  background: #051526 !important;
 }
 
 .custom-dropdown-item:hover span {
@@ -3723,7 +3723,7 @@ table tr:hover .n-data-table-td {
 .hr-base-select-option,
 #OpportunitiesList .hr-base-selection-input,
 #OpportunitiesList .min-h-0 .h-full.flex.flex-col .opportunitiesCard {
-  background: #1D1E20 !important;
+  background: #051526 !important;
 }
 
 #OpportunitiesList .wrapper.opportunityPage {
@@ -3841,7 +3841,7 @@ body:has(#OpportunitiesList) .topmenu-navtitle::before {
 }
 
 .hr-drawer-content-wrapper {
-  background: #1D1E20 !important;
+  background: #051526 !important;
 }
 
 .hl_wrapper.hl_contact--details .hl_contact-details-left .dropdown button,
@@ -3891,7 +3891,7 @@ body:has(#OpportunitiesList) .topmenu-navtitle::before {
 #BusinessList .tabulator-tableholder,
 #BusinessList .tabulator-tableholder div,
 #CustomObjectsList .tabulator-tableholder div {
-  background: #1D1E20 !important;
+  background: #051526 !important;
 }
 
 .n-card .message-card:hover div,
@@ -3973,7 +3973,7 @@ body:has(#OpportunitiesList) .topmenu-navtitle::before {
 }
 
 #pipeline-table {
-  background-color: #1D1E20 !important;
+  background-color: #051526 !important;
 }
 
 .opportunitiesCard .hr-avatar .hr-avatar__text svg {
@@ -4040,7 +4040,7 @@ body:has(#OpportunitiesList) .topmenu-navtitle::before {
 }
 
 #manage-fields .bg-gray-100 {
-  background: #1D1E20 !important;
+  background: #051526 !important;
 }
 
 #manage-fields .ui-card-content {
@@ -4064,7 +4064,7 @@ body:has(#OpportunitiesList) .topmenu-navtitle::before {
 }
 
 #menuPopOverDiv {
-  background: #1D1E20 !important;
+  background: #051526 !important;
 }
 
 #manage-fields .opportunitiesCard {
@@ -4190,7 +4190,7 @@ body:has(#OpportunitiesList) .topmenu-navtitle::before {
 }
 
 .hr-data-table-wrapper-footer {
-  background: #1D1E20 !important;
+  background: #051526 !important;
 }
 
 #hr-prev-button {
@@ -4625,7 +4625,7 @@ body:has(#OpportunitiesList) .topmenu-navtitle {
 
 #parent-container #estimates-notes-preview-section,
 #parent-container #left-section {
-  background: #1D1E20 !important;
+  background: #051526 !important;
 }
 
 #items-and-summary .border-gray-300 .flex.pl-2 {
@@ -4913,7 +4913,7 @@ body:has(#OpportunitiesList) .topmenu-navtitle {
 }
 
 .messages-group-inner .flex.cursor-pointer.bg-gray-custom.subject-line.hover\:bg-gray-200.new-email-thread-view--transition {
-  background: #1D1E20;
+  background: #051526;
 }
 
 .hr-popover.hr-popover-shared.hr-popover--show-header-or-footer.ui-popover {
@@ -5292,7 +5292,7 @@ body:has(#notification_banner-top_bar) #estimatesDashboardApp {
 
 .tabulator-tableholder,
 .tabulator-tableholder .tabulator-table div.tabulator-cell {
-  background: #1D1E20 !important;
+  background: #051526 !important;
 }
 
 .tabulator-tableholder .tabulator-table .tabulator-row:hover div.tabulator-cell div {
@@ -5353,7 +5353,7 @@ body:has(#notification_banner-top_bar) #estimatesDashboardApp {
 #copilot-drawer .hr-input-wrapper,
 #acc-ueimt5s7wc8-to-do-step-item-header,
 #copilot-drawer .subscription-banner {
-  background: #1D1E20 !important;
+  background: #051526 !important;
 }
 
 #copilot-drawer .hl-accordion-item {
@@ -5398,7 +5398,7 @@ body:has(#notification_banner-top_bar) #estimatesDashboardApp {
 #conversation-panel .m-3,
 #conversation-panel,
 #conversations-list .conversation-list-container .flex.flex-col.w-full.h-full.gap-5.bg-\[\#F7F9FD\].px-3.pt-3.pb-3 {
-  background: #1D1E20 !important;
+  background: #051526 !important;
 }
 
 #conversation-panel .chat-bubble-outbound {
@@ -5419,7 +5419,7 @@ body:has(#notification_banner-top_bar) #estimatesDashboardApp {
 }
 
 .flex.flex-col.relative.bg-\[\#F7F9FD\].flex-none {
-  background: #1D1E20 !important;
+  background: #051526 !important;
 
 }
 
@@ -5430,7 +5430,7 @@ body:has(#notification_banner-top_bar) #estimatesDashboardApp {
 
 .flex.w-full.border-1.border-solid.border-gray-200.rounded-lg.overflow-hidden,
 .conversation-list-header {
-  background: #1D1E20 !important;
+  background: #051526 !important;
 }
 
 #conversations-messages .flex.justify-between.items-center.px-3.border-b.border-gray-200 {
@@ -5477,7 +5477,7 @@ display: none !important;
 #record-details-lhs .bg-gray-50,
 #record-details-lhs .bg-contacts-panel,
 #record-details-lhs {
-  background: #1d1e20 !important;
+  background: #051526 !important;
 }
 
 .hl_nav-header nav .divider{
