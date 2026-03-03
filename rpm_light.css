@@ -500,7 +500,9 @@ a .fa-phone {
 .sidebar-v2-location:has(#crm-contacts-view) .hl_topbar-tabs {
     padding-top: 130px !important;
 }
-
+.sidebar-v2-location:has(#notification_banner-top_bar) .hl_topbar-tabs {
+    padding-top: 180px !important;
+}
 .flex.mb-4.h-7.flex-row.md\:flex-col.lg\:flex-row.xl\:flex-row.items-start.justify-between.px-2 {
     position: absolute !important;
     z-index: 999 !important;
