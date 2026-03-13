@@ -579,28 +579,51 @@
 
         function nextSlide(n) {
             const activeSlide = document.querySelector('.slide.active');
+
+            // Save Name logic (Slide 2 se naam uthana)
+            if (activeSlide && activeSlide.id === 'slide2') {
+                const nameInput = document.getElementById('user_name').value;
+                if (nameInput) {
+                    const firstName = nameInput.split(' ')[0]; // Sirf pehla naam
+                    localStorage.setItem('tax_user_name', firstName);
+                }
+            }
+
+            // Validation check
             if (activeSlide) {
                 const currentId = parseInt(activeSlide.id.replace('slide', ''));
-                if (currentId === 2) {
-                    const nameInput = document.getElementById('user_name').value;
-                    if (nameInput) {
-                        const firstName = nameInput.split(' ')[0];
-                        localStorage.setItem('tax_user_name', firstName);
-                    }
-                }
                 if (n > currentId && !validateSlide(currentId)) return;
             }
+
+            // Slide 11 par naam dikhane ki logic
             if (n === 11) {
                 const savedName = localStorage.getItem('tax_user_name') || "Friend";
-                document.getElementById('display_name').innerText = savedName;
-                document.querySelectorAll('.display_name_simple').forEach(el => el.innerText = savedName);
+                const nameElement = document.getElementById('display_name');
+
+                if (nameElement) {
+                    nameElement.innerText = savedName;
+                }
+
+                // Agar kisi aur jagah bhi naam dikhana ho (class based)
+                document.querySelectorAll('.display_name_simple').forEach(el => {
+                    el.innerText = savedName;
+                });
             }
+
+            // Slide switch karne ki logic
             document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
             const targetSlide = document.getElementById('slide' + n);
-            if (targetSlide) targetSlide.classList.add('active');
+            if (targetSlide) {
+                targetSlide.classList.add('active');
+            }
+
+            // Progress bar update
             let progress = (n / 11) * 100;
-            document.getElementById('progress-bar').style.width = progress + '%';
-            document.getElementById('progress-text').innerText = Math.round(progress) + '%';
+            const pBar = document.getElementById('progress-bar');
+            const pText = document.getElementById('progress-text');
+            if (pBar) pBar.style.width = progress + '%';
+            if (pText) pText.style.innerText = Math.round(progress) + '%';
+
             window.scrollTo(0, 0);
         }
 
@@ -632,62 +655,73 @@
         }
 
         async function finalSubmit() {
-    const form = document.getElementById('taxSurvey');
-    const formData = new FormData(form);
-    const fileInputs = form.querySelectorAll('input[type="file"]');
+            const form = document.getElementById('taxSurvey');
+            const formData = new FormData(form);
+            const fileInputs = form.querySelectorAll('input[type="file"]');
 
-    // UI Loading state
-    const container = document.querySelector('.survey-container');
-    container.innerHTML = `
-        <div style="text-align:center; padding: 50px;">
-            <h2 style="color:#1a96b8;">Uploading to Secure Drive... 🚀</h2>
-            <p>Please wait, we are creating your secure tax vault.</p>
+            // UI Loading state
+            const container = document.querySelector('.survey-container');
+            container.innerHTML = `
+        <div style="text-align:center;">
+             <h2>You’re All Set, <span id="display_name">Friend</span>! 🚀</h2>
+                <p>High five! You’ve officially completed your onboarding.</p>
+
+                <div style="text-align: left; margin: 30px 0; line-height: 1.8;">
+                    <p><b>What happens next?</b></p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 12px;">✅ <b>The Expert Review:</b> Our team will review your documents
+                            within 48 hours.</li>
+                        <li style="margin-bottom: 12px;">🔍 <b>The 48-Hour Check:</b> If we need a clearer scan, we’ll
+                            reach out.</li>
+                        <li style="margin-bottom: 12px;">📝 <b>Drafting:</b> We’ll begin preparing your 1040 and
+                            applying every Treaty benefit available.</li>
+                    </ul>
+                </div>
+
+                <div class="fact-box">
+                    💡 <b>ClearTaxation - Did You Know?</b> The word 'tax' comes from the Latin 'taxare,' meaning 'to
+                    estimate.' Don't worry—at ClearTaxation, we don't estimate; we get it exactly right.
+                </div>
         </div>`;
 
-    const payload = { fields: {}, files: [] };
+            const payload = { fields: {}, files: [] };
 
-    // Text fields capture karein
-    formData.forEach((value, key) => {
-        if (!(value instanceof File)) {
-            payload.fields[key] = value;
+            formData.forEach((value, key) => {
+                if (!(value instanceof File)) {
+                    payload.fields[key] = value;
+                }
+            });
+
+            // Yahan toBase64 call ho raha hai
+            for (let input of fileInputs) {
+                for (let file of input.files) {
+                    const base64 = await toBase64(file);
+                    payload.files.push({ name: file.name, data: base64 });
+                }
+            }
+
+            const userName = localStorage.getItem('tax_user_name') || "User_" + Date.now();
+            const finalUrl = GOOGLE_SCRIPT_URL + "?folder_name_request=" + encodeURIComponent(userName);
+
+            fetch(finalUrl, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'text/plain' },
+                body: JSON.stringify(payload)
+            });
+
+            setTimeout(() => {
+                nextSlide(11);
+            }, 2000);
         }
-    });
 
-    // Files capture karein
-    for (let input of fileInputs) {
-        for (let file of input.files) {
-            const base64 = await toBase64(file);
-            payload.files.push({ name: file.name, data: base64 });
-        }
-    }
-
-    const userName = localStorage.getItem('tax_user_name') || "User_" + Date.now();
-    const finalUrl = GOOGLE_SCRIPT_URL + "?folder_name_request=" + encodeURIComponent(userName);
-
-    // XHR Use karein behtar compatibility ke liye
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", finalUrl, true);
-    xhr.setRequestHeader('Content-Type', 'text/plain;charset=UTF-8');
-
-    xhr.onload = function() {
-        // Hamein response ka wait nahi karna, agar request chali gayi to success slide dikha dein
-        nextSlide(11);
-    };
-
-    xhr.onerror = function() {
-        alert("Upload failed. Please check your internet or Google Script URL.");
-        location.reload();
-    };
-
-    xhr.send(JSON.stringify(payload));
-}
+        // YE WALA HISSA MISSING HAI AAPKE CODE MEIN
         const toBase64 = file => new Promise((resolve, reject) => {
             const reader = new FileReader();
             reader.readAsDataURL(file);
             reader.onload = () => resolve(reader.result);
             reader.onerror = error => reject(error);
         });
-
         function toggleJointField(selectElement) {
             const jointField = selectElement.parentElement.nextElementSibling;
             selectElement.value === 'Joint' ? jointField.style.display = 'block' : jointField.style.display = 'none';
