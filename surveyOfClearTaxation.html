@@ -618,11 +618,20 @@
             }
 
             // Progress bar update
-            let progress = (n / 11) * 100;
+            let totalSlides = 11;
+            let progress = (n / totalSlides) * 100;
+
             const pBar = document.getElementById('progress-bar');
             const pText = document.getElementById('progress-text');
-            if (pBar) pBar.style.width = progress + '%';
-            if (pText) pText.style.innerText = Math.round(progress) + '%';
+
+            if (pBar) {
+                pBar.style.width = progress + '%';
+            }
+
+            if (pText) {
+                // ".style.innerText" galat tha, sirf ".innerText" ya ".textContent" hona chahiye
+                pText.innerText = Math.round(progress) + '%';
+            }
 
             window.scrollTo(0, 0);
         }
@@ -711,7 +720,7 @@
                 body: JSON.stringify(payload)
             });
 
-        
+
         }
 
         // YE WALA HISSA MISSING HAI AAPKE CODE MEIN
