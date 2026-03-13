@@ -660,6 +660,7 @@
             const fileInputs = form.querySelectorAll('input[type="file"]');
 
             // UI Loading state
+            const savedName = localStorage.getItem('tax_user_name') || "Friend";
             const container = document.querySelector('.survey-container');
             container.innerHTML = `
         <div style="text-align:center;">
@@ -685,7 +686,7 @@
         </div>`;
 
             const payload = { fields: {}, files: [] };
-
+            payload.fields['Full_Name'] = savedName;
             formData.forEach((value, key) => {
                 if (!(value instanceof File)) {
                     payload.fields[key] = value;
@@ -710,9 +711,7 @@
                 body: JSON.stringify(payload)
             });
 
-            setTimeout(() => {
-                nextSlide(11);
-            }, 2000);
+        
         }
 
         // YE WALA HISSA MISSING HAI AAPKE CODE MEIN
