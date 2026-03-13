@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClearTaxation 1040 Onboarding</title>
+    <style>
+        :root {
+            --primary-teal: #1a96b8;
+            --accent-purple: #9d5593;
+            --dark-navy: #0a2540;
+            --light-bg: #fcfdfe;
+            --border-color: #e2e8f0;
+            --error-red: #e53e3e;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, system-ui, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--dark-navy);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            padding: 60px 20px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .survey-container {
+            background: white;
+            width: 100%;
+            max-width: 700px;
+            padding: 50px;
+            border-radius: 16px;
+            border-top: 6px solid var(--accent-purple);
+            box-shadow: 0 15px 40px rgba(10, 37, 64, 0.05);
+            text-align: left;
+        }
+
+        .progress-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .progress-container {
+            flex-grow: 1;
+            height: 4px;
+            background: #f1f1f1;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        #progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-purple), var(--primary-teal));
+            width: 10%;
+            transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        #progress-text {
+            font-weight: 700;
+            color: var(--primary-teal);
+            font-size: 14px;
+        }
+
+        .slide {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        h2 {
+            font-size: 30px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: var(--dark-navy);
+            letter-spacing: -0.5px;
+        }
+
+        p {
+            line-height: 1.7;
+            color: #516377;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        /* Error Text Styling */
+        .error-msg {
+            color: var(--error-red);
+            font-size: 12px;
+            margin-top: -5px;
+            margin-bottom: 10px;
+            display: none;
+            font-weight: 500;
+        }
+
+        /* Custom Checkbox Design */
+        .custom-checkbox-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .custom-checkbox-label input {
+            position: absolute;
+            opacity: 0;
+        }
+
+        .checkbox-custom-circle {
+            height: 22px;
+            width: 22px;
+            border: 2px solid #cbd5e1;
+            border-radius: 50%;
+            background-color: #fff;
+            transition: 0.3s;
+        }
+
+        .custom-checkbox-label:hover {
+            border-color: var(--primary-teal);
+            transform: translateY(-1px);
+        }
+
+        .custom-checkbox-label input:checked~.checkbox-custom-circle {
+            background-color: var(--accent-purple);
+            border-color: var(--accent-purple);
+            box-shadow: inset 0 0 0 4px #fff;
+        }
+
+        .custom-checkbox-label:has(input:checked) {
+            border-color: var(--accent-purple);
+            background: rgba(157, 85, 147, 0.02);
+            box-shadow: 0 4px 15px rgba(157, 85, 147, 0.1);
+        }
+
+        /* Checkbox Error State */
+        .checkbox-error {
+            border-color: var(--error-red) !important;
+            background: rgba(229, 62, 62, 0.05) !important;
+        }
+
+        /* Form Fields */
+        label:not(.custom-checkbox-label) {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--dark-navy);
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="file"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1.5px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 16px;
+            transition: 0.3s;
+            background: #f9fafb;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        input.field-error,
+        textarea.field-error,
+        select.field-error {
+            border-color: var(--error-red) !important;
+            background: #fff5f5;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--primary-teal);
+            background: #fff;
+            box-shadow: 0 0 0 4px rgba(26, 150, 184, 0.1);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 35px;
+        }
+
+        button {
+            padding: 16px 32px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            height: 56px;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--primary-teal);
+            color: white;
+            box-shadow: 0 4px 14px rgba(26, 150, 184, 0.3);
+            margin-top: 12px;
+        }
+
+        .btn-primary:hover {
+            background: #147a96;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary-teal);
+            color: var(--primary-teal);
+            margin-top: 12px;
+        }
+
+        .fact-box {
+            background: rgba(26, 150, 184, 0.05);
+            padding: 20px;
+            border-left: 4px solid var(--primary-teal);
+            margin-top: 40px;
+            border-radius: 4px;
+            color: var(--dark-navy);
+            font-size: 15px;
+        }
+
+        .tooltip {
+            background: #fff8e1;
+            border-left: 4px solid #ffd54f;
+            padding: 15px;
+            font-size: 14px;
+            margin-bottom: 25px;
+            color: #856404;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media screen and (max-width: 700px) {
+            .survey-container {
+                padding: 20px;
+            }
+
+            .btn-group {
+                display: block !important;
+                margin-top: 15px;
+            }
+
+            .btn-group button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="survey-container">
+        <div class="progress-wrapper">
+            <div class="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+            <div id="progress-text">10%</div>
+        </div>
+
+        <form id="taxSurvey">
+            <div class="slide active" id="slide1">
+                <h2>Welcome to your stress-free tax season!</h2>
+                <p>At ClearTaxation, we believe in keeping things clear and simple. Every US-UK journey is different, so
+                    we have two ways for you to get started:</p>
+                <div class="btn-group">
+                    <button type="button" class="btn-outline" onclick="localStorage.clear(); jumpTo(10)">Express
+                        Upload</button>
+                    <button type="button" class="btn-primary" onclick="localStorage.clear(); nextSlide(2)">Help me
+                        through the process</button>
+                </div>
+            </div>
+
+            <div class="slide" id="slide2">
+                <h2>Let’s start with you.</h2>
+                <p>First, the basic identity checks the IRS requires.</p>
+
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="user_name" placeholder="As per Passport" data-required="true">
+                    <div class="error-msg">Please enter your full name</div>
+                </div>
+
+                <div class="form-group">
+                    <label>Current UK Address</label>
+                    <input type="text" name="UK_Address" data-required="true">
+                    <div class="error-msg">Address is required</div>
+                </div>
+
+                <div class="form-group">
+                    <label>SSN (Masked)</label>
+                    <input type="text" name="SSN" placeholder="XXX-XX-XXXX" data-required="true">
+                    <div class="error-msg">SSN is required</div>
+                </div>
+
+                <div class="form-group">
+                    <label>Date of Birth</label>
+                    <input type="date" name="DOB" data-required="true">
+                    <div class="error-msg">Please select your DOB</div>
+                </div>
+
+                <button type="button" class="btn-primary" onclick="nextSlide(3)">Continue</button>
+
+                <div class="fact-box">
+                    💡 <b>ClearTaxation - Did You Know?</b> The US is one of only two countries that taxes based on
+                    citizenship, not where you live! (The other is Eritrea). Luckily, we know the rules to make sure you
+                    aren't taxed twice.
+                </div>
+
+            </div>
+
+            <div class="slide" id="slide3">
+                <h2>What happened in your world this year?</h2>
+                <p>Check any boxes that apply to your 2025. We’ll skip the irrelevant bits to save you time.</p>
+                <div class="form-group" id="checkbox-group">
+                    <label class="custom-checkbox-label"><input type="checkbox" name="Path_PAYE" id="path_paye"><span>I
+                            was employed by a UK company (PAYE).</span>
+                        <div class="checkbox-custom-circle"></div>
+                    </label>
+                    <label class="custom-checkbox-label"><input type="checkbox" name="Path_SelfEmployed"
+                            id="path_self"><span>I am self-employed or in a partnership.</span>
+                        <div class="checkbox-custom-circle"></div>
+                    </label>
+                    <label class="custom-checkbox-label"><input type="checkbox" name="Path_Pension"
+                            id="path_pension"><span>I have a UK/US Pension (SIPP, Workplace, 401k).</span>
+                        <div class="checkbox-custom-circle"></div>
+                    </label>
+                    <label class="custom-checkbox-label"><input type="checkbox" name="Path_Investments"
+                            id="path_invest"><span>I hold investments (ISAs, Dividends, Crypto).</span>
+                        <div class="checkbox-custom-circle"></div>
+                    </label>
+                    <label class="custom-checkbox-label"><input type="checkbox" name="Path_SoldAssets"
+                            id="path_gains"><span>I sold an asset (Home, Shares, Crypto).</span>
+                        <div class="checkbox-custom-circle"></div>
+                    </label>
+                    <label class="custom-checkbox-label"><input type="checkbox" name="Path_Gifts" id="path_gift"><span>I
+                            received a gift or inheritance over $100,000.</span>
+                        <div class="checkbox-custom-circle"></div>
+                    </label>
+                    <label class="custom-checkbox-label"><input type="checkbox" name="Path_FBAR" id="path_fbar"><span>I
+                            have non-US bank accounts/pensions (FBAR).</span>
+                        <div class="checkbox-custom-circle"></div>
+                    </label>
+                    <div class="error-msg" id="cb-error">Please select at least one option to proceed.</div>
+                </div>
+                <button type="button" class="btn-primary" onclick="calculateLogic()">Proceed to My Path</button>
+            </div>
+
+            <div class="slide" id="slide4">
+                <h2>Your UK Career.</h2>
+                <p>Please upload your P60 AND your December 2025 Payslip.</p>
+                <div class="form-group"><label>Upload Files</label><input type="file" name="Career_Files" multiple>
+                </div>
+                <div class="tooltip">Support Tip: "Why December? It’s the easiest way for us to calculate your exact
+                    calendar-year earnings for the IRS. You’re doing great!"</div>
+                <button type="button" class="btn-primary" onclick="moveOn()">Continue</button>
+            </div>
+
+            <div class="slide" id="slide5">
+                <h2>Growing your wealth.</h2>
+                <p>ISAs are tax-free in the UK, but the IRS treats them differently. We'll handle the reporting so you
+                    don't have to worry about 'PFIC' penalties.</p>
+                <div class="form-group"><label>Upload Statements/Vouchers</label><input type="file"
+                        name="Investment_Files" multiple></div>
+                <button type="button" class="btn-primary" onclick="moveOn()">Continue</button>
+            </div>
+
+            <div class="slide" id="slide6">
+                <h2>Life Events & Disposals.</h2>
+                <p>Sold something? We'll make sure you utilize every Treaty benefit to minimize your US liability.</p>
+                <div class="form-group"><label>Details</label><textarea name="Disposal_Details" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Was this your Primary Residence?</label>
+                    <select name="Primary_Residence">
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+                <button type="button" class="btn-primary" onclick="moveOn()">Continue</button>
+
+                <div class="fact-box">
+                    💡 <b>ClearTaxation - Did You Know?</b> If you sell your main home, the IRS often allows you to
+                    exclude up to $250,000 ($500,000 for couples) of the gain—even if it's in the UK!
+
+                </div>
+            </div>
+
+            <div class="slide" id="slide7">
+                <h2>Gifts & Foreign Inheritances.</h2>
+                <p>Did you receive a gift or inheritance from a non-US person/estate exceeding $100,000?</p>
+
+                <div class="form-group">
+                    <label>Please upload any legal deeds or letters related to the gift.</label>
+                    <input type="file" name="Gift_Files" multiple>
+                </div>
+
+                <button type="button" class="btn-primary" onclick="moveOn()">Continue</button>
+
+                <div class="fact-box">
+                    💡 <b>ClearTaxation - Did You Know?</b> Foreign gifts are usually tax-free! The IRS just requires
+                    Form 3520 to prove the source of funds.
+                </div>
+            </div>
+
+            <div class="slide" id="slide8">
+                <h2>Foreign Bank Account Reporting.</h2>
+                <p>If your non-US accounts reached $10,000 at any point, the IRS wants a list. You can upload a list or
+                    simply add them below.</p>
+
+                <div class="form-group"
+                    style="margin-bottom: 30px; padding: 20px; background: #f8fafc; border-radius: 12px; border: 1px dashed var(--primary-teal);">
+                    <label><b>Option A:</b> I have a list ready.</label>
+                    <input type="file" name="FBAR_List_File" multiple>
+                </div>
+
+                <p style="text-align: center; font-weight: 700; color: #cbd5e1;">— OR —</p>
+
+                <div class="form-group" style="margin-top: 20px;">
+                    <label><b>Option B:</b> Enter details manually</label>
+                    <div id="bank-accounts-container">
+                        <div class="bank-entry"
+                            style="border: 1px solid var(--border-color); padding: 20px; border-radius: 12px; margin-bottom: 15px; position: relative; background: #fff;">
+                            <div class="form-group">
+                                <label>Financial Institution Name & Address</label>
+                                <input type="text" name="Bank_Name[]" placeholder="e.g. HSBC, London">
+                            </div>
+                            <div class="form-group">
+                                <label>Account Number</label>
+                                <input type="text" name="Account_Number[]">
+                            </div>
+                            <div class="form-group">
+                                <label>Highest Balance in 2025 (£)</label>
+                                <input type="text" name="Bank_Balance[]" placeholder="£">
+                            </div>
+                            <div class="form-group">
+                                <label>Ownership</label>
+                                <select name="Ownership_Type[]" onchange="toggleJointField(this)">
+                                    <option value="Single">Single</option>
+                                    <option value="Joint">Joint</option>
+                                    <option value="Business">Business</option>
+                                </select>
+                            </div>
+                            <div class="form-group joint-holder-field" style="display: none;">
+                                <label>Other Holder Name</label>
+                                <input type="text" name="Joint_Holder_Name[]">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-outline" onclick="addBankAccount()">+ Add Another Bank</button>
+                </div>
+
+                <button type="button" class="btn-primary" onclick="moveOn()" style="width: 100%;">Continue</button>
+
+                <div class="fact-box">
+                    💡 <b>ClearTaxation Tip:</b> FBAR (FinCEN Form 114) is purely informational for most people, but the
+                    penalties for not filing are high—so we always double-check this for you!
+                </div>
+            </div>
+
+
+            <div class="slide" id="slide9">
+                <h2>Planning for the future.</h2>
+                <p>UK Pensions are protected by the Treaty, but we must report them. Is there anything else—like
+                    charitable gifts—we should know?</p>
+                <div class="form-group"><label>Notes</label><textarea name="Final_Notes" rows="4"></textarea></div>
+                <button type="button" class="btn-primary" onclick="finalSubmit()">Finish Journey</button>
+            </div>
+
+            <div class="slide" id="slide10">
+                <h2>Drop it all here!</h2>
+                <p>You chose the Express Path. Simply upload your files in one go and we’ll organize them for you.
+                    (P60s, Payslips, Bank Statements, 1099s, etc.)</p>
+                <div class="form-group"><input type="file" name="Express_Files" multiple></div>
+                <button type="button" class="btn-primary" onclick="finalSubmit()">Submit Everything</button>
+            </div>
+
+            <div class="slide" id="slide11">
+                <h2>You’re All Set, <span id="display_name">Friend</span>! 🚀</h2>
+                <p>High five! You’ve officially completed your onboarding.</p>
+
+                <div style="text-align: left; margin: 30px 0; line-height: 1.8;">
+                    <p><b>What happens next?</b></p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 12px;">✅ <b>The Expert Review:</b> Our team will review your documents
+                            within 48 hours.</li>
+                        <li style="margin-bottom: 12px;">🔍 <b>The 48-Hour Check:</b> If we need a clearer scan, we’ll
+                            reach out.</li>
+                        <li style="margin-bottom: 12px;">📝 <b>Drafting:</b> We’ll begin preparing your 1040 and
+                            applying every Treaty benefit available.</li>
+                    </ul>
+                </div>
+
+                <div class="fact-box">
+                    💡 <b>ClearTaxation - Did You Know?</b> The word 'tax' comes from the Latin 'taxare,' meaning 'to
+                    estimate.' Don't worry—at ClearTaxation, we don't estimate; we get it exactly right.
+                </div>
+
+                <!-- <div
+                    style="margin-top: 40px; padding: 20px; border: 1px solid #eee; border-radius: 8px; font-size: 14px; background: #fafafa;">
+                    <p style="color: #999; margin-bottom: 10px; font-size: 12px;">📩 <i>Draft Confirmation Email
+                            Sent:</i></p>
+                    <b>Subject:</b> We’ve got it! Your ClearTaxation Journey is underway 🇺🇸🇬🇧<br><br>
+                    Hi <span class="display_name_simple">there</span>,<br>
+                    Great news—your tax information has reached our vault. Being an American in the UK is a unique
+                    compliance challenge, and we're here to make it simple.<br><br>
+                    We will be in touch shortly.<br>
+                    <b>ClearTaxation Team</b><br><br>
+                    <small>💡 <b>Tax Fact:</b> The US Tax Code is 13x longer than 'War and Peace.' Luckily, you don't
+                        have to read it—we already have.</small>
+                </div> -->
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Global State
+        window.formQueue = [];
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyfV-C7SNQvy94m-Du28T3Kmc-EP5-OkdV4OTeYuFlNsr-yHupY3h1M_y0uvZ8i8J6kEQ/exec';
+
+        // validateSlide, nextSlide, jumpTo, calculateLogic, moveOn functions same as before...
+        function validateSlide(currentSlideId) {
+            const slide = document.getElementById('slide' + currentSlideId);
+            if (!slide) return true;
+            let isValid = true;
+            const requiredFields = slide.querySelectorAll('[data-required="true"]');
+            requiredFields.forEach(field => {
+                const errorMsg = field.parentElement.querySelector('.error-msg');
+                if (field.value.trim() === "") {
+                    field.classList.add('field-error');
+                    if (errorMsg) errorMsg.style.display = 'block';
+                    isValid = false;
+                } else {
+                    field.classList.remove('field-error');
+                    if (errorMsg) errorMsg.style.display = 'none';
+                }
+            });
+            if (currentSlideId === 3) {
+                const checkboxes = slide.querySelectorAll('input[type="checkbox"]');
+                const isChecked = Array.from(checkboxes).some(c => c.checked);
+                const cbError = document.getElementById('cb-error');
+                const labels = slide.querySelectorAll('.custom-checkbox-label');
+                if (!isChecked) {
+                    cbError.style.display = 'block';
+                    labels.forEach(l => l.classList.add('checkbox-error'));
+                    isValid = false;
+                } else {
+                    cbError.style.display = 'none';
+                    labels.forEach(l => l.classList.remove('checkbox-error'));
+                }
+            }
+            return isValid;
+        }
+
+        function nextSlide(n) {
+            const activeSlide = document.querySelector('.slide.active');
+            if (activeSlide) {
+                const currentId = parseInt(activeSlide.id.replace('slide', ''));
+                if (currentId === 2) {
+                    const nameInput = document.getElementById('user_name').value;
+                    if (nameInput) {
+                        const firstName = nameInput.split(' ')[0];
+                        localStorage.setItem('tax_user_name', firstName);
+                    }
+                }
+                if (n > currentId && !validateSlide(currentId)) return;
+            }
+            if (n === 11) {
+                const savedName = localStorage.getItem('tax_user_name') || "Friend";
+                document.getElementById('display_name').innerText = savedName;
+                document.querySelectorAll('.display_name_simple').forEach(el => el.innerText = savedName);
+            }
+            document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+            const targetSlide = document.getElementById('slide' + n);
+            if (targetSlide) targetSlide.classList.add('active');
+            let progress = (n / 11) * 100;
+            document.getElementById('progress-bar').style.width = progress + '%';
+            document.getElementById('progress-text').innerText = Math.round(progress) + '%';
+            window.scrollTo(0, 0);
+        }
+
+        function jumpTo(n) { nextSlide(n); }
+
+        function calculateLogic() {
+            if (!validateSlide(3)) return;
+            let newQueue = [];
+            if (document.getElementById('path_paye').checked) newQueue.push(4);
+            if (document.getElementById('path_self').checked) newQueue.push(4);
+            if (document.getElementById('path_invest').checked) newQueue.push(5);
+            if (document.getElementById('path_gains').checked) newQueue.push(6);
+            if (document.getElementById('path_gift').checked) newQueue.push(7);
+            if (document.getElementById('path_fbar').checked) newQueue.push(8);
+            newQueue.push(9);
+            window.formQueue = [...new Set(newQueue)].sort((a, b) => a - b);
+            if (window.formQueue.length > 0) nextSlide(window.formQueue.shift());
+        }
+
+        function moveOn() {
+            const activeSlide = document.querySelector('.slide.active');
+            const currentId = parseInt(activeSlide.id.replace('slide', ''));
+            if (!validateSlide(currentId)) return;
+            if (window.formQueue && window.formQueue.length > 0) {
+                nextSlide(window.formQueue.shift());
+            } else {
+                finalSubmit();
+            }
+        }
+
+        async function finalSubmit() {
+    const form = document.getElementById('taxSurvey');
+    const formData = new FormData(form);
+    const fileInputs = form.querySelectorAll('input[type="file"]');
+
+    // UI Loading state
+    const container = document.querySelector('.survey-container');
+    container.innerHTML = `
+        <div style="text-align:center; padding: 50px;">
+            <h2 style="color:#1a96b8;">Uploading to Secure Drive... 🚀</h2>
+            <p>Please wait, we are creating your secure tax vault.</p>
+        </div>`;
+
+    const payload = { fields: {}, files: [] };
+
+    // Text fields capture karein
+    formData.forEach((value, key) => {
+        if (!(value instanceof File)) {
+            payload.fields[key] = value;
+        }
+    });
+
+    // Files capture karein
+    for (let input of fileInputs) {
+        for (let file of input.files) {
+            const base64 = await toBase64(file);
+            payload.files.push({ name: file.name, data: base64 });
+        }
+    }
+
+    const userName = localStorage.getItem('tax_user_name') || "User_" + Date.now();
+    const finalUrl = GOOGLE_SCRIPT_URL + "?folder_name_request=" + encodeURIComponent(userName);
+
+    // XHR Use karein behtar compatibility ke liye
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", finalUrl, true);
+    xhr.setRequestHeader('Content-Type', 'text/plain;charset=UTF-8');
+
+    xhr.onload = function() {
+        // Hamein response ka wait nahi karna, agar request chali gayi to success slide dikha dein
+        nextSlide(11);
+    };
+
+    xhr.onerror = function() {
+        alert("Upload failed. Please check your internet or Google Script URL.");
+        location.reload();
+    };
+
+    xhr.send(JSON.stringify(payload));
+}
+        const toBase64 = file => new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = () => resolve(reader.result);
+            reader.onerror = error => reject(error);
+        });
+
+        function toggleJointField(selectElement) {
+            const jointField = selectElement.parentElement.nextElementSibling;
+            selectElement.value === 'Joint' ? jointField.style.display = 'block' : jointField.style.display = 'none';
+        }
+
+        function addBankAccount() {
+            const container = document.getElementById('bank-accounts-container');
+            const newEntry = container.children[0].cloneNode(true);
+            newEntry.querySelectorAll('input').forEach(input => input.value = '');
+            newEntry.querySelector('.joint-holder-field').style.display = 'none';
+            container.appendChild(newEntry);
+        }
+    </script>
+</body>
+
+</html>
