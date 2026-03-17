@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClearTaxation | Streamlined Filing</title>
+    <style>
+        :root {
+            --primary-teal: #1a96b8;
+            --accent-purple: #9d5593;
+            --dark-navy: #0a2540;
+            --light-bg: #fcfdfe;
+            --border-color: #e2e8f0;
+            --error-red: #e53e3e;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--dark-navy);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .survey-container {
+            background: white;
+            width: 100%;
+            max-width: 700px;
+            padding: 40px;
+            border-radius: 16px;
+            border-top: 6px solid var(--accent-purple);
+            box-shadow: 0 15px 40px rgba(10, 37, 64, 0.05);
+        }
+
+        /* Progress Bar */
+        .progress-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .progress-container {
+            flex-grow: 1;
+            height: 6px;
+            background: #f1f1f1;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        #progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-purple), var(--primary-teal));
+            width: 10%;
+            transition: 0.4s;
+        }
+
+        #progress-text {
+            font-weight: 700;
+            color: var(--primary-teal);
+            font-size: 14px;
+        }
+
+        .slide {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--dark-navy);
+        }
+
+        p {
+            line-height: 1.6;
+            color: #516377;
+            font-size: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="file"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1.5px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 14px 28px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--primary-teal);
+            color: white;
+            margin-top: 10px;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary-teal);
+            color: var(--primary-teal);
+            margin-top: 10px;
+        }
+
+        .fact-box {
+            background: rgba(26, 150, 184, 0.05);
+            padding: 15px;
+            border-left: 4px solid var(--primary-teal);
+            margin-top: 25px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .year-card {
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            background: #fcfdfe;
+        }
+
+        .custom-checkbox-label {
+
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="survey-container">
+        <div class="progress-wrapper">
+            <div class="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+            <div id="progress-text">10%</div>
+        </div>
+
+        <form id="amnestyForm">
+            <div class="slide active" id="slide1">
+                <h2>Your path back to tax peace of mind starts here.</h2>
+                <p>At ClearTaxation, we specialize in helping US citizens in the UK get back on track—penalty-free. If
+                    you have all your documents for the last 3–6 years ready, use the Express Vault. If you’d like us to
+                    guide you through each year, choose the Guided Path.</p>
+                <div class="btn-group">
+                    <button type="button" class="btn-outline" onclick="jumpTo(11)">I have everything! Express
+                        Vault</button>
+                    <button type="button" class="btn-primary" onclick="nextSlide(2)">Help me through the
+                        process</button>
+                </div>
+            </div>
+
+            <div class="slide" id="slide2">
+                <h2>Let’s start with you.</h2>
+                <p>The US is one of only two countries that taxes based on citizenship, not where you live! This
+                    'Amnesty' program is designed specifically to fix that hurdle for expats.</p>
+
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="Full_Name" name="Full_Name" placeholder="As per Passport" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Current UK Address</label>
+                    <textarea name="UK_Address" rows="2" placeholder="Street, City, Postcode" required></textarea>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="form-group">
+                        <label>SSN (Masked)</label>
+                        <input type="text" name="SSN" placeholder="XXX-XX-XXXX" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Date of Birth</label>
+                        <input type="date" name="DOB" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Marital Status</label>
+                    <select name="Marital_Status" onchange="toggleSpouse(this.value)">
+                        <option value="Single">Single</option>
+                        <option value="Married">Married</option>
+                    </select>
+                </div>
+
+                <div id="spouse_fields" style="display:none;" class="year-card">
+                    <label>Spouse Full Name</label>
+                    <input type="text" name="Spouse_Name" placeholder="Spouse Full Name">
+                    <label style="margin-top:10px;">Spouse SSN</label>
+                    <input type="text" name="Spouse_SSN" placeholder="XXX-XX-XXXX">
+                </div>
+
+                <div class="form-group" style="margin-top:15px;">
+                    <label>Do you have any Dependents?</label>
+                    <select name="Has_Dependents" onchange="toggleDependents(this.value)">
+                        <option value="No">No</option>
+                        <option value="Yes">Yes</option>
+                    </select>
+                </div>
+
+                <div id="dependent_fields" style="display:none;" class="year-card">
+                    <p><strong>Dependent 1 Details:</strong></p>
+                    <input type="text" name="Dep1_Name" placeholder="Full Name" style="margin-bottom:10px;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                        <input type="date" name="Dep1_DOB">
+                        <input type="text" name="Dep1_SSN" placeholder="SSN">
+                    </div>
+                </div>
+
+                <div class="fact-box">
+                    💡 <b>Did You Know?</b> The US is one of only two countries that taxes based on citizenship, not
+                    where you live!
+                </div>
+
+                <div class="btn-group">
+                    <button type="button" class="btn-outline" onclick="prevSlide()">← Back</button>
+                    <button type="button" class="btn-primary" onclick="nextSlide(3)">Continue</button>
+                </div>
+            </div>
+
+
+
+            <div class="slide" id="slide3">
+                <h2>Your Story Matters.</h2>
+                <p>The IRS requires a "Certification of Non-Willfulness." Simply put: why didn't you file? (e.g., moved
+                    to UK as child, didn't know the rules).</p>
+                <textarea name="Non_Willful_Story" rows="6" placeholder="Just give us the honest facts..."></textarea>
+                <div class="fact-box">💡 <b>Support Hook:</b> Don't worry about 'legal-speak.' Just give us the honest
+                    facts, and we will help you draft the formal statement for the IRS.</div>
+                <div class="btn-group">
+                    <button type="button" class="btn-outline" onclick="prevSlide()">← Back</button>
+                    <button type="button" class="btn-primary" onclick="nextSlide(4)">Continue</button>
+
+                </div>
+            </div>
+
+            <div class="slide" id="slide4">
+                <h2>What happened between 2022 and 2024?</h2>
+                <p>Check every box that applied to you at any point in the last three years.</p>
+
+                <div class="form-group">
+
+                    <label class="custom-checkbox-label"><input type="checkbox" class="path-check" value="5"> I was
+                        employed by a UK company
+                        (PAYE)</label>
+
+                    <label class="custom-checkbox-label"><input type="checkbox" class="path-check" value="6"> I was
+                        self-employed / in a
+                        partnership</label>
+
+                    <label class="custom-checkbox-label"><input type="checkbox" class="path-check" value="7"> I own
+                        rental property</label>
+
+                    <label class="custom-checkbox-label"><input type="checkbox" class="path-check" value="8"> I have UK
+                        investments (ISAs, Dividends,
+                        Crypto)</label>
+
+                    <label class="custom-checkbox-label"><input type="checkbox" class="path-check" value="8"> I own 10%+
+                        of a non-US
+                        company</label>
+
+                    <label class="custom-checkbox-label"><input type="checkbox" class="path-check" value="10"> I
+                        received a gift or inheritance over
+                        $100,000</label>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn-outline" onclick="prevSlide()">← Back</button>
+                    <button type="button" class="btn-primary" onclick="calculateAmnestyLogic()">Proceed to My
+                        Path</button>
+                </div>
+            </div>
+            <div class="slide" id="slide5">
+                <h2>Your 3-Year Career History.</h2>
+                <p>For 2022, 2023, and 2024, we need your P60s and your December Payslips.</p>
+
+                <div class="year-card"><label>2024 Documents</label><input type="file" name="Career_2024" multiple>
+                </div>
+                <div class="year-card"><label>2023 Documents</label><input type="file" name="Career_2023" multiple>
+                </div>
+                <div class="year-card"><label>2022 Documents</label><input type="file" name="Career_2022" multiple>
+                </div>
+
+                <div class="fact-box">
+                    💡 <b>Did You Know?</b> The first US Income Tax was created in 1861 to help fund the Civil War—at a
+                    flat 3%!
+                </div>
+
+                <div class="btn-group">
+                    <button type="button" class="btn-outline" onclick="prevSlide()">← Back</button>
+                    <button type="button" class="btn-primary" onclick="moveOn()">Continue</button>
+                </div>
+            </div>
+            <div class="slide" id="slide6">
+                <h2>Your Business & Partnerships.</h2>
+                <p>Whether you were a Sole Trader or in a Partnership, we need your 3-year results.</p>
+
+                <div class="form-group">
+                    <label>Business Name</label>
+                    <input type="text" name="Business_Name" placeholder="Enter your business or partnership name"
+                        required>
+                </div>
+
+                <div class="year-card">
+                    <label>Upload UK SA100s for 2022–2024</label>
+                    <p style="font-size: 12px; color: #666; margin-top: -5px;">Please provide the full tax returns for
+                        the last three years.</p>
+                    <input type="file" name="SA100_Upload" multiple>
+                </div>
+
+                <div class="year-card" style="border-left: 4px solid var(--accent-purple);">
+                    <label style="color: var(--accent-purple);">Partnership Logic</label>
+                    <p style="font-size: 14px; margin-bottom: 10px;">"Upload any US K-1 forms here."</p>
+                    <input type="file" name="K1_Forms_Upload" multiple>
+                </div>
+
+                <div class="btn-group">
+                    <button type="button" class="btn-outline" onclick="prevSlide()">← Back</button>
+                    <button type="button" class="btn-primary" onclick="moveOn()">Continue</button>
+                </div>
+            </div>
+            <div class="slide" id="slide7">
+                <h2>Your Property Portfolio.</h2>
+                <p>"If you rented out a home (in the UK or elsewhere), we need your P&L or UK SA105 for the last 3
+                    years."</p>
+
+                <div class="year-card">
+                    <div class="form-group">
+                        <label>Property Address</label>
+                        <textarea name="Rental_Property_Address" rows="2"
+                            placeholder="Full address of the rental property"></textarea>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <div class="form-group">
+                            <label>Total Rent</label>
+                            <input type="text" name="Rental_Total_Rent" placeholder="Annual Total (£)">
+                        </div>
+                        <div class="form-group">
+                            <label>Mortgage Interest</label>
+                            <input type="text" name="Rental_Mortgage_Interest" placeholder="Annual Total (£)">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Expenses</label>
+                        <input type="text" name="Rental_Expenses" placeholder="Repairs, management fees, etc. (£)">
+                    </div>
+
+                    <div class="form-group"
+                        style="margin-top: 10px; border-top: 1px dashed var(--border-color); padding-top: 15px;">
+                        <label>Upload P&L or UK SA105 (2022–2024)</label>
+                        <input type="file" name="Rental_Docs_Upload" multiple>
+                    </div>
+                </div>
+
+                <div class="fact-box">
+                    💡 <b>Did You Know?</b> The IRS allows you to 'depreciate' the value of your UK rental property on
+                    your US return, which often significantly reduces your US tax bill!
+                </div>
+
+                <div class="btn-group">
+                    <button type="button" class="btn-outline" onclick="prevSlide()">← Back</button>
+                    <button type="button" class="btn-primary" onclick="moveOn()">Continue</button>
+                </div>
+            </div>
+            <div class="slide" id="slide8">
+                <h2>Growing Your Wealth.</h2>
+                <p>"Did you hold ISAs or UK Mutual Funds/OEICs? These often trigger 'PFIC' rules."</p>
+
+                <div class="year-card" style="background: #f0f7ff; border-left: 4px solid var(--primary-teal);">
+                    <p style="font-size: 14px; margin: 0;">
+                        <strong>Wait, what is a PFIC?</strong><br>
+                        It stands for Passive Foreign Investment Company. Essentially, the IRS treats most UK-based
+                        investment funds (Mutual Funds/ETFs) differently than US ones. We'll handle the complex math to
+                        ensure you stay compliant.
+                    </p>
+                </div>
+
+                <div class="form-group" style="margin-top: 20px;">
+                    <label>Investment value on the day you became a US resident (£)</label>
+                    <input type="text" name="PFIC_Start_Value" placeholder="Value at start of US residency">
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;">
+                    <div class="form-group">
+                        <label>2024 Year-End</label>
+                        <input type="text" name="PFIC_Value_2024" placeholder="£">
+                    </div>
+                    <div class="form-group">
+                        <label>2023 Year-End</label>
+                        <input type="text" name="PFIC_Value_2023" placeholder="£">
+                    </div>
+                    <div class="form-group">
+                        <label>2022 Year-End</label>
+                        <input type="text" name="PFIC_Value_2022" placeholder="£">
+                    </div>
+                </div>
+
+                <div class="year-card">
+                    <label>Upload Documents</label>
+                    <p style="font-size: 12px; color: #666; margin-bottom: 10px;">
+                        ISA statements, Dividend vouchers, or Crypto reports.
+                    </p>
+                    <input type="file" name="Investment_Docs_Upload" multiple>
+                </div>
+
+                <div class="btn-group">
+                    <button type="button" class="btn-outline" onclick="prevSlide()">← Back</button>
+                    <button type="button" class="btn-primary" onclick="moveOn()">Continue</button>
+                </div>
+            </div>
+
+            <div class="slide" id="slide9">
+                <h2>Your 6-Year Bank History.</h2>
+                <p>"The amnesty requires reporting the Highest Balance for every non-US account for each year from 2019
+                    to 2024."</p>
+
+                <div class="year-card" style="border-left: 4px solid var(--primary-teal);">
+                    <label><strong>Option 1: I have a list ready.</strong></label>
+                    <p style="font-size: 13px; color: #666;">Upload your spreadsheet or bank statements here.</p>
+                    <input type="file" name="FBAR_Ready_List" multiple>
+                </div>
+
+                <div style="text-align: center; margin: 20px 0; font-weight: bold; color: #999;">— OR —</div>
+
+                <div class="year-card">
+                    <label><strong>Option 2: I'll enter them manually.</strong></label>
+
+                    <div id="fbar-repeater">
+                        <div class="fbar-account-entry"
+                            style="border-bottom: 1px solid #eee; padding-bottom: 20px; margin-bottom: 20px;">
+                            <div class="form-group">
+                                <label>Financial Institution Name & Address</label>
+                                <input type="text" name="FBAR_Bank_Name[]" placeholder="Bank Name, City, Country">
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                                <div class="form-group">
+                                    <label>Account Number</label>
+                                    <input type="text" name="FBAR_Acc_Num[]">
+                                </div>
+                                <div class="form-group">
+                                    <label>Ownership</label>
+                                    <select name="FBAR_Ownership[]" onchange="toggleJointHolder(this)">
+                                        <option value="Single">Single</option>
+                                        <option value="Joint">Joint</option>
+                                        <option value="Business">Business</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="joint-holder-name" style="display:none; margin-bottom:15px;">
+                                <label>Name of other holder</label>
+                                <input type="text" name="FBAR_Joint_Name[]" placeholder="Full Name">
+                            </div>
+
+                            <label>Highest Balance per Year (£)</label>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;">
+                                <input type="text" placeholder="2024" name="FBAR_24[]">
+                                <input type="text" placeholder="2023" name="FBAR_23[]">
+                                <input type="text" placeholder="2022" name="FBAR_22[]">
+                                <input type="text" placeholder="2021" name="FBAR_21[]">
+                                <input type="text" placeholder="2020" name="FBAR_20[]">
+                                <input type="text" placeholder="2019" name="FBAR_19[]">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn-outline" style="font-size: 13px; padding: 8px 15px;"
+                        onclick="addFBARAccount()">+ Add Another Account</button>
+                </div>
+
+                <div class="btn-group">
+                    <button type="button" class="btn-outline" onclick="prevSlide()">← Back</button>
+                    <button type="button" class="btn-primary" onclick="moveOn()">Continue</button>
+                </div>
+            </div>
+
+            <div class="slide" id="slide10">
+                <h2>Pensions & Gifts over $100,000.</h2>
+                <p>The IRS tracks foreign pensions and large gifts to ensure compliance with the US-UK Tax Treaty.</p>
+
+                <div class="year-card">
+                    <label><strong>Pension Contributions (SIPP / Workplace)</strong></label>
+                    <p style="font-size: 13px; color: #666; margin-bottom: 10px;">Please provide your total
+                        contributions for the last 3 years.</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;">
+                        <div class="form-group">
+                            <label>2024 (£)</label>
+                            <input type="text" name="Pension_2024" placeholder="Total">
+                        </div>
+                        <div class="form-group">
+                            <label>2023 (£)</label>
+                            <input type="text" name="Pension_2023" placeholder="Total">
+                        </div>
+                        <div class="form-group">
+                            <label>2022 (£)</label>
+                            <input type="text" name="Pension_2022" placeholder="Total">
+                        </div>
+                    </div>
+                    <label style="margin-top: 10px;">Upload Pension Statements</label>
+                    <input type="file" name="Pension_Docs" multiple>
+                </div>
+
+                <div class="year-card" style="border-left: 4px solid var(--accent-purple);">
+                    <label style="color: var(--accent-purple);"><strong>Foreign Gifts & Inheritance</strong></label>
+                    <p style="font-size: 14px; margin-bottom: 15px;">
+                        "Did you receive a gift or inheritance over $100,000 from a non-US person?"
+                    </p>
+                    <select name="Large_Gift_Received"
+                        onchange="document.getElementById('gift_details').style.display = (this.value === 'Yes') ? 'block' : 'none'">
+                        <option value="No">No</option>
+                        <option value="Yes">Yes</option>
+                    </select>
+
+                    <div id="gift_details" style="display:none; margin-top: 15px;">
+                        <label>Approximate Value ($) & Date</label>
+                        <input type="text" name="Gift_Value_Date" placeholder="e.g. $120,000 in July 2023">
+                        <p style="font-size: 12px; color: var(--error-red); margin-top: 5px;">
+                            Note: This requires IRS Form 3520, which we will help you prepare.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="fact-box">
+                    💡 <b>Did You Know?</b> The US-UK Tax Treaty is over 100 pages long—it's the 'Golden Rules' that
+                    keep your savings safe from double taxation.
+                </div>
+
+                <div class="btn-group">
+                    <button type="button" class="btn-outline" onclick="prevSlide()">← Back</button>
+                    <button type="button" class="btn-primary" onclick="moveOn()">Continue</button>
+                </div>
+            </div>
+
+            <div class="slide" id="slide11">
+                <h2>Drop it all here! (Express Path)</h2>
+                <p>You chose the Express Path. Simply upload your files in one go (P60s, Payslips, SA100s, Bank
+                    Statements for 2019–2024).</p>
+                <input type="file" name="Express_Vault_Files" multiple>
+                <button type="button" class="btn-primary" onclick="finalSubmit()">Submit Everything</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Aapka Google Apps Script URL
+
+        let formQueue = [];
+        let historyStack = [1];
+
+        function nextSlide(n) {
+            // 1. Pehle current slide ki validation check karein
+            const currentSlideNum = historyStack[historyStack.length - 1];
+            const currentSlide = document.getElementById('slide' + currentSlideNum);
+
+            // Sirf un inputs ko pakre ga jin mein 'required' attribute laga hai
+            const requiredInputs = currentSlide.querySelectorAll('input[required], textarea[required], select[required]');
+            let allValid = true;
+
+            requiredInputs.forEach(input => {
+                if (!input.value.trim()) {
+                    input.style.border = "2px solid #ff4d4d"; // Error dikhane ke liye red border
+                    allValid = false;
+                } else {
+                    input.style.border = "1px solid #ddd"; // Theek hone par wapis normal
+                }
+            });
+
+            // Agar koi field khali hai to ruk jao
+            if (!allValid) {
+                alert("Please fill all required fields (*) before continuing.");
+                return;
+            }
+
+            // 2. Agar sab theek hai, to aglay slide par jao
+            document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+
+            const nextSlideEl = document.getElementById('slide' + n);
+            if (nextSlideEl) {
+                nextSlideEl.classList.add('active');
+                if (historyStack[historyStack.length - 1] !== n) {
+                    historyStack.push(n);
+                }
+            }
+
+            // Progress bar update
+            let progress = (n / 11) * 100;
+            document.getElementById('progress-bar').style.width = progress + '%';
+            document.getElementById('progress-text').innerText = Math.round(progress) + '%';
+            window.scrollTo(0, 0);
+        }
+
+        // Progress bar logic (Total 11 slides hain)
+        let progress = (n / 11) * 100;
+        document.getElementById('progress-bar').style.width = progress + '%';
+        document.getElementById('progress-text').innerText = Math.round(progress) + '%';
+        window.scrollTo(0, 0);
+
+
+        function prevSlide() {
+            if (historyStack.length > 1) {
+                historyStack.pop(); // Current slide hatayein
+                const lastSlide = historyStack[historyStack.length - 1];
+
+                // Manual UI Update (nextSlide call nahi karenge warna history stack badhta jayega)
+                document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+                document.getElementById('slide' + lastSlide).classList.add('active');
+
+                // Progress Update
+                let progress = (lastSlide / 11) * 100;
+                document.getElementById('progress-bar').style.width = progress + '%';
+                document.getElementById('progress-text').innerText = Math.round(progress) + '%';
+            }
+        }
+
+        function jumpTo(n) { nextSlide(n); }
+
+        function toggleSpouse(val) {
+            document.getElementById('spouse_fields').style.display = (val === 'Married') ? 'block' : 'none';
+        }
+
+        function toggleDependents(val) {
+            const div = document.getElementById('dependent_fields');
+            div.style.display = (val === 'Yes') ? 'block' : 'none';
+        }
+
+        function calculateAmnestyLogic() {
+            const checkboxes = document.querySelectorAll('.path-check:checked');
+            if (checkboxes.length === 0) {
+                alert("Please select at least one option that applies to you.");
+                return;
+            }
+            let selected = [];
+            document.querySelectorAll('.path-check:checked').forEach(cb => {
+                selected.push(parseInt(cb.value));
+            });
+
+            // FBAR slide hamesha mandatory hai
+            selected.push(9);
+            // Unique values aur ascending order taake sequence sahi rahe
+            formQueue = [...new Set(selected)].sort((a, b) => a - b);
+
+            moveOn();
+        }
+
+        function moveOn() {
+            if (formQueue.length > 0) {
+                let nextTarget = formQueue.shift();
+                nextSlide(nextTarget);
+            } else {
+                nextSlide(11); // Submit slide
+            }
+        }
+
+        function toggleJointHolder(selectElement) {
+            const jointDiv = selectElement.closest('.fbar-account-entry').querySelector('.joint-holder-name');
+            jointDiv.style.display = (selectElement.value === 'Joint') ? 'block' : 'none';
+        }
+
+        function addFBARAccount() {
+            const repeater = document.getElementById('fbar-repeater');
+            const firstEntry = document.querySelector('.fbar-account-entry');
+            const newEntry = firstEntry.cloneNode(true);
+
+            // Inputs clear karein
+            newEntry.querySelectorAll('input').forEach(input => input.value = '');
+            newEntry.querySelector('.joint-holder-name').style.display = 'none';
+
+            repeater.appendChild(newEntry);
+        }
+
+        // Pehle validation check karne ke liye ek function
+        function validateCurrentSlide(n) {
+            const currentSlide = document.getElementById('slide' + n);
+            const inputs = currentSlide.querySelectorAll('input[required], textarea[required], select[required]');
+            for (let input of inputs) {
+                if (!input.value) {
+                    alert("Please fill all required fields before continuing.");
+                    input.focus();
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        // Ye function lazmi hona chahiye code mein
+        function toBase64(file) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = () => resolve(reader.result);
+                reader.onerror = error => reject(error);
+            });
+        }
+
+        async function finalSubmit() {
+            const submitBtn = document.querySelector("#slide11 .btn-primary");
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerText = "Uploading... Please wait";
+            }
+
+            const form = document.getElementById('amnestyForm');
+            const formData = new FormData(form);
+
+            // Yahan apna Apps Script URL dalein
+            const finalURL = "https://script.google.com/macros/s/AKfycbxhtKeMLYsXiAnSoe3gSKpYS1q-KJ8WtecfzeLk_ite4rIUImbB3Dp4UgS15a8DdbCEJQ/exec";
+
+            try {
+                const data = {};
+                const filesToUpload = []; // Unique name
+
+                // 1. Text Data nikalna
+                formData.forEach((value, key) => {
+                    if (!(value instanceof File)) {
+                        data[key] = value;
+                    }
+                });
+
+                // 2. Files processing (Fixing the 'file is not defined' error)
+                const fileInputs = form.querySelectorAll('input[type="file"]');
+
+                for (let input of fileInputs) {
+                    if (input.files.length > 0) {
+                        for (let i = 0; i < input.files.length; i++) {
+                            const currentFile = input.files[i]; // 'currentFile' variable define kiya
+
+                            try {
+                                const base64Data = await toBase64(currentFile); // currentFile pass kiya
+
+                                filesToUpload.push({
+                                    base64: base64Data.split(',')[1],
+                                    type: currentFile.type,
+                                    name: currentFile.name,
+                                    field: input.name
+                                });
+                            } catch (err) {
+                                console.error("File skip hui: " + currentFile.name);
+                            }
+                        }
+                    }
+                }
+
+                // 3. Google Apps Script ko data bhejna
+                await fetch(finalURL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    cache: 'no-cache',
+                    body: JSON.stringify({
+                        textData: data,
+                        fileData: filesToUpload
+                    })
+                });
+
+                // Success message
+                showSuccessMessage(data.Full_Name || "User");
+
+            } catch (error) {
+                console.error('Submission Error:', error);
+                alert("Error: " + error.message);
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = "Submit Everything";
+                }
+            }
+        }
+        function showSuccessMessage(name) {
+            document.querySelector('.survey-container').innerHTML = `
+        <div style="text-align:left; padding: 40px; border-left: 5px solid #008080;">
+            <h2 style="color: #008080;">Submission Received! 🏁</h2>
+            <p>Thank you. Your documents have been uploaded securely.</p>
+            <button class="btn-primary" onclick="location.reload()">Finish</button>
+        </div>`;
+        }
+
+
+    </script>
+
+</body>
+
+</html>
