@@ -5786,3 +5786,7 @@ border-radius: 7px !important;
 .hover\:bg-gray-200.padding-y-3.padding-x-4.cursor-pointer:hover div{
     color: #000 !important;
 }
+div#email-builder-container{
+color: #fff !important;
+background: #fff !important;
+}
