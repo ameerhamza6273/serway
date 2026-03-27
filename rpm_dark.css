@@ -5755,3 +5755,34 @@ border: none !important;
 .dialer .number-config-header.ui-display-sm-semibold{
 color: #fff !important;
 }
+
+#emailPreview .hr-tag__content .ui-text-xs-regular{
+color: #000 !important;
+}
+#pg-email-builder-sync-change-modal span.inline-flex.items-center.px-2.py-1.text-xs.font-medium.text-blue-800.bg-blue-100.rounded-full,
+#pg-email-builder-sync-change-modal .ui-icon-container__ui-icon,
+#pg-email-builder-sync-change-modal .ui-text-xs-medium[data-v-da8d4834],
+#pg-email-builder-sync-change-modal.hr-card.hr-modal.ui-modal .hr-button__content,
+button#pg-email-builder-template-setting-cancel-btn span.hr-button__content,
+button#pg-email-builder__test-email-close-btn span.hr-button__content,
+#emailPreview #preview-btn .hr-button__content{
+color: #000 !important;
+}
+#email-preview-email-builder-action-menu-action-dropdown div svg,
+#email-preview-email-builder-action-menu-action-dropdown div.hr-dropdown-option-body__label{
+color: #000 !important;
+}
+.ui-table-footer{
+background: #1a132b !important;
+border-radius: 7px !important;
+}
+#restore-btn .hr-button__content{
+  color: #000 !important;
+}
+.hover\:bg-gray-200.padding-y-3.padding-x-4.cursor-pointer.bg-gray-100 div{
+  color: #000 !important;
+
+}
+.hover\:bg-gray-200.padding-y-3.padding-x-4.cursor-pointer:hover div{
+    color: #000 !important;
+}
