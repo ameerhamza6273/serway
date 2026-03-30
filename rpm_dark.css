@@ -5874,12 +5874,24 @@ background: #fff !important;
 {
   color: #fff !important;
 }
-#conversations-list div[style="height: 1800px; width: 100%; position: relative;"] div[type="button"]{
+#conversations-list div div[type="button"]{
   background: #221e30 !important ;
   margin-top: 2px;
 }
+
 #record-details-lhs .bg-gray-50,
 #record-details-lhs .bg-contacts-panel,
 #record-details-lhs {
   background: #0e0923 !important;
+}
+.hr-dropdown-option-title span p,
+#new-conversation-right-side-bar .hr-tabs-tab span,
+#new-conversation-right-side-bar .hr-tag .hr-ellipsis span,
+#new-conversation-right-side-bar .hr-tabs-tab span,
+#new-conversation-right-side-bar .hr-collapse-item__header .hr-text{
+  color:#000 !important
+}
+
+#followers-dropdown-menu .hr-text.hr-text-md span{
+  color:#000 !important;
 }
