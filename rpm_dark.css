@@ -5790,3 +5790,96 @@ div#email-builder-container{
 color: #fff !important;
 background: #fff !important;
 }
+
+#conversation-panel .hr-tag__container {
+  background: #221e30 !important;
+  padding: 15px !important;
+  border-radius: 50px !important;
+}
+#conversations-layout,
+#conversations-layout .relative.flex.flex-col.bg-\[\#ECEEF2\].px-2.pt-3.pb-2.h-full.overflow-visible.transition-all.duration-300.inbox-panel,
+#conversations-workspace,
+#conversations-content {
+  background: #090417 !important;
+}
+
+#conversation-panel .m-3,
+#conversation-panel,
+#conversations-list .conversation-list-container .flex.flex-col.w-full.h-full.gap-5.bg-\[\#F7F9FD\].px-3.pt-3.pb-3 {
+  background: #0e0923 !important;
+}
+#conversation-panel .chat-bubble-inbound {
+  background: #1a132c !important;
+  border: none !important;
+}
+#conversation-panel .chat-bubble-outbound {
+  background: #1a132c !important;
+  border: none !important;
+  border-radius: 10px !important;
+}
+#conversation-panel .chat-bubble-inbound p,
+#conversation-panel .chat-bubble-outbound a,
+#conversation-panel .hr-tag__container svg,
+#conversation-panel .hr-tag__container div {
+  color: #fff !important;
+}
+
+.flex.flex-col.relative.bg-\[\#F7F9FD\].flex-none {
+  background: #0e0923 !important;
+
+}
+#conv-composer-inline-expand-trigger input,
+#conv-composer-inline-expand-trigger,
+#mail-composer-footer {
+  background: #0e0923 !important;
+}
+#conv-composer-inline-expand-trigger input{
+  border: none !important;
+}
+
+.flex.w-full.border-1.border-solid.border-gray-200.rounded-lg.overflow-hidden,
+.conversation-list-header {
+  background: #0e0923 !important;
+}
+
+#conversations-messages .flex.justify-between.items-center.px-3.border-b.border-gray-200 {
+  background: #e7246f !important;
+  border-radius: 0 !important;
+}
+
+.conversation-list-header svg,
+#conversations-messages .flex.justify-between.items-center.px-3.border-b.border-gray-200 svg {
+  color: #fff !important;
+}
+
+#conversations-layout span.hr-avatar .hr-text {
+  color: #000 !important;
+}
+
+.conversation-list-header button {
+  background: #221e30 !important;
+}
+
+#crm-contacts-view a:not(.btn) {
+  color: #fff !important;
+}
+
+#crm-contacts-view .tabulator-row:hover a:not(.btn) {
+  color: #000 !important;
+}
+#add-record-btn span{
+  color: #000 !important;
+}
+#OpportunitiesList button.d-flex.manage-fields.cursor-pointer span#list-view-manage-field
+{
+  color: #fff !important;
+}
+#conversations-list div[style="height: 1800px; width: 100%; position: relative;"] div[type="button"]{
+  background: #221e30 !important ;
+  margin-top: 2px;
+}
+#record-details-lhs .bg-gray-50,
+#record-details-lhs .bg-contacts-panel,
+#record-details-lhs {
+  background: #0e0923 !important;
+}
