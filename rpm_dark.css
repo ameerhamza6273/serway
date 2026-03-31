@@ -5891,7 +5891,16 @@ background: #fff !important;
 #new-conversation-right-side-bar .hr-collapse-item__header .hr-text{
   color:#000 !important
 }
-
+#owner-dropdown-menu .hr-text.hr-text-md span,
 #followers-dropdown-menu .hr-text.hr-text-md span{
   color:#000 !important;
+}
+
+.flex.flex-col.items-stretch.w-full.bg-\[\#F7F9FD\].pl-3.py-3,
+.flex.flex-col.w-full.h-full.bg-\[\#F7F9FD\].px-3.pt-3.pb-3.gap-0 {
+  background: #0e0923 !important;
+}
+
+#conversations-contact-details .hr-button span{
+color:#000 !important;
 }
