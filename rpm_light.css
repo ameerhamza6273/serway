@@ -2127,20 +2127,8 @@ border-top: 2px solid #9A89B5 !important;
 #OpportunitiesList .scrollable .target .min-h-0:nth-child(4) .card .cardWrapper{
 border-top: 2px solid #A6B12F !important;
 }
-#hl_header--copilot-icon svg circle{
-  fill: #F3F3F3  !important;
-}
-#hl_header--copilot-icon svg path{
-  stroke: #555a64c2   !important;
-}
-#hl_header--copilot-icon svg {
-    background: #F3F3F3 !important;
-    width: 40px !important;
-    height: 40px !important;
-    border-radius: 50px !important;
-    margin-top: -4px !important;
-    margin-left: -3px !important;
-    border: 1px solid #EAEAEA !important
+#hl_header--copilot-icon svg path {
+    stroke: #fff   !important;
 }
 
 a[id="3f2485c4-068c-40b7-965b-1945cbf4d194"] span{
