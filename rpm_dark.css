@@ -5891,3 +5891,8 @@ background: #fff !important;
 #conversations-contact-details .hr-button span{
 color:#000 !important;
 }
+
+div.pipeline-ribbon,
+.hr-wrapper-container{
+  background: #090417 !important;
+}
