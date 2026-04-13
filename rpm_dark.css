@@ -5586,21 +5586,8 @@ body:has(#notification_banner-top_bar) #estimatesDashboardApp {
   background-size: 1050px auto !important;
 }
 
-#hl_header--copilot-icon svg circle {
-  fill: #1a142d !important;
-}
-
 #hl_header--copilot-icon svg path {
-  stroke: #bbbbbc !important;
-}
-
-#hl_header--copilot-icon svg {
-  background: #1a142d !important;
-  width: 40px !important;
-  height: 40px !important;
-  border-radius: 50px !important;
-  margin-top: -4px !important;
-  margin-left: -3px !important;
+  stroke: #fff !important;
 }
 
 #conversations .hl_conversations--wrap .relative.border-r.border-gray-200.hl_conversations--messages-list-v2-left-most-panel section .space-y-2 .flex.flex-col {
