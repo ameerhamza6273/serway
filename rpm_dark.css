@@ -5708,10 +5708,6 @@ body:has(#notification_banner-top_bar) #estimatesDashboardApp {
   color: #000 !important;
 }
 
-#hr-tag-count-wrapper-undefined{
-  color: #fff !important;
-}
-
 .dialer{
   border: 1px solid #fff !important;
   border-radius: 10px !important;
@@ -5909,5 +5905,14 @@ color: #000 !important;
   background: #0e0923 !important;
 }
 .hr-base-select-option--pending .pipeline-option-label{
+  color: #000 !important;
+}
+
+#record-details-new-ui .hr-wrapper-container .hr-config-provider .flex.h-full.py-3.pl-3.bg-background.w-full{
+  background: #090417 !important;
+}
+#record-details-new-ui .hr-collapse-item__header-main p,
+#record-details-new-ui .hr-tabs-nav .hr-tabs-tab__label,
+#record-details-new-ui .hr-tag .hr-tag__content .hr-ellipsis span{
   color: #000 !important;
 }
