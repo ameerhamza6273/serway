@@ -5896,3 +5896,18 @@ div.pipeline-ribbon,
 .hr-wrapper-container{
   background: #090417 !important;
 }
+
+#pipelineDropdDown-listview .hr-base-selection-overlay__wrapper{
+  color: #fff !important;
+}
+
+.hr-base-select-option:hover .pipeline-option-label {
+color: #000 !important;
+}
+
+.hr-base-select-menu__action{
+  background: #0e0923 !important;
+}
+.hr-base-select-option--pending .pipeline-option-label{
+  color: #000 !important;
+}
