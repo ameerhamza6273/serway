@@ -5929,3 +5929,27 @@ color: #000 !important;
 #agent-studio-container #sort-button{
   background: #221e30 !important;
 }
+
+#ai-agents-getting-started .review-reply-preview-card__reply,
+#ai-agents-getting-started .hero[data-v-584ef23d]{
+  background: #090417 !important;
+}
+#ai-agents-getting-started .hero-highlight{
+  color: #fff !important;
+}
+.ship-ai-card,
+#ai-agents-getting-started .trust-section,
+#ai-agents-getting-started .agent-conversation-panel__body,
+#ai-agents-getting-started .feature-sections,
+#ai-agents-getting-started .hero-eyebrow{
+  background: #221e30 !important;
+}
+#ai-agents-getting-started .ship-ai-card-badge,
+#ai-agents-getting-started .agent-conversation-panel__user-bubble p,
+#ai-agents-getting-started .hero-stats-label,
+#ai-agents-getting-started .hero-stats-value,
+#ai-agents-getting-started .hero-toast-time,
+#ai-agents-getting-started .hero-toast-title,
+#ai-agents-getting-started .compare-impact-badge{
+  color: #000 !important;
+}
