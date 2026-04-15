@@ -5916,3 +5916,16 @@ color: #000 !important;
 #record-details-new-ui .hr-tag .hr-tag__content .hr-ellipsis span{
   color: #000 !important;
 }
+
+#agent-studio-container .header-content{
+  background: #221e30 !important;
+  padding: 10px 20px !important;
+  border-radius: 10px !important;
+}
+#agent-studio-container{
+  background: #090417 !important;
+}
+#agent-studio-container .hr-input-wrapper,
+#agent-studio-container #sort-button{
+  background: #221e30 !important;
+}
