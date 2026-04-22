@@ -5953,3 +5953,8 @@ color: #000 !important;
 #ai-agents-getting-started .compare-impact-badge{
   color: #000 !important;
 }
+
+#location-dashboard svg[style="position: absolute; left: 0px; top: 0px; user-select: none;"]  path[fill="#EAECF0"] {
+  fill: #2d2739 !important;
+  stroke: none !important;
+}

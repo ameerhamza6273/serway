@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wisconsin-Grown School Produce | Wisconsin Food Hub Cooperative</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --dark-green: #2D5016;
+    --med-green: #4A7C27;
+    --light-green: #6BAF2E;
+    --pale-green: #EAF4DC;
+    --gold: #C8921A;
+    --gold-light: #F5D990;
+    --cream: #F7F2E8;
+    --warm-white: #FDFAF4;
+    --dark: #1E2B14;
+    --gray: #5A5A4A;
+    --red: #C0392B;
+    --white: #FFFFFF;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    background: var(--warm-white);
+    color: var(--dark);
+    line-height: 1.65;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--dark-green);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 2.5rem;
+    height: 60px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+  }
+  .nav-logo {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 700; font-size: 0.8rem;
+    color: var(--gold-light);
+    letter-spacing: 0.12em; text-transform: uppercase;
+    line-height: 1.3;
+  }
+  .nav-links { display: flex; gap: 1.8rem; list-style: none; }
+  .nav-links a {
+    color: rgba(255,255,255,0.85); text-decoration: none;
+    font-size: 0.85rem; font-weight: 600; letter-spacing: 0.04em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold-light); }
+  .nav-cta {
+    background: var(--gold); color: var(--dark-green) !important;
+    padding: 0.45rem 1.1rem; border-radius: 4px;
+    font-weight: 700 !important;
+    transition: background 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--gold-light) !important; }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--dark-green);
+    position: relative; overflow: hidden;
+    padding: 5rem 2.5rem 4rem;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: 
+      radial-gradient(ellipse at 80% 20%, rgba(107,175,46,0.18) 0%, transparent 60%),
+      radial-gradient(ellipse at 10% 90%, rgba(200,146,26,0.12) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .hero-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+    position: relative; z-index: 1;
+  }
+  .hero-eyebrow {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.75rem; font-weight: 700;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold-light); margin-bottom: 1rem;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    font-weight: 900; line-height: 1.1;
+    color: var(--white); margin-bottom: 1.5rem;
+  }
+  .hero h1 em { color: var(--gold-light); font-style: italic; }
+  .hero-body {
+    color: rgba(255,255,255,0.82); font-size: 1.05rem;
+    max-width: 480px; margin-bottom: 2rem; line-height: 1.7;
+  }
+  .hero-cta-group { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--gold); color: var(--dark-green);
+    padding: 0.85rem 2rem; border-radius: 4px;
+    font-weight: 700; font-size: 0.95rem;
+    text-decoration: none; letter-spacing: 0.02em;
+    border: 2px solid var(--gold);
+    transition: all 0.2s; display: inline-block;
+  }
+  .btn-primary:hover { background: var(--gold-light); border-color: var(--gold-light); }
+  .btn-secondary {
+    background: transparent; color: var(--white);
+    padding: 0.85rem 2rem; border-radius: 4px;
+    font-weight: 600; font-size: 0.95rem;
+    text-decoration: none;
+    border: 2px solid rgba(255,255,255,0.4);
+    transition: all 0.2s; display: inline-block;
+  }
+  .btn-secondary:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+  .hero-image-panel {
+    display: flex; flex-direction: column; gap: 1rem;
+  }
+  .hero-stat-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-left: 4px solid var(--gold);
+    border-radius: 6px; padding: 1.2rem 1.5rem;
+    backdrop-filter: blur(4px);
+  }
+  .hero-stat-card .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem; font-weight: 900; color: var(--gold-light);
+    line-height: 1; margin-bottom: 0.25rem;
+  }
+  .hero-stat-card .stat-label {
+    font-size: 0.85rem; color: rgba(255,255,255,0.75); font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+
+  /* ── TRUST STRIP ── */
+  .trust-strip {
+    background: var(--med-green);
+    padding: 1rem 2.5rem;
+  }
+  .trust-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: flex; gap: 2.5rem; flex-wrap: wrap;
+    justify-content: center; align-items: center;
+  }
+  .trust-item {
+    display: flex; align-items: center; gap: 0.5rem;
+    color: var(--white); font-size: 0.8rem; font-weight: 600;
+    letter-spacing: 0.06em; text-transform: uppercase;
+  }
+  .trust-dot { width: 6px; height: 6px; background: var(--gold-light); border-radius: 50%; flex-shrink: 0; }
+
+  /* ── SECTIONS ── */
+  section { padding: 5rem 2.5rem; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-label {
+    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--med-green);
+    margin-bottom: 0.75rem;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 700; color: var(--dark-green);
+    line-height: 1.2; margin-bottom: 1.25rem;
+  }
+  .section-body { font-size: 1.05rem; color: var(--gray); max-width: 640px; line-height: 1.75; }
+
+  /* ── PROBLEM/SOLUTION ── */
+  .problem-section { background: var(--cream); }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+  .problem-card {
+    background: var(--white);
+    border-radius: 8px; padding: 2rem;
+    border-top: 4px solid var(--red);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  }
+  .problem-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem; color: var(--red);
+    margin-bottom: 1rem;
+  }
+  .solution-card {
+    background: var(--dark-green);
+    border-radius: 8px; padding: 2rem;
+    border-top: 4px solid var(--gold);
+  }
+  .solution-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem; color: var(--gold-light);
+    margin-bottom: 1rem;
+  }
+  .solution-card p { color: rgba(255,255,255,0.85); font-size: 0.95rem; line-height: 1.7; }
+  .problem-list { list-style: none; }
+  .problem-list li {
+    padding: 0.5rem 0; font-size: 0.95rem; color: var(--gray);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    padding-left: 1.4rem; position: relative;
+  }
+  .problem-list li::before { content: '✗'; position: absolute; left: 0; color: var(--red); font-weight: 700; }
+
+  /* ── PRODUCTS ── */
+  .products-section { background: var(--warm-white); }
+  .products-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.25rem; margin-top: 2.5rem;
+  }
+  .product-card {
+    background: var(--white);
+    border-radius: 8px; overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .product-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(45,80,22,0.12); }
+  .product-card-photo {
+    height: 140px; background: var(--pale-green);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2.5rem;
+  }
+  .product-card-body { padding: 1.25rem; }
+  .product-card-body h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem; color: var(--dark-green);
+    margin-bottom: 0.4rem;
+  }
+  .product-card-body .sku { font-size: 0.72rem; color: var(--gray); letter-spacing: 0.05em; margin-bottom: 0.6rem; }
+  .product-card-body .price {
+    font-weight: 700; color: var(--med-green); font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+  }
+  .product-card-body .usda-tag {
+    display: inline-block;
+    background: var(--pale-green); color: var(--dark-green);
+    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.05em;
+    padding: 0.2rem 0.55rem; border-radius: 20px;
+    text-transform: uppercase;
+  }
+
+  /* ── HOW IT WORKS ── */
+  .how-section { background: var(--dark-green); }
+  .how-section .section-title { color: var(--white); }
+  .how-section .section-body { color: rgba(255,255,255,0.75); }
+  .how-section .section-label { color: var(--gold-light); }
+  .steps {
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    gap: 1px; margin-top: 3rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px; overflow: hidden;
+  }
+  .step {
+    background: rgba(255,255,255,0.04);
+    padding: 2rem 1.5rem; text-align: center;
+    position: relative;
+  }
+  .step-num {
+    width: 42px; height: 42px;
+    background: var(--gold); color: var(--dark-green);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 1.1rem;
+    margin: 0 auto 1rem;
+    font-family: 'Playfair Display', serif;
+  }
+  .step h4 { font-size: 0.85rem; color: var(--white); font-weight: 700; margin-bottom: 0.5rem; letter-spacing: 0.04em; }
+  .step p { font-size: 0.8rem; color: rgba(255,255,255,0.65); line-height: 1.5; }
+
+  /* ── TRUST / PROOF ── */
+  .proof-section { background: var(--cream); }
+  .proof-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem; margin-top: 2.5rem;
+  }
+  .proof-card {
+    background: var(--white); border-radius: 8px; padding: 1.75rem;
+    border-left: 4px solid var(--med-green);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  }
+  .proof-icon { font-size: 1.75rem; margin-bottom: 0.75rem; }
+  .proof-card h4 { font-weight: 700; color: var(--dark-green); margin-bottom: 0.5rem; font-size: 0.95rem; }
+  .proof-card p { font-size: 0.88rem; color: var(--gray); line-height: 1.6; }
+
+  /* ── COMPLIANCE ── */
+  .compliance-section { background: var(--warm-white); }
+  .compliance-table {
+    width: 100%; border-collapse: collapse;
+    margin-top: 2rem; font-size: 0.9rem;
+    border-radius: 8px; overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  }
+  .compliance-table thead tr { background: var(--dark-green); }
+  .compliance-table thead th {
+    padding: 1rem 1.25rem; text-align: left;
+    color: var(--white); font-weight: 700;
+    font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase;
+  }
+  .compliance-table tbody tr:nth-child(even) { background: var(--cream); }
+  .compliance-table tbody tr:hover { background: var(--pale-green); }
+  .compliance-table td { padding: 0.85rem 1.25rem; color: var(--dark); border-bottom: 1px solid rgba(0,0,0,0.06); }
+  .compliance-table td:first-child { font-weight: 600; color: var(--dark-green); }
+  .badge {
+    display: inline-block;
+    padding: 0.2rem 0.7rem; border-radius: 20px;
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .badge-green { background: var(--pale-green); color: var(--dark-green); }
+  .badge-gold { background: #FDF2D8; color: var(--gold); }
+
+  /* ── FAQ ── */
+  .faq-section { background: var(--cream); }
+  .faq-list { margin-top: 2.5rem; max-width: 760px; }
+  .faq-item {
+    background: var(--white); border-radius: 6px;
+    margin-bottom: 0.75rem; overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.07);
+  }
+  .faq-q {
+    padding: 1.2rem 1.5rem; cursor: pointer;
+    font-weight: 700; color: var(--dark-green);
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.95rem;
+    user-select: none;
+  }
+  .faq-q::after { content: '+'; font-size: 1.4rem; color: var(--med-green); font-weight: 300; transition: transform 0.2s; }
+  .faq-item.open .faq-q::after { transform: rotate(45deg); }
+  .faq-a {
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.2s;
+    font-size: 0.9rem; color: var(--gray); line-height: 1.7;
+  }
+  .faq-item.open .faq-a { max-height: 300px; padding: 0 1.5rem 1.25rem; }
+
+  /* ── SAMPLE CTA ── */
+  .sample-section { background: var(--dark-green); text-align: center; }
+  .sample-section .section-title { color: var(--white); }
+  .sample-section p { color: rgba(255,255,255,0.8); font-size: 1.05rem; max-width: 560px; margin: 0 auto 2rem; }
+  .sample-form {
+    display: flex; gap: 0.75rem; max-width: 560px;
+    margin: 0 auto; flex-wrap: wrap; justify-content: center;
+  }
+  .sample-form input {
+    flex: 1; min-width: 200px;
+    padding: 0.85rem 1.25rem;
+    border: none; border-radius: 4px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.95rem; color: var(--dark);
+    background: rgba(255,255,255,0.95);
+  }
+  .sample-form input::placeholder { color: #999; }
+  .sample-form input:focus { outline: 2px solid var(--gold); }
+  .sample-form .btn-primary { flex-shrink: 0; white-space: nowrap; }
+  .sample-note { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 1rem; }
+
+  /* ── RESOURCES ── */
+  .resources-section { background: var(--warm-white); }
+  .resource-cards {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.25rem; margin-top: 2.5rem;
+  }
+  .resource-card {
+    background: var(--white); border-radius: 8px; padding: 1.75rem;
+    border: 1px solid rgba(0,0,0,0.07);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    transition: box-shadow 0.2s;
+    text-decoration: none;
+  }
+  .resource-card:hover { box-shadow: 0 6px 20px rgba(45,80,22,0.1); }
+  .resource-icon { font-size: 1.75rem; margin-bottom: 0.75rem; }
+  .resource-card h4 { font-weight: 700; color: var(--dark-green); margin-bottom: 0.4rem; font-size: 0.9rem; }
+  .resource-card p { font-size: 0.82rem; color: var(--gray); line-height: 1.5; margin-bottom: 0.75rem; }
+  .resource-link { font-size: 0.8rem; font-weight: 700; color: var(--med-green); letter-spacing: 0.04em; text-transform: uppercase; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--dark);
+    padding: 3rem 2.5rem;
+    text-align: center;
+  }
+  .footer-logo {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 700; font-size: 0.9rem;
+    color: var(--gold-light); letter-spacing: 0.12em;
+    text-transform: uppercase; margin-bottom: 1rem;
+  }
+  .footer-tagline { color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-bottom: 1.5rem; }
+  .footer-contact { color: rgba(255,255,255,0.75); font-size: 0.9rem; margin-bottom: 0.4rem; }
+  .footer-contact a { color: var(--gold-light); text-decoration: none; }
+  .footer-legal { color: rgba(255,255,255,0.3); font-size: 0.75rem; margin-top: 2rem; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .hero-inner, .two-col { grid-template-columns: 1fr; gap: 2rem; }
+    .steps { grid-template-columns: 1fr 1fr; }
+    .proof-grid { grid-template-columns: 1fr; }
+    nav { padding: 0 1.25rem; }
+    .nav-links { display: none; }
+    section { padding: 3.5rem 1.25rem; }
+    .hero { padding: 3rem 1.25rem; }
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero h1, .hero-body, .hero-cta-group { animation: fadeUp 0.7s ease both; }
+  .hero-body { animation-delay: 0.12s; }
+  .hero-cta-group { animation-delay: 0.24s; }
+  .hero-image-panel { animation: fadeUp 0.7s 0.32s ease both; }
+
+  /* ── MOBILE OPTIMIZATION ── */
+@media screen and (max-width: 768px) {
+  /* Table container ko scrollable banane ke liye */
+  .compliance-section .section-inner {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .compliance-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto; /* Horizontal scroll enable karega */
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap; /* Text ko wrap hone se rokega taake columns khule rahein */
+  }
+
+  .compliance-table td, 
+  .compliance-table th {
+    padding: 0.75rem 1rem; /* Mobile par thoda compact padding */
+    min-width: 120px; /* Har column ko thodi jagah dena zaroori hai */
+  }
+
+  /* Product column ko thoda bada rakhne ke liye */
+  .compliance-table tr:nth-child(odd) td:first-child{
+    background: #fdfaf4 !important;
+  }
+  .compliance-table tr:nth-child(even) td:first-child{
+    background: #F7F2E8 !important;
+  }
+  .compliance-table td:first-child, 
+  .compliance-table th:first-child {
+    min-width: 150px;
+    position: sticky; /* Agar aap chahte hain ke pehla column freeze rahe */
+    left: 0;
+    background: inherit;
+    z-index: 1;
+  }
+  
+  .section-title {
+    font-size: 1.5rem; /* Heading mobile ke liye thodi choti */
+  }
+}
+
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Wisconsin Food Hub<br>Cooperative</div>
+  <ul class="nav-links">
+    <li><a href="#products">Products</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#compliance">Compliance</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#resources">Resources</a></li>
+    <li><a href="#sample" class="nav-cta">Request Sample</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <p class="hero-eyebrow">VAPG School Program — Tend &amp; Table Packs</p>
+      <h1>Make Wisconsin-Grown Produce <em>Easy</em> for Your Schools</h1>
+      <p class="hero-body">Fresh vegetables grown by Wisconsin farmers — delivered washed, cut, and ready to serve. Zero prep. USDA-compliant. Informal-purchase eligible. And no, you don't need to run a bid.</p>
+      <div class="hero-cta-group">
+        <a href="#sample" class="btn-primary">Request Free Sample Kit</a>
+        <a href="#how" class="btn-secondary">See How It Works</a>
+      </div>
+    </div>
+    <div class="hero-image-panel">
+      <div class="hero-stat-card">
+        <div class="stat-num">5</div>
+        <div class="stat-label">Wisconsin-grown grab-and-go SKUs, ready now</div>
+      </div>
+      <div class="hero-stat-card">
+        <div class="stat-num">½ cup</div>
+        <div class="stat-label">USDA vegetable credit per serving, every product</div>
+      </div>
+      <div class="hero-stat-card">
+        <div class="stat-num">47</div>
+        <div class="stat-label">Wisconsin school &amp; ECE sites served through WFHC programs</div>
+      </div>
+      <div class="hero-stat-card">
+        <div class="stat-num">$0</div>
+        <div class="stat-label">Prep labor required. Open, portion, serve.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-inner">
+    <div class="trust-item"><span class="trust-dot"></span>Local Sourcing</div>
+    <div class="trust-item"><span class="trust-dot"></span>Food Safety Certified</div>
+    <div class="trust-item"><span class="trust-dot"></span>PTI Traceability</div>
+    <div class="trust-item"><span class="trust-dot"></span>Refrigerated Delivery</div>
+    <div class="trust-item"><span class="trust-dot"></span>USDA-Compliant Packs</div>
+    <div class="trust-item"><span class="trust-dot"></span>No Bid Required</div>
+    <div class="trust-item"><span class="trust-dot"></span>Farm to School Ready</div>
+  </div>
+</div>
+
+<!-- PROBLEM / SOLUTION -->
+<section class="problem-section">
+  <div class="section-inner">
+    <p class="section-label">The Reality</p>
+    <h2 class="section-title">Local produce is a great idea. Getting it to the lunch line is the hard part.</h2>
+    <div class="two-col" style="margin-top:2.5rem;">
+      <div class="problem-card">
+        <h3>What you're dealing with</h3>
+        <ul class="problem-list">
+          <li>Kitchen staff stretched thin — no time for prep</li>
+          <li>USDA vegetable subgroup requirements to hit</li>
+          <li>Local sourcing goals with no clear vendor pathway</li>
+          <li>Food safety and traceability documentation to manage</li>
+          <li>Procurement rules that make trying new vendors feel risky</li>
+          <li>Substitution surprises from vendors who don't ask first</li>
+        </ul>
+      </div>
+      <div class="solution-card">
+        <h3>What WFHC takes off your plate</h3>
+        <p>We're a farmer-led cooperative built to make local purchasing practical for institutions. We coordinate the farm network, cold-chain aggregation, food safety documentation, and refrigerated delivery — so your team can add Wisconsin-grown produce to your program without adding a single prep step.</p>
+        <br>
+        <p style="color:var(--gold-light); font-weight:700;">Every product arrives washed, cut, and ready to serve. Open the case. Portion. Plate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products-section" id="products">
+  <div class="section-inner">
+    <p class="section-label">Current Availability</p>
+    <h2 class="section-title">What Schools Can Order Right Now</h2>
+    <p class="section-body">All starter items are Wisconsin-grown, minimally processed, and formatted for grab-and-go lines, snack programs, and quick-prep service. All qualify as informal purchases in most Wisconsin districts.</p>
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-card-photo">🥦</div>
+        <div class="product-card-body">
+          <h4>Broccoli Florets</h4>
+          <div class="sku">WFHC-VEG-BRF-350</div>
+          <div class="price">$17.35/case &nbsp;·&nbsp; 3.5 lb</div>
+          <span class="usda-tag">Dark Green Veg</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card-photo">🌿</div>
+        <div class="product-card-body">
+          <h4>Cauliflower Florets</h4>
+          <div class="sku">WFHC-VEG-CAF-550</div>
+          <div class="price">$27.25/case &nbsp;·&nbsp; 5.5 lb</div>
+          <span class="usda-tag">Other Veg</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card-photo">🥕</div>
+        <div class="product-card-body">
+          <h4>Carrot Matchsticks</h4>
+          <div class="sku">WFHC-VEG-CAM-650</div>
+          <div class="price">$32.25/case &nbsp;·&nbsp; 6.5 lb</div>
+          <span class="usda-tag">Red/Orange Veg</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card-photo">🔴</div>
+        <div class="product-card-body">
+          <h4>Radish Matchsticks</h4>
+          <div class="sku">WFHC-VEG-RDM-660</div>
+          <div class="price">$32.75/case &nbsp;·&nbsp; 6.6 lb</div>
+          <span class="usda-tag">Red/Orange Veg</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card-photo">🌱</div>
+        <div class="product-card-body">
+          <h4>Kohlrabi Matchsticks</h4>
+          <div class="sku">WFHC-VEG-KHM-108</div>
+          <div class="price">$53.60/case &nbsp;·&nbsp; 10.8 lb</div>
+          <span class="usda-tag">Other Veg</span>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top:1.75rem; font-size:0.88rem; color:var(--gray);">All items: <strong>½ cup serving = ½ cup USDA vegetable credit</strong>. Full product spec sheets (ingredients, allergens, shelf life, substitution policy, lot coding) available for download below or by request.</p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section" id="how">
+  <div class="section-inner">
+    <p class="section-label">The Ordering Process</p>
+    <h2 class="section-title">Simple. Predictable. Repeatable.</h2>
+    <p class="section-body">Ordering from WFHC is designed to fit your weekly rhythm — not add to it.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Connect</h4>
+        <p>Set up your account with WFHC. Billing, delivery address, ordering contact.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>Weekly Availability</h4>
+        <p>Receive our availability list each week. Know what's fresh and ready before you order.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>Place Your Order</h4>
+        <p>Order by the weekly cutoff. Consistent windows mean consistent menu planning.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h4>Refrigerated Delivery</h4>
+        <p>Cold-chain delivery to your dock. Receiving docs on every shipment. No guessing.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <h4>Serve &amp; Repeat</h4>
+        <p>Open. Portion. Plate. Use our promo toolkit to build student and parent support.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="proof-section">
+  <div class="section-inner">
+    <p class="section-label">Why WFHC</p>
+    <h2 class="section-title">The things nutrition directors actually need to know</h2>
+    <div class="proof-grid">
+      <div class="proof-card">
+        <div class="proof-icon">🛡️</div>
+        <h4>Food Safety You Can Document</h4>
+        <p>HACCP/GHP/Harmonized GAP-certified warehouse. GAP-certified farm partners. PTI-aligned traceability on every case. Food safety manager on staff — with a direct phone number.</p>
+      </div>
+      <div class="proof-card">
+        <div class="proof-icon">🚚</div>
+        <h4>Cold Chain, Start to Finish</h4>
+        <p>Refrigerated aggregation warehouse in Waupaca. Refrigerated transport to your dock. Temperature-verified receiving. We don't break the cold chain, period.</p>
+      </div>
+      <div class="proof-card">
+        <div class="proof-icon">📋</div>
+        <h4>No Surprise Substitutions</h4>
+        <p>If a crop is short, we call you 48 hours before your delivery. We offer options. You approve in writing. We ship only what you authorized. Item code must match PO.</p>
+      </div>
+      <div class="proof-card">
+        <div class="proof-icon">🏫</div>
+        <h4>Proven School Experience</h4>
+        <p>WFHC has served 47 Wisconsin school and ECE sites across 27 counties — with Harvest of the Month kits, recipe development, and promo resources already in use.</p>
+      </div>
+      <div class="proof-card">
+        <div class="proof-icon">🌾</div>
+        <h4>Farm to School Documentation</h4>
+        <p>100% Wisconsin-grown. Origin documentation on every case. WFHC is named by DPI as a Wisconsin food hub. Local geographic preference qualifications supported.</p>
+      </div>
+      <div class="proof-card">
+        <div class="proof-icon">📄</div>
+        <h4>Bid-Ready Spec Sheets</h4>
+        <p>Full product spec sheets for every SKU: item code, case pack, allergens, shelf life, cold-chain requirements, substitution policy, and traceability/recall process. Ready for your files.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPLIANCE TABLE -->
+<section class="compliance-section" id="compliance">
+  <div class="section-inner">
+    <p class="section-label">Procurement &amp; Compliance</p>
+    <h2 class="section-title">The procurement facts, plainly stated</h2>
+    <p class="section-body">Wisconsin DPI informal purchasing thresholds mean most districts can pilot these products without a formal bid. Here's how it works for each product.</p>
+    <table class="compliance-table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>USDA Veg Subgroup</th>
+          <th>Meal Credit</th>
+          <th>Informal Purchase</th>
+          <th>Farm to School</th>
+          <th>Case Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Broccoli Florets</td>
+          <td>Dark Green</td>
+          <td>½ cup = ½ cup</td>
+          <td><span class="badge badge-green">✓ Eligible</span></td>
+          <td><span class="badge badge-green">✓ 100% WI-Grown</span></td>
+          <td><strong>$17.35</strong></td>
+        </tr>
+        <tr>
+          <td>Cauliflower Florets</td>
+          <td>Other</td>
+          <td>½ cup = ½ cup</td>
+          <td><span class="badge badge-green">✓ Eligible</span></td>
+          <td><span class="badge badge-green">✓ 100% WI-Grown</span></td>
+          <td><strong>$27.25</strong></td>
+        </tr>
+        <tr>
+          <td>Carrot Matchsticks</td>
+          <td>Red/Orange</td>
+          <td>½ cup = ½ cup</td>
+          <td><span class="badge badge-green">✓ Eligible</span></td>
+          <td><span class="badge badge-green">✓ 100% WI-Grown</span></td>
+          <td><strong>$32.25</strong></td>
+        </tr>
+        <tr>
+          <td>Radish Matchsticks</td>
+          <td>Red/Orange</td>
+          <td>½ cup = ½ cup</td>
+          <td><span class="badge badge-green">✓ Eligible</span></td>
+          <td><span class="badge badge-green">✓ 100% WI-Grown</span></td>
+          <td><strong>$32.75</strong></td>
+        </tr>
+        <tr>
+          <td>Kohlrabi Matchsticks</td>
+          <td>Other</td>
+          <td>½ cup = ½ cup</td>
+          <td><span class="badge badge-green">✓ Eligible</span></td>
+          <td><span class="badge badge-green">✓ 100% WI-Grown</span></td>
+          <td><strong>$53.60</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top:1rem; font-size:0.82rem; color:var(--gray);">Wisconsin DPI informal purchasing: up to $10,000/transaction (districts may set higher thresholds up to $50,000 with DPI self-certification). Effective July 1, 2024: "local" may be used as a specification for unprocessed agricultural products in solicitations. Minimally processed forms (chopped, sliced, matchstick) qualify. <a href="https://dpi.wi.gov" style="color:var(--med-green);">Source: WI DPI</a></p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="section-inner">
+    <p class="section-label">Common Questions</p>
+    <h2 class="section-title">What nutrition directors ask us</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Do I need to run a bid to purchase from WFHC?</div>
+        <div class="faq-a">Probably not. All five starter items qualify for informal purchasing. Most Wisconsin districts can purchase up to $10,000 per transaction without a formal bid — and DPI-approved thresholds can go up to $50,000. Check your district's micro-purchase policy. These products are priced to make a pilot easy.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What if you run out of something I ordered?</div>
+        <div class="faq-a">We notify you at least 48 hours before your scheduled delivery if there's a supply issue. We offer alternatives from our catalog at the same or lower price. You approve in writing before we ship anything. We never send a substitution without your explicit authorization — ever.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What food safety documentation do you provide?</div>
+        <div class="faq-a">Every case ships with PTI-aligned lot coding, farm name and USDA Establishment # on the label. Our warehouse is HACCP/GHP/Harmonized GAP certified. Farm partners are GAP-certified and audited. We have a food safety manager on staff and a 4-hour recall response commitment. Full traceability documentation available on request.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I use this for my Farm to School reporting?</div>
+        <div class="faq-a">Yes. We provide origin documentation for every case. All products are grown by named Wisconsin cooperative member farms. WFHC is listed by Wisconsin DPI as a food hub aggregator. As of July 1, 2024, "local" may be used as a procurement specification for products like ours under USDA rules.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What does delivery look like for my district?</div>
+        <div class="faq-a">We operate refrigerated routes out of our Waupaca warehouse. You'll receive weekly availability, place your order by a set cutoff, and we confirm your delivery day and window. Receiving documentation is provided with every delivery. Contact us to confirm route coverage for your district.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I get spec sheets for our purchasing files?</div>
+        <div class="faq-a">Yes — complete one-page spec sheets for every SKU are available for download in the Resources section below. Each sheet includes item code, case pack, unit size, ingredients, allergen declaration, shelf life, storage requirements, substitution policy, and traceability/recall information.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SAMPLE CTA -->
+<section class="sample-section" id="sample">
+  <div class="section-inner">
+    <h2 class="section-title">Try it before you commit</h2>
+    <p>We'll send your team a complimentary Tend &amp; Table sample kit — all five products, spec sheets, and ordering guide included. No paperwork. No commitment.</p>
+    <form class="sample-form" onsubmit="handleSampleRequest(event)">
+      <input type="text" placeholder="Your name" id="sample-name" required>
+      <input type="email" placeholder="Email address" id="sample-email" required>
+      <input type="text" placeholder="School / District" id="sample-district">
+      <button type="submit" class="btn-primary">Request Free Sample Kit →</button>
+    </form>
+    <p class="sample-note">Or call 715-227-1990 or email <strong>sales@wifoodhub.com</strong> to request directly.</p>
+    <div id="sample-confirm" style="display:none; margin-top:1.5rem; color:var(--gold-light); font-weight:700; font-size:1.05rem;">
+      ✓ Request received! Our schools team will be in touch within 1 business day.
+    </div>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section class="resources-section" id="resources">
+  <div class="section-inner">
+    <p class="section-label">Downloads &amp; Resources</p>
+    <h2 class="section-title">Everything you need to move forward</h2>
+    <div class="resource-cards">
+      <a href="#" class="resource-card">
+        <div class="resource-icon">📋</div>
+        <h4>Product Spec Sheets</h4>
+        <p>One-page spec sheet for each product — procurement-ready with all required fields.</p>
+        <div class="resource-link">Download All 5 →</div>
+      </a>
+      <a href="#" class="resource-card">
+        <div class="resource-icon">📦</div>
+        <h4>Ordering Guide</h4>
+        <p>How to set up your account, receive availability, place orders, and manage delivery.</p>
+        <div class="resource-link">Download PDF →</div>
+      </a>
+      <a href="#" class="resource-card">
+        <div class="resource-icon">💰</div>
+        <h4>Pricing Sheet</h4>
+        <p>Current pricing for all starter items in both bulk and bagged formats.</p>
+        <div class="resource-link">Download PDF →</div>
+      </a>
+      <a href="#" class="resource-card">
+        <div class="resource-icon">⚖️</div>
+        <h4>Procurement Quick Guide</h4>
+        <p>Wisconsin-specific guidance on informal purchasing, local preference rules, and funding sources.</p>
+        <div class="resource-link">Download PDF →</div>
+      </a>
+      <a href="#" class="resource-card">
+        <div class="resource-icon">🎨</div>
+        <h4>Cafeteria Promo Toolkit</h4>
+        <p>Tray line cards, poster templates, newsletter blurbs, and social captions — ready to use.</p>
+        <div class="resource-link">Download Toolkit →</div>
+      </a>
+      <a href="#" class="resource-card">
+        <div class="resource-icon">🎓</div>
+        <h4>Getting Started Webinar</h4>
+        <p>10-minute video walkthrough: what to order, how ordering works, and how to place your first order.</p>
+        <div class="resource-link">Watch Now →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Wisconsin Food Hub Cooperative</div>
+  <p class="footer-tagline">A farmer-led cooperative growing a vibrant local and regional food system.</p>
+  <p class="footer-contact">📞 <a href="tel:7152271990">715-227-1990</a> &nbsp;|&nbsp; ✉ <a href="mailto:sales@wifoodhub.com">sales@wifoodhub.com</a> &nbsp;|&nbsp; <a href="https://wifoodhub.com">wifoodhub.com</a></p>
+  <p class="footer-contact">E502 State Hwy 54 · Waupaca, WI 54981</p>
+  <p class="footer-legal">© 2025 Wisconsin Food Hub Cooperative. All rights reserved. &nbsp;|&nbsp; [Privacy Policy] &nbsp;|&nbsp; [Terms of Use]<br>This institution is an equal opportunity provider.</p>
+</footer>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // Sample form mock submit
+  function handleSampleRequest(e) {
+    e.preventDefault();
+    document.getElementById('sample-confirm').style.display = 'block';
+    e.target.style.display = 'none';
+  }
+
+  // Scroll-triggered fade-in for cards
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        entry.target.style.animation = `fadeUp 0.5s ${i * 0.07}s ease both`;
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.product-card, .proof-card, .step, .resource-card').forEach(el => {
+    el.style.opacity = '0';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
