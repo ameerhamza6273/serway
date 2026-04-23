@@ -5962,6 +5962,6 @@ color: #000 !important;
 .hl_v2-location_switcher{
   z-index: 999999 !important;
 }
-div[class="grid-stack-item ui-draggable-disabled ui-resizable-disabled"] .text-sm.text-gray-600.font-normal{
+div[class="grid-stack-item ui-draggable-disabled ui-resizable-disabled"] div.text-sm.text-gray-600.font-normal{
   color:#000 !important;
 }
