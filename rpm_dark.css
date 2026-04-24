@@ -5980,3 +5980,7 @@ table td[class="hr-data-table__body-cell hr-data-table-bdr-rgt"] #folder-name-ta
 #links-container-div table tr:hover td{
   background:#ddd !important;
 }
+
+#analytics-app-container .sla-dashboard-canvas{
+  background : #2d2739 !important;
+}
