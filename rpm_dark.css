@@ -5965,3 +5965,7 @@ color: #000 !important;
 div[class="grid-stack-item ui-draggable-disabled ui-resizable-disabled"] div.text-sm.text-gray-600.font-normal{
   color:#000 !important;
 }
+
+#conversations-list div[class="flex flex-col items-stretch w-full bg-[#F7F9FD] pl-3 py-2.5"]{
+  background: #0e0923 !important;
+}
