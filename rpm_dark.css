@@ -5969,3 +5969,11 @@ div[class="grid-stack-item ui-draggable-disabled ui-resizable-disabled"] div.tex
 #conversations-list div[class="flex flex-col items-stretch w-full bg-[#F7F9FD] pl-3 py-2.5"]{
   background: #0e0923 !important;
 }
+
+
+table td[class="hr-data-table__body-cell hr-data-table-bdr-rgt"] #folder-name-tag{
+  background : #2d2739 !important;
+}
+table td[class="hr-data-table__body-cell hr-data-table-bdr-rgt"] #folder-name-tag svg{
+  color : #fff !important;
+}
