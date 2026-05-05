@@ -5984,3 +5984,41 @@ table td[class="hr-data-table__body-cell hr-data-table-bdr-rgt"] #folder-name-ta
 #analytics-app-container .sla-dashboard-canvas{
   background : #2d2739 !important;
 }
+
+#ask-ai-container-pmd .askai-sidebar__main ,
+#ask-ai-container-pmd .askai-left-panel {
+  background: #0e0923 !important;
+}
+#ask-ai-container-pmd
+.askai-composer-bar:before,
+#ask-ai-container-pmd .askai-welcome__input-group .askai-composer-bar__content{
+  background: #2d2739 !important;
+}
+#ask-ai-container-pmd .askai-welcome__input-group .askai-composer-bar__content textarea{
+color:#fff !important;
+}
+
+#secondary-gray{
+  border:1px solid #fff !important;
+  background: #2d2739 !important;
+}
+
+#ask-ai-container-pmd .askai-welcome__input-group .askai-composer-bar__content textarea {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important; /* Chrome autofill fix */
+}
+#ask-ai-container-pmd
+.hr-input__textarea-el {
+  color: #fff !important;
+}
+
+#ask-ai-container-pmd .askai-sidebar__main ,
+#ask-ai-container-pmd .askai-left-panel {
+  background: #0e0923 !important;
+}
+#ask-ai-container-pmd
+.askai-composer-bar:before,
+#ask-ai-container-pmd .askai-welcome__input-group .askai-composer-bar__content{
+  background: #2d2739 !important;
+}
+
