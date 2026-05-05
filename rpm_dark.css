@@ -6026,3 +6026,7 @@ color:#fff !important;
 #ask-ai-container-pmd .chat-view__thoughts-drawer.chat-view__thoughts-drawer--open{
   background: #0e0923 !important;
 }
+
+.new-smartlist-ui #import-btn:hover{
+  background: #E7246F !important;
+}
