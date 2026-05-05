@@ -6027,6 +6027,6 @@ color:#fff !important;
   background: #0e0923 !important;
 }
 
-.new-smartlist-ui #import-btn:hover{
+.new-smartlist-ui button#import-btn:hover{
   background: #E7246F !important;
 }
