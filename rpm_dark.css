@@ -6034,3 +6034,13 @@ color:#fff !important;
 #hr-button-v-0-0-0-1-label{
   color: #000 !important;
 }
+
+#conv-menu-item-team-inbox{
+  background:#2d2739 !important ;
+}
+#create-conversation-modal{
+  background:#0e0923 !important;
+}
+#create-conversation-modal button{
+  background:#2d2739 !important;
+}
