@@ -6048,3 +6048,11 @@ color:#fff !important;
 #inbox-search-input{
   background: #2d2739 !important;
 }
+
+#conversations-layout .menu-item.child-item.menu-item-container.active{
+  background: #2d2739 !important;
+}
+
+#conversations-layout .menu-item.child-item.menu-item-container svg{
+  color: #fff !important;
+}
