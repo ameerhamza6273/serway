@@ -6056,3 +6056,7 @@ color:#fff !important;
 #conversations-layout .menu-item.child-item.menu-item-container svg{
   color: #fff !important;
 }
+.askai-sidebar__main,
+.askai-sidebar{
+    background: #2d2739 !important;
+}
