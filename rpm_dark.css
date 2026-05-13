@@ -6060,3 +6060,32 @@ color:#fff !important;
 .askai-sidebar{
     background: #2d2739 !important;
 }
+
+#bulkActionsList #bulk-actions-data-table-wrapper{
+  background: #2d2739 !important;
+}
+#bulkActionsList .crmObjectsSettingsApp .text-green-800{
+  color:#000 !important;
+}
+#bulk-actions-data-table tr:hover td{
+  background: #ddd !important;
+}
+.model-picker__menu.model-picker__menu--bottom{
+  border:1px solid #ddd !important
+}
+.model-picker__menu.model-picker__menu--bottom,
+.askai-composer-bar::before,
+.askai-composer-bar__content{
+  background: #0e0923 !important;
+}
+
+button#hr-button-v-3-7,
+button#hr-button-v-3-6,
+button#hr-button-v-3-5,
+button#hr-button-v-3-4{
+  background: #2d2739 !important;
+}
+.askai-composer-bar__content textarea {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important; /* Chrome autofill fix */
+}
