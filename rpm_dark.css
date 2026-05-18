@@ -6089,3 +6089,10 @@ button#hr-button-v-3-4{
   color: #fff !important;
   -webkit-text-fill-color: #fff !important; /* Chrome autofill fix */
 }
+
+.hr-tooltip{
+  background: #0e0923 !important;
+}
+.askai-sidebar-header__right button.hr-button:hover svg{
+  color: #000 !important;
+}
