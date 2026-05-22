@@ -1,889 +1,2150 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wisconsin-Grown School Produce | Wisconsin Food Hub Cooperative</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --dark-green: #2D5016;
-    --med-green: #4A7C27;
-    --light-green: #6BAF2E;
-    --pale-green: #EAF4DC;
-    --gold: #C8921A;
-    --gold-light: #F5D990;
-    --cream: #F7F2E8;
-    --warm-white: #FDFAF4;
-    --dark: #1E2B14;
-    --gray: #5A5A4A;
-    --red: #C0392B;
-    --white: #FFFFFF;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GHL Expert Portfolio</title>
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
+    rel="stylesheet">
 
-  html { scroll-behavior: smooth; }
+  <style>
+    :root {
+      --ghl-blue: #1a73e8;
+      --neon-cyan: #00f2fe;
+      --dark-bg: #05080f;
+      --card-dark: rgba(19, 28, 46, 0.7);
+    }
 
-  body {
-    font-family: 'Source Sans 3', sans-serif;
-    background: var(--warm-white);
-    color: var(--dark);
-    line-height: 1.65;
-  }
+    body {
+      background-color: var(--dark-bg);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
 
-  /* ── NAV ── */
-  nav {
-    position: sticky; top: 0; z-index: 100;
-    background: var(--dark-green);
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 0 2.5rem;
-    height: 60px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+/* --- Navbar: White Glass Look --- */
+.bg-white-glass {
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+}
+
+.brand-box {
+  width: 38px; 
+  height: 38px; 
+  background: var(--ghl-blue); 
+  border-radius: 10px; 
+  margin-right: 12px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+}
+
+.brand-text {
+  color: #0f172a;
+  font-size: 1.4rem;
+}
+
+.navbar .nav-link {
+  color: #475569 !important;
+  font-weight: 600;
+}
+
+.navbar .nav-link:hover {
+  color: var(--ghl-blue) !important;
+}
+
+/* --- Hero Section with BG Image --- */
+.hero-section-premium {
+  padding: 220px 0 150px 0;
+  position: relative;
+  background-color: var(--dark-bg);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Yahan apni image ka link lagayen */
+  background-image: linear-gradient(to right, rgba(5, 8, 15, 0.95), rgba(5, 8, 15, 0.7)), 
+                    url('https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=2070');
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.custom-badge {
+  background: rgba(26, 115, 232, 0.1);
+  color: var(--neon-cyan);
+  border: 1px solid rgba(0, 210, 255, 0.3);
+  padding: 10px 20px !important;
+  font-size: 0.8rem;
+}
+
+.hero-title-premium {
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 900;
+  letter-spacing: -2px;
+  color: #fff;
+  line-height: 1;
+}
+
+.hero-subtitle {
+  color: #94a3b8;
+  line-height: 1.8;
+  max-width: 550px;
+}
+
+/* --- 3D Glass Card --- */
+.hero-visual-card {
+  position: relative;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 40px;
+  padding: 20px;
+  backdrop-filter: blur(20px);
+  transform: rotateY(-15deg) rotateX(10deg);
+  box-shadow: 0 50px 80px rgba(0,0,0,0.5);
+  animation: float3D 6s ease-in-out infinite;
+}
+
+@keyframes float3D {
+  0%, 100% { transform: rotateY(-15deg) rotateX(10deg) translateY(0); }
+  50% { transform: rotateY(-10deg) rotateX(5deg) translateY(-20px); }
+}
+
+.tag {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 6px 15px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+}
+
+/* Mobile Fixes */
+@media (max-width: 991px) {
+  .hero-bg-overlay {
+    background-image: linear-gradient(to bottom, rgba(5, 8, 15, 0.9), rgba(5, 8, 15, 0.9)), 
+                      url('https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=2070');
   }
-  .nav-logo {
-    font-family: 'Source Sans 3', sans-serif;
-    font-weight: 700; font-size: 0.8rem;
-    color: var(--gold-light);
-    letter-spacing: 0.12em; text-transform: uppercase;
-    line-height: 1.3;
-  }
-  .nav-links { display: flex; gap: 1.8rem; list-style: none; }
-  .nav-links a {
-    color: rgba(255,255,255,0.85); text-decoration: none;
-    font-size: 0.85rem; font-weight: 600; letter-spacing: 0.04em;
-    transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--gold-light); }
-  .nav-cta {
-    background: var(--gold); color: var(--dark-green) !important;
-    padding: 0.45rem 1.1rem; border-radius: 4px;
+}
+/* --- Navbar Button Fix --- */
+.btn-nav-primary {
+    background: var(--ghl-blue) !important;
+    color: white !important;
+    border-radius: 8px !important;
+    padding: 10px 22px !important;
     font-weight: 700 !important;
-    transition: background 0.2s !important;
-  }
-  .nav-cta:hover { background: var(--gold-light) !important; }
-
-  /* ── HERO ── */
-  .hero {
-    background: var(--dark-green);
-    position: relative; overflow: hidden;
-    padding: 5rem 2.5rem 4rem;
-  }
-  .hero::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: 
-      radial-gradient(ellipse at 80% 20%, rgba(107,175,46,0.18) 0%, transparent 60%),
-      radial-gradient(ellipse at 10% 90%, rgba(200,146,26,0.12) 0%, transparent 50%);
-    pointer-events: none;
-  }
-  .hero-inner {
-    max-width: 1100px; margin: 0 auto;
-    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
-    position: relative; z-index: 1;
-  }
-  .hero-eyebrow {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 0.75rem; font-weight: 700;
-    letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--gold-light); margin-bottom: 1rem;
-  }
-  .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2.2rem, 4vw, 3.2rem);
-    font-weight: 900; line-height: 1.1;
-    color: var(--white); margin-bottom: 1.5rem;
-  }
-  .hero h1 em { color: var(--gold-light); font-style: italic; }
-  .hero-body {
-    color: rgba(255,255,255,0.82); font-size: 1.05rem;
-    max-width: 480px; margin-bottom: 2rem; line-height: 1.7;
-  }
-  .hero-cta-group { display: flex; gap: 1rem; flex-wrap: wrap; }
-  .btn-primary {
-    background: var(--gold); color: var(--dark-green);
-    padding: 0.85rem 2rem; border-radius: 4px;
-    font-weight: 700; font-size: 0.95rem;
-    text-decoration: none; letter-spacing: 0.02em;
-    border: 2px solid var(--gold);
-    transition: all 0.2s; display: inline-block;
-  }
-  .btn-primary:hover { background: var(--gold-light); border-color: var(--gold-light); }
-  .btn-secondary {
-    background: transparent; color: var(--white);
-    padding: 0.85rem 2rem; border-radius: 4px;
-    font-weight: 600; font-size: 0.95rem;
-    text-decoration: none;
-    border: 2px solid rgba(255,255,255,0.4);
-    transition: all 0.2s; display: inline-block;
-  }
-  .btn-secondary:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
-  .hero-image-panel {
-    display: flex; flex-direction: column; gap: 1rem;
-  }
-  .hero-stat-card {
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.15);
-    border-left: 4px solid var(--gold);
-    border-radius: 6px; padding: 1.2rem 1.5rem;
-    backdrop-filter: blur(4px);
-  }
-  .hero-stat-card .stat-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.2rem; font-weight: 900; color: var(--gold-light);
-    line-height: 1; margin-bottom: 0.25rem;
-  }
-  .hero-stat-card .stat-label {
-    font-size: 0.85rem; color: rgba(255,255,255,0.75); font-weight: 600;
-    letter-spacing: 0.04em;
-  }
-
-  /* ── TRUST STRIP ── */
-  .trust-strip {
-    background: var(--med-green);
-    padding: 1rem 2.5rem;
-  }
-  .trust-inner {
-    max-width: 1100px; margin: 0 auto;
-    display: flex; gap: 2.5rem; flex-wrap: wrap;
-    justify-content: center; align-items: center;
-  }
-  .trust-item {
-    display: flex; align-items: center; gap: 0.5rem;
-    color: var(--white); font-size: 0.8rem; font-weight: 600;
-    letter-spacing: 0.06em; text-transform: uppercase;
-  }
-  .trust-dot { width: 6px; height: 6px; background: var(--gold-light); border-radius: 50%; flex-shrink: 0; }
-
-  /* ── SECTIONS ── */
-  section { padding: 5rem 2.5rem; }
-  .section-inner { max-width: 1100px; margin: 0 auto; }
-  .section-label {
-    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em;
-    text-transform: uppercase; color: var(--med-green);
-    margin-bottom: 0.75rem;
-  }
-  .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(1.8rem, 3vw, 2.5rem);
-    font-weight: 700; color: var(--dark-green);
-    line-height: 1.2; margin-bottom: 1.25rem;
-  }
-  .section-body { font-size: 1.05rem; color: var(--gray); max-width: 640px; line-height: 1.75; }
-
-  /* ── PROBLEM/SOLUTION ── */
-  .problem-section { background: var(--cream); }
-  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
-  .problem-card {
-    background: var(--white);
-    border-radius: 8px; padding: 2rem;
-    border-top: 4px solid var(--red);
-    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
-  }
-  .problem-card h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.15rem; color: var(--red);
-    margin-bottom: 1rem;
-  }
-  .solution-card {
-    background: var(--dark-green);
-    border-radius: 8px; padding: 2rem;
-    border-top: 4px solid var(--gold);
-  }
-  .solution-card h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.15rem; color: var(--gold-light);
-    margin-bottom: 1rem;
-  }
-  .solution-card p { color: rgba(255,255,255,0.85); font-size: 0.95rem; line-height: 1.7; }
-  .problem-list { list-style: none; }
-  .problem-list li {
-    padding: 0.5rem 0; font-size: 0.95rem; color: var(--gray);
-    border-bottom: 1px solid rgba(0,0,0,0.06);
-    padding-left: 1.4rem; position: relative;
-  }
-  .problem-list li::before { content: '✗'; position: absolute; left: 0; color: var(--red); font-weight: 700; }
-
-  /* ── PRODUCTS ── */
-  .products-section { background: var(--warm-white); }
-  .products-grid {
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1.25rem; margin-top: 2.5rem;
-  }
-  .product-card {
-    background: var(--white);
-    border-radius: 8px; overflow: hidden;
-    border: 1px solid rgba(0,0,0,0.08);
-    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .product-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(45,80,22,0.12); }
-  .product-card-photo {
-    height: 140px; background: var(--pale-green);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 2.5rem;
-  }
-  .product-card-body { padding: 1.25rem; }
-  .product-card-body h4 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1rem; color: var(--dark-green);
-    margin-bottom: 0.4rem;
-  }
-  .product-card-body .sku { font-size: 0.72rem; color: var(--gray); letter-spacing: 0.05em; margin-bottom: 0.6rem; }
-  .product-card-body .price {
-    font-weight: 700; color: var(--med-green); font-size: 0.95rem;
-    margin-bottom: 0.3rem;
-  }
-  .product-card-body .usda-tag {
-    display: inline-block;
-    background: var(--pale-green); color: var(--dark-green);
-    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.05em;
-    padding: 0.2rem 0.55rem; border-radius: 20px;
+    font-size: 0.85rem !important;
     text-transform: uppercase;
-  }
+    transition: 0.3s;
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(26, 115, 232, 0.2) !important;
+}
 
-  /* ── HOW IT WORKS ── */
-  .how-section { background: var(--dark-green); }
-  .how-section .section-title { color: var(--white); }
-  .how-section .section-body { color: rgba(255,255,255,0.75); }
-  .how-section .section-label { color: var(--gold-light); }
-  .steps {
-    display: grid; grid-template-columns: repeat(5, 1fr);
-    gap: 1px; margin-top: 3rem;
-    background: rgba(255,255,255,0.1);
-    border-radius: 8px; overflow: hidden;
-  }
-  .step {
-    background: rgba(255,255,255,0.04);
-    padding: 2rem 1.5rem; text-align: center;
-    position: relative;
-  }
-  .step-num {
-    width: 42px; height: 42px;
-    background: var(--gold); color: var(--dark-green);
-    border-radius: 50%; display: flex; align-items: center; justify-content: center;
-    font-weight: 900; font-size: 1.1rem;
-    margin: 0 auto 1rem;
-    font-family: 'Playfair Display', serif;
-  }
-  .step h4 { font-size: 0.85rem; color: var(--white); font-weight: 700; margin-bottom: 0.5rem; letter-spacing: 0.04em; }
-  .step p { font-size: 0.8rem; color: rgba(255,255,255,0.65); line-height: 1.5; }
+.btn-nav-primary:hover {
+    background: #0056b3 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(26, 115, 232, 0.3) !important;
+}
 
-  /* ── TRUST / PROOF ── */
-  .proof-section { background: var(--cream); }
-  .proof-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem; margin-top: 2.5rem;
-  }
-  .proof-card {
-    background: var(--white); border-radius: 8px; padding: 1.75rem;
-    border-left: 4px solid var(--med-green);
-    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-  }
-  .proof-icon { font-size: 1.75rem; margin-bottom: 0.75rem; }
-  .proof-card h4 { font-weight: 700; color: var(--dark-green); margin-bottom: 0.5rem; font-size: 0.95rem; }
-  .proof-card p { font-size: 0.88rem; color: var(--gray); line-height: 1.6; }
-
-  /* ── COMPLIANCE ── */
-  .compliance-section { background: var(--warm-white); }
-  .compliance-table {
-    width: 100%; border-collapse: collapse;
-    margin-top: 2rem; font-size: 0.9rem;
-    border-radius: 8px; overflow: hidden;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
-  }
-  .compliance-table thead tr { background: var(--dark-green); }
-  .compliance-table thead th {
-    padding: 1rem 1.25rem; text-align: left;
-    color: var(--white); font-weight: 700;
-    font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase;
-  }
-  .compliance-table tbody tr:nth-child(even) { background: var(--cream); }
-  .compliance-table tbody tr:hover { background: var(--pale-green); }
-  .compliance-table td { padding: 0.85rem 1.25rem; color: var(--dark); border-bottom: 1px solid rgba(0,0,0,0.06); }
-  .compliance-table td:first-child { font-weight: 600; color: var(--dark-green); }
-  .badge {
+/* --- Hero Buttons Fix (Links to Real Buttons) --- */
+.btn-main {
+    background: var(--ghl-blue) !important;
+    color: white !important;
+    padding: 16px 35px !important;
+    border-radius: 12px !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
     display: inline-block;
-    padding: 0.2rem 0.7rem; border-radius: 20px;
-    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em;
-    text-transform: uppercase;
-  }
-  .badge-green { background: var(--pale-green); color: var(--dark-green); }
-  .badge-gold { background: #FDF2D8; color: var(--gold); }
+    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(26, 115, 232, 0.4) !important;
+}
 
-  /* ── FAQ ── */
-  .faq-section { background: var(--cream); }
-  .faq-list { margin-top: 2.5rem; max-width: 760px; }
-  .faq-item {
-    background: var(--white); border-radius: 6px;
-    margin-bottom: 0.75rem; overflow: hidden;
-    border: 1px solid rgba(0,0,0,0.07);
-  }
-  .faq-q {
-    padding: 1.2rem 1.5rem; cursor: pointer;
-    font-weight: 700; color: var(--dark-green);
-    display: flex; justify-content: space-between; align-items: center;
-    font-size: 0.95rem;
-    user-select: none;
-  }
-  .faq-q::after { content: '+'; font-size: 1.4rem; color: var(--med-green); font-weight: 300; transition: transform 0.2s; }
-  .faq-item.open .faq-q::after { transform: rotate(45deg); }
-  .faq-a {
-    max-height: 0; overflow: hidden;
-    transition: max-height 0.3s ease, padding 0.2s;
-    font-size: 0.9rem; color: var(--gray); line-height: 1.7;
-  }
-  .faq-item.open .faq-a { max-height: 300px; padding: 0 1.5rem 1.25rem; }
+.btn-outline-white {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    padding: 16px 35px !important;
+    border-radius: 12px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    transition: 0.3s;
+    backdrop-filter: blur(5px);
+}
 
-  /* ── SAMPLE CTA ── */
-  .sample-section { background: var(--dark-green); text-align: center; }
-  .sample-section .section-title { color: var(--white); }
-  .sample-section p { color: rgba(255,255,255,0.8); font-size: 1.05rem; max-width: 560px; margin: 0 auto 2rem; }
-  .sample-form {
-    display: flex; gap: 0.75rem; max-width: 560px;
-    margin: 0 auto; flex-wrap: wrap; justify-content: center;
-  }
-  .sample-form input {
-    flex: 1; min-width: 200px;
-    padding: 0.85rem 1.25rem;
-    border: none; border-radius: 4px;
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 0.95rem; color: var(--dark);
-    background: rgba(255,255,255,0.95);
-  }
-  .sample-form input::placeholder { color: #999; }
-  .sample-form input:focus { outline: 2px solid var(--gold); }
-  .sample-form .btn-primary { flex-shrink: 0; white-space: nowrap; }
-  .sample-note { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 1rem; }
+.btn-main:hover, .btn-outline-white:hover {
+    transform: translateY(-5px);
+    color: white !important;
+}
 
-  /* ── RESOURCES ── */
-  .resources-section { background: var(--warm-white); }
-  .resource-cards {
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 1.25rem; margin-top: 2.5rem;
-  }
-  .resource-card {
-    background: var(--white); border-radius: 8px; padding: 1.75rem;
-    border: 1px solid rgba(0,0,0,0.07);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
-    transition: box-shadow 0.2s;
-    text-decoration: none;
-  }
-  .resource-card:hover { box-shadow: 0 6px 20px rgba(45,80,22,0.1); }
-  .resource-icon { font-size: 1.75rem; margin-bottom: 0.75rem; }
-  .resource-card h4 { font-weight: 700; color: var(--dark-green); margin-bottom: 0.4rem; font-size: 0.9rem; }
-  .resource-card p { font-size: 0.82rem; color: var(--gray); line-height: 1.5; margin-bottom: 0.75rem; }
-  .resource-link { font-size: 0.8rem; font-weight: 700; color: var(--med-green); letter-spacing: 0.04em; text-transform: uppercase; }
+.btn-outline-white:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border-color: white !important;
+}
 
-  /* ── FOOTER ── */
-  footer {
-    background: var(--dark);
-    padding: 3rem 2.5rem;
-    text-align: center;
-  }
-  .footer-logo {
-    font-family: 'Source Sans 3', sans-serif;
-    font-weight: 700; font-size: 0.9rem;
-    color: var(--gold-light); letter-spacing: 0.12em;
-    text-transform: uppercase; margin-bottom: 1rem;
-  }
-  .footer-tagline { color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-bottom: 1.5rem; }
-  .footer-contact { color: rgba(255,255,255,0.75); font-size: 0.9rem; margin-bottom: 0.4rem; }
-  .footer-contact a { color: var(--gold-light); text-decoration: none; }
-  .footer-legal { color: rgba(255,255,255,0.3); font-size: 0.75rem; margin-top: 2rem; }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 768px) {
-    .hero-inner, .two-col { grid-template-columns: 1fr; gap: 2rem; }
-    .steps { grid-template-columns: 1fr 1fr; }
-    .proof-grid { grid-template-columns: 1fr; }
-    nav { padding: 0 1.25rem; }
-    .nav-links { display: none; }
-    section { padding: 3.5rem 1.25rem; }
-    .hero { padding: 3rem 1.25rem; }
-  }
-
-  /* ── ANIMATIONS ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  .hero h1, .hero-body, .hero-cta-group { animation: fadeUp 0.7s ease both; }
-  .hero-body { animation-delay: 0.12s; }
-  .hero-cta-group { animation-delay: 0.24s; }
-  .hero-image-panel { animation: fadeUp 0.7s 0.32s ease both; }
-
-  /* ── MOBILE OPTIMIZATION ── */
-@media screen and (max-width: 768px) {
-  /* Table container ko scrollable banane ke liye */
-  .compliance-section .section-inner {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .compliance-table {
+/* --- Right Side Icon Fix --- */
+.hero-visual-icon {
+    font-size: 4.5rem !important; /* Size increased */
+    color: var(--neon-cyan) !important;
+    margin-bottom: 25px;
     display: block;
-    width: 100%;
-    overflow-x: auto; /* Horizontal scroll enable karega */
-    -webkit-overflow-scrolling: touch;
-    white-space: nowrap; /* Text ko wrap hone se rokega taake columns khule rahein */
-  }
-
-  .compliance-table td, 
-  .compliance-table th {
-    padding: 0.75rem 1rem; /* Mobile par thoda compact padding */
-    min-width: 120px; /* Har column ko thodi jagah dena zaroori hai */
-  }
-
-  /* Product column ko thoda bada rakhne ke liye */
-  .compliance-table tr:nth-child(odd) td:first-child{
-    background: #fdfaf4 !important;
-  }
-  .compliance-table tr:nth-child(even) td:first-child{
-    background: #F7F2E8 !important;
-  }
-  .compliance-table td:first-child, 
-  .compliance-table th:first-child {
-    min-width: 150px;
-    position: sticky; /* Agar aap chahte hain ke pehla column freeze rahe */
-    left: 0;
-    background: inherit;
-    z-index: 1;
-  }
-  
-  .section-title {
-    font-size: 1.5rem; /* Heading mobile ke liye thodi choti */
-  }
+    filter: drop-shadow(0 0 15px rgba(0, 210, 255, 0.5));
 }
 
 
-</style>
+/* Hero Title Color Fix */
+.text-info {
+    color: var(--neon-cyan) !important;
+}
+  </style>
 </head>
+
 <body>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-logo">Wisconsin Food Hub<br>Cooperative</div>
-  <ul class="nav-links">
-    <li><a href="#products">Products</a></li>
-    <li><a href="#how">How It Works</a></li>
-    <li><a href="#compliance">Compliance</a></li>
-    <li><a href="#faq">FAQ</a></li>
-    <li><a href="#resources">Resources</a></li>
-    <li><a href="#sample" class="nav-cta">Request Sample</a></li>
-  </ul>
+ <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white-glass">
+  <div class="container">
+    <a class="navbar-brand fw-bold d-flex align-items-center" href="#" data-aos="fade-right">
+      <div class="brand-box">
+        <i class="fas fa-bolt text-white"></i>
+      </div>
+      <span class="brand-text">GHL<span class="text-primary">.Expert</span></span>
+    </a>
+
+    <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#ghlMainNavbar">
+      <i class="fas fa-bars-staggered text-dark fs-2"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="ghlMainNavbar">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item ms-lg-4">
+          <a href="#strategy" class="btn btn-nav-primary">Free Strategic Session</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
-    <div>
-      <p class="hero-eyebrow">VAPG School Program — Tend &amp; Table Packs</p>
-      <h1>Make Wisconsin-Grown Produce <em>Easy</em> for Your Schools</h1>
-      <p class="hero-body">Fresh vegetables grown by Wisconsin farmers — delivered washed, cut, and ready to serve. Zero prep. USDA-compliant. Informal-purchase eligible. And no, you don't need to run a bid.</p>
-      <div class="hero-cta-group">
-        <a href="#sample" class="btn-primary">Request Free Sample Kit</a>
-        <a href="#how" class="btn-secondary">See How It Works</a>
-      </div>
-    </div>
-    <div class="hero-image-panel">
-      <div class="hero-stat-card">
-        <div class="stat-num">5</div>
-        <div class="stat-label">Wisconsin-grown grab-and-go SKUs, ready now</div>
-      </div>
-      <div class="hero-stat-card">
-        <div class="stat-num">½ cup</div>
-        <div class="stat-label">USDA vegetable credit per serving, every product</div>
-      </div>
-      <div class="hero-stat-card">
-        <div class="stat-num">47</div>
-        <div class="stat-label">Wisconsin school &amp; ECE sites served through WFHC programs</div>
-      </div>
-      <div class="hero-stat-card">
-        <div class="stat-num">$0</div>
-        <div class="stat-label">Prep labor required. Open, portion, serve.</div>
-      </div>
-    </div>
-  </div>
-</section>
+<section class="hero-section-premium">
+  <div class="hero-bg-overlay"></div>
+  
+  <div class="container position-relative" style="z-index: 2;">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7 text-lg-start text-center">
+        <div class="hero-badge mb-4" data-aos="fade-down" data-aos-delay="200">
+          <span class="badge rounded-pill custom-badge">
+            <i class="fas fa-shield-halved me-2"></i> AUTHORIZED GHL ARCHITECTS
+          </span>
+        </div>
 
-<!-- TRUST STRIP -->
-<div class="trust-strip">
-  <div class="trust-inner">
-    <div class="trust-item"><span class="trust-dot"></span>Local Sourcing</div>
-    <div class="trust-item"><span class="trust-dot"></span>Food Safety Certified</div>
-    <div class="trust-item"><span class="trust-dot"></span>PTI Traceability</div>
-    <div class="trust-item"><span class="trust-dot"></span>Refrigerated Delivery</div>
-    <div class="trust-item"><span class="trust-dot"></span>USDA-Compliant Packs</div>
-    <div class="trust-item"><span class="trust-dot"></span>No Bid Required</div>
-    <div class="trust-item"><span class="trust-dot"></span>Farm to School Ready</div>
-  </div>
+        <h1 class="hero-title-premium" data-aos="fade-up" data-aos-delay="400">
+          Automate. <span class="text-white">Scale.</span><br>
+          <span class="text-info">Dominate GHL.</span>
+        </h1>
+
+        <p class="hero-subtitle mb-5 fs-5" data-aos="fade-up" data-aos-delay="600">
+          Hum aapke GoHighLevel CRM ko aik powerful money-making machine mein convert karte hain. Advanced API integrations aur seamless funnels ke saath.
+        </p>
+
+        <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+  <a href="#strategy" class="btn-main">Get Started Now</a>
+  <a href="#services" class="btn-outline-white">View Case Studies</a>
 </div>
+      </div>
 
-<!-- PROBLEM / SOLUTION -->
-<section class="problem-section">
-  <div class="section-inner">
-    <p class="section-label">The Reality</p>
-    <h2 class="section-title">Local produce is a great idea. Getting it to the lunch line is the hard part.</h2>
-    <div class="two-col" style="margin-top:2.5rem;">
-      <div class="problem-card">
-        <h3>What you're dealing with</h3>
-        <ul class="problem-list">
-          <li>Kitchen staff stretched thin — no time for prep</li>
-          <li>USDA vegetable subgroup requirements to hit</li>
-          <li>Local sourcing goals with no clear vendor pathway</li>
-          <li>Food safety and traceability documentation to manage</li>
-          <li>Procurement rules that make trying new vendors feel risky</li>
-          <li>Substitution surprises from vendors who don't ask first</li>
-        </ul>
-      </div>
-      <div class="solution-card">
-        <h3>What WFHC takes off your plate</h3>
-        <p>We're a farmer-led cooperative built to make local purchasing practical for institutions. We coordinate the farm network, cold-chain aggregation, food safety documentation, and refrigerated delivery — so your team can add Wisconsin-grown produce to your program without adding a single prep step.</p>
-        <br>
-        <p style="color:var(--gold-light); font-weight:700;">Every product arrives washed, cut, and ready to serve. Open the case. Portion. Plate.</p>
-      </div>
-    </div>
+      <div class="col-lg-5 d-none d-lg-block" data-aos="zoom-in-left" data-aos-delay="500">
+        <div class="hero-visual-card">
+          <div class="glass-inner">
+             <div class="hero-visual-icon">
+    <i class="fas fa-microchip"></i> 
   </div>
-</section>
-
-<!-- PRODUCTS -->
-<section class="products-section" id="products">
-  <div class="section-inner">
-    <p class="section-label">Current Availability</p>
-    <h2 class="section-title">What Schools Can Order Right Now</h2>
-    <p class="section-body">All starter items are Wisconsin-grown, minimally processed, and formatted for grab-and-go lines, snack programs, and quick-prep service. All qualify as informal purchases in most Wisconsin districts.</p>
-    <div class="products-grid">
-      <div class="product-card">
-        <div class="product-card-photo">🥦</div>
-        <div class="product-card-body">
-          <h4>Broccoli Florets</h4>
-          <div class="sku">WFHC-VEG-BRF-350</div>
-          <div class="price">$17.35/case &nbsp;·&nbsp; 3.5 lb</div>
-          <span class="usda-tag">Dark Green Veg</span>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-card-photo">🌿</div>
-        <div class="product-card-body">
-          <h4>Cauliflower Florets</h4>
-          <div class="sku">WFHC-VEG-CAF-550</div>
-          <div class="price">$27.25/case &nbsp;·&nbsp; 5.5 lb</div>
-          <span class="usda-tag">Other Veg</span>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-card-photo">🥕</div>
-        <div class="product-card-body">
-          <h4>Carrot Matchsticks</h4>
-          <div class="sku">WFHC-VEG-CAM-650</div>
-          <div class="price">$32.25/case &nbsp;·&nbsp; 6.5 lb</div>
-          <span class="usda-tag">Red/Orange Veg</span>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-card-photo">🔴</div>
-        <div class="product-card-body">
-          <h4>Radish Matchsticks</h4>
-          <div class="sku">WFHC-VEG-RDM-660</div>
-          <div class="price">$32.75/case &nbsp;·&nbsp; 6.6 lb</div>
-          <span class="usda-tag">Red/Orange Veg</span>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-card-photo">🌱</div>
-        <div class="product-card-body">
-          <h4>Kohlrabi Matchsticks</h4>
-          <div class="sku">WFHC-VEG-KHM-108</div>
-          <div class="price">$53.60/case &nbsp;·&nbsp; 10.8 lb</div>
-          <span class="usda-tag">Other Veg</span>
+             <h3 class="fw-bold mb-3 text-white">GHL Master Engine</h3>
+             <p class="text-light opacity-75 small">Smart workflows that handle your leads 24/7 without human intervention.</p>
+             <div class="d-flex justify-content-center gap-2 mt-4">
+                <span class="tag">Workflow V2</span>
+                <span class="tag">SaaS Pro</span>
+             </div>
+          </div>
         </div>
       </div>
     </div>
-    <p style="margin-top:1.75rem; font-size:0.88rem; color:var(--gray);">All items: <strong>½ cup serving = ½ cup USDA vegetable credit</strong>. Full product spec sheets (ingredients, allergens, shelf life, substitution policy, lot coding) available for download below or by request.</p>
   </div>
 </section>
+  <section id="services" class="py-5" style="background: #f8fafc; color: #1e293b;">
+    <div class="container py-5">
+      <div class="row align-items-center g-5">
 
-<!-- HOW IT WORKS -->
-<section class="how-section" id="how">
-  <div class="section-inner">
-    <p class="section-label">The Ordering Process</p>
-    <h2 class="section-title">Simple. Predictable. Repeatable.</h2>
-    <p class="section-body">Ordering from WFHC is designed to fit your weekly rhythm — not add to it.</p>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <h4>Connect</h4>
-        <p>Set up your account with WFHC. Billing, delivery address, ordering contact.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <h4>Weekly Availability</h4>
-        <p>Receive our availability list each week. Know what's fresh and ready before you order.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <h4>Place Your Order</h4>
-        <p>Order by the weekly cutoff. Consistent windows mean consistent menu planning.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <h4>Refrigerated Delivery</h4>
-        <p>Cold-chain delivery to your dock. Receiving docs on every shipment. No guessing.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">5</div>
-        <h4>Serve &amp; Repeat</h4>
-        <p>Open. Portion. Plate. Use our promo toolkit to build student and parent support.</p>
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="position-relative">
+            <div class="main-visual-container">
+              <img
+                src="https://img.freepik.com/free-vector/modern-desktop-interface-concept-with-infographic-elements_23-2148252288.jpg"
+                alt="GHL Dashboard" class="img-fluid rounded-4 shadow-lg border">
+
+              <div class="floating-stats-card" data-aos="zoom-in" data-aos-delay="500">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="icon-circle bg-success text-white">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-0 fw-bold">98% Success Rate</h6>
+                    <small class="text-muted">Automations Delivered</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left">
+          <h6 class="text-primary fw-bold text-uppercase mb-3" style="letter-spacing: 1px;">Why Choose Us</h6>
+          <h2 class="display-6 fw-800 mb-4" style="color: #0f172a;">Our <span class="text-primary">Commitment</span> to
+            Your Growth</h2>
+          <p class="text-muted fs-5 mb-5">Hum sirf automation setup nahi karte, hum aapke CRM ko aik asset mein convert
+            karte hain jo growth accelerate karta hai.</p>
+
+          <div class="row g-4">
+            <div class="col-sm-6">
+              <div class="d-flex gap-3 mb-2">
+                <i class="fas fa-microchip text-primary fs-4"></i>
+                <h6 class="fw-bold mb-0">Expert Automation</h6>
+              </div>
+              <p class="small text-muted">Advanced API V2 workflows jo error-free scalable hain.</p>
+            </div>
+            <div class="col-sm-6">
+              <div class="d-flex gap-3 mb-2">
+                <i class="fas fa-headset text-primary fs-4"></i>
+                <h6 class="fw-bold mb-0">24/7 Support</h6>
+              </div>
+              <p class="small text-muted">Aapka business kabhi rukta nahi, aur hum bhi nahi.</p>
+            </div>
+            <div class="col-sm-6">
+              <div class="d-flex gap-3 mb-2">
+                <i class="fas fa-chart-pie text-primary fs-4"></i>
+                <h6 class="fw-bold mb-0">Proven Results</h6>
+              </div>
+              <p class="small text-muted">Data-driven strategies jo direct ROI generate karti hain.</p>
+            </div>
+            <div class="col-sm-6">
+              <div class="d-flex gap-3 mb-2">
+                <i class="fas fa-rocket text-primary fs-4"></i>
+                <h6 class="fw-bold mb-0">Fast Scaling</h6>
+              </div>
+              <p class="small text-muted">Smart CRM systems jo aapke business ke sath grow hon.</p>
+            </div>
+          </div>
+
+          <div class="mt-5">
+            <a href="#contact" class="btn btn-outline-primary rounded-pill px-4 py-2 fw-bold">Learn More About Our
+              Process</a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- PROOF -->
-<section class="proof-section">
-  <div class="section-inner">
-    <p class="section-label">Why WFHC</p>
-    <h2 class="section-title">The things nutrition directors actually need to know</h2>
-    <div class="proof-grid">
-      <div class="proof-card">
-        <div class="proof-icon">🛡️</div>
-        <h4>Food Safety You Can Document</h4>
-        <p>HACCP/GHP/Harmonized GAP-certified warehouse. GAP-certified farm partners. PTI-aligned traceability on every case. Food safety manager on staff — with a direct phone number.</p>
+  <style>
+    /* Styling to make it look "Bespoke" (Manually Designed) */
+    #services {
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .fw-800 {
+      font-weight: 800;
+    }
+
+    .main-visual-container {
+      position: relative;
+      padding: 20px;
+      background: #fff;
+      border-radius: 30px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+    }
+
+    .main-visual-container img {
+      border-radius: 20px;
+      transition: transform 0.5s ease;
+    }
+
+    .main-visual-container:hover img {
+      transform: scale(1.02);
+    }
+
+    .floating-stats-card {
+      position: absolute;
+      bottom: -20px;
+      right: -10px;
+      background: #ffffff;
+      padding: 20px 25px;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      z-index: 2;
+    }
+
+    .icon-circle {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Text Primary Color to match your GHL Blue but in a professional tone */
+    .text-primary {
+      color: #1a73e8 !important;
+    }
+
+    .btn-outline-primary {
+      border: 2px solid #1a73e8;
+      color: #1a73e8;
+      transition: 0.3s;
+    }
+
+    .btn-outline-primary:hover {
+      background: #1a73e8;
+      color: #fff;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      .floating-stats-card {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        margin-top: 20px;
+      }
+    }
+  </style>
+  <section id="all-services" class="py-5" style="background: #f1f5f9; border-top: 1px solid #e2e8f0;">
+    <div class="container py-5">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h6 class="text-primary fw-bold text-uppercase mb-2" style="letter-spacing: 2px; font-size: 0.85rem;">Top
+          Services</h6>
+        <h2 class="display-5 fw-800 text-dark" style="color: #0f172a;">Featured Service <span
+            class="text-primary">Solutions</span></h2>
+        <div class="mx-auto mt-3" style="width: 60px; height: 4px; background: #1a73e8; border-radius: 10px;"></div>
       </div>
-      <div class="proof-card">
-        <div class="proof-icon">🚚</div>
-        <h4>Cold Chain, Start to Finish</h4>
-        <p>Refrigerated aggregation warehouse in Waupaca. Refrigerated transport to your dock. Temperature-verified receiving. We don't break the cold chain, period.</p>
+
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-box">
+            <div class="service-icon-wrap">
+              <i class="fas fa-building-user"></i>
+            </div>
+            <h5>GHL for Agencies</h5>
+            <p>SaaS mode setups, sub-account automation, and white-labeling.</p>
+            <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-box">
+            <div class="service-icon-wrap">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <h5>GHL for Businesses</h5>
+            <p>Streamline your operations with automated CRM workflows.</p>
+            <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-box">
+            <div class="service-icon-wrap">
+              <i class="fas fa-cart-shopping"></i>
+            </div>
+            <h5>GHL for Ecommerce</h5>
+            <p>Abandoned cart recovery, upsells, and review management.</p>
+            <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-box">
+            <div class="service-icon-wrap">
+              <i class="fas fa-comments-dollar"></i>
+            </div>
+            <h5>GHL for Consulting</h5>
+            <p>Appointment booking funnels and automated lead qualifying.</p>
+            <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-box">
+            <div class="service-icon-wrap">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <h5>GHL for B2B</h5>
+            <p>Complex sales pipelines and automated LinkedIn prospecting.</p>
+            <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-box">
+            <div class="service-icon-wrap">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h5>GHL for Coaching</h5>
+            <p>Membership areas, course delivery, and student nurture.</p>
+            <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-box">
+            <div class="service-icon-wrap">
+              <i class="fas fa-file-invoice-dollar"></i>
+            </div>
+            <h5>GHL for MCA</h5>
+            <p>Specialized systems for Merchant Cash Advance lead flow.</p>
+            <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-box highlight">
+            <div class="service-icon-wrap">
+              <i class="fas fa-globe"></i>
+            </div>
+            <h5>GHL for All Industries</h5>
+            <p>Custom tailer-made solutions for any niche or industry.</p>
+            <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
       </div>
-      <div class="proof-card">
-        <div class="proof-icon">📋</div>
-        <h4>No Surprise Substitutions</h4>
-        <p>If a crop is short, we call you 48 hours before your delivery. We offer options. You approve in writing. We ship only what you authorized. Item code must match PO.</p>
-      </div>
-      <div class="proof-card">
-        <div class="proof-icon">🏫</div>
-        <h4>Proven School Experience</h4>
-        <p>WFHC has served 47 Wisconsin school and ECE sites across 27 counties — with Harvest of the Month kits, recipe development, and promo resources already in use.</p>
-      </div>
-      <div class="proof-card">
-        <div class="proof-icon">🌾</div>
-        <h4>Farm to School Documentation</h4>
-        <p>100% Wisconsin-grown. Origin documentation on every case. WFHC is named by DPI as a Wisconsin food hub. Local geographic preference qualifications supported.</p>
-      </div>
-      <div class="proof-card">
-        <div class="proof-icon">📄</div>
-        <h4>Bid-Ready Spec Sheets</h4>
-        <p>Full product spec sheets for every SKU: item code, case pack, allergens, shelf life, cold-chain requirements, substitution policy, and traceability/recall process. Ready for your files.</p>
+
+      <div class="text-center mt-5">
+        <a href="#" class="btn btn-view-all">VIEW ALL SERVICES</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- COMPLIANCE TABLE -->
-<section class="compliance-section" id="compliance">
-  <div class="section-inner">
-    <p class="section-label">Procurement &amp; Compliance</p>
-    <h2 class="section-title">The procurement facts, plainly stated</h2>
-    <p class="section-body">Wisconsin DPI informal purchasing thresholds mean most districts can pilot these products without a formal bid. Here's how it works for each product.</p>
-    <table class="compliance-table">
-      <thead>
-        <tr>
-          <th>Product</th>
-          <th>USDA Veg Subgroup</th>
-          <th>Meal Credit</th>
-          <th>Informal Purchase</th>
-          <th>Farm to School</th>
-          <th>Case Price</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Broccoli Florets</td>
-          <td>Dark Green</td>
-          <td>½ cup = ½ cup</td>
-          <td><span class="badge badge-green">✓ Eligible</span></td>
-          <td><span class="badge badge-green">✓ 100% WI-Grown</span></td>
-          <td><strong>$17.35</strong></td>
-        </tr>
-        <tr>
-          <td>Cauliflower Florets</td>
-          <td>Other</td>
-          <td>½ cup = ½ cup</td>
-          <td><span class="badge badge-green">✓ Eligible</span></td>
-          <td><span class="badge badge-green">✓ 100% WI-Grown</span></td>
-          <td><strong>$27.25</strong></td>
-        </tr>
-        <tr>
-          <td>Carrot Matchsticks</td>
-          <td>Red/Orange</td>
-          <td>½ cup = ½ cup</td>
-          <td><span class="badge badge-green">✓ Eligible</span></td>
-          <td><span class="badge badge-green">✓ 100% WI-Grown</span></td>
-          <td><strong>$32.25</strong></td>
-        </tr>
-        <tr>
-          <td>Radish Matchsticks</td>
-          <td>Red/Orange</td>
-          <td>½ cup = ½ cup</td>
-          <td><span class="badge badge-green">✓ Eligible</span></td>
-          <td><span class="badge badge-green">✓ 100% WI-Grown</span></td>
-          <td><strong>$32.75</strong></td>
-        </tr>
-        <tr>
-          <td>Kohlrabi Matchsticks</td>
-          <td>Other</td>
-          <td>½ cup = ½ cup</td>
-          <td><span class="badge badge-green">✓ Eligible</span></td>
-          <td><span class="badge badge-green">✓ 100% WI-Grown</span></td>
-          <td><strong>$53.60</strong></td>
-        </tr>
-      </tbody>
-    </table>
-    <p style="margin-top:1rem; font-size:0.82rem; color:var(--gray);">Wisconsin DPI informal purchasing: up to $10,000/transaction (districts may set higher thresholds up to $50,000 with DPI self-certification). Effective July 1, 2024: "local" may be used as a specification for unprocessed agricultural products in solicitations. Minimally processed forms (chopped, sliced, matchstick) qualify. <a href="https://dpi.wi.gov" style="color:var(--med-green);">Source: WI DPI</a></p>
-  </div>
-</section>
+  <style>
+    .service-box {
+      background: #ffffff;
+      padding: 40px 30px;
+      border-radius: 20px;
+      border: 1px solid #e2e8f0;
+      height: 100%;
+      transition: all 0.3s ease;
+      text-align: left;
+    }
 
-<!-- FAQ -->
-<section class="faq-section" id="faq">
-  <div class="section-inner">
-    <p class="section-label">Common Questions</p>
-    <h2 class="section-title">What nutrition directors ask us</h2>
-    <div class="faq-list">
-      <div class="faq-item">
-        <div class="faq-q">Do I need to run a bid to purchase from WFHC?</div>
-        <div class="faq-a">Probably not. All five starter items qualify for informal purchasing. Most Wisconsin districts can purchase up to $10,000 per transaction without a formal bid — and DPI-approved thresholds can go up to $50,000. Check your district's micro-purchase policy. These products are priced to make a pilot easy.</div>
+    .service-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+      border-color: #1a73e8;
+    }
+
+    .service-box.highlight {
+      background: #1a73e8;
+    }
+
+    .service-box.highlight h5,
+    .service-box.highlight p,
+    .service-box.highlight .service-link {
+      color: #ffffff !important;
+    }
+
+    .service-box.highlight .service-icon-wrap {
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+
+    .service-icon-wrap {
+      width: 50px;
+      height: 50px;
+      background: rgba(26, 115, 232, 0.1);
+      color: #1a73e8;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 25px;
+      transition: 0.3s;
+    }
+
+    .service-box:hover .service-icon-wrap {
+      background: #1a73e8;
+      color: #fff;
+    }
+
+    .service-box h5 {
+      font-weight: 700;
+      font-size: 1.15rem;
+      margin-bottom: 15px;
+      color: #1e293b;
+    }
+
+    .service-box p {
+      font-size: 0.9rem;
+      color: #64748b;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .service-link {
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: #1a73e8;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: 0.3s;
+    }
+
+    .service-link i {
+      margin-left: 5px;
+      transition: transform 0.3s ease;
+    }
+
+    .service-link:hover i {
+      transform: translateX(5px);
+    }
+
+    .btn-view-all {
+      background: #0f172a;
+      color: #fff;
+      padding: 15px 35px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      transition: 0.3s;
+    }
+
+    .btn-view-all:hover {
+      background: #1a73e8;
+      color: #fff;
+      transform: scale(1.05);
+    }
+  </style>
+  <section id="comparison-process" class="py-5" style="background: #ffffff; overflow: hidden;">
+    <div class="container py-5">
+
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="display-6 fw-800" style="color: #0f172a;">DIY Setup vs. <span class="text-primary">Expert
+            Implementation</span></h2>
+        <p class="text-muted mx-auto mt-3" style="max-width: 750px;">
+          GHL ka interface simple lag sakta hai, lekin galat setup aapke business ko costly mistakes aur wasted time ki
+          taraf le ja sakta hai.
+        </p>
       </div>
-      <div class="faq-item">
-        <div class="faq-q">What if you run out of something I ordered?</div>
-        <div class="faq-a">We notify you at least 48 hours before your scheduled delivery if there's a supply issue. We offer alternatives from our catalog at the same or lower price. You approve in writing before we ship anything. We never send a substitution without your explicit authorization — ever.</div>
+
+      <div class="row g-4 mb-5 pb-5">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="comp-card diy-card">
+            <div class="comp-header">
+              <div class="comp-icon-box">
+                <i class="fas fa-triangle-exclamation"></i>
+              </div>
+              <h4>The Cost of Going Solo</h4>
+            </div>
+            <ul class="comp-list">
+              <li><i class="fas fa-clock"></i>
+                <div><strong>Steep Learning Curve:</strong> Weeks wasted on confusing settings.</div>
+              </li>
+              <li><i class="fas fa-link-slash"></i>
+                <div><strong>Automation Breakdowns:</strong> Critical workflows failing randomly.</div>
+              </li>
+              <li><i class="fas fa-money-bill-wave"></i>
+                <div><strong>Hidden Costs:</strong> Unexpected charges for missed integrations.</div>
+              </li>
+              <li><i class="fas fa-envelope-open-text"></i>
+                <div><strong>Deliverability Disaster:</strong> Open rates falling from 35% to 9%.</div>
+              </li>
+              <li><i class="fas fa-bug"></i>
+                <div><strong>Technical Nightmare:</strong> Months of struggling with configurations.</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="comp-card expert-card shadow-lg">
+            <div class="comp-header">
+              <div class="comp-icon-box">
+                <i class="fas fa-crown"></i>
+              </div>
+              <h4>The Expert Advantage</h4>
+            </div>
+            <ul class="comp-list">
+              <li><i class="fas fa-circle-check"></i>
+                <div><strong>Expert-Built Systems:</strong> Perfect setup from day one.</div>
+              </li>
+              <li><i class="fas fa-bolt"></i>
+                <div><strong>Time Savings:</strong> Launch in days, not months of frustration.</div>
+              </li>
+              <li><i class="fas fa-chart-line"></i>
+                <div><strong>Optimized Funnels:</strong> Proven templates for consistent results.</div>
+              </li>
+              <li><i class="fas fa-puzzle-piece"></i>
+                <div><strong>Seamless Flow:</strong> Zero technical headaches or costly errors.</div>
+              </li>
+              <li><i class="fas fa-up-right-and-arrow-up-from-center"></i>
+                <div><strong>Scalable Foundation:</strong> Built to handle rapid expansion.</div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="faq-item">
-        <div class="faq-q">What food safety documentation do you provide?</div>
-        <div class="faq-a">Every case ships with PTI-aligned lot coding, farm name and USDA Establishment # on the label. Our warehouse is HACCP/GHP/Harmonized GAP certified. Farm partners are GAP-certified and audited. We have a food safety manager on staff and a 4-hour recall response commitment. Full traceability documentation available on request.</div>
+
+      <div class="text-center mt-5 mb-5 pt-5" data-aos="fade-up">
+        <h6 class="text-primary fw-bold text-uppercase" style="letter-spacing: 2px;">Our Roadmap</h6>
+        <h2 class="fw-800" style="color: #0f172a;">The Four Main Processing Steps</h2>
       </div>
-      <div class="faq-item">
-        <div class="faq-q">Can I use this for my Farm to School reporting?</div>
-        <div class="faq-a">Yes. We provide origin documentation for every case. All products are grown by named Wisconsin cooperative member farms. WFHC is listed by Wisconsin DPI as a food hub aggregator. As of July 1, 2024, "local" may be used as a procurement specification for products like ours under USDA rules.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">What does delivery look like for my district?</div>
-        <div class="faq-a">We operate refrigerated routes out of our Waupaca warehouse. You'll receive weekly availability, place your order by a set cutoff, and we confirm your delivery day and window. Receiving documentation is provided with every delivery. Contact us to confirm route coverage for your district.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Can I get spec sheets for our purchasing files?</div>
-        <div class="faq-a">Yes — complete one-page spec sheets for every SKU are available for download in the Resources section below. Each sheet includes item code, case pack, unit size, ingredients, allergen declaration, shelf life, storage requirements, substitution policy, and traceability/recall information.</div>
+
+      <div class="row g-5 mt-2">
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="process-item d-flex gap-4">
+            <div class="process-visual">
+              <div class="process-icon-circle">
+                <i class="fas fa-layer-group"></i>
+              </div>
+              <div class="process-line"></div>
+            </div>
+            <div class="process-content pb-5">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="step-num-badge">01</span>
+                <h4 class="fw-bold mb-0">Setup Base</h4>
+              </div>
+              <p class="text-muted">Build your SaaS foundation with branding, payments, and core integrations for a
+                fully operational ecosystem.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="process-item d-flex gap-4">
+            <div class="process-visual">
+              <div class="process-icon-circle">
+                <i class="fas fa-tags"></i>
+              </div>
+              <div class="process-line"></div>
+            </div>
+            <div class="process-content pb-5">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="step-num-badge">02</span>
+                <h4 class="fw-bold mb-0">Plan Offers</h4>
+              </div>
+              <p class="text-muted">Structure your pricing, high-value packages, and retention-focused automation to
+                maximize lifetime value.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="process-item d-flex gap-4">
+            <div class="process-visual">
+              <div class="process-icon-circle">
+                <i class="fas fa-microchip"></i>
+              </div>
+              <div class="process-line"></div>
+            </div>
+            <div class="process-content pb-5">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="step-num-badge">03</span>
+                <h4 class="fw-bold mb-0">Automate Ops</h4>
+              </div>
+              <p class="text-muted">Optimize internal workflows, client onboarding, and support systems using seamless
+                V2 automation engines.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="process-item d-flex gap-4">
+            <div class="process-visual">
+              <div class="process-icon-circle">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="process-line"></div>
+
+            </div>
+            <div class="process-content pb-5">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="step-num-badge">04</span>
+                <h4 class="fw-bold mb-0">Scale Growth</h4>
+              </div>
+              <p class="text-muted">Boost visibility and drive higher conversions with strategic marketing funnels
+                designed for expansion.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SAMPLE CTA -->
-<section class="sample-section" id="sample">
-  <div class="section-inner">
-    <h2 class="section-title">Try it before you commit</h2>
-    <p>We'll send your team a complimentary Tend &amp; Table sample kit — all five products, spec sheets, and ordering guide included. No paperwork. No commitment.</p>
-    <form class="sample-form" onsubmit="handleSampleRequest(event)">
-      <input type="text" placeholder="Your name" id="sample-name" required>
-      <input type="email" placeholder="Email address" id="sample-email" required>
-      <input type="text" placeholder="School / District" id="sample-district">
-      <button type="submit" class="btn-primary">Request Free Sample Kit →</button>
-    </form>
-    <p class="sample-note">Or call 715-227-1990 or email <strong>sales@wifoodhub.com</strong> to request directly.</p>
-    <div id="sample-confirm" style="display:none; margin-top:1.5rem; color:var(--gold-light); font-weight:700; font-size:1.05rem;">
-      ✓ Request received! Our schools team will be in touch within 1 business day.
+  <style>
+    /* --- Comparison Cards Styling --- */
+    .comp-card {
+      padding: 45px 40px;
+      border-radius: 28px;
+      height: 100%;
+      border: 1px solid #eef2f6;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      position: relative;
+    }
+
+    .comp-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 35px;
+    }
+
+    .comp-icon-box {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      font-size: 1.5rem;
+    }
+
+    .comp-header h4 {
+      margin: 0;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .comp-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .comp-list li {
+      margin-bottom: 20px;
+      color: #475569;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .comp-list li i {
+      margin-top: 5px;
+      font-size: 1rem;
+    }
+
+    /* DIY Card specific */
+    .diy-card {
+      background: #fff;
+    }
+
+    .diy-card .comp-icon-box {
+      background: #fee2e2;
+      color: #dc2626;
+    }
+
+    .diy-card .comp-header {
+      color: #dc2626;
+    }
+
+    .diy-card .comp-list li i {
+      color: #f87171;
+    }
+
+    .diy-card:hover {
+      border-color: #f87171 !important;
+      transform: translateY(-5px);
+    }
+
+    /* Expert Card specific (Standout) */
+    .expert-card {
+      background: #ffffff;
+      border: 2px solid #1a73e8 !important;
+    }
+
+    .expert-card::after {
+      content: "Recommended";
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #1a73e8;
+      color: #fff;
+      padding: 4px 12px;
+      border-radius: 50px;
+      font-size: 0.65rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .expert-card .comp-icon-box {
+      background: #e0efff;
+      color: #1a73e8;
+    }
+
+    .expert-card .comp-header {
+      color: #0f172a;
+    }
+
+    .expert-card .comp-list li i {
+      color: #1a73e8;
+    }
+
+    .expert-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 60px rgba(26, 115, 232, 0.15) !important;
+    }
+
+    /* --- Process Roadmap Styling --- */
+    .process-visual {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .process-icon-circle {
+      width: 65px;
+      height: 65px;
+      background: #f8fafc;
+      color: #1a73e8;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      z-index: 2;
+      transition: 0.4s;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.02);
+    }
+
+    .process-item:hover .process-icon-circle {
+      background: #1a73e8;
+      color: #fff;
+      border-color: #1a73e8;
+      transform: scale(1.1) rotate(-5deg);
+    }
+
+    .process-line {
+      width: 2px;
+      flex-grow: 1;
+      background: #e2e8f0;
+      margin: 10px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Animated flow in the line */
+    .process-line::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent, #1a73e8, transparent);
+      animation: lineFlow 3s infinite linear;
+    }
+
+    @keyframes lineFlow {
+      0% {
+        transform: translateY(-100%);
+      }
+
+      100% {
+        transform: translateY(100%);
+      }
+    }
+
+    .step-num-badge {
+      font-size: 0.7rem;
+      font-weight: 800;
+      background: #0f172a;
+      color: #fff;
+      padding: 2px 10px;
+      border-radius: 6px;
+      letter-spacing: 1px;
+    }
+
+    .process-content h4 {
+      font-size: 1.3rem;
+      color: #0f172a;
+    }
+
+    .process-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+      max-width: 95%;
+    }
+
+    /* Sahi Tariqa (Correct CSS) */
+    @media (max-width: 991px) {
+      .process-content {
+        padding-bottom: 1.5rem !important;
+      }
+    }
+  </style>
+  <section id="global-stats" class="py-5" style="background: #0f172a; color: #ffffff;">
+    <div class="container py-5">
+
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-6" data-aos="fade-right">
+          <h6 class="text-primary fw-bold text-uppercase mb-3" style="letter-spacing: 2px;">Globally Endorsed</h6>
+          <h2 class="display-5 fw-800 mb-4">Proven Global <span class="text-primary">Excellence</span></h2>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <p class="lead-text text-light-gray" style="opacity: 0.8; font-size: 1.1rem; line-height: 1.7;">
+            The GoHighLevel Expert, where automation meets innovation. As a globally endorsed leader, I empower
+            businesses with cutting-edge solutions, ensuring success and credibility in the digital world.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4 mt-2">
+        <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+          <div class="stat-card">
+            <div class="stat-header">
+              <span class="stat-number">70</span><span class="stat-plus">+</span>
+            </div>
+            <h5 class="stat-title">Clients Served</h5>
+            <p class="stat-desc">Serving clients globally with constantly updated SaaS solutions.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+          <div class="stat-card">
+            <div class="stat-header">
+              <span class="stat-number">10</span><span class="stat-plus">+</span>
+            </div>
+            <h5 class="stat-title">Positive Reviews</h5>
+            <p class="stat-desc">Constant positive feedback for high-end applications and setups.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+          <div class="stat-card">
+            <div class="stat-header">
+              <span class="stat-number">100</span><span class="stat-plus">%</span>
+            </div>
+            <h5 class="stat-title">Scalable Systems</h5>
+            <p class="stat-desc">Powerful, scalable customization for advanced business growth.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+          <div class="stat-card highlight-stat">
+            <div class="stat-header">
+              <span class="stat-number">100</span><span class="stat-plus">%</span>
+            </div>
+            <h5 class="stat-title">User Friendly</h5>
+            <p class="stat-desc">Seamless automations for an intuitive, easy-to-use interface.</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- RESOURCES -->
-<section class="resources-section" id="resources">
-  <div class="section-inner">
-    <p class="section-label">Downloads &amp; Resources</p>
-    <h2 class="section-title">Everything you need to move forward</h2>
-    <div class="resource-cards">
-      <a href="#" class="resource-card">
-        <div class="resource-icon">📋</div>
-        <h4>Product Spec Sheets</h4>
-        <p>One-page spec sheet for each product — procurement-ready with all required fields.</p>
-        <div class="resource-link">Download All 5 →</div>
-      </a>
-      <a href="#" class="resource-card">
-        <div class="resource-icon">📦</div>
-        <h4>Ordering Guide</h4>
-        <p>How to set up your account, receive availability, place orders, and manage delivery.</p>
-        <div class="resource-link">Download PDF →</div>
-      </a>
-      <a href="#" class="resource-card">
-        <div class="resource-icon">💰</div>
-        <h4>Pricing Sheet</h4>
-        <p>Current pricing for all starter items in both bulk and bagged formats.</p>
-        <div class="resource-link">Download PDF →</div>
-      </a>
-      <a href="#" class="resource-card">
-        <div class="resource-icon">⚖️</div>
-        <h4>Procurement Quick Guide</h4>
-        <p>Wisconsin-specific guidance on informal purchasing, local preference rules, and funding sources.</p>
-        <div class="resource-link">Download PDF →</div>
-      </a>
-      <a href="#" class="resource-card">
-        <div class="resource-icon">🎨</div>
-        <h4>Cafeteria Promo Toolkit</h4>
-        <p>Tray line cards, poster templates, newsletter blurbs, and social captions — ready to use.</p>
-        <div class="resource-link">Download Toolkit →</div>
-      </a>
-      <a href="#" class="resource-card">
-        <div class="resource-icon">🎓</div>
-        <h4>Getting Started Webinar</h4>
-        <p>10-minute video walkthrough: what to order, how ordering works, and how to place your first order.</p>
-        <div class="resource-link">Watch Now →</div>
-      </a>
+  <style>
+    /* Stats Styling */
+    .stat-card {
+      padding: 40px 30px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      height: 100%;
+      transition: all 0.3s ease;
+    }
+
+    .stat-card:hover {
+      background: rgba(255, 255, 255, 0.07);
+      transform: translateY(-10px);
+      border-color: #1a73e8;
+    }
+
+    .highlight-stat {
+      background: linear-gradient(145deg, rgba(26, 115, 232, 0.2), rgba(26, 115, 232, 0.05));
+      border-color: rgba(26, 115, 232, 0.3);
+    }
+
+    .stat-header {
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 15px;
+    }
+
+    .stat-number {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: #1a73e8;
+      line-height: 1;
+    }
+
+    .stat-plus {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #1a73e8;
+      margin-left: 5px;
+    }
+
+    .stat-title {
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      color: #ffffff;
+    }
+
+    .stat-desc {
+      font-size: 0.9rem;
+      color: #94a3b8;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .stat-number {
+        font-size: 2.8rem;
+      }
+
+      .stat-card {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+  <section id="expertise-tabs" class="py-5" style="background: #f8fafc;">
+    <div class="container py-5">
+
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h6 class="text-primary fw-bold text-uppercase" style="letter-spacing: 2px;">Master Automation Excellence</h6>
+        <h2 class="display-6 fw-800" style="color: #0f172a;">GoHighLevel Master Expertise</h2>
+        <p class="text-muted mx-auto mt-3" style="max-width: 800px;">
+          GoHighLevel Master Expertise delivers cutting-edge automation and strategic solutions, empowering businesses
+          to optimize workflows and drive digital success effortlessly.
+        </p>
+      </div>
+
+      <div class="row g-5 align-items-center mt-4">
+        <div class="col-lg-5" data-aos="fade-right">
+          <div class="nav flex-column nav-pills custom-tabs" id="v-pills-tab" role="tablist"
+            aria-orientation="vertical">
+
+            <button class="nav-link active" id="pill-dashboard-tab" data-bs-toggle="pill"
+              data-bs-target="#pill-dashboard" type="button" role="tab">
+              <div class="tab-icon"><i class="fas fa-chart-line"></i></div>
+              <div class="tab-text text-start">
+                <h5>Intuitive Dashboard</h5>
+                <p>Real-time insights and performance tracking at a glance.</p>
+              </div>
+            </button>
+
+            <button class="nav-link" id="pill-automation-tab" data-bs-toggle="pill" data-bs-target="#pill-automation"
+              type="button" role="tab">
+              <div class="tab-icon"><i class="fas fa-robot"></i></div>
+              <div class="tab-text text-start">
+                <h5>Workflow Automation</h5>
+                <p>Automate repetitive tasks and nurture leads 24/7.</p>
+              </div>
+            </button>
+
+            <button class="nav-link" id="pill-crm-tab" data-bs-toggle="pill" data-bs-target="#pill-crm" type="button"
+              role="tab">
+              <div class="tab-icon"><i class="fas fa-users-gear"></i></div>
+              <div class="tab-text text-start">
+                <h5>Smart CRM</h5>
+                <p>Manage all client interactions in one centralized hub.</p>
+              </div>
+            </button>
+
+          </div>
+        </div>
+
+        <div class="col-lg-7" data-aos="fade-left">
+          <div class="tab-content" id="v-pills-tabContent">
+
+            <div class="tab-pane fade show active" id="pill-dashboard" role="tabpanel">
+              <div class="preview-box">
+                <div class="preview-header">
+                  <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                  <span class="ms-2 small text-muted">GoHighLevel / Dashboard</span>
+                </div>
+                <div class="preview-body p-4">
+                  <h4 class="fw-bold mb-3">Intuitive Dashboard</h4>
+                  <p class="text-muted">The Dashboard provides real-time insights, tracking, and automation controls,
+                    allowing businesses to monitor performance, streamline operations, and optimize client interactions
+                    efficiently for sustained growth.</p>
+                  <img src="https://via.placeholder.com/600x350/e2e8f0/64748b?text=Dashboard+Preview" alt="Dashboard"
+                    class="img-fluid rounded-3 mt-3 shadow-sm">
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="pill-automation" role="tabpanel">
+              <div class="preview-box">
+                <div class="preview-header">
+                  <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                  <span class="ms-2 small text-muted">GoHighLevel / Automation</span>
+                </div>
+                <div class="preview-body p-4">
+                  <h4 class="fw-bold mb-3">Workflow Automation</h4>
+                  <p class="text-muted">Set up complex triggers and actions. Our automation expertise ensures no lead
+                    falls through the cracks with multi-channel follow-ups via SMS, Email, and Voice.</p>
+                  <img src="https://via.placeholder.com/600x350/e2e8f0/64748b?text=Automation+Workflows"
+                    alt="Automation" class="img-fluid rounded-3 mt-3 shadow-sm">
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="pill-crm" role="tabpanel">
+              <div class="preview-box">
+                <div class="preview-header">
+                  <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                  <span class="ms-2 small text-muted">GoHighLevel / CRM</span>
+                </div>
+                <div class="preview-body p-4">
+                  <h4 class="fw-bold mb-3">Smart CRM Systems</h4>
+                  <p class="text-muted">Full visibility into your sales pipeline. Track opportunities, book
+                    appointments, and manage reviews all from a single, intuitive interface built for scale.</p>
+                  <img src="https://via.placeholder.com/600x350/e2e8f0/64748b?text=CRM+Interface" alt="CRM"
+                    class="img-fluid rounded-3 mt-3 shadow-sm">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-logo">Wisconsin Food Hub Cooperative</div>
-  <p class="footer-tagline">A farmer-led cooperative growing a vibrant local and regional food system.</p>
-  <p class="footer-contact">📞 <a href="tel:7152271990">715-227-1990</a> &nbsp;|&nbsp; ✉ <a href="mailto:sales@wifoodhub.com">sales@wifoodhub.com</a> &nbsp;|&nbsp; <a href="https://wifoodhub.com">wifoodhub.com</a></p>
-  <p class="footer-contact">E502 State Hwy 54 · Waupaca, WI 54981</p>
-  <p class="footer-legal">© 2025 Wisconsin Food Hub Cooperative. All rights reserved. &nbsp;|&nbsp; [Privacy Policy] &nbsp;|&nbsp; [Terms of Use]<br>This institution is an equal opportunity provider.</p>
-</footer>
+  <style>
+    /* Tabs Navigation Styling */
+    .custom-tabs .nav-link {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 25px;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+      color: #64748b;
+    }
 
-<script>
-  // FAQ accordion
-  document.querySelectorAll('.faq-q').forEach(q => {
-    q.addEventListener('click', () => {
-      const item = q.parentElement;
-      const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-      if (!isOpen) item.classList.add('open');
+    .custom-tabs .nav-link h5 {
+      margin: 0;
+      font-weight: 700;
+      color: #0f172a;
+      transition: 0.3s;
+    }
+
+    .custom-tabs .nav-link p {
+      margin: 5px 0 0;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .tab-icon {
+      width: 50px;
+      height: 50px;
+      background: #f1f5f9;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      color: #1a73e8;
+      flex-shrink: 0;
+      transition: 0.3s;
+    }
+
+    /* Active Tab State */
+    .custom-tabs .nav-link.active {
+      background: #fff !important;
+      border-color: #1a73e8 !important;
+      box-shadow: 0 15px 30px rgba(26, 115, 232, 0.08);
+      transform: translateX(10px);
+    }
+
+    .custom-tabs .nav-link.active .tab-icon {
+      background: #1a73e8;
+      color: #fff;
+    }
+
+    .custom-tabs .nav-link.active h5 {
+      color: #1a73e8;
+    }
+
+    /* Preview Box (Right Side) */
+    .preview-box {
+      background: #fff;
+      border-radius: 24px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      box-shadow: 0 40px 80px rgba(15, 23, 42, 0.05);
+    }
+
+    .preview-header {
+      background: #f8fafc;
+      padding: 12px 20px;
+      border-bottom: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+    }
+
+    .preview-header .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #cbd5e1;
+      display: inline-block;
+      margin-right: 6px;
+    }
+
+    /* Mobile Responsive Fix */
+    @media (max-width: 991px) {
+      .custom-tabs .nav-link.active {
+        transform: translateY(-5px);
+      }
+    }
+  </style>
+  <section id="team" class="py-5 position-relative" style="background: #ffffff; overflow: hidden;">
+    <div
+      style="position: absolute; bottom: -50px; left: -50px; width: 300px; height: 300px; background: rgba(0, 242, 254, 0.05); border-radius: 50%; filter: blur(100px); z-index: 0;">
+    </div>
+
+    <div class="container py-5 position-relative" style="z-index: 1;">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h6 class="text-primary fw-bold text-uppercase mb-2" style="letter-spacing: 2px;">The Architects of Automation
+        </h6>
+        <h2 class="display-5 fw-800 text-dark">Meet Our <span class="text-gradient">GHL Experts</span></h2>
+        <p class="text-secondary mx-auto mt-3" style="max-width: 600px;">Humare experts sirf tool use nahi karte, hum
+          automation systems ke masterminds hain, jo aapki success ke liye dedicated hain.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+          <div class="team-card text-center">
+            <div class="team-visual">
+              <img
+                src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="Founder" class="img-fluid team-img">
+              <div class="team-social-overlay">
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon"><i class="fas fa-briefcase"></i></a>
+              </div>
+            </div>
+            <div class="team-content p-4">
+              <h4 class="fw-bold mb-1">Farhan Khan</h4>
+              <p class="text-primary fw-semibold mb-3">Founder & Lead GHL Architect</p>
+              <p class="text-muted small mb-0">5+ years specializing in GHL automation, API integrations, and advanced
+                scaling strategies.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+          <div class="team-card text-center">
+            <div class="team-visual">
+              <img
+                src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="Ops Manager" class="img-fluid team-img">
+              <div class="team-social-overlay">
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+            <div class="team-content p-4">
+              <h4 class="fw-bold mb-1">Ayesha Rahman</h4>
+              <p class="text-primary fw-semibold mb-3">Operations & Client Success</p>
+              <p class="text-muted small mb-0">Ensuring seamless project delivery and maximizing GHL snapshot deployment
+                efficiency.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+          <div class="team-card text-center">
+            <div class="team-visual">
+              <img
+                src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="GHL Developer" class="img-fluid team-img">
+              <div class="team-social-overlay">
+                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-icon"><i class="fas fa-code"></i></a>
+              </div>
+            </div>
+            <div class="team-content p-4">
+              <h4 class="fw-bold mb-1">Zain Ahmed</h4>
+              <p class="text-primary fw-semibold mb-3">Advanced Workflow Specialist</p>
+              <p class="text-muted small mb-0">Master of complex V2 workflows, custom JavaScript actions, and
+                third-party API zaps.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* Team Section Styling */
+    .team-card {
+      background: #fff;
+      border-radius: 25px;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      height: 100%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    }
+
+    .team-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+      border-color: rgba(26, 115, 232, 0.1);
+    }
+
+    .team-visual {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 1/1;
+      /* Makes the image area square */
+    }
+
+    .team-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .team-card:hover .team-img {
+      transform: scale(1.08);
+    }
+
+    .team-social-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      background: linear-gradient(180deg, transparent 50%, rgba(11, 15, 25, 0.8) 100%);
+      display: flex;
+      align-items: end;
+      justify-content: center;
+      gap: 15px;
+      padding-bottom: 20px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .team-card:hover .team-social-overlay {
+      opacity: 1;
+    }
+
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    .social-icon:hover {
+      background: #1a73e8;
+      transform: translateY(-3px);
+      color: white;
+    }
+
+    .team-content h4 {
+      font-size: 1.3rem;
+      color: #0f172a;
+    }
+
+    .team-content p {
+      font-size: 0.95rem;
+    }
+  </style>
+  <section id="integrations" class="py-5" style="background: #f8fafc; overflow: hidden;">
+    <div class="container py-5">
+      <div class="row align-items-center g-5">
+
+        <div class="col-lg-6" data-aos="fade-right">
+          <h6 class="text-primary fw-bold text-uppercase mb-3" style="letter-spacing: 2px;">Integrate</h6>
+          <h2 class="display-5 fw-800 text-dark mb-4">Your Favourite <span class="text-primary">Tools</span></h2>
+          <p class="text-muted mb-4" style="font-size: 1.1rem; line-height: 1.7;">
+            Effortlessly connect GoHighLevel with your favorite platforms to enhance automation and streamline
+            workflows. Whether you’re using <strong>Zapier, Make, or Stripe</strong>, seamless integration ensures
+            smooth data flow.
+          </p>
+          <div class="d-flex align-items-center gap-3 mb-5">
+            <div class="btn btn-primary btn-lg rounded-pill px-4">Connect Fast</div>
+            <span class="text-muted small"><i class="fas fa-shield-alt text-success me-1"></i> Secure API Sync</span>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="d-flex align-items-center gap-2">
+                <i class="fas fa-check-circle text-primary"></i>
+                <span class="fw-semibold small">Sync CRM Data</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="d-flex align-items-center gap-2">
+                <i class="fas fa-check-circle text-primary"></i>
+                <span class="fw-semibold small">Automated Ecosystem</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="integration-grid">
+            <div class="int-card"><img
+                src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Calendar_icon_%282020%29.svg"
+                alt="Google Cal"></div>
+            <div class="int-card"><i class="fab fa-stripe text-primary"></i></div>
+            <div class="int-card"><i class="fab fa-facebook text-primary"></i></div>
+            <div class="int-card"><i class="fab fa-instagram text-danger"></i></div>
+            <div class="int-card"><i class="fab fa-linkedin text-primary"></i></div>
+            <div class="int-card"><i class="fab fa-tiktok text-dark"></i></div>
+            <div class="int-card"><i class="fab fa-shopify text-success"></i></div>
+            <div class="int-card"><i class="fab fa-wordpress text-info"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-3 mt-5">
+        <div class="col-md-4 col-lg-3" data-aos="zoom-in">
+          <div class="tool-tile">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <i class="fab fa-google text-primary fs-4"></i>
+              <h6 class="mb-0 fw-bold">Google Calendar</h6>
+            </div>
+            <p class="small text-muted mb-0">Sync schedules, automate reminders, and streamline bookings.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+          <div class="tool-tile">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <i class="fab fa-stripe text-info fs-4"></i>
+              <h6 class="mb-0 fw-bold">Stripe</h6>
+            </div>
+            <p class="small text-muted mb-0">Automate payments, manage subscriptions, and transactions.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+          <div class="tool-tile">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <i class="fab fa-facebook text-primary fs-4"></i>
+              <h6 class="mb-0 fw-bold">Facebook Ads</h6>
+            </div>
+            <p class="small text-muted mb-0">Automate lead generation and enhance ad engagement.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+          <div class="tool-tile">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <i class="fas fa-ellipsis-h text-secondary fs-4"></i>
+              <h6 class="mb-0 fw-bold">And More...</h6>
+            </div>
+            <p class="small text-muted mb-0">Zapier, Make, Shopify, n8n, and 100+ other platforms.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* Integration Grid Styling */
+    .integration-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      position: relative;
+    }
+
+    .int-card {
+      background: #fff;
+      aspect-ratio: 1/1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+      font-size: 2.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+      border: 1px solid #eef2f6;
+      transition: all 0.4s ease;
+    }
+
+    .int-card img {
+      width: 50px;
+    }
+
+    .int-card:hover {
+      transform: scale(1.1) rotate(5deg);
+      border-color: #1a73e8;
+      box-shadow: 0 20px 40px rgba(26, 115, 232, 0.1);
+    }
+
+    /* Floating Animation for 4-Column Grid */
+
+    /* Pehla aur Teesra column (1st & 3rd) */
+    .integration-grid .int-card:nth-child(4n+1),
+    .integration-grid .int-card:nth-child(4n+3) {
+      animation: floatAnim 4s infinite ease-in-out;
+    }
+
+    /* Dusra aur Chotha column (2nd & 4th) */
+    .integration-grid .int-card:nth-child(4n+2),
+    .integration-grid .int-card:nth-child(4n+4) {
+      animation: floatAnim 4s infinite ease-in-out reverse;
+      animation-delay: 0.6s;
+      /* Halka sa delay taake movement zigzag lage */
+    }
+
+    @keyframes floatAnim {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+
+    /* Tool Tiles Styling */
+    .tool-tile {
+      background: #fff;
+      padding: 25px;
+      border-radius: 18px;
+      border: 1px solid #eef2f6;
+      height: 100%;
+      transition: 0.3s;
+    }
+
+    .tool-tile:hover {
+      background: #f0f7ff;
+      border-color: #1a73e8;
+      transform: translateY(-5px);
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .integration-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+
+      .int-card {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+  <section id="faq-section" class="py-5" style="background: #ffffff;">
+    <div class="container py-5">
+
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h6 class="text-primary fw-bold text-uppercase mb-3" style="letter-spacing: 2px;">Support Center</h6>
+        <h2 class="display-6 fw-800" style="color: #0f172a;">Frequently Asked <span
+            class="text-primary">Questions</span></h2>
+        <p class="text-muted mx-auto mt-3" style="max-width: 650px;">
+          Automation aur GoHighLevel ke bare mein wo sab kuch jo aap janana chahte hain. Agar aapka sawal yahan nahi
+          hai, to humse rabta karein.
+        </p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="accordion custom-accordion" id="ghlFaq">
+
+            <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  <span class="q-num">01.</span> What is GoHighLevel, and how can it help my business?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#ghlFaq">
+                <div class="accordion-body text-muted">
+                  GoHighLevel (GHL) ek all-in-one sales aur marketing platform hai jo CRM, email marketing, funnel
+                  building, aur automation ko ek hi jagah lata hai. Ye aapke business ko leads capture karne, unhe
+                  automate nurture karne aur deals close karne mein madad karta hai bina multiple softwares ki zaroorat
+                  ke.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq2">
+                  <span class="q-num">02.</span> How do I automate my workflows using GoHighLevel?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#ghlFaq">
+                <div class="accordion-body text-muted">
+                  GHL mein "Workflows" ka feature use hota hai jahan aap triggers (jaise form submit hona) aur actions
+                  (jaise SMS bhejna ya tag lagana) set karte hain. Hum aapke liye custom logical flows banate hain jo
+                  aapka 80% manual kaam khatam kar dete hain.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq3">
+                  <span class="q-num">03.</span> What’s the difference between Zapier, Make.com, and n8n.io?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#ghlFaq">
+                <div class="accordion-body text-muted">
+                  <strong>Zapier:</strong> Sabse asaan aur user-friendly hai. <br>
+                  <strong>Make.com:</strong> Visual automation ke liye best hai aur thora advanced logic support karta
+                  hai. <br>
+                  <strong>n8n.io:</strong> Technical users ke liye hai jo self-hosting aur complex data mapping chahte
+                  hain. Hum teeno mein expert hain!
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq4">
+                  <span class="q-num">04.</span> Is GoHighLevel suitable for non-tech-savvy users?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#ghlFaq">
+                <div class="accordion-body text-muted">
+                  GHL ka interface user-friendly hai, lekin iska setup complex ho sakta hai. Isi liye hum expert
+                  implementation provide karte hain taake aapko backend ki fikar na ho aur aap sirf apna business
+                  dashboard manage karein.
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="text-center mt-5" data-aos="fade-up">
+            <a href="#" class="btn btn-outline-primary btn-lg rounded-pill px-5 fw-bold">View More FAQs</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* FAQ Custom Styling */
+    .custom-accordion .accordion-item {
+      border: 1px solid #e2e8f0;
+      border-radius: 16px !important;
+      margin-bottom: 15px;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .custom-accordion .accordion-item:hover {
+      border-color: #1a73e8;
+      box-shadow: 0 10px 20px rgba(26, 115, 232, 0.05);
+    }
+
+    .custom-accordion .accordion-button {
+      padding: 25px;
+      font-weight: 700;
+      color: #0f172a;
+      background-color: #fff;
+      font-size: 1.1rem;
+      box-shadow: none !important;
+    }
+
+    .custom-accordion .accordion-button:not(.collapsed) {
+      color: #1a73e8;
+      background-color: #f8fafc;
+    }
+
+    .q-num {
+      color: #1a73e8;
+      font-weight: 800;
+      margin-right: 15px;
+      font-family: monospace;
+    }
+
+    .custom-accordion .accordion-body {
+      padding: 0 25px 25px 65px;
+      line-height: 1.7;
+      font-size: 0.95rem;
+      background-color: #f8fafc;
+    }
+
+    /* Icon Rotation Customization */
+    .custom-accordion .accordion-button::after {
+      background-size: 1rem;
+      transition: 0.3s;
+    }
+
+    /* Primary Outline Button Hover */
+    .btn-outline-primary:hover {
+      background-color: #1a73e8;
+      color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(26, 115, 232, 0.2);
+    }
+  </style>
+  <section id="testimonials" class="py-5" style="background: #f8fafc;">
+    <div class="container py-5">
+
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h6 class="text-primary fw-bold text-uppercase mb-2" style="letter-spacing: 2px;">Success Stories</h6>
+        <h2 class="display-5 fw-800 text-dark">What Our <span class="text-primary">Clients Say</span></h2>
+        <p class="text-muted mx-auto mt-3" style="max-width: 600px;">
+          Duniya bhar ke businesses ne humari automation expertise par bharosa kiya hai. Ye hain unke asli tajurbaat.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="testimonial-card">
+            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+            <div class="star-rating mb-3">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "GoHighLevel automation ka jo setup inhone karke diya hai, usne humara 70% manual work khatam kar diya.
+              Integration itni seamless thi ke humein pata bhi nahi chala kab system live ho gaya!"
+            </p>
+            <div class="client-info d-flex align-items-center mt-4">
+              <img src="https://i.pravatar.cc/150?u=1" alt="Client 1" class="client-img">
+              <div class="ms-3">
+                <h6 class="mb-0 fw-bold">James Wilson</h6>
+                <small class="text-muted text-uppercase fw-semibold" style="font-size: 0.7rem;">CEO, TechFlow
+                  Solutions</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="testimonial-card highlighted-card">
+            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+            <div class="star-rating mb-3 text-white">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text text-white">
+              "The best automation expert we've ever worked with. Unka workflow logic aur Zapier ki samajh kamaal ki
+              hai. Humari conversion rates 2x ho gayi hain automate follow-ups ki wajah se."
+            </p>
+            <div class="client-info d-flex align-items-center mt-4">
+              <img src="https://i.pravatar.cc/150?u=2" alt="Client 2" class="client-img border-white">
+              <div class="ms-3">
+                <h6 class="mb-0 fw-bold text-white">Sarah Jenkins</h6>
+                <small class="text-light text-uppercase fw-semibold" style="font-size: 0.7rem; opacity: 0.8;">Marketing
+                  Director, RealEstate Pro</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="testimonial-card">
+            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+            <div class="star-rating mb-3">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Farhan and his team are GHL wizards! Unhone humare CRM ko aise optimize kiya ke humari team ab 2x zyada
+              leads handle kar rahi hai bina stress ke. Highly recommended!"
+            </p>
+            <div class="client-info d-flex align-items-center mt-4">
+              <img src="https://i.pravatar.cc/150?u=3" alt="Client 3" class="client-img">
+              <div class="ms-3">
+                <h6 class="mb-0 fw-bold">David Miller</h6>
+                <small class="text-muted text-uppercase fw-semibold" style="font-size: 0.7rem;">Founder, GrowthOps
+                  Agency</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* Testimonial Styling */
+    .testimonial-card {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 24px;
+      border: 1px solid #eef2f6;
+      height: 100%;
+      position: relative;
+      transition: all 0.4s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.05);
+      border-color: #1a73e8;
+    }
+
+    /* Center Card Highlight */
+    .highlighted-card {
+      background: #1a73e8;
+      border-color: #1a73e8;
+      box-shadow: 0 30px 60px rgba(26, 115, 232, 0.2);
+    }
+
+    .quote-icon {
+      font-size: 2rem;
+      opacity: 0.1;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      color: #0f172a;
+    }
+
+    .highlighted-card .quote-icon {
+      color: #ffffff;
+      opacity: 0.2;
+    }
+
+    .star-rating i {
+      color: #ffc107;
+      font-size: 0.85rem;
+    }
+
+    .testimonial-text {
+      font-size: 1rem;
+      line-height: 1.7;
+      font-style: italic;
+      color: #475569;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .client-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #eef2f6;
+    }
+
+    .border-white {
+      border-color: rgba(255, 255, 255, 0.3) !important;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 991px) {
+      .testimonial-card {
+        padding: 30px;
+      }
+    }
+  </style>
+  <footer class="pt-5 pb-3" style="background: #0f172a; color: #ffffff;">
+    <div class="container pt-4">
+      <div class="row g-4 mb-5">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand mb-4">
+            <h3 class="fw-800 text-white mb-0">GHL <span class="text-primary">Master</span></h3>
+            <p class="small text-uppercase tracking-widest text-primary fw-bold" style="letter-spacing: 1px;">Automation
+              Agency</p>
+          </div>
+          <p class="text-secondary pe-lg-5" style="font-size: 0.95rem; line-height: 1.8;">
+            Duniya bhar ke businesses ke liye high-end automation systems aur GoHighLevel solutions create karna humara
+            junoon hai. Hum workflows ko optimize karte hain taake aap scale kar saken.
+          </p>
+          <div class="footer-socials d-flex gap-3 mt-4">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h6 class="fw-bold mb-4 text-white">Quick Links</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#expertise-tabs">Expertise</a></li>
+            <li><a href="#comparison-process">Our Process</a></li>
+            <li><a href="#global-stats">Global Success</a></li>
+            <li><a href="#integrations">Integrations</a></li>
+            <li><a href="#faq-section">FAQs</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold mb-4 text-white">Our Services</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">GHL Snapshot Setup</a></li>
+            <li><a href="#">API & Webhook Integration</a></li>
+            <li><a href="#">SaaS High-Level Setup</a></li>
+            <li><a href="#">Workflow Optimization</a></li>
+            <li><a href="#">Custom CRM Solutions</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold mb-4 text-white">Stay Updated</h6>
+          <p class="small text-secondary mb-4">Automation ke naye trends aur updates apne inbox mein payein.</p>
+          <div class="input-group mb-3 custom-newsletter">
+            <input type="text" class="form-control bg-transparent text-white border-secondary"
+              placeholder="Email address" style="font-size: 0.9rem;">
+            <button class="btn btn-primary" type="button"><i class="fas fa-paper-plane"></i></button>
+          </div>
+          <p class="small text-secondary"><i class="fas fa-envelope text-primary me-2"></i> contact@ghlmaster.com</p>
+        </div>
+      </div>
+
+      <hr style="border-color: rgba(255,255,255,0.1);">
+
+      <div class="row align-items-center pt-3">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="small text-secondary mb-0">© 2026 GHL Master Expertise. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <ul class="list-inline mb-0 footer-bottom-links">
+            <li class="list-inline-item"><a href="#" class="small text-secondary text-decoration-none">Privacy
+                Policy</a></li>
+            <li class="list-inline-item ms-3"><a href="#" class="small text-secondary text-decoration-none">Terms of
+                Service</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    /* Footer Styling */
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links li a {
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: 0.3s;
+    }
+
+    .footer-links li a:hover {
+      color: #1a73e8;
+      padding-left: 5px;
+    }
+
+    .social-link {
+      width: 38px;
+      height: 38px;
+      background: rgba(255, 255, 255, 0.05);
+      color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: 0.3s;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .social-link:hover {
+      background: #1a73e8;
+      color: white;
+      transform: translateY(-3px);
+      border-color: #1a73e8;
+    }
+
+    .custom-newsletter .form-control:focus {
+      box-shadow: none;
+      border-color: #1a73e8;
+    }
+
+    .tracking-widest {
+      letter-spacing: 2px;
+    }
+
+    .footer-bottom-links a:hover {
+      color: #ffffff !important;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      .footer-brand {
+        text-align: center;
+      }
+
+      .footer-socials {
+        justify-content: center;
+      }
+
+      footer {
+        text-align: center;
+      }
+
+      .footer-links li a:hover {
+        padding-left: 0;
+      }
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize Animations
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100
     });
-  });
 
-  // Sample form mock submit
-  function handleSampleRequest(e) {
-    e.preventDefault();
-    document.getElementById('sample-confirm').style.display = 'block';
-    e.target.style.display = 'none';
-  }
-
-  // Scroll-triggered fade-in for cards
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        entry.target.style.animation = `fadeUp 0.5s ${i * 0.07}s ease both`;
-        observer.unobserve(entry.target);
+    // Navbar scroll effect
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 50) {
+        document.querySelector('.navbar').style.padding = '10px 0';
+        document.querySelector('.navbar').style.background = 'rgba(5, 8, 15, 0.95)';
+      } else {
+        document.querySelector('.navbar').style.padding = '15px 0';
       }
     });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.product-card, .proof-card, .step, .resource-card').forEach(el => {
-    el.style.opacity = '0';
-    observer.observe(el);
-  });
-</script>
+  </script>
 </body>
+
 </html>

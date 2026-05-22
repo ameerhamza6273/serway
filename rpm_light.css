@@ -1946,7 +1946,7 @@ body:has(#notification_banner-top_bar) .flex.mb-4.h-7.flex-row.md\:flex-col.lg\:
   #f9fafb calc(100% - 30px) 100% /* right 30px same */
 );
 
-    padding: 15px 20px 15px 60px !important;
+    padding: 15px 0px 15px 40px !important;
     margin-left: -10px !important;
     z-index: 0 !important;
 }
