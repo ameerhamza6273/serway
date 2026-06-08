@@ -6110,6 +6110,6 @@ button#hr-button-v-3-4{
   background-color: #e7246f !important;
 }
 
-#sidebar-v2 a[id="sb_AI Agents"] img{
+.sidebar-v2-location #sidebar-v2 .hl_nav-header a[id="sb_AI Agents"] img{
   display: block !important;
 }
