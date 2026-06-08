@@ -2153,3 +2153,15 @@ a[id="3f2485c4-068c-40b7-965b-1945cbf4d194"] span.nav-title{
 .hl_v2-location_switcher{
   z-index: 999999 !important;
 }
+
+#sidebar-v2 a span i{
+  color: #70747d !important;
+}
+
+#sidebar-v2 a[id="sb_AI Agents"] img{
+  display: block !important;
+}
+
+ body .sidebar-v2-location #sidebar-v2 .hl_nav-header nav a.active img{
+   filter: invert(0) !important;
+ }
