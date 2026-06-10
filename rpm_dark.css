@@ -6113,3 +6113,10 @@ button#hr-button-v-3-4{
 .sidebar-v2-location #sidebar-v2 .hl_nav-header a[id="sb_AI Agents"] img{
   display: block !important;
 }
+
+.dialer .dialer-header button{
+  background: #E7246F !important;
+}
+.dialer .dialer-header button{
+  padding: 5px !important;
+}
