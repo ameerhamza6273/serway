@@ -1,269 +1,336 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Welcome to AtlasGPT</title>
-    <style type="text/css">
-        /* Client Overrides */
-        #outlook a { padding:0; }
-        body { width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #f4f6f9; color: #333333; }
-        .ExternalClass { width:100%; }
-        .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div { line-height: 100%; }
-        #backgroundTable { margin:0; padding:0; width:100% !important; line-height: 100% !important; }
-        img { opacity: 1; -ms-interpolation-mode: cubic-bezier; border: none; display: block; outline: none; }
-        table td { border-collapse: collapse; }
-        table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
-        
-        /* Mobile Viewport Fixes */
-        @media only screen and (max-width: 600px) {
-            .container { width: 100% !important; max-width: 100% !important; }
-            .stack { display: block !important; width: 100% !important; box-sizing: border-box; }
-            .text-right { text-align: left !important; padding-top: 12px !important; border-left: none !important; padding-left: 0 !important; }
-            .hero-text { padding-right: 0 !important; text-align: center !important; }
-            .hero-image { display: block !important; width: 100% !important; text-align: center !important; padding-top: 25px !important; }
-            .footer-col { display: block !important; width: 100% !important; text-align: center !important; padding: 15px 0 !important; }
-            .padding-mobile { padding-left: 20px !important; padding-right: 20px !important; }
-            .btn-block { display: block !important; width: 100% !important; text-align: center !important; padding: 14px 0 !important; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workforce Team List</title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f6fa;
+            margin: 30px;
         }
+
+        /* Top Bar Layout for Title & Button */
+        .table-header-bar {
+            display: table;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .header-title {
+            display: table-cell;
+            vertical-align: middle;
+            font-size: 20px;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        .header-actions {
+            display: table-cell;
+            text-align: right;
+            vertical-align: middle;
+        }
+
+        /* Premium Rounded Clickable Action Button */
+        .btn-download {
+            background-color: #27ae60; /* Professional Green Accent */
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 30px; /* Rounded Button Design */
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(39, 174, 96, 0.2);
+            text-decoration: none;
+        }
+
+        .btn-download:hover {
+            background-color: #219653;
+            box-shadow: 0 6px 12px rgba(39, 174, 96, 0.3);
+            transition: all 0.2s ease;
+        }
+
+        /* Table container */
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+        }
+
+        .workforce-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            text-align: left; /* Premium Left-aligned Chauffeur Look */
+        }
+
+        .workforce-table th {
+            background-color: #34495e; /* Dark Charcoal Slate */
+            color: #ffffff;
+            font-weight: 600;
+            padding: 14px 16px;
+            border-top: 1px solid #2c3e50;
+        }
+
+        .workforce-table td {
+            padding: 12px 16px;
+            color: #333333;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        /* Zebra Striping */
+        .workforce-table tbody tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        /* Status Badges */
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        
+        .badge-hydrovac { background-color: #e3f2fd; color: #0d47a1; }
+        .badge-driver { background-color: #fff3e0; color: #e65100; }
+        .badge-mechanic { background-color: #f3e5f5; color: #4a148c; }
+        .badge-office { background-color: #eceff1; color: #37474f; }
     </style>
 </head>
-<body style="margin: 0; padding: 0; background-color: #f4f6f9;">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%" id="backgroundTable" style="background-color: #f4f6f9;">
-        <tr>
-            <td align="center" valign="top" style="padding: 20px 0;">
-                
-                <table border="0" cellpadding="0" cellspacing="0" width="600" class="container" style="background-color: #ffffff; border-radius: 6px; overflow: hidden; table-layout: fixed;">
-                    
-                    <tr>
-                        <td style="background-color: #002d62; padding: 20px 30px; text-align: center; color: #ffffff;" class="padding-mobile">
-                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                <tr>
-                                    <td align="center" style="padding-bottom: 10px;">
-                                        <span style="font-size: 28px; color: #ffffff; line-height: 1;">✉</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="font-size: 13px; line-height: 1.5; color: #ffffff;">
-                                        <strong style="color: #ffffff;">Subject:</strong> Your AtlasGPT account is ready &mdash; here's where to start<br/>
-                                        <strong style="color: #ffffff;">Preview Text:</strong> <span style="color: #e2e8f0;">One thing to try in the next 5 minutes that will change how you use it.</span>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
+<body>
 
-                    <tr>
-                        <td style="padding: 25px 30px 15px 30px;" class="padding-mobile">
-                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                <tr>
-                                    <td width="300" class="stack" valign="middle">
-                                        <img src="https://assets.cdn.filesafe.space/84sadHh8FJOAdArRZ3QQ/media/6a2829742f56d3ac84616837.png" alt="AtlasGPT Logo" width="170" style="width: 170px; max-width: 170px; height: auto; display: block;" />
-                                    </td>
-                                    <td width="240" class="stack text-right" valign="middle" align="right" style="font-size: 13px; color: #4a5568; line-height: 1.4; font-weight: 500; border-left: 1px solid #e2e8f0; padding-left: 15px;">
-                                        Clinical decision support<br/><span style="color: #718096; font-weight: 400;">for subspecialists</span>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td style="padding: 0 30px;">
-                            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 0;" />
-                        </td>
-                    </tr>
+<div class="table-header-bar">
+    <div class="header-title">Workforce Active Team List</div>
+    <div class="header-actions">
+        <button class="btn-download" onclick="downloadPDF()">⬇️ Download PDF</button>
+    </div>
+</div>
 
-                    <tr>
-                        <td style="padding: 40px 30px; background-color: #f0f7ff;" class="padding-mobile">
-                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                <tr>
-                                    <td width="380" class="stack hero-text" valign="middle" style="padding-right: 20px;">
-                                        <h1 style="margin: 0 0 8px 0; font-size: 30px; font-weight: 800; color: #0f172a; line-height: 1.2;">Welcome to AtlasGPT</h1>
-                                        <h2 style="margin: 0 0 15px 0; font-size: 21px; font-weight: 700; color: #0052cc; line-height: 1.3;">Your account is ready.</h2>
-                                        <p style="margin: 0; font-size: 15px; color: #475569; line-height: 1.5; font-weight: 500;">One thing to try in the next 5 minutes that will change how you use it.</p>
-                                    </td>
-                                    <td width="160" class="stack hero-image" valign="middle" align="right">
-                                        <div style="background-color: #ffffff; border: 2px solid #d0e1fd; border-radius: 16px; padding: 20px 25px; display: inline-block; text-align: center;">
-                                            <span style="font-size: 42px; color: #0052cc; line-height: 1;">⚕</span>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td style="padding: 40px 30px 20px 30px;" class="padding-mobile">
-                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                <tr>
-                                    <td style="font-size: 16px; font-weight: 700; color: #0f172a; padding-bottom: 15px;">
-                                        {{contact.first_name}},
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="font-size: 15px; color: #1e293b; line-height: 1.6; padding-bottom: 20px; font-weight: 600;">
-                                        Your account is live.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="font-size: 15px; color: #334155; line-height: 1.6; padding-bottom: 30px;">
-                                        You now have access to clinical decision support built specifically for your specialty — not a general-purpose AI with a medical disclaimer bolted on, but a platform reviewed by board-certified physicians in your exact field.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td style="padding-bottom: 30px;">
-                                        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f1f5f9; border-radius: 12px; border: 1px solid #e2e8f0;">
-                                            <tr>
-                                                <td style="padding: 25px;" class="padding-mobile">
-                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                        <tr>
-                                                            <td width="55" valign="top" style="padding-right: 15px;" class="stack">
-                                                                <div style="background-color: #0052cc; color: #ffffff; width: 44px; height: 44px; line-height: 44px; border-radius: 50%; text-align: center; margin-bottom: 15px;">
-                                                                    <span style="font-size: 20px; font-weight: bold; color: #ffffff; vertical-align: middle;">⚡</span>
-                                                                </div>
-                                                            </td>
-                                                            <td valign="top" class="stack">
-                                                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                                    <tr>
-                                                                        <td style="font-size: 16px; font-weight: 700; color: #0f172a; padding-bottom: 15px;">
-                                                                            Here's the fastest way to see the difference:
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td style="padding-bottom: 12px;">
-                                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                                                <tr>
-                                                                                    <td valign="top" width="25" style="padding-top: 2px; font-size: 16px; color: #0052cc; font-weight: bold;">
-                                                                                        ✓
-                                                                                    </td>
-                                                                                    <td valign="top" style="font-size: 14px; color: #334155; line-height: 1.5;">
-                                                                                        <strong style="color: #0f172a;">Open AtlasGPT</strong> and enter your most recent challenging case — the one where you spent extra time confirming the differential or double-checking a treatment protocol.
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                                                <tr>
-                                                                                    <td valign="top" width="25" style="padding-top: 2px; font-size: 16px; color: #0052cc; font-weight: bold;">
-                                                                                        ✓
-                                                                                    </td>
-                                                                                    <td valign="top" style="font-size: 14px; color: #334155; line-height: 1.5;">
-                                                                                        <strong style="color: #0f172a;">See what comes back.</strong>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td style="font-size: 15px; color: #334155; line-height: 1.6; padding-bottom: 35px;">
-                                        Every answer is grounded in subspecialty guidelines, ranked by specialty editors in your field, with evidence cited inline so you can trace every recommendation to its source. That last part matters: you're not trusting a black box. You're verifying alongside one.
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td align="center" style="padding-bottom: 35px;">
-                                        <table border="0" cellpadding="0" cellspacing="0">
-                                            <tr>
-                                                <td align="center" style="background-color: #0052cc; border-radius: 6px;">
-                                                    <a href="https://atlas-gpt.com" target="_blank" class="btn-block" style="display: inline-block; padding: 14px 35px; font-size: 16px; font-weight: 700; color: #ffffff; text-decoration: none; border-radius: 6px; letter-spacing: 0.3px;">
-                                                        Try Your First Query &nbsp;➔
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td style="font-size: 14px; color: #475569; line-height: 1.6; padding-bottom: 15px;">
-                                        Over the next two weeks, I'll share a few things that help new users get the most out of the platform. Nothing lengthy — just what's worked for the specialists already using it.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="font-size: 14px; color: #475569; line-height: 1.6; padding-bottom: 15px; font-weight: 600;">
-                                        One question before then: what's the primary reason you signed up?
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="font-size: 14px; color: #475569; line-height: 1.6; padding-bottom: 30px;">
-                                        Reply to this email and tell me — it helps us make sure we're showing you the right features for your practice.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="font-size: 14px; color: #64748b; line-height: 1.6; padding-bottom: 40px;">
-                                        &mdash; The AtlasGPT Team
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td style="padding: 0 30px;">
-                            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 0;" />
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td style="padding: 30px;" class="padding-mobile">
-                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                <tr>
-                                    <td width="200" class="footer-col" valign="top" style="padding-right: 10px;">
-                                        <img src="https://assets.cdn.filesafe.space/84sadHh8FJOAdArRZ3QQ/media/6a2829742f56d3ac84616837.png" alt="AtlasGPT" width="110" style="width: 110px; height: auto; margin-bottom: 8px;" />
-                                        <p style="margin: 0; font-size: 11px; color: #64748b; line-height: 1.4;">Built for evidence-based clinical decision support.</p>
-                                    </td>
-                                    <td width="160" class="footer-col" valign="middle" align="center" style="font-size: 13px; font-weight: 600;">
-                                        <a href="https://atlas-gpt.com" target="_blank" style="color: #0052cc; text-decoration: none;">
-                                            🌐 atlas-gpt.com
-                                        </a>
-                                    </td>
-                                    <td width="180" class="footer-col" valign="top" style="padding-left: 10px;">
-                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                            <tr>
-                                                <td width="20" valign="top" style="padding-top: 1px; font-size: 14px; color: #0052cc;">
-                                                    🛡
-                                                </td>
-                                                <td valign="top" style="font-size: 11px; color: #64748b; line-height: 1.4; padding-left: 6px;">
-                                                    Reviewed by board-certified physicians.
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td style="background-color: #0f172a; padding: 25px 30px; text-align: center; font-size: 12px; color: #94a3b8; line-height: 1.6;" class="padding-mobile">
-                            <p style="margin: 0 0 10px 0;">You're receiving this email because you created an AtlasGPT account.</p>
-                            <p style="margin: 0;">
-                                <a href="{{contact.unsubscribe_link}}" target="_blank" style="color: #ffffff; text-decoration: underline; font-weight: 500;">Unsubscribe</a> 
-                                &nbsp;&bull;&nbsp; 
-                                <a href="#" target="_blank" style="color: #ffffff; text-decoration: underline; font-weight: 500;">Privacy Policy</a>
-                            </p>
-                        </td>
-                    </tr>
-
-                </table>
-                
-            </td>
-        </tr>
+<div id="pdf-content" class="table-container">
+    <table class="workforce-table">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Display Name</th>
+                <th>Role</th>
+                <th>QuickBooks Role</th>
+                <th>Group / Department</th>
+                <th>Last Activity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Beau</td>
+                <td>Norris</td>
+                <td>Beau T. Norris</td>
+                <td>Worker</td>
+                <td>Employee</td>
+                <td><span class="badge badge-hydrovac">Hydrovac</span></td>
+                <td>4 hours ago</td>
+            </tr>
+            <tr>
+                <td>Cayoni</td>
+                <td>Campbell</td>
+                <td>Cayoni Campbell</td>
+                <td>Worker</td>
+                <td>Employee</td>
+                <td><span class="badge badge-driver">Dump Truck Driver</span></td>
+                <td>15 hours ago</td>
+            </tr>
+            <tr>
+                <td>David</td>
+                <td>Rutley</td>
+                <td>David M. Rutley</td>
+                <td>Worker</td>
+                <td>Employee</td>
+                <td><span class="badge badge-hydrovac">Hydrovac</span></td>
+                <td>4 hours ago</td>
+            </tr>
+            <tr>
+                <td>David</td>
+                <td>Hussey</td>
+                <td>David R. Hussey</td>
+                <td>Worker</td>
+                <td>Employee</td>
+                <td><span class="badge badge-hydrovac">Hydrovac</span></td>
+                <td>4 hours ago</td>
+            </tr>
+            <tr>
+                <td>Donny</td>
+                <td>Sherriffs</td>
+                <td>Donny R. Sherriffs</td>
+                <td>Worker</td>
+                <td>Employee</td>
+                <td><span class="badge badge-hydrovac">Hydrovac</span></td>
+                <td>5 hours ago</td>
+            </tr>
+            <tr>
+                <td>Gage</td>
+                <td>Churchill</td>
+                <td>Gage Churchill</td>
+                <td>Worker</td>
+                <td>Employee</td>
+                <td><span class="badge badge-hydrovac">Hydrovac</span></td>
+                <td>2 years ago</td>
+            </tr>
+            <tr>
+                <td>Gerhard</td>
+                <td>Thielmann</td>
+                <td>Gerhard Thielmann</td>
+                <td>Worker</td>
+                <td>Employee</td>
+                <td><span class="badge badge-hydrovac">Hydrovac</span></td>
+                <td>6 hours ago</td>
+            </tr>
+            <tr>
+                <td>Jason</td>
+                <td>Ball</td>
+                <td>Jason C. Ball</td>
+                <td>Worker</td>
+                <td>Employee</td>
+                <td><span class="badge badge-hydrovac">Hydrovac</span></td>
+                <td>3 hours ago</td>
+            </tr>
+            <tr>
+                <td>Joe</td>
+                <td>Finley</td>
+                <td>Joe J. Finley</td>
+                <td>Worker</td>
+                <td>Employee</td>
+                <td><span class="badge badge-hydrovac">Hydrovac</span></td>
+                <td>4 hours ago</td>
+            </tr>
+            <tr>
+                <td>Joshua</td>
+                <td>Halladay</td>
+                <td>Joshua R. Halladay</td>
+                <td>Worker</td>
+                <td>Employee</td>
+                <td><span class="badge badge-hydrovac">Hydrovac</span></td>
+                <td>9 months ago</td>
+            </tr>
+            <tr>
+                <td>Kaitlin</td>
+                <td>Churchill</td>
+                <td>Kaitlin V Churchill</td>
+                <td>Worker</td>
+                <td>Employee</td>
+                <td><span class="badge badge-hydrovac">Hydrovac</span></td>
+                <td>14 hours ago</td>
+            </tr>
+            <tr>
+                <td>Kristen</td>
+                <td>Parker-Phillips</td>
+                <td>Kristen Parker-Phillips</td>
+                <td>Worker</td>
+                <td>Employee</td>
+                <td><span class="badge badge-office">Office</span></td>
+                <td>4 minutes ago</td>
+            </tr>
+            <tr>
+                <td>Kyle</td>
+                <td>Clarkson</td>
+                <td>Kyle J. Clarke</td>
+                <td>Worker</td>
+                <td>Employee</td>
+                <td><span class="badge badge-mechanic">Mechanics</span></td>
+                <td>2 hours ago</td>
+            </tr>
+            <tr>
+                <td>Michael</td>
+                <td>Sharples</td>
+                <td>Michael R. Sharples</td>
+                <td>Worker</td>
+                <td>Employee</td>
+                <td><span class="badge badge-mechanic">Mechanics</span></td>
+                <td>2 hours ago</td>
+            </tr>
+            <tr>
+                <td>Mikhail</td>
+                <td>Allen</td>
+                <td>Mikhail S. Allen</td>
+                <td>Worker</td>
+                <td>Employee</td>
+                <td><span class="badge badge-driver">Dump Truck Driver</span></td>
+                <td>5 hours ago</td>
+            </tr>
+            <tr>
+                <td>Nick</td>
+                <td>Churchill</td>
+                <td>Nick Churchill</td>
+                <td>Custom</td>
+                <td>Employee</td>
+                <td><span class="badge badge-office">Office</span></td>
+                <td>An hour ago</td>
+            </tr>
+            <tr>
+                <td>Ryan</td>
+                <td>Clark</td>
+                <td>Ryan S. Clark</td>
+                <td>Worker</td>
+                <td>Employee</td>
+                <td><span class="badge badge-hydrovac">Hydrovac</span></td>
+                <td>6 hours ago</td>
+            </tr>
+            <tr>
+                <td>Stephen</td>
+                <td>Huddleston</td>
+                <td>Stephen M Huddleston</td>
+                <td>Worker</td>
+                <td>Employee</td>
+                <td><span class="badge badge-hydrovac">Hydrovac</span></td>
+                <td>6 hours ago</td>
+            </tr>
+            <tr>
+                <td>Virginia</td>
+                <td>Phillips</td>
+                <td>Virginia Phillips</td>
+                <td>Worker</td>
+                <td>Employee</td>
+                <td><span class="badge badge-office">Office</span></td>
+                <td>3 years ago</td>
+            </tr>
+            <tr>
+                <td>William</td>
+                <td>Buta</td>
+                <td>William Buta</td>
+                <td>Worker</td>
+                <td>Employee</td>
+                <td><span class="badge badge-hydrovac">Hydrovac</span></td>
+                <td>19 hours ago</td>
+            </tr>
+        </tbody>
     </table>
+</div>
+
+<script>
+    function downloadPDF() {
+        // Target the element containing the table
+        const element = document.getElementById('pdf-content');
+        
+        // Configure PDF settings for professional corporate download
+        const opt = {
+            margin:       10,
+            filename:     'QuickBooks_Workforce_Team_List.pdf',
+            image:        { type: 'jpeg', quality: 0.98 },
+            html2canvas:  { scale: 2, useCORS: true },
+            jsPDF:        { unit: 'mm', format: 'a4', orientation: 'landscape' } // Landscape makes it fit perfectly
+        };
+        
+        // Execute the PDF generation and download process
+        html2pdf().set(opt).from(element).save();
+    }
+</script>
+
 </body>
 </html>

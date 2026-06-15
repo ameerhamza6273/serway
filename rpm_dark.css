@@ -6120,3 +6120,7 @@ button#hr-button-v-3-4{
 .dialer .dialer-header button{
   padding: 5px !important;
 }
+
+#snippets-app-container .hr-tabs-tab__label:hover{
+color:#000 !important;
+}
