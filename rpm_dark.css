@@ -6128,3 +6128,17 @@ color:#000 !important;
 .menu-item.top-level-item.menu-item-container.active{
   background: #2d2739 !important;
 }
+
+#conv-provider-option-6981ac807e761d840b3669cd,
+#conv-provider-option-internalComment,
+#conv-provider-option-whatsapp,
+#conv-provider-option-sms {
+  background: #0e0923 !important;
+}
+#composer-textarea div.flex.overflow-clip,
+#conv-provider-option-6981ac807e761d840b3669cd:hover,
+#conv-provider-option-internalComment:hover,
+#conv-provider-option-whatsapp:hover,
+#conv-provider-option-sms:hover {
+  background: #2d2739 !important;
+}
