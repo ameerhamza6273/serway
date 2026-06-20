@@ -6124,3 +6124,7 @@ button#hr-button-v-3-4{
 #snippets-app-container .hr-tabs-tab__label:hover{
 color:#000 !important;
 }
+
+.menu-item.top-level-item.menu-item-container.active{
+  background: #2d2739 !important;
+}
