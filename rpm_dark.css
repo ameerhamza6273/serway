@@ -6166,3 +6166,7 @@ color:#000 !important;
 #conversations-layout .conversation-panel .chat-bubble-inbound .audio-player span{
    color: #2d2739 !important;
 }
+
+#views-collapsed-dropdown-menu{
+  background: #2d2739 !important;
+}
