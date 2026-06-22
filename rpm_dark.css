@@ -6142,3 +6142,19 @@ color:#000 !important;
 #conv-provider-option-sms:hover {
   background: #2d2739 !important;
 }
+
+#conversations-layout .conversation-panel .chat-bubble-inbound,
+#conversations-layout .conversation-panel div .hr-tag{
+   background: #2d2739 !important;
+   border: none;
+   border-radius: 10px;
+}
+#conversations-layout .conversation-panel div .hr-tag svg,
+#conversations-layout .conversation-panel div .hr-tag div{
+   color: #fff !important;
+}
+
+#conversations-layout .conversation-panel ,
+#conversations-layout .conversation-panel >div {  
+  background: #0e0923 !important;
+}
