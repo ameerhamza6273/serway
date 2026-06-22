@@ -6142,7 +6142,7 @@ color:#000 !important;
 #conv-provider-option-sms:hover {
   background: #2d2739 !important;
 }
-
+#conversations-layout .conversation-panel .chat-bubble-outbound,
 #conversations-layout .conversation-panel .chat-bubble-inbound,
 #conversations-layout .conversation-panel div .hr-tag{
    background: #2d2739 !important;
@@ -6157,4 +6157,10 @@ color:#000 !important;
 #conversations-layout .conversation-panel ,
 #conversations-layout .conversation-panel >div {  
   background: #0e0923 !important;
+}
+
+#conversations-layout .conversation-panel .chat-bubble-inbound .audio-player button,
+#conversations-layout .conversation-panel .chat-bubble-inbound .audio-player svg,
+#conversations-layout .conversation-panel .chat-bubble-inbound .audio-player span{
+   color: #2d2739 !important;
 }
