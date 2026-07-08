@@ -6170,3 +6170,18 @@ color:#000 !important;
 #views-collapsed-dropdown-menu{
   background: #2d2739 !important;
 }
+
+#contact-conversation-panel .conversation-panel div .hr-tag{
+   background: #2d2739 !important;
+}
+#contact-conversation-panel .conversation-panel div .hr-tag svg,
+#contact-conversation-panel .conversation-panel div .hr-tag div{
+   color: #fff !important;
+}
+
+#contact-conversation-panel .conversation-panel ,
+#contact-conversation-panel .conversation-panel >div {  
+  background: #0e0923 !important;
+}
+
+
