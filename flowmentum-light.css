@@ -19,32 +19,6 @@ div {
 }
 
 
-
-:root {
-    --main-font: "Poppins";
-    --main-body-bg: linear-gradient(45deg, #292929 0%, #18191a 54%) !important;
-    --main-body-image: url("https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/68c18dd36462633a43464c93.svg") !important;
-    --main-body-image-overlay: #ececec00(0 0 0 / 0) !important;
-    --main-login-bg: #ededed00 !important;
-    /* --login-logo: url("https://storage.googleapis.com/msgsndr/0BNXRaTTusQGAfcHLyfN/media/661d36d2b8837d16f6b4b8f4.svg") !important; */
-    --login-heading-color: #000 !important;
-    --login-input-color: #000 !important;
-    --login-input-bg: #1f3fad !important;
-    --login-input-border: #bbbbbb !important;
-    --login-error-color: #000 !important;
-    --login-forgot-pass-color: #ffffff !important;
-    --login-button-bg: #5B4CF6 !important;
-    --login-button-color: #ffffff !important;
-    --login-button-hover-bg: #000 !important;
-    --login-button-hover-color: #ffffff !important;
-    --login-foot-note-color: #000 !important;
-    --login-foot-note-link-color: #000 !important;
-    --header-note-color: #000 !important;
-    --footer-note: "Having trouble logging in? Email us at support@8bitcreative.com or call us at (414)310-7103" !important;
-    --footer-note-color: #000 !important;
-}
-
-
 /* dashboard style */
 #location-switcher-sidbar-v2 {
     max-width: 210px !important;
