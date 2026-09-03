@@ -7069,7 +7069,7 @@ color:#fff !important;
 }
 
 #location-dashboard #dashboard-wrapper{
-    padding-top: 140px !important;
+    margin-top: 140px !important;
 }
 
 body:has(.sidebar-v2-location #dashboard .card-group) .main_container1012 {
@@ -7100,11 +7100,11 @@ body:has(#notification_banner-top_bar) .main_container1012 {
 }
 
 @media screen and (min-width:1800px) {
-    .main_container1012 {
-        transform: translate(0%, 0) scale(0.73) !important;
-        width: 112vw !important;
-        top: 6.5rem !important;
-    }
+   .main_container1012 {
+    transform: translate(-11%, 0) scale(0.73) !important;
+    width: 127vw !important;
+    top: 6.5rem !important;
+}
 
 }
 
@@ -7120,19 +7120,18 @@ body:has(#notification_banner-top_bar) .main_container1012 {
 
 @media screen and (max-width:1500px) {
     .main_container1012 {
-        transform: translate(5%, 0) scale(0.73) !important;
-        width: 105vw !important;
-        top: 6.5rem !important;
-    }
+    transform: translate(-12%, 0) scale(0.73) !important;
+    width: 131vw !important;
+    top: 6.5rem !important;
+}
 }
 
 @media screen and (max-width:1300px) {
-    .main_container1012 {
-        transform: translate(8%, 0) scale(0.73) !important;
-        width: 101vw !important;
+   .main_container1012 {
+    transform: translate(-12%, 0) scale(0.73) !important;
+    width: 130vw !important;
     top: 6.5rem !important;
-    }
-
+}
 }
 
 @media screen and (max-width:1200px) {
@@ -7147,9 +7146,9 @@ body:has(#notification_banner-top_bar) .main_container1012 {
 
 @media screen and (max-width:1050px) {
     .main_container1012 {
-        transform: translate(11%, 0) scale(0.73) !important;
-        width: 100vw !important;
-        top: 6.5rem !important;
-    }
+    transform: translate(-11%, 0) scale(0.73) !important;
+    width: 128vw !important;
+    top: 6.5rem !important;
+}
 
 }
