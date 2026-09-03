@@ -5810,6 +5810,11 @@ button#hr-button-v-3-4 {
     left: 0 !important;
     top: 0 !important;
     width: 100% !important;
+    z-index: 1000 !important;
+}
+
+/* The logo/location-switcher/search */
+.hl_header:has(.dropdown-menu.show) {
     z-index: 1002 !important;
 }
 
