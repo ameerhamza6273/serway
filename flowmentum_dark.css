@@ -5964,7 +5964,7 @@ button#hr-button-v-3-4 {
 #sidebar-v2 .agency-logo-container img,
 .v2-collapse .agency-logo-container img {
     max-height: 36px !important;
-    max-width: 130px !important;
+    max-width: 200px !important;
     margin-left: 0 !important;
     filter: none !important;
 }
@@ -5974,7 +5974,7 @@ button#hr-button-v-3-4 {
 .v2-collapse #location-switcher-sidbar-v2 {
     position: fixed !important;
     top: 6px !important;
-    left: 160px !important;
+    left: 250px !important;
     max-width: 190px !important;
     margin: 0 !important;
     z-index: 1003 !important;
@@ -5987,7 +5987,7 @@ button#hr-button-v-3-4 {
 /* Search bar*/
 .flex.mb-4.h-7.flex-row.md\:flex-col.lg\:flex-row.xl\:flex-row.items-start.justify-between.px-2 {
     position: fixed !important;
-    left: 370px !important;
+    left: 425px !important;
     top: 10px !important;
     z-index: 1003 !important;
 }

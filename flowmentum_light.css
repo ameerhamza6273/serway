@@ -1950,7 +1950,7 @@ body .sidebar-v2-location #sidebar-v2 .hl_nav-header nav a.active img {
 #sidebar-v2 .agency-logo-container img,
 .v2-collapse .agency-logo-container img {
     max-height: 36px !important;
-    max-width: 130px !important;
+    max-width: 200px !important;
     margin-left: 0 !important;
     filter: none !important;
 }
@@ -1960,7 +1960,7 @@ body .sidebar-v2-location #sidebar-v2 .hl_nav-header nav a.active img {
 .v2-collapse #location-switcher-sidbar-v2 {
     position: fixed !important;
     top: 6px !important;
-    left: 160px !important;
+    left: 250px !important;
     max-width: 190px !important;
     margin: 0 !important;
     z-index: 1003 !important;
@@ -1975,7 +1975,7 @@ body .sidebar-v2-location #sidebar-v2 .hl_nav-header nav a.active img {
    Fixed positioning here makes it immune to #sidebar-v2's own box changes. */
 .flex.mb-4.h-7.flex-row.md\:flex-col.lg\:flex-row.xl\:flex-row.items-start.justify-between.px-2 {
     position: fixed !important;
-    left: 370px !important;
+    left: 425px !important;
     top: 10px !important;
     z-index: 1003 !important;
 }
