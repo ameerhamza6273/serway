@@ -897,6 +897,7 @@ table thead th {
 .sidebar-v2-location .hl_header .topmenu-nav .topmenu-navitem.divider {
     padding: 1px !important;
 }
+
 #smartlists,
 #form-builder,
 #CalendarIntegration,
@@ -911,18 +912,6 @@ table thead th {
 #OpportunitiesList .opportunitiesCard.borderColor[data-v-3b3d361a] .hl-card-content span.flex.w-full.flex-col.pt-2\.5.\!w-fit {
     border-bottom: 1px solid #D9D9D9 !important;
     width: 100% !important;
-}
-
-body:has(.sidebar-v2-location #dashboard .card-group) .main_container1012 {
-    display: block !important;
-}
-
-.main_container1012 {
-    display: none;
-    border-radius: 15px;
-    background: linear-gradient(90deg, #1f3fad -0.01%, #4628C5 100%) !important;
-    padding: 40px 50px !important;
-    position: absolute;
 }
 
 .inside_container1012 {
@@ -1005,12 +994,6 @@ body:has(.sidebar-v2-location #dashboard .card-group) .main_container1012 {
     margin-top: 225px !important;
 }
 
-body:has(.sidebar-v2-location #location-dashboard) .main_container1012 {
-    display: block !important;
-    z-index: -0 !important;
-
-}
-
 .location-dashboard-wrapper.hl-wrapper-container .n-config-provider {
     z-index: 9 !important;
     background-color: #fff !important;
@@ -1027,104 +1010,6 @@ body:has(.sidebar-v2-location #location-dashboard) .main_container1012 {
 
 #OpportunitiesList a {
     color: #1e0000 !important;
-}
-
-.main_container1012 {
-    transform: translate(1%, 0) scale(0.73) !important;
-    width: 110vw !important;
-    top: 4rem !important;
-}
-
-body:has(.v2-collapse) .main_container1012 {
-    transform: translate(-6%, 0) scale(0.73) !important;
-    width: 120vw !important;
-    top: 4rem !important;
-}
-
-@media screen and (min-width:1800px) {
-    .main_container1012 {
-        transform: translate(0%, 0) scale(0.73) !important;
-        width: 112vw !important;
-        top: 5rem !important;
-    }
-
-    body:has(.v2-collapse) .main_container1012 {
-        transform: translate(-7%, 0) scale(0.73) !important;
-        width: 122vw !important;
-        top: 5rem !important;
-    }
-}
-
-@media screen and (max-width:1700px) {
-    .main_container1012 {
-        transform: translate(3%, 0) scale(0.73) !important;
-        width: 107vw !important;
-        top: 5rem !important;
-
-    }
-
-    body:has(.v2-collapse) .main_container1012 {
-        transform: translate(-5%, 0) scale(0.73) !important;
-        width: 118vw !important;
-        top: 5rem !important;
-    }
-}
-
-
-@media screen and (max-width:1500px) {
-    .main_container1012 {
-        transform: translate(5%, 0) scale(0.73) !important;
-        width: 105vw !important;
-        top: 5rem !important;
-    }
-
-    body:has(.v2-collapse) .main_container1012 {
-        transform: translate(-4%, 0) scale(0.73) !important;
-        width: 116vw !important;
-        top: 5rem !important;
-    }
-}
-
-@media screen and (max-width:1300px) {
-    .main_container1012 {
-        transform: translate(8%, 0) scale(0.73) !important;
-        width: 101vw !important;
-        top: 5rem !important;
-    }
-
-    body:has(.v2-collapse) .main_container1012 {
-        transform: translate(-3%, 0) scale(0.73) !important;
-        width: 115vw !important;
-        top: 5rem !important;
-    }
-}
-
-@media screen and (max-width:1200px) {
-    .main_container1012 {
-        transform: translate(11%, 0) scale(0.73) !important;
-        width: 98vw !important;
-        top: 5rem !important;
-    }
-
-    body:has(.v2-collapse) .main_container1012 {
-        transform: translate(-1%, 0) scale(0.73) !important;
-        width: 112vw !important;
-        top: 5rem !important;
-    }
-}
-
-@media screen and (max-width:1050px) {
-    .main_container1012 {
-        transform: translate(11%, 0) scale(0.73) !important;
-        width: 100vw !important;
-        top: 5rem !important;
-    }
-
-    body:has(.v2-collapse) .main_container1012 {
-        transform: translate(2%, 0) scale(0.73) !important;
-        width: 107vw !important;
-        top: 5rem !important;
-    }
 }
 
 .sidebar-v2-location .hl_allphonenumber--container {
@@ -1634,10 +1519,6 @@ body:has(#OpportunitiesList) .topmenu-navtitle {
     border: none !important;
 }
 
-body:has(#notification_banner-top_bar) .main_container1012 {
-    top: 7rem !important;
-}
-
 body:has(#notification_banner-top_bar) #tooglecss {
     top: 66px !important;
 }
@@ -1910,7 +1791,7 @@ body .sidebar-v2-location #sidebar-v2 .hl_nav-header nav a.active img {
     left: 0 !important;
     top: 0 !important;
     width: 100% !important;
-    z-index: 1000 !important;
+    z-index: 1002 !important;
 }
 
 .v2-collapse .hl_header {
@@ -2285,4 +2166,90 @@ a#sb_ask-ai span {
 /* ---- Fix: Workflows ---- */
 #marketplace-app {
     height: calc(100vh - 100px) !important;
+}
+
+#location-dashboard {
+    padding-top: 195px !important;
+}
+
+body:has(.sidebar-v2-location #dashboard .card-group) .main_container1012 {
+    display: block !important;
+}
+
+body:has(.sidebar-v2-location #location-dashboard) .main_container1012 {
+    display: block !important;
+    z-index: -0 !important;
+
+}
+
+body:has(#notification_banner-top_bar) .main_container1012 {
+    top: 7rem !important;
+}
+
+.main_container1012 {
+    display: none;
+    border-radius: 15px;
+    background: linear-gradient(90deg, #1f3fad -0.01%, #4628C5 100%) !important;
+    padding: 40px 50px !important;
+    position: absolute;
+}
+.main_container1012 {
+    transform: translate(-12%, 0) scale(0.73) !important;
+    width: 130vw !important;
+    top: 6.5rem !important;
+}
+
+@media screen and (min-width:1800px) {
+    .main_container1012 {
+        transform: translate(0%, 0) scale(0.73) !important;
+        width: 112vw !important;
+        top: 6.5rem !important;
+    }
+
+}
+
+@media screen and (max-width:1700px) {
+    .main_container1012 {
+        transform: translate(-12%, 0) scale(0.73) !important;
+        width: 131vw !important;
+        top: 6.5rem !important;
+    }
+
+}
+
+
+@media screen and (max-width:1500px) {
+    .main_container1012 {
+        transform: translate(5%, 0) scale(0.73) !important;
+        width: 105vw !important;
+        top: 6.5rem !important;
+    }
+}
+
+@media screen and (max-width:1300px) {
+    .main_container1012 {
+        transform: translate(8%, 0) scale(0.73) !important;
+        width: 101vw !important;
+    top: 6.5rem !important;
+    }
+
+}
+
+@media screen and (max-width:1200px) {
+    .main_container1012 {
+        transform: translate(11%, 0) scale(0.73) !important;
+        width: 98vw !important;
+        top: 6.5rem !important;
+    }
+
+  
+}
+
+@media screen and (max-width:1050px) {
+    .main_container1012 {
+        transform: translate(11%, 0) scale(0.73) !important;
+        width: 100vw !important;
+        top: 6.5rem !important;
+    }
+
 }

@@ -4233,121 +4233,6 @@ body:has(#OpportunitiesList) .topmenu-navtitle::before {
     backdrop-filter: blur(22px) !important;
 }
 
-.main_container1012 {
-    display: none !important;
-    border-radius: 15px !Important;
-    background: linear-gradient(90deg, #6B4BF4 -0.01%, #4628C5 100%) !Important;
-    padding: 40px 50px !important;
-    position: absolute !important;
-}
-
-.main_container1012 {
-    transform: translate(1%, 0) scale(0.73) !important;
-    width: 110vw !important;
-    top: 4rem !important;
-}
-
-body:has(.v2-collapse) .main_container1012 {
-    transform: translate(-6%, 0) scale(0.73) !important;
-    width: 120vw !important;
-    top: 4rem !important;
-}
-
-.location-dashboard-wrapper.hl-wrapper-container .n-config-provider {
-    margin-top: 225px !important;
-}
-
-body:has(.sidebar-v2-location #location-dashboard) .main_container1012 {
-    display: block !important;
-    z-index: -0 !important;
-}
-
-@media screen and (min-width:1800px) {
-    .main_container1012 {
-        transform: translate(0%, 0) scale(0.73) !important;
-        width: 112vw !important;
-        top: 5rem !important;
-    }
-
-    body:has(.v2-collapse) .main_container1012 {
-        transform: translate(-7%, 0) scale(0.73) !important;
-        width: 122vw !important;
-        top: 5rem !important;
-    }
-}
-
-@media screen and (max-width:1700px) {
-    .main_container1012 {
-        transform: translate(3%, 0) scale(0.73) !important;
-        width: 107vw !important;
-        top: 5rem !important;
-
-    }
-
-    body:has(.v2-collapse) .main_container1012 {
-        transform: translate(-5%, 0) scale(0.73) !important;
-        width: 118vw !important;
-        top: 5rem !important;
-    }
-}
-
-
-@media screen and (max-width:1500px) {
-    .main_container1012 {
-        transform: translate(5%, 0) scale(0.73) !important;
-        width: 105vw !important;
-        top: 5rem !important;
-    }
-
-    body:has(.v2-collapse) .main_container1012 {
-        transform: translate(-4%, 0) scale(0.73) !important;
-        width: 116vw !important;
-        top: 5rem !important;
-    }
-}
-
-@media screen and (max-width:1300px) {
-    .main_container1012 {
-        transform: translate(8%, 0) scale(0.73) !important;
-        width: 101vw !important;
-        top: 5rem !important;
-    }
-
-    body:has(.v2-collapse) .main_container1012 {
-        transform: translate(-3%, 0) scale(0.73) !important;
-        width: 115vw !important;
-        top: 5rem !important;
-    }
-}
-
-@media screen and (max-width:1200px) {
-    .main_container1012 {
-        transform: translate(11%, 0) scale(0.73) !important;
-        width: 98vw !important;
-        top: 5rem !important;
-    }
-
-    body:has(.v2-collapse) .main_container1012 {
-        transform: translate(-1%, 0) scale(0.73) !important;
-        width: 112vw !important;
-        top: 5rem !important;
-    }
-}
-
-@media screen and (max-width:1050px) {
-    .main_container1012 {
-        transform: translate(11%, 0) scale(0.73) !important;
-        width: 100vw !important;
-        top: 5rem !important;
-    }
-
-    body:has(.v2-collapse) .main_container1012 {
-        transform: translate(2%, 0) scale(0.73) !important;
-        width: 107vw !important;
-        top: 5rem !important;
-    }
-}
-
 #pipeline-table tr:hover td span {
     color: #fff !important;
 }
@@ -5030,10 +4915,6 @@ div#tagsCRMBuilder {
 #contact-details .v-binder-follower-content .hr-popover__content .hr-form-item-blank .hr-select .hr-base-selection p,
 #contact-details .v-binder-follower-content .hr-popover__content .hr-form-item-blank .hr-select .hr-base-selection div {
     color: #000 !important;
-}
-
-body:has(#notification_banner-top_bar) .main_container1012 {
-    top: 7rem !important;
 }
 
 body:has(#notification_banner-top_bar) #tooglecss {
@@ -5929,7 +5810,7 @@ button#hr-button-v-3-4 {
     left: 0 !important;
     top: 0 !important;
     width: 100% !important;
-    z-index: 1000 !important;
+    z-index: 1002 !important;
 }
 
 .v2-collapse .hl_header {
@@ -7185,4 +7066,90 @@ color:#fff !important;
    white ==== */
 #appointment-reporting-dashboard .hl-card {
     background-color: #101213 !important;
+}
+
+#location-dashboard {
+    padding-top: 195px !important;
+}
+
+body:has(.sidebar-v2-location #dashboard .card-group) .main_container1012 {
+    display: block !important;
+}
+
+body:has(.sidebar-v2-location #location-dashboard) .main_container1012 {
+    display: block !important;
+    z-index: -0 !important;
+
+}
+
+body:has(#notification_banner-top_bar) .main_container1012 {
+    top: 7rem !important;
+}
+
+.main_container1012 {
+    display: none;
+    border-radius: 15px;
+    background: linear-gradient(90deg, #1f3fad -0.01%, #4628C5 100%) !important;
+    padding: 40px 50px !important;
+    position: absolute;
+}
+.main_container1012 {
+    transform: translate(-12%, 0) scale(0.73) !important;
+    width: 130vw !important;
+    top: 6.5rem !important;
+}
+
+@media screen and (min-width:1800px) {
+    .main_container1012 {
+        transform: translate(0%, 0) scale(0.73) !important;
+        width: 112vw !important;
+        top: 6.5rem !important;
+    }
+
+}
+
+@media screen and (max-width:1700px) {
+    .main_container1012 {
+        transform: translate(-12%, 0) scale(0.73) !important;
+        width: 131vw !important;
+        top: 6.5rem !important;
+    }
+
+}
+
+
+@media screen and (max-width:1500px) {
+    .main_container1012 {
+        transform: translate(5%, 0) scale(0.73) !important;
+        width: 105vw !important;
+        top: 6.5rem !important;
+    }
+}
+
+@media screen and (max-width:1300px) {
+    .main_container1012 {
+        transform: translate(8%, 0) scale(0.73) !important;
+        width: 101vw !important;
+    top: 6.5rem !important;
+    }
+
+}
+
+@media screen and (max-width:1200px) {
+    .main_container1012 {
+        transform: translate(11%, 0) scale(0.73) !important;
+        width: 98vw !important;
+        top: 6.5rem !important;
+    }
+
+  
+}
+
+@media screen and (max-width:1050px) {
+    .main_container1012 {
+        transform: translate(11%, 0) scale(0.73) !important;
+        width: 100vw !important;
+        top: 6.5rem !important;
+    }
+
 }
