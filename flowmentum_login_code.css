@@ -1,0 +1,143 @@
+ @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+body,
+a,
+span.search-placeholder,
+strong,
+td,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+div {
+    font-family: "Poppins";
+}
+
+.hl_login--header {
+    background-color: transparent !important;
+    border-bottom: none !important;
+}
+
+.hl_login--body p.foot-note:before {
+    content: 'Having trouble logging in? Email us at support@company.com or call us at 000 000 0000';
+    font-size: 13px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.hl_login--body .login-card-heading {
+    margin-bottom: 35px !important;
+}
+
+.hl_login--body .login-card-heading .heading2 {
+    font-size: 25px !important;
+    font-weight: 600 !important;
+}
+
+.hl_login--body .form-group .hl-text-input-label {
+    display: none !important;
+}
+
+.hl_login--body .form-group input {
+    padding: 12px !important;
+}
+
+.hl_login--body .form-group {
+    margin-bottom: 16px !important;
+}
+
+#forgot_passowrd_btn {
+    margin-top: 12px !important;
+}
+
+.hl_login--header .container-fluid a {
+    margin: 0 auto !important;
+    display: block !important;
+    margin-bottom: -80px !important;
+    margin-top: 80px;
+    max-width: 60px !important;
+}
+
+#app:has(.hl_login) {
+    background: #3552c3 !important;
+}
+
+.hl_login .card {
+    max-width: 500px !important;
+    border-radius: 20px !important;
+    border: 20px solid transparent;
+    background: linear-gradient(#fff, #fff) padding-box,
+        linear-gradient(to right, #ffffff21 0%, #ffffff21 0%, #ffffff21 200%) border-box !important;
+}
+
+body[data-theme=default-dark-v1] a:not(.btn) {
+    color: #000 !important;
+}
+
+.hl_login .card button {
+    border-radius: 10px !important;
+    background: #3d10d7 !important;
+}
+
+#app .hl_login--header .container-fluid a img {
+   filter: brightness(24.5) !important;
+}
+
+.hl_login--header .container-fluid a img {
+    max-width: 280px !important;
+    margin-top: 35px !important; 
+}
+
+.hl_login--body .card .card-body .forgot-password {
+    color: #3d10d7 !important;
+}
+
+.hl_login--body .card .card-body .foot-note a {
+    color: #3d10d7 !important;
+}
+
+.hl_login--body .card .card-body input[type="password"],
+.hl_login--body .card .card-body input[type="text"] {
+    border: 1px solid #ddd !important;
+    background: #fff !important;
+}
+
+.hl_login .card .relative.rounded-md.shadow-sm button {
+    background: transparent !important;
+}
+.hl_login .card .card-body {
+    background: transparent !important;
+}
+.hl_login .card .card-body h2,
+.hl_login .card .card-body p {
+    color: #000 !important;
+}
+
+:root {
+    --main-font: "Poppins";
+    --main-body-bg: linear-gradient(45deg, #292929 0%, #18191a 54%) !important;
+    --main-body-image: url("https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/68c18dd36462633a43464c93.svg") !important;
+    --main-body-image-overlay: #ececec00(0 0 0 / 0) !important;
+    --main-login-bg: #ededed00 !important;
+    /* --login-logo: url("https://storage.googleapis.com/msgsndr/0BNXRaTTusQGAfcHLyfN/media/661d36d2b8837d16f6b4b8f4.svg") !important; */
+    --login-heading-color: #000 !important;
+    --login-input-color: #000 !important;
+    --login-input-bg: #1f3fad !important;
+    --login-input-border: #bbbbbb !important;
+    --login-error-color: #000 !important;
+    --login-forgot-pass-color: #ffffff !important;
+    --login-button-bg: #5B4CF6 !important;
+    --login-button-color: #ffffff !important;
+    --login-button-hover-bg: #000 !important;
+    --login-button-hover-color: #ffffff !important;
+    --login-foot-note-color: #000 !important;
+    --login-foot-note-link-color: #000 !important;
+    --header-note-color: #000 !important;
+    --footer-note: "Having trouble logging in? Email us at support@8bitcreative.com or call us at (414)310-7103" !important;
+    --footer-note-color: #000 !important;
+} 

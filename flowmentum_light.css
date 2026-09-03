@@ -428,10 +428,6 @@ a .fa-phone {
     margin-top: 6px !important;
 }
 
-body:has(.sidebar-v2-location #dashboard .card-group) .main_container1012 {
-    display: block !important;
-}
-
 @media screen and (min-width: 1370px) {
     .card-group.--wide-gutter .card-body {
         display: flex !important;
