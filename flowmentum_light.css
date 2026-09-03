@@ -2168,7 +2168,7 @@ a#sb_ask-ai span {
     height: calc(100vh - 100px) !important;
 }
 
-#location-dashboard {
+#location-dashboard #dashboard-wrapper{
     padding-top: 195px !important;
 }
 
