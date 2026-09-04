@@ -4256,25 +4256,7 @@ button.hr-button--secondary p {
 
 /* sidebar start */
 .agency-logo-container img {
-    max-width: 150px !important
-}
-
-.agency-logo-container img {
-    opacity: 0 !important;
-}
-
-.agency-logo-container {
-    position: relative !important;
-}
-
-.agency-logo-container::before {
-    content: "" !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 18% !important;
-    width: 150px !important;
-    height: 100% !important;
-    background: url(new-logo-here) no-repeat center/contain !important;
+    max-width: 200px !important
 }
 
 body:has(#bulkActionsList) .topmenu-navtitle,
