@@ -566,7 +566,7 @@ span.search-placeholder::before {
 #location-switcher-sidbar-v2 {
     margin: 0px auto 10px auto !important;
     max-width: 210px !important;
-    height: 48px !important;
+    height: 42px !important;
     padding: 4px 10px !important;
 
 }
@@ -5841,7 +5841,7 @@ button#hr-button-v-3-4 {
 .v2-open #location-switcher-sidbar-v2,
 .v2-collapse #location-switcher-sidbar-v2 {
     position: fixed !important;
-    top: 6px !important;
+    top: 9px !important;
     left: 250px !important;
     max-width: 190px !important;
     margin: 0 !important;
