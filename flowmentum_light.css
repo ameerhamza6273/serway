@@ -1933,3 +1933,7 @@ body:has(.v2-collapse) .main_container1012 {
 #location-dashboard #dashboard-wrapper{
     margin-top: 195px !important;
 }
+
+#location_dashboard-btn-dashboard_switcher span.truncate.text-left.min-w-0.max-w-\[260px\]{
+    color: #fff !important;
+}
