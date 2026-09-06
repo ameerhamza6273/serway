@@ -6633,10 +6633,6 @@ div#globalSearchOpener {
     background-color: #101213 !important;
 }
 
-#location-dashboard #dashboard-wrapper {
-    margin-top: 140px !important;
-}
-
 body:has(.sidebar-v2-location #dashboard .card-group) .main_container1012 {
     display: block !important;
 }
@@ -6648,9 +6644,8 @@ body:has(.sidebar-v2-location #location-dashboard) .main_container1012 {
 }
 
 body:has(#notification_banner-top_bar) .main_container1012 {
-    top: 7rem !important;
+    top: 4rem !important;
 }
-
 
 .main_container1012 {
     display: none;
@@ -6663,26 +6658,26 @@ body:has(#notification_banner-top_bar) .main_container1012 {
 .main_container1012 {
     transform: translate(1%, 0) scale(0.73) !important;
     width: 110vw !important;
-    top: 4rem !important;
+    top: 3rem !important;
 }
 
 body:has(.v2-collapse) .main_container1012 {
     transform: translate(-6%, 0) scale(0.73) !important;
     width: 120vw !important;
-    top: 4rem !important;
+    top: 3rem !important;
 }
 
 @media screen and (min-width:1800px) {
     .main_container1012 {
         transform: translate(0%, 0) scale(0.73) !important;
         width: 112vw !important;
-        top: 5rem !important;
+        top: 3rem !important;
     }
 
     body:has(.v2-collapse) .main_container1012 {
         transform: translate(-7%, 0) scale(0.73) !important;
         width: 122vw !important;
-        top: 5rem !important;
+        top: 3rem !important;
     }
 }
 
@@ -6690,14 +6685,14 @@ body:has(.v2-collapse) .main_container1012 {
     .main_container1012 {
         transform: translate(3%, 0) scale(0.73) !important;
         width: 107vw !important;
-        top: 5rem !important;
+        top: 3rem !important;
 
     }
 
     body:has(.v2-collapse) .main_container1012 {
         transform: translate(-5%, 0) scale(0.73) !important;
         width: 118vw !important;
-        top: 5rem !important;
+        top: 3rem !important;
     }
 }
 
@@ -6706,13 +6701,13 @@ body:has(.v2-collapse) .main_container1012 {
     .main_container1012 {
         transform: translate(5%, 0) scale(0.73) !important;
         width: 105vw !important;
-        top: 5rem !important;
+        top: 3rem !important;
     }
 
     body:has(.v2-collapse) .main_container1012 {
         transform: translate(-4%, 0) scale(0.73) !important;
         width: 116vw !important;
-        top: 5rem !important;
+        top: 3rem !important;
     }
 }
 
@@ -6720,13 +6715,13 @@ body:has(.v2-collapse) .main_container1012 {
     .main_container1012 {
         transform: translate(8%, 0) scale(0.73) !important;
         width: 101vw !important;
-        top: 5rem !important;
+        top: 3rem !important;
     }
 
     body:has(.v2-collapse) .main_container1012 {
         transform: translate(-3%, 0) scale(0.73) !important;
         width: 115vw !important;
-        top: 5rem !important;
+        top: 3rem !important;
     }
 }
 
@@ -6734,13 +6729,13 @@ body:has(.v2-collapse) .main_container1012 {
     .main_container1012 {
         transform: translate(11%, 0) scale(0.73) !important;
         width: 98vw !important;
-        top: 5rem !important;
+        top: 3rem !important;
     }
 
     body:has(.v2-collapse) .main_container1012 {
         transform: translate(-1%, 0) scale(0.73) !important;
         width: 112vw !important;
-        top: 5rem !important;
+        top: 3rem !important;
     }
 }
 
@@ -6748,13 +6743,13 @@ body:has(.v2-collapse) .main_container1012 {
     .main_container1012 {
         transform: translate(11%, 0) scale(0.73) !important;
         width: 100vw !important;
-        top: 5rem !important;
+        top: 3rem !important;
     }
 
     body:has(.v2-collapse) .main_container1012 {
         transform: translate(2%, 0) scale(0.73) !important;
         width: 107vw !important;
-        top: 5rem !important;
+        top: 3rem !important;
     }
 }
 
@@ -6762,4 +6757,8 @@ body:has(.v2-collapse) .main_container1012 {
     border-radius: 50px !important;
     padding-left: 10px !important;
     padding-right: 10px !important;
+}
+
+#location-dashboard #dashboard-wrapper{
+    margin-top: 195px !important;
 }

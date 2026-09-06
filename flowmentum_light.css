@@ -1830,13 +1830,13 @@ body:has(#notification_banner-top_bar) .main_container1012 {
 .main_container1012 {
     transform: translate(1%, 0) scale(0.73) !important;
     width: 110vw !important;
-    top: 4rem !important;
+    top: 5rem !important;
 }
 
 body:has(.v2-collapse) .main_container1012 {
     transform: translate(-6%, 0) scale(0.73) !important;
     width: 120vw !important;
-    top: 4rem !important;
+    top: 5rem !important;
 }
 
 @media screen and (min-width:1800px) {
@@ -1926,5 +1926,5 @@ body:has(.v2-collapse) .main_container1012 {
 }
 
 #location-dashboard #dashboard-wrapper{
-    margin-top: 140px !important;
+    margin-top: 195px !important;
 }
