@@ -456,7 +456,7 @@ a#canny_logs-toggle::after {
     top: -3px !important;
     left: -0px !important;
 }
-
+header.hl_header #template-power-dialer,
 header.hl_header #template-power-dialer button.h-8.w-8 {
     background: #000000 !important;
     border-radius: 50px !important;
@@ -555,7 +555,7 @@ span.search-placeholder::before {
     height: 19px !important;
     position: absolute !important;
     top: unset !important;
-    right: 10px !important;
+    right: 30px !important;
 }
 
 .n-drawer.n-drawer--native-scrollbar .n-drawer-content-wrapper {
@@ -797,14 +797,13 @@ body[data-theme=default] .sidebar-v2-location #sidebar-v2 #location-switcher-sid
 /* dashboard & sidebar style is here ------------------------------ */
 #sidebar-v2 {
     border: 2px solid rgba(255, 255, 255, 0.10) !important;
-    background: radial-gradient(340.32% 136.38% at 0% 3.35%, rgba(107, 75, 244, 0.06) 0%, rgba(107, 75, 244, 0.00) 100%) !important;
-    background-color: #0b051c !important;
+    background-color: #1a1a1a !important;
     min-width: 60px !important;
     padding: 0px !important;
 }
 
 .sidebar-v2-location .hl_header .container-fluid {
-    background-color: #101213 !important;
+    background-color: #1a1a1a !important;
 }
 
 .help-section,
@@ -3773,7 +3772,7 @@ a#canny_logs-toggle {
     Left: 0 !important;
     Position: relative !important;
     font-size: 12px !important;
-    color: #FFFFFFCC !important;
+    color: #808080 !important;
     font-weight: 600 !important;
     line-height: 24px !important;
     text-transform: uppercase !important;
@@ -5782,311 +5781,6 @@ button#hr-button-v-3-4 {
     background: #101213 !important;
 }
 
-
-
-/*  NAVBAR REDESIGN: sidebar -> top navbar  */
-
-/* ---- Row 1: header stays full width, makes room on the left ---- */
-.v2-open .hl_header,
-.v2-collapse .hl_header {
-    left: 0 !important;
-    top: 0 !important;
-    width: 100% !important;
-    z-index: 1000 !important;
-}
-
-/* The logo/location-switcher/search */
-.hl_header:has(.dropdown-menu.show) {
-    z-index: 1002 !important;
-}
-
-.v2-collapse .hl_header {
-    width: 100% !important;
-}
-
-/* neutralize  */
-.v2-collapse #globalSearchOpener {
-    position: relative !important;
-    left: auto !important;
-    top: auto !important;
-}
-
-.v2-collapse #quickActions {
-    position: relative !important;
-    left: auto !important;
-    top: auto !important;
-}
-
-/* Logo, pulled out of the sidebar and fixed into row 1, far left */
-#sidebar-v2 .agency-logo-container {
-    position: fixed !important;
-    top: 10px !important;
-    left: 20px !important;
-    width: auto !important;
-    height: 40px !important;
-    margin: 0 !important;
-    justify-content: flex-start !important;
-    z-index: 1003 !important;
-}
-
-#sidebar-v2 .agency-logo-container img,
-.v2-collapse .agency-logo-container img {
-    max-height: 36px !important;
-    max-width: 200px !important;
-    margin-left: 0 !important;
-    filter: none !important;
-}
-
-/* Location switcher */
-.v2-open #location-switcher-sidbar-v2,
-.v2-collapse #location-switcher-sidbar-v2 {
-    position: fixed !important;
-    top: 9px !important;
-    left: 250px !important;
-    max-width: 190px !important;
-    margin: 0 !important;
-    z-index: 1003 !important;
-}
-
-.v2-collapse #location-switcher-sidbar-v2::after {
-    display: flex !important;
-}
-
-/* Search bar*/
-.flex.mb-4.h-7.flex-row.md\:flex-col.lg\:flex-row.xl\:flex-row.items-start.justify-between.px-2 {
-    position: fixed !important;
-    left: 450px !important;
-    top: 10px !important;
-    z-index: 1003 !important;
-}
-
-/* ---- Row 2: the sidebar itself becomes a fixed horizontal navbar ---- */
-.v2-open #sidebar-v2,
-.v2-collapse #sidebar-v2 {
-    position: fixed !important;
-    top: 60px !important;
-    left: 0 !important;
-    width: 100% !important;
-    min-width: 100% !important;
-    max-width: 100% !important;
-    height: 56px !important;
-    z-index: 1001 !important;
-    background: #1f3fad !important;
-    overflow: visible !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
-}
-
-.v2-open #sidebar-v2 .h-screen,
-.v2-collapse #sidebar-v2 .h-screen {
-    flex-direction: row !important;
-    height: 56px !important;
-    min-width: 100% !important;
-    width: 100% !important;
-    align-items: center !important;
-}
-
-/* collapse button repurposed  */
-#sidebar-v2>div.absolute.z-50 {
-    display: none !important;
-}
-
-#sidebar-v2>div.absolute.z-50 button {
-    background: rgba(255, 255, 255, 0.18) !important;
-    border-radius: 50% !important;
-    width: 28px !important;
-    height: 28px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-}
-
-#sidebar-v2>div.absolute.z-50 button i.hl_collapse-button {
-    color: #fff !important;
-    font-size: 16px !important;
-    transform: rotate(180deg) !important;
-}
-
-#sidebar-v2 nav {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    flex: 1 1 auto !important;
-    width: auto !important;
-    height: 100% !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-    gap: 4px !important;
-    padding-left: 12px !important;
-    padding-right: 44px !important;
-    scrollbar-width: none !important;
-    -ms-overflow-style: none !important;
-}
-
-#sidebar-v2 nav::-webkit-scrollbar {
-    display: none !important;
-    height: 0 !important;
-}
-
-.v2-open #sidebar-v2 nav a,
-.v2-collapse #sidebar-v2 nav a,
-.hl_nav-settings nav a {
-    width: auto !important;
-    max-width: none !important;
-    flex: 0 0 auto !important;
-    flex-direction: row !important;
-    white-space: nowrap !important;
-    padding: 8px 14px !important;
-    margin: 0 !important;
-    border-radius: 8px !important;
-}
-
-#sidebar-v2 nav a img,
-.hl_nav-settings nav a img {
-    margin-right: 8px !important;
-    filter: brightness(0) invert(1) opacity(0.75) !important;
-}
-
-.v2-open #sidebar-v2 nav a::before,
-.v2-collapse #sidebar-v2 nav a::before,
-.hl_nav-settings nav a::before {
-    filter: brightness(0) invert(1) opacity(0.75) !important;
-}
-
-#sidebar-v2 nav a span.nav-title,
-.hl_nav-settings nav a span.nav-title {
-    color: rgba(255, 255, 255, 0.8) !important;
-}
-
-#sidebar-v2 nav a:hover,
-#sidebar-v2 nav a.active,
-.hl_nav-settings nav a:hover,
-.hl_nav-settings nav a#sb_settings:hover {
-    background: #10287d !important;
-}
-
-#sidebar-v2 nav a:hover img,
-#sidebar-v2 nav a.active img,
-#sidebar-v2 nav a:hover::before,
-#sidebar-v2 nav a.active::before {
-    filter: brightness(0) invert(1) opacity(1) !important;
-}
-
-#sidebar-v2 nav a:hover span.nav-title,
-#sidebar-v2 nav a.active span.nav-title {
-    color: #fff !important;
-}
-
-#sidebar-v2 a#sb_divider-1 {
-    display: none !important;
-}
-
-/* Settings link: pushed to the far right end of the navbar */
-.hl_nav-settings {
-    position: static !important;
-    width: auto !important;
-    height: 100% !important;
-    margin-left: auto !important;
-    flex-shrink: 0 !important;
-    background: transparent !important;
-    display: flex !important;
-    align-items: center !important;
-}
-
-.hl_nav-settings nav {
-    display: flex !important;
-    overflow: visible !important;
-    height: auto !important;
-}
-
-.hl_nav-settings nav a#sb_settings {
-    width: auto !important;
-}
-
-/* ---- Page content: clear header (60px) + new navbar (56px) ---- */
-section.w-full {
-    padding-top: 56px !important;
-}
-
-#conversations,
-.v2-collapse #conversations {
-    width: 100% !important;
-}
-
-.v2-open #sidebar-v2 .h-screen {
-    padding-top: 4px !important;
-}
-
-#app .topmenu-nav {
-    margin-top: 53px !important;
-}
-
-.sidebar-v2-location .hl_header .topmenu-nav .topmenu-navitem {
-    border-radius: 50px !important;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-}
-
-.sidebar-v2-location .hl_header .topmenu-nav .topmenu-navitem img {
-    filter: brightness(1.5) !important;
-}
-
-.sidebar-v2-location .hl_header .topmenu-nav .topmenu-navitem.divider {
-    padding: 1px !important;
-}
-
-#sidebar-v2 .w-full.group.px-3.flex.items-center.justify-start.lg\:justify-start.xl\:justify-start.text-sm.font-medium.rounded-md.text-gray-300.font-normal.cursor-text.divider {
-    display: none !important;
-}
-
-/* ---- Page content width fix: ---- */
-#app #funnels,
-#app .hl_wrapper,
-#location_prospect_micro_app,
-#app #clientportal-builder,
-#app #marketplace-app,
-.sidebar-v2-location .hl_wrapper,
-.sidebar-v2-location .wrapper,
-.sidebar-v2-location .hl_settings--body {
-    width: 100% !important;
-}
-
-#account-snapshots,
-main #settings,
-#marketplace-app,
-#university-app,
-#reselling-dashboard-app,
-#locations-list {
-    padding-top: 60px !important;
-}
-
-#location-dashboard {
-    padding-top: 60px !important;
-}
-
-#app .sidebar-v2-location .hl_wrapper.hl_topbar-tabs,
-#app .sidebar-v2-location .hl_topbar-tabs {
-    padding-top: 120px !important;
-}
-
-#mobileAppCustomiser,
-.hl_affiliate--header,
-.hl_agency.hl_agency-sales-resources,
-#location_prospect_micro_app {
-    padding-top: 80px !important;
-}
-
-/* ---- Page content height fix: ---- */
-.sidebar-v2-location .hl_wrapper,
-.sidebar-v2-location .hl_topbar-tabs {
-    height: calc(100vh - 56px) !important;
-}
-
-/* ---- Pipeline (Opportunities) ---- */
-#app #funnels,
-.sidebar-v2-location .wrapper.opportunityPage.crm-opportunities-content {
-    max-width: 100% !important;
-}
-
 a#sb_ask-ai span {
     color: #ffffffcc !important;
 }
@@ -6111,132 +5805,10 @@ a#sb_ask-ai span {
     padding: 16px !important;
 }
 
-/* Specifically target only the Dashboard switcher label text */
-#location_dashboard-btn-dashboard_switcher-label .truncate {
-    color: #ffffff !important;
-}
-
-/* ---- Calendars page: /height ---- */
-#CalendarPage {
-    transform: none !important;
-    -webkit-transform: none !important;
-    -moz-transform: none !important;
-    -ms-transform: none !important;
-    -o-transform: none !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    --calendar-height: 68% !important;
-}
-
-#calendar-page-parent-container {
-    width: 100% !important;
-    max-width: 100% !important;
-}
-
-/* ---- Popups/drawers ---- */
-.hr-drawer-container,
-.n-modal-container,
-.n-drawer-container {
-    z-index: 2000 !important;
-}
-
-#record-details-new-ui {
-    padding-top: 105px !important;
-}
-
-#app:has(#BusinessList) .hl_wrapper,
-#app:has(#CustomObjectsList) .hl_wrapper {
-    padding-top: 0 !important;
-}
-
-#Labs {
-    padding-top: 50px !important;
-}
-
-#domainReselling {
-    padding-top: 10px !important;
-}
-
-#Labs,
-#bulkImport,
-#app:has(#phone-system-app) .hl_allphonenumber--container,
-#app .hl_wrapper--inner,
-#app:has(#ForecastDashboard) .wrapper,
-#app:has(#ad-manager-dashboard) .hl_topbar-tabs,
-#app:has(#BusinessList) .wrapper,
-#app:has(#CustomObjectsList) .wrapper {
-    max-width: 100% !important;
-    width: 100%;
-}
-
-/* ---- Fix: pages (e.g. Workflows---- */
-.sidebar-v2-location .hl_wrapper,
-.sidebar-v2-location .hl_topbar-tabs {
-    box-sizing: border-box !important;
-}
-
-.sidebar-v2-location .hl_topbar-tabs #workflowBuilder {
-    height: calc(100vh - 176px) !important;
-}
-
-/* ---- Fix: Workflows ---- */
-#marketplace-app {
-    height: calc(100vh - 100px) !important;
-}
-
-#location_dashboard-btn_group-dashboard_switcher button .hr-button__content p {
-    color: #fff !important;
-}
-
 #location_dashboard-btn-summarize_dashboard,
 #reporting_common_datepicker-btn-trigger,
 #location_dashboard-btn_group-dashboard_switcher button {
     background: #1a1a1a !important;
-}
-
-/* ---- banner offset fix  ---- */
-body:has(#notification_banner-top_bar) #sidebar-v2 .agency-logo-container {
-    top: 58px !important;
-}
-
-body:has(#notification_banner-top_bar) .v2-open #location-switcher-sidbar-v2,
-body:has(#notification_banner-top_bar) .v2-collapse #location-switcher-sidbar-v2 {
-    top: 54px !important;
-}
-
-body:has(#notification_banner-top_bar) .flex.mb-4.h-7.flex-row.md\:flex-col.lg\:flex-row.xl\:flex-row.items-start.justify-between.px-2 {
-    top: 58px !important;
-}
-
-body:has(#notification_banner-top_bar) .v2-open #sidebar-v2,
-body:has(#notification_banner-top_bar) .v2-collapse #sidebar-v2 {
-    top: 108px !important;
-}
-
-body:has(#notification_banner-top_bar) section.w-full {
-    padding-top: 14px !important;
-}
-
-body:has(#notification_banner-top_bar) #location-dashboard {
-    padding-top: 108px !important;
-}
-
-/* ---- notification banner ---- */
-#notification_banner-top_bar {
-    background: #2a2410 !important;
-    color: #f2d98a !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-}
-
-#notification_banner-top_bar * {
-    color: #f2d98a !important;
-}
-
-#notification_banner-top_bar button,
-#notification_banner-top_bar a.btn,
-#notification_banner-top_bar [class*="btn"] {
-    background: #f2d98a !important;
-    color: #1a1608 !important;
 }
 
 #dashboard-wrapper,
@@ -6327,12 +5899,13 @@ body:has(#notification_banner-top_bar) #location-dashboard {
 
     color: #fff !important;
 }
-#location_dashboard-input-search_dashboard .hr-input-wrapper{
-  background-color: #101213 !important;
+
+#location_dashboard-input-search_dashboard .hr-input-wrapper {
+    background-color: #101213 !important;
 }
 
 /* ==== Fix: numeric dashboard  */
-svg.location-dashboard-numeric-chart-text:hover  text{
+svg.location-dashboard-numeric-chart-text:hover text {
     fill: #00000d !important;
 }
 
@@ -6431,9 +6004,11 @@ div#globalSearchOpener {
 .relative.flex.flex-col.h-full.bg-\[\#F7F9FD\].flex-1.min-h-0 {
     background: #101213 !important;
 }
-.flex.justify-between.items-center.px-3.gap-3.border-b.border-gray-200 svg{
-color:#fff !important;
+
+.flex.justify-between.items-center.px-3.gap-3.border-b.border-gray-200 svg {
+    color: #fff !important;
 }
+
 /* header  */
 .flex.justify-between.items-center.px-3.gap-3.border-b.border-gray-200 {
     background-color: #1f3fad !important;
@@ -6445,9 +6020,11 @@ color:#fff !important;
 .audio-player * {
     color: #000 !important;
 }
-.soai-promo-banner-remote{
-  margin:0 !important;
+
+.soai-promo-banner-remote {
+    margin: 0 !important;
 }
+
 .audio-player svg {
     stroke: #000 !important;
 }
@@ -6489,8 +6066,8 @@ color:#fff !important;
     border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
-#views-bar .unsavedChanges{
-  background: #1a1a1a !important;
+#views-bar .unsavedChanges {
+    background: #1a1a1a !important;
 }
 
 /* ==== Fix: Pipeline board empty-state overlay ("No opportunities match
@@ -6514,8 +6091,9 @@ color:#fff !important;
 .fd-summary-total-row {
     background-color: #1a1a1a !important;
 }
-#app .wrapper{
-        background-color: #101213 !important;
+
+#app .wrapper {
+    background-color: #101213 !important;
 
 }
 
@@ -7055,7 +6633,7 @@ color:#fff !important;
     background-color: #101213 !important;
 }
 
-#location-dashboard #dashboard-wrapper{
+#location-dashboard #dashboard-wrapper {
     margin-top: 140px !important;
 }
 
@@ -7073,69 +6651,115 @@ body:has(#notification_banner-top_bar) .main_container1012 {
     top: 7rem !important;
 }
 
+
 .main_container1012 {
     display: none;
     border-radius: 15px;
-    background: linear-gradient(90deg, #1f3fad -0.01%, #4628C5 100%) !important;
+    background: linear-gradient(90deg, #6B4BF4 -0.01%, #4628C5 100%) !important;
     padding: 40px 50px !important;
     position: absolute;
 }
+
 .main_container1012 {
-    transform: translate(-12%, 0) scale(0.73) !important;
-    width: 130vw !important;
-    top: 6.5rem !important;
+    transform: translate(1%, 0) scale(0.73) !important;
+    width: 110vw !important;
+    top: 4rem !important;
+}
+
+body:has(.v2-collapse) .main_container1012 {
+    transform: translate(-6%, 0) scale(0.73) !important;
+    width: 120vw !important;
+    top: 4rem !important;
 }
 
 @media screen and (min-width:1800px) {
-   .main_container1012 {
-    transform: translate(-11%, 0) scale(0.73) !important;
-    width: 127vw !important;
-    top: 6.5rem !important;
-}
+    .main_container1012 {
+        transform: translate(0%, 0) scale(0.73) !important;
+        width: 112vw !important;
+        top: 5rem !important;
+    }
 
+    body:has(.v2-collapse) .main_container1012 {
+        transform: translate(-7%, 0) scale(0.73) !important;
+        width: 122vw !important;
+        top: 5rem !important;
+    }
 }
 
 @media screen and (max-width:1700px) {
     .main_container1012 {
-        transform: translate(-12%, 0) scale(0.73) !important;
-        width: 131vw !important;
-        top: 6.5rem !important;
+        transform: translate(3%, 0) scale(0.73) !important;
+        width: 107vw !important;
+        top: 5rem !important;
+
     }
 
+    body:has(.v2-collapse) .main_container1012 {
+        transform: translate(-5%, 0) scale(0.73) !important;
+        width: 118vw !important;
+        top: 5rem !important;
+    }
 }
 
 
 @media screen and (max-width:1500px) {
     .main_container1012 {
-    transform: translate(-12%, 0) scale(0.73) !important;
-    width: 131vw !important;
-    top: 6.5rem !important;
-}
+        transform: translate(5%, 0) scale(0.73) !important;
+        width: 105vw !important;
+        top: 5rem !important;
+    }
+
+    body:has(.v2-collapse) .main_container1012 {
+        transform: translate(-4%, 0) scale(0.73) !important;
+        width: 116vw !important;
+        top: 5rem !important;
+    }
 }
 
 @media screen and (max-width:1300px) {
-   .main_container1012 {
-    transform: translate(-12%, 0) scale(0.73) !important;
-    width: 130vw !important;
-    top: 6.5rem !important;
-}
+    .main_container1012 {
+        transform: translate(8%, 0) scale(0.73) !important;
+        width: 101vw !important;
+        top: 5rem !important;
+    }
+
+    body:has(.v2-collapse) .main_container1012 {
+        transform: translate(-3%, 0) scale(0.73) !important;
+        width: 115vw !important;
+        top: 5rem !important;
+    }
 }
 
 @media screen and (max-width:1200px) {
     .main_container1012 {
         transform: translate(11%, 0) scale(0.73) !important;
         width: 98vw !important;
-        top: 6.5rem !important;
+        top: 5rem !important;
     }
 
-  
+    body:has(.v2-collapse) .main_container1012 {
+        transform: translate(-1%, 0) scale(0.73) !important;
+        width: 112vw !important;
+        top: 5rem !important;
+    }
 }
 
 @media screen and (max-width:1050px) {
     .main_container1012 {
-    transform: translate(-11%, 0) scale(0.73) !important;
-    width: 128vw !important;
-    top: 6.5rem !important;
+        transform: translate(11%, 0) scale(0.73) !important;
+        width: 100vw !important;
+        top: 5rem !important;
+    }
+
+    body:has(.v2-collapse) .main_container1012 {
+        transform: translate(2%, 0) scale(0.73) !important;
+        width: 107vw !important;
+        top: 5rem !important;
+    }
 }
 
+.sidebar-v2-location .hl_header .topmenu-nav .topmenu-navitem {
+    border-radius: 50px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
 }

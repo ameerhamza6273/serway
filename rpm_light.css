@@ -1211,14 +1211,6 @@ body:has(.sidebar-v2-location #dashboard .card-group) .main_container1012 {
     display: block !important;
 }
 
-.main_container1012 {
-    display: none;
-border-radius: 15px;
-background: linear-gradient(90deg, #6B4BF4 -0.01%, #4628C5 100%) !important;
-    padding: 40px 50px !important;
-    position: absolute;
-}
-
 .inside_container1012 {
     display: flex;
     justify-content: space-between;
@@ -1321,6 +1313,14 @@ body:has(.sidebar-v2-location #location-dashboard) .main_container1012 {
 
 #OpportunitiesList a {
     color: #1e0000 !important;
+}
+
+.main_container1012 {
+    display: none;
+border-radius: 15px;
+background: linear-gradient(90deg, #6B4BF4 -0.01%, #4628C5 100%) !important;
+    padding: 40px 50px !important;
+    position: absolute;
 }
 
 .main_container1012 {
