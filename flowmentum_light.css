@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
 
 body,
 a,
@@ -496,12 +497,13 @@ span.search-placeholder {
 }
 
 :root {
-    --head-font: "Plus Jakarta Sans";
+    --head-font: "Montserrat";
     --side-bar-background_color: #ffffff;
     --side-bar-location-changer_background-color: #f3f3f3;
     --side-side-bar_links_active_background_color: #23957C;
     border-radius: 10px !important;
     --side-side-bar_links_active_text_color: #fff;
+    --brand-btn-gradient: linear-gradient(to right, #1E40AF, #3B82F6);
 }
 
 a .fa-phone::before {
@@ -646,10 +648,6 @@ table thead th {
     color: #fff !important;
 }
 
-#OpportunitiesList .add-opportunity {
-    background-color: #1f3fad !important;
-}
-
 #OpportunitiesList .opportunitiesCard.borderColor.mb-2.hl-card {
     border-radius: 10px;
     border-top: 2px solid #1f3fad !important;
@@ -755,19 +753,8 @@ table thead th {
     background: #f2f4f7 !important;
 }
 
-#add-object-record-button-Task,
-#schedule-later,
-#add-record-btn,
-#send-sms {
-    background: #1f3fad !important;
-}
-
 #location_dashboard-btn-dashboard_switcher svg {
     color: #fff !important;
-}
-
-#location_dashboard-btn-dashboard_switcher {
-    background: #155eef !important;
 }
 
 #add-object-record-button-Task .n-button__border,
@@ -1020,11 +1007,13 @@ table thead th {
 /* ameer hamza code */
 
 
-.sidebar-v2-location #sidebar-v2 .hl_nav-header-without-footer nav a:hover {
+.sidebar-v2-location #sidebar-v2 .hl_nav-header-without-footer nav a:hover,
+.sidebar-v2-location #sidebar-v2 .hl_nav-header nav a:hover,
+body[data-theme=default] .sidebar-v2-location #sidebar-v2 .hl_nav-header nav a.active {
     --tw-text-opacity: 1;
     color: rgb(255 255 255/var(--tw-text-opacity));
     opacity: 1;
-    background: #1f3fad !important;
+    background: var(--brand-btn-gradient) !important;
 }
 
 #sidebar-v2 a.active span {
@@ -1032,7 +1021,7 @@ table thead th {
 }
 
 #sidebar-v2 a.active {
-    background: #1f3fad !important;
+    background: var(--brand-btn-gradient) !important;
 }
 
 .sidebar-v2-location #sidebar-v2 .default-bg-color {
@@ -1049,7 +1038,7 @@ table thead th {
 }
 
 #sidebar-v2 a:hover {
-    background: #1f3fad !important;
+    background: var(--brand-btn-gradient) !important;
 }
 
 #recent_activities-toggle {
@@ -1601,10 +1590,18 @@ button:hover .hr-button__state-border {
     stroke: none !important;
 }
 
-#location-dashboard svg path[fill="rgb(128,152,249)"],
-#location-dashboard svg path[fill="rgb(140,167,255)"],
-#location-dashboard svg path[fill="#8098F9"] {
+#location-dashboard svg path[fill="rgb(128,152,249)"] {
+    fill: #3B82F6 !important;
+    stroke: none !important;
+}
+
+#location-dashboard svg path[fill="rgb(140,167,255)"] {
     fill: #217D99 !important;
+    stroke: none !important;
+}
+
+#location-dashboard svg path[fill="#8098F9"] {
+    fill: #3B82F6 !important;
     stroke: none !important;
 }
 
@@ -1827,7 +1824,7 @@ body:has(#notification_banner-top_bar) .main_container1012 {
 .main_container1012 {
     display: none;
     border-radius: 15px;
-    background: linear-gradient(90deg, #6B4BF4 -0.01%, #4628C5 100%) !important;
+    background: var(--brand-btn-gradient) !important;
     padding: 40px 50px !important;
     position: absolute;
 }
@@ -1935,5 +1932,69 @@ body:has(.v2-collapse) .main_container1012 {
 }
 
 #location_dashboard-btn-dashboard_switcher span.truncate.text-left.min-w-0.max-w-\[260px\]{
+    color: #fff !important;
+}
+
+/* ============================== flowmentumpath.com hero: heading / p style ============================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif !important;
+    font-weight: 800 !important;
+    color: #1F2937 !important;
+    letter-spacing: -1.6px !important;
+}
+
+p {
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 400 !important;
+    color: #4B5563 !important;
+}
+
+span {
+    font-family: "Poppins", sans-serif !important;
+}
+
+/* ============================== flowmentumpath.com header button color -> all dashboard buttons ============================== */
+.hr-button--primary,
+.btn-primary,
+#add-object-record-button-Task,
+#schedule-later,
+#add-record-btn,
+#send-sms,
+#location_dashboard-btn-dashboard_switcher,
+#OpportunitiesList .add-opportunity {
+    background: var(--brand-btn-gradient) !important;
+    color: #fff !important;
+    border-radius: 12px !important;
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 700 !important;
+    border: none !important;
+}
+
+.hr-button--primary:hover,
+.btn-primary:hover {
+    filter: brightness(1.08) !important;
+}
+
+.hr-button--primary p,
+.hr-button--primary span,
+.btn-primary p,
+.btn-primary span,
+#add-object-record-button-Task p,
+#add-object-record-button-Task span,
+#schedule-later p,
+#schedule-later span,
+#add-record-btn p,
+#add-record-btn span,
+#send-sms p,
+#send-sms span,
+#location_dashboard-btn-dashboard_switcher p,
+#location_dashboard-btn-dashboard_switcher span,
+#OpportunitiesList .add-opportunity p,
+#OpportunitiesList .add-opportunity span {
     color: #fff !important;
 }
