@@ -1,0 +1,3265 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+body,
+a,
+span.search-placeholder,
+strong,
+td,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+div {
+    font-family: "Poppins";
+}
+
+.hl_login--header {
+    background-color: transparent !important;
+    border-bottom: none !important;
+}
+
+.hl_login--body p.foot-note:before {
+    content: 'Having trouble logging in? Email us at support@company.com or call us at 000 000 0000';
+    font-size: 13px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.hl_login--body .login-card-heading {
+    margin-bottom: 35px !important;
+}
+
+.hl_login--body .login-card-heading .heading2 {
+    font-size: 25px !important;
+    font-weight: 600 !important;
+}
+
+.hl_login--body .form-group .hl-text-input-label {
+    display: none !important;
+}
+
+.hl_login--body .form-group input {
+    padding: 12px !important;
+}
+
+.hl_login--body .form-group {
+    margin-bottom: 16px !important;
+}
+
+#forgot_passowrd_btn {
+    margin-top: 12px !important;
+}
+
+.hl_login--header .container-fluid a {
+    margin: 0 auto !important;
+    display: block !important;
+    margin-bottom: -80px !important;
+    margin-top: 80px;
+}
+
+#app:has(.hl_login) {
+    background: #3552c3 !important;
+}
+
+.hl_login .card {
+    max-width: 500px !important;
+    border-radius: 20px !important;
+    border: 20px solid transparent;
+    background: linear-gradient(#fff, #fff) padding-box,
+        linear-gradient(to right, #ffffff21 0%, #ffffff21 0%, #ffffff21 200%) border-box !important;
+}
+
+body[data-theme=default-dark-v1] a:not(.btn) {
+    color: #000 !important;
+}
+
+.hl_login .card button {
+    border-radius: 10px !important;
+    background: #3d10d7 !important;
+}
+
+#app .hl_login--header .container-fluid a img {
+    filter: invert(1) !important;
+    filter: invert(1) !important;
+}
+
+.hl_login--header .container-fluid a img {
+    max-width: 180px !important;
+    margin-top: 35px !important;
+}
+
+.hl_login--body .card .card-body .forgot-password {
+    color: #3d10d7 !important;
+}
+
+.hl_login--body .card .card-body .foot-note a {
+    color: #3d10d7 !important;
+}
+
+.hl_login--body .card .card-body input[type="password"],
+.hl_login--body .card .card-body input[type="text"] {
+    border: 1px solid #ddd !important;
+    background: #fff !important;
+}
+
+.hl_login .card .relative.rounded-md.shadow-sm button {
+    background: transparent !important;
+}
+
+:root {
+    --main-font: "Poppins";
+    --main-body-bg: linear-gradient(45deg, #292929 0%, #18191a 54%) !important;
+    --main-body-image: url("https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/68c18dd36462633a43464c93.svg") !important;
+    --main-body-image-overlay: #ececec00(0 0 0 / 0) !important;
+    --main-login-bg: #ededed00 !important;
+    /* --login-logo: url("https://storage.googleapis.com/msgsndr/0BNXRaTTusQGAfcHLyfN/media/661d36d2b8837d16f6b4b8f4.svg") !important; */
+    --login-heading-color: #000 !important;
+    --login-input-color: #000 !important;
+    --login-input-bg: #1f3fad !important;
+    --login-input-border: #bbbbbb !important;
+    --login-error-color: #000 !important;
+    --login-forgot-pass-color: #ffffff !important;
+    --login-button-bg: #5B4CF6 !important;
+    --login-button-color: #ffffff !important;
+    --login-button-hover-bg: #000 !important;
+    --login-button-hover-color: #ffffff !important;
+    --login-foot-note-color: #000 !important;
+    --login-foot-note-link-color: #000 !important;
+    --header-note-color: #000 !important;
+    --footer-note: "Having trouble logging in? Email us at support@8bitcreative.com or call us at (414)310-7103" !important;
+    --footer-note-color: #000 !important;
+}
+
+
+/* dashboard style */
+#location-switcher-sidbar-v2 {
+    max-width: 210px !important;
+    margin: 0px auto 10px auto !important;
+}
+
+.v2-collapse #location-switcher-sidbar-v2 {
+    max-width: 50px !important;
+    margin: 0 auto 10px auto !important;
+}
+
+.v2-collapse #location-switcher-sidbar-v2::after {
+    display: none !important;
+}
+
+#location-switcher-sidbar-v2 {
+    background: #EAEAEA !important;
+    height: 48px !important;
+    border: 1px solid #EAEAEA !important;
+    padding: 0px 10px !important;
+}
+
+#sidebar-v2 nav a {
+    margin: 5px auto !important;
+    opacity: 1 !important;
+    max-width: 210px !important;
+}
+
+.v2-collapse #sidebar-v2 nav a {
+    max-width: 45px !important;
+    padding: 20% !important;
+}
+
+#sidebar-v2 {
+    background: #fff !important;
+    min-width: 60px !important;
+    padding: 0px !important;
+}
+
+.v2-open #sidebar-v2 {
+    min-width: 239px !important;
+    padding: 0px !important;
+}
+
+.v2-open #sidebar-v2 .h-screen {
+    min-width: 237px !important;
+}
+
+#globalSearchOpener {
+    margin-top: 0 !important;
+}
+
+.sidebar-v2-agency #sidebar-v2 .menu-title {
+
+    color: rgb(0 0 0) !important;
+}
+
+.sidebar-v2-location #sidebar-v2 .menu-title {
+
+    color: rgb(0 0 0) !important;
+}
+
+#sidebar-v2 a#sb_divider-1 {
+    height: 2px !important;
+    background-color: #D9D9D9 !important;
+}
+
+/* ============================== use for all ============================== */
+#media-storage-wrapper {
+    margin-top: 0px !important;
+}
+
+#media-storage-wrapper #mediaCenter {
+    padding-top: 75px !important;
+}
+
+#membership {
+    margin-top: 0px !important;
+}
+
+.fit-screen[data-v-ec00270a] {
+    padding-top: 140px !important;
+}
+
+#FormSubmissions,
+#funnelWebsiteAnalytics,
+#contact-restore-dashboard,
+#dashboard,
+#hl_calendar_events,
+#triggerLinksPage {
+    margin-top: 20px !important;
+}
+
+#communities,
+#clientportal-builder,
+#emailHome,
+#launchpadHome,
+#SurveyList,
+#FormList,
+#funnels,
+#membershipBuilder {
+    margin-top: 20px !important;
+}
+
+a#hl_header--help-icon,
+span.search-placeholder {
+    position: relative !important;
+}
+
+.bottom-stats li {
+    gap: 20px !important;
+}
+
+.hl_header--controls {
+    gap: 10px !important;
+}
+
+#location-switcher-sidbar-v2 svg,
+#sb_settings img,
+#sidebar-v2 .hl_nav-header a img,
+#sidebar-v2 a#sb_divider-1 p,
+.pending-task-value-col i,
+.search-shortcut,
+.topmenu-nav a.divider,
+div#quickActions img,
+svg.h-4.w-4.search-icon.mx-1 {
+    display: none !important;
+}
+
+.nav-title:not(#location-switcher-sidbar-v2 span) {
+    font-family: var(--head-font) !important;
+    font-weight: 400 !important;
+    line-height: 24px !important;
+}
+
+.agency-logo-container img {
+    max-width: 150px !important;
+}
+
+.hl_header .container-fluid {
+    height: 60px !important;
+}
+
+.container-fluid>.hl_header--controls {
+    margin-right: 50px !important;
+}
+
+a .fa-phone {
+    transform: rotate(00deg) !important;
+    -webkit-transform: rotate(00deg) !important;
+    -moz-transform: rotate(00deg) !important;
+    -ms-transform: rotate(00deg) !important;
+    -o-transform: rotate(00deg) !important;
+    position: absolute !important;
+    top: -10px !important;
+    left: -8px !important;
+}
+
+#calendarSetupPage {
+    padding-top: 60px !important;
+
+}
+
+#CRMSettings {
+    padding-top: 20px !important;
+}
+
+/* .sidebar-v2-agency .hl_wrapper .hl_wrapper--inner, */
+#agency_location,
+.sidebar-v2-location #socialMediaPlanner.hl_topbar-tabs,
+.sidebar-v2-location:has(#workflowBuilder) .hl_topbar-tabs {
+    padding-top: 120px !important;
+    max-height: 100% !important;
+}
+
+.sidebar-v2-location:has(#crm-contacts-view) .hl_topbar-tabs {
+    padding-top: 130px !important;
+}
+
+.sidebar-v2-location:has(#notification_banner-top_bar) .hl_topbar-tabs {
+    padding-top: 180px !important;
+}
+
+.flex.mb-4.h-7.flex-row.md\:flex-col.lg\:flex-row.xl\:flex-row.items-start.justify-between.px-2 {
+    position: absolute !important;
+    z-index: 999 !important;
+    left: 17rem !important;
+    top: 10px !important;
+}
+
+#location-switcher-sidbar-v2,
+.card-group.--wide-gutter>div {
+    border-radius: 10px !important;
+}
+
+.card-body {
+    border-radius: 15px !important;
+}
+
+.card-group.--wide-gutter .card-body {
+    padding: 20px 30px !important;
+}
+
+.card-header h2 {
+    font-weight: 700 !important;
+    font-size: 18px !important;
+    line-height: 21px !important;
+    text-transform: uppercase !important;
+}
+
+.bottom-stats li span,
+.card-header input {
+    font-weight: 500 !important;
+}
+
+#sidebar-v2 a span,
+.bottom-stats li strong,
+.hl_conversations--messages-list-v2 a {
+    font-weight: 700 !important;
+}
+
+#location-switcher-sidbar-v2 span:not(.leading-4 span),
+#sb_sites::after,
+.card-header input,
+.nav-title:not(#location-switcher-sidbar-v2 span),
+.pending-task-value-col div:nth-child(3) {
+    font-size: 16px !important;
+    text-transform: capitalize !important;
+}
+
+.bottom-stats {
+    margin-left: auto !important;
+}
+
+.bottom-stats li {
+    mix-blend-mode: normal !important;
+    border-radius: 5px !important;
+    padding: 5px 8px !important;
+    width: 120px !important;
+    height: 25px !important;
+    margin: 10px 0 !important;
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -ms-border-radius: 5px !important;
+    -o-border-radius: 5px !important;
+}
+
+.bottom-stats li span,
+.bottom-stats li strong {
+    margin: 0 !important;
+    font-size: 12px !important;
+    line-height: 14px !important;
+}
+
+.card-body h3 {
+    font-weight: 800 !important;
+    font-size: 40px !important;
+    line-height: 50px !important;
+    margin: auto 0 !important;
+    width: 60% !important;
+    text-align: left !important;
+}
+
+#location-switcher-sidbar-v2 .hl_location-text {
+    margin-left: 15px !important;
+}
+
+#location-switcher-sidbar-v2::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/68bff5177f917be5bd83d529.svg);
+    width: 24px !important;
+    height: 24px !important;
+}
+
+.switcher-caret-holder {
+    opacity: 0 !important;
+}
+
+#location-switcher-sidbar-v2::after {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/68bff50f210e430655da1448.svg);
+    width: 19px !important;
+    height: 19px !important;
+    position: absolute !important;
+    top: unset !important;
+    right: 10px !important;
+}
+
+#sidebar-v2 a span.nav-title {
+    color: #FFFFFFCC !important;
+    text-transform: uppercase !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+}
+
+#sb_settings::before,
+#sidebar-v2 .hl_nav-header a::before {
+    margin-right: 10px !important;
+    height: 24px !important;
+}
+
+#sidebar-v2 .hl_nav-header .active span:first-child,
+#sidebar-v2 .hl_nav-header .active::before,
+#sidebar-v2 .hl_nav-header a:hover span:first-child,
+#sidebar-v2 .hl_nav-header a:hover::before,
+.hl_nav-settings nav a#sb_settings:hover::before {
+    filter: brightness(0.3) sepia(0) contrast(1.9) opacity(0.6) !important;
+    -webkit-filter: brightness(3.5) sepia(0) contrast(1.9) opacity() !important;
+}
+
+.pending-task-value {
+    width: fit-content !important;
+    height: fit-content !important;
+    font-style: normal !important;
+    font-weight: 800 !important;
+    font-size: 50px !important;
+    line-height: 63px !important;
+    text-transform: uppercase !important;
+}
+
+#sb_automation::after,
+.helloow1012 {
+    text-transform: capitalize !important;
+    font-style: normal !important;
+}
+
+.card.pmd_dashboard--appointments thead th {
+    font-size: 14px !important;
+    line-height: 18px !important;
+    text-transform: capitalize !important;
+}
+
+.topmenu-nav .topmenu-navtitle {
+    font-size: 26px !important;
+    padding: 0 !important;
+    margin: 0 20px 0 10px !important;
+}
+
+.topmenu-nav a.active {
+    border: 0 !important;
+    font-weight: 700 !important;
+
+}
+
+.mt-1.ml-1.relative.rounded-md,
+.sidebar-v2-location #sidebar-v2 .hl_nav-header-without-footer nav a.divider p {
+    border: none !important;
+}
+
+#conversations .py-2.px-3.h-\[128\.5px\].bg-gray-100.text-sm.text-gray-400 {
+    background: #F3F3F3 !important;
+    border-radius: 10px;
+}
+
+.hl_nav-settings nav a#sb_settings {
+    width: 75% !important;
+}
+
+#fields .hl_form-builder--sidebar .dragdrop-wrap {
+    bottom: 70px !important;
+}
+
+.hl_form-builder--sidebar .nav-tabs {
+    top: 68px !important;
+}
+
+#myTabContent #standard {
+    margin-top: 40px !important;
+}
+
+.right_side1012 img {
+    margin: -65px 0 0 !important;
+}
+
+.left_side1012 {
+    display: grid !important;
+    align-content: center !important;
+}
+
+#chat-connect:has(#launchpad-stripe-connect) {
+    display: none !important;
+}
+
+#sb_agency-affiliate-portal span:has(i),
+#sb_agency-template-library span:has(i),
+#sb_agency-university span:has(i) {
+    display: none !important;
+}
+
+/* noting */
+#f9775d82-d1d1-492d-8f4c-a8bcfbad1e5e::before {
+    content: url("https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/6509d79188b772b0999c3e30.svg+xml");
+}
+
+#de3219c9-e27f-4412-8425-daba1d45981e::before {
+    content: url("https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/6509d714a8ce705c6a208d67.svg+xml");
+}
+
+#b294d3cb-e4f8-44c0-9507-e199f7c1dabe::before {
+    content: url("https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/6509d8fca8ce7067f2209096.svg+xml");
+}
+
+.hl_without-topbar:has(#phone-system-app) {
+    padding-top: 4.4rem !important;
+}
+
+.group:hover .group-hover\:block {
+    display: block;
+    margin-top: 6px !important;
+}
+
+body:has(.sidebar-v2-location #dashboard .card-group) .main_container1012 {
+    display: block !important;
+}
+
+@media screen and (min-width: 1370px) {
+    .card-group.--wide-gutter .card-body {
+        display: flex !important;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .topmenu-nav {
+        flex-wrap: wrap !important;
+    }
+
+    .sidebar-v2-location:has(#funnels) .hl_wrapper.hl_topbar-tabs {
+        padding-top: 160px !important;
+    }
+
+    .hl_form-builder--sidebar .nav-tabs {
+        top: 120px !important;
+    }
+
+    #myTabContent #standard {
+        margin-top: 80px !important;
+    }
+
+    #dashboard {
+        margin-top: 200px !important;
+    }
+}
+
+/* ============================== use for one ============================== */
+
+span.search-placeholder {
+    color: #464255 !important;
+}
+
+#navigation-btn,
+.topmenu-nav .hidden a {
+    background: #9CA3AF !important;
+}
+
+.topmenu-nav .hidden a span {
+    color: #fff !important;
+    padding: 0 5px 3px 5px !important;
+}
+
+.topmenu-nav a.active {
+    background: #000 !important;
+    border: 1px solid #1f3fad !important;
+
+}
+
+.topmenu-nav a.active span {
+    color: #fff !important;
+}
+
+#location-dashboard .hl-card {
+    border: none !important;
+}
+
+#location-dashboard .n-config-provider {
+    background-color: #f9fafb !important;
+}
+
+#sidebar-v2,
+.hl_header .container-fluid {
+    box-shadow: 7px 0 80px rgba(0, 0, 0, 0.05) !important;
+}
+
+:root {
+    --head-font: "Plus Jakarta Sans";
+    --side-bar-background_color: #ffffff;
+    --side-bar-location-changer_background-color: #f3f3f3;
+    --side-side-bar_links_active_background_color: #23957C;
+    border-radius: 10px !important;
+    --side-side-bar_links_active_text_color: #fff;
+}
+
+a .fa-phone::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/66c4b4dd1b9bd77656f5170d.svg) !important;
+}
+
+a#hl_header--help-icon::after {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/68c1b6d4353d130318f8eb2c.svg);
+    position: absolute;
+    left: -5px !important;
+    top: -5px !important;
+}
+
+div#globalSearchOpener {
+    width: 370px !important;
+    height: 40px !important;
+    background: #f3f3f3 !important;
+    margin-left: 25px;
+    mix-blend-mode: normal !important;
+    border: 1px solid #eaeaea !important;
+    border-radius: 50px !important;
+    padding-left: 60px !important;
+    padding-right: 20px !important;
+}
+
+#search_conversations,
+div#quickActions {
+    border: 1px solid #eaeaea !important;
+}
+
+div#quickActions {
+    background: #f3f3f3 !important;
+    border-radius: 100% !important;
+    width: 40px !important;
+    height: 40px !important;
+    margin: auto auto auto 15px !important;
+    -webkit-border-radius: 100% !important;
+    -moz-border-radius: 100% !important;
+    -ms-border-radius: 100% !important;
+    -o-border-radius: 100% !important;
+}
+
+div#quickActions::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/68c46dbf401dea23a6ad9632.svg) !important;
+    width: 24px !important;
+    height: 24px !important;
+    position: absolute !important;
+}
+
+span.search-placeholder {
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    line-height: 19px !important;
+    text-transform: capitalize !important;
+    opacity: 0.4 !important;
+}
+
+span.search-placeholder::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/66916018ff4b7e80996c4a7b.svg);
+    position: absolute;
+    left: -30px !important;
+    top: -3px !important;
+    opacity: 9 !important;
+}
+
+.card-header {
+    padding: 15px 20px 10px !important;
+    border-bottom: 2px solid rgba(217, 217, 217, 0.6) !important;
+}
+
+table thead th {
+    background: #0C0F15 !important;
+    color: #fff !important;
+}
+
+.card.pmd_dashboard--appointments thead th,
+.topmenu-nav .topmenu-navtitle {
+    font-weight: 500 !important;
+    color: #fff !important;
+    font-style: normal !important;
+}
+
+.topmenu-nav a span {
+    font-weight: 500 !important;
+    color: #fff !important;
+    font-style: normal !important;
+}
+
+.topmenu-nav {
+    background: #1f3fad !important;
+}
+
+
+.topmenu-nav .hidden a.active {
+    background: #1f3fad !important;
+    color: #fff !important;
+}
+
+.topmenu-nav a {
+    font-size: 14px !important;
+    background: #10297e !important;
+    color: #fff !important;
+    border-radius: 50px !important;
+    border: 1px solid #ffffff26 !important;
+    padding: 3px !important;
+    margin: 8px 4px !important;
+    -webkit-border-radius: 50px !important;
+    -moz-border-radius: 50px !important;
+    -ms-border-radius: 50px !important;
+    -o-border-radius: 50px !important;
+}
+
+.hl_conversations--messages-list-v2 {
+    background: #fff !important;
+    border-radius: 15px !important;
+    padding: 10px !important;
+    -webkit-border-radius: 15px !important;
+    -moz-border-radius: 15px !important;
+    -ms-border-radius: 15px !important;
+    -o-border-radius: 15px !important;
+}
+
+.hl_nav-settings {
+    bottom: 5vh !important;
+    width: 100% !important;
+    background-color: #f7f8f9 !important;
+}
+
+.flex.flex-col.overflow-y-auto.overflow-x-hidden.w-full.hl_nav-header::-webkit-scrollbar {
+    width: 0.4em !important;
+    border: 1px solid rgb(209 213 219) !important;
+    border-radius: 50px !important;
+}
+
+.flex.flex-col.overflow-y-auto.overflow-x-hidden.w-full.hl_nav-header::-webkit-scrollbar-thumb {
+    background-color: #9f9f9f !important;
+    border-radius: 50px !important;
+}
+
+:is(#sb_contacts, #sb_opportunities).active::after,
+:is(#sb_contacts, #sb_opportunities):hover::after {
+    color: #fff !important;
+}
+
+#OpportunitiesList .add-opportunity {
+    background-color: #1f3fad !important;
+}
+
+#OpportunitiesList .opportunitiesCard.borderColor.mb-2.hl-card {
+    border-radius: 10px;
+    border-top: 2px solid #1f3fad !important;
+}
+
+#OpportunitiesList .advanced-container .button,
+#OpportunitiesList .count {
+    background: #fff !important;
+    border-radius: 7px !important;
+    color: #000 !important;
+    border: none;
+    box-shadow: 0px 10px 20px 0px rgba(231, 236, 238, 0.60) !important;
+}
+
+#OpportunitiesList .hl-card.\!border-t-2 {
+    color: #fff !important;
+    box-shadow: none !important;
+}
+
+.hl-card {
+    border-radius: 15px !important;
+    box-shadow: 0 10px 20px 0 rgba(231, 236, 238, 0.6) !important;
+}
+
+.n-base-selection .n-base-selection-label {
+    background-color: #f3f3f3 !important;
+}
+
+/* ============================== conversation ============================== */
+.conversation-selected-v2 i.icon.icon-v2,
+.messages-list--item-v2 i.icon.icon-v2 {
+    left: 185px !important;
+    top: 15px !important;
+}
+
+#conversations {
+    transform: scale(0.9) translateX(-4vw) !important;
+    -webkit-transform: scale(0.9) translateX(-4vw) !important;
+    -moz-transform: scale(0.9) translateX(-4vw) !important;
+    -ms-transform: scale(0.9) translateX(-4vw) !important;
+    -o-transform: scale(0.9) translateX(-4vw) !important;
+}
+
+#conversations .hl_conversations--wrap {
+    background: #f5f5f5 !important;
+}
+
+.hl_conversations--message-header h2 {
+    color: #FFF !important;
+}
+
+.hl_conversations--message-header {
+    background: #1f3fad !important;
+    border-radius: 15px 15px 0 0 !important;
+
+    -webkit-border-radius: 15px 15px 0px 0px !important;
+    -moz-border-radius: 15px 15px 0 0 !important;
+    -ms-border-radius: 15px 15px 0px 0px !important;
+    -o-border-radius: 15px 15px 0 0 !important;
+}
+
+#right-panel .bg-primary-50 {
+    background-color: rgb(107 76 244) !important;
+}
+
+#right-panel .bg-primary-50 svg path {
+    stroke: #fff !important;
+}
+
+#right-panel .bg-primary-50 {
+    color: #fff !important;
+}
+
+.conversation-selected-v2 {
+    border-color: #1f3fad !important;
+    background: #23957c1a !important;
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+.location-dashboard-wrapper.hl-wrapper-container .n-config-provider {
+    margin-top: 180px !important;
+    background-color: #f9fafb !important;
+}
+
+.flex.mb-4.h-7.flex-row.md\:flex-col.lg\:flex-row.xl\:flex-row.items-start.justify-between.px-2 {
+    left: 14.3rem !important;
+}
+
+.v2-collapse .hl_header {
+    width: calc(108vw - 14rem) !important;
+}
+
+.v2-collapse #sidebar-v2 .hl_nav-header a::before {
+    margin-right: 0px !important;
+}
+
+#location-dashboard {
+    padding-top: 0px !important;
+}
+
+#dashboard-container {
+    background: #f2f4f7 !important;
+}
+
+#add-object-record-button-Task,
+#schedule-later,
+#add-record-btn,
+#send-sms {
+    background: #1f3fad !important;
+}
+
+#location_dashboard-btn-dashboard_switcher svg {
+    color: #fff !important;
+}
+
+#location_dashboard-btn-dashboard_switcher {
+    background: #155eef !important;
+}
+
+#add-object-record-button-Task .n-button__border,
+#add-record-btn .hr-button__border,
+#location_dashboard-btn-dashboard_switcher .hr-button__border,
+#send-sms .hr-button__border {
+    border: none !important;
+}
+
+#add-record-btn .n-button__border,
+#location_dashboard-btn-dashboard_switcher .n-button__border,
+#send-sms .n-button__border {
+    border: #1f3fad !important;
+}
+
+#conversations #date-label {
+    border-radius: 5px !important;
+    color: #000 !important;
+    background: #23957c1a !important;
+}
+
+.flex.mb-4.h-7.flex-col.items-center.justify-center {
+    position: absolute !important;
+}
+
+.sidebar-v2-location #sidebar-v2 .hl_collapse-button {
+    background: #ffffff !important;
+    color: #1f3fad !important;
+}
+
+#location-dashboard .text-3xl {
+    font-weight: 600 !important;
+}
+
+#search_conversations {
+    background: #f3f3f3 !important;
+    border-radius: 25px !important;
+    padding: 9.3px 40px !important;
+    max-width: 230px !important;
+}
+
+#conversations .hl_conversations--wrap div[style="border: 1px solid rgba(209, 213, 219, 0.5);"] {
+    border: none !important;
+}
+
+#conversations .hl_conversations--wrap .relative.border-r.border-gray-200.hl_conversations--messages-list-v2-left-most-panel section .space-y-2 .flex.flex-col {
+    margin-left: 0px !important;
+}
+
+#fc-calendar-container-v2 .fc-timegrid-body table,
+#fc-calendar-container-v2 .fc-daygrid-body,
+#fc-calendar-container-v2 .fc-scrollgrid-sync-table,
+#fc-calendar-container-v2 .fc-timegrid-body {
+    width: 100% !important;
+}
+
+#fc-calendar-container-v2 .fc-col-header {
+    width: 98.4% !important;
+}
+
+#quickFilterDropdownOuter a::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/66c4d19b2685ebc413877b67.svg) !important;
+    position: absolute !important;
+    top: -15px !important;
+    left: -24px !important;
+}
+
+#conversations div[title].cursor-pointer::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/66c4d19eddf52090e2490de7.svg) !important;
+    position: absolute !important;
+    top: 15px !important;
+    right: 8px !important;
+}
+
+#conversations div[data-tooltip="tooltip"] {
+    background-color: #fff !important;
+}
+
+.v2-collapse #globalSearchOpener {
+    position: absolute !important;
+    left: 9rem !important;
+    top: -6px !important;
+    z-index: 999 !important;
+}
+
+.v2-collapse #quickActions {
+    position: absolute !important;
+    left: 34rem !important;
+    top: -7px !important;
+    z-index: 999 !important;
+}
+
+.v2-collapse #globalSearchOpener::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/643ee4afa88a2a452686a5a0.svg+xml);
+    position: absolute !important;
+    left: 20px !important;
+    top: 7px !important;
+    opacity: 0.4 !important;
+}
+
+.v2-collapse #globalSearchOpener::after {
+    content: "Search" !important;
+    position: absolute !important;
+    left: 52px !important;
+    top: 9px !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    line-height: 19px !important;
+    opacity: 0.4 !important;
+    color: #111827 !important;
+}
+
+#conversations {
+    width: calc(107vw - 14rem) !important;
+}
+
+.sidebar-v2-location .hl_header .topmenu-nav .topmenu-navitem {
+    border-radius: 50px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+.sidebar-v2-location .hl_header .topmenu-nav .topmenu-navitem img {
+    filter: brightness(1.5) !important;
+}
+
+#smartlists,
+#form-builder,
+#CalendarIntegration,
+.sidebar-v2-location .hl_settings--body.hl_settings--customize-communication.hl_topbar-tabs .container-fluid {
+    padding-top: 20px !important;
+}
+
+#OpportunitiesList .opportunitiesCard.borderColor[data-v-3b3d361a] {
+    border-top: 3px solid #EAEAEA !important
+}
+
+#OpportunitiesList .opportunitiesCard.borderColor[data-v-3b3d361a] .hl-card-content span.flex.w-full.flex-col.pt-2\.5.\!w-fit {
+    border-bottom: 1px solid #D9D9D9 !important;
+    width: 100% !important;
+}
+
+body:has(.sidebar-v2-location #dashboard .card-group) .main_container1012 {
+    display: block !important;
+}
+
+.main_container1012 {
+    display: none;
+    border-radius: 15px;
+    background: linear-gradient(90deg, #1f3fad -0.01%, #4628C5 100%) !important;
+    padding: 40px 50px !important;
+    position: absolute;
+}
+
+.inside_container1012 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left_side1012 {
+    display: grid;
+    align-content: center;
+}
+
+.helloow1012 {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 44px;
+    color: #fff;
+    margin: 0;
+}
+
+.dashboard101224,
+.helloow1012 {
+    font-style: normal !important;
+    color: #fff !important;
+}
+
+.another_one12347 a {
+    font-size: 16px !important;
+    line-height: 19px !important;
+    text-decoration: none !important;
+    padding: 20px 30px !important;
+    background-color: #fff !important;
+    font-weight: 700 !important;
+    color: #000 !important;
+    border-radius: 30px !important;
+    margin-right: 10px !important;
+    -webkit-border-radius: 10px !important;
+    -moz-border-radius: 10px !important;
+    -ms-border-radius: 10px !important;
+    -o-border-radius: 10px !important;
+    display: none !Important;
+}
+
+.another_one12347 a:nth-child(2) {
+    color: #000 !important;
+    background: #fff !important;
+}
+
+.another_one12347 {
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.bottom-stats li strong,
+.hl_conversations--messages-list-v2 a {
+    font-weight: 700 !important;
+}
+
+.dashboard101224 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px !important;
+    color: #fff !important;
+    opacity: 0.7 !important;
+    margin: 10px 0 0 !important;
+}
+
+#sb_automation::after,
+.helloow1012 {
+    text-transform: capitalize !important;
+    font-style: normal !important;
+}
+
+.right_side1012 img {
+    margin: -65px 0 0 !important;
+}
+
+.location-dashboard-wrapper.hl-wrapper-container .n-config-provider {
+    margin-top: 225px !important;
+}
+
+body:has(.sidebar-v2-location #location-dashboard) .main_container1012 {
+    display: block !important;
+    z-index: -0 !important;
+
+}
+
+.location-dashboard-wrapper.hl-wrapper-container .n-config-provider {
+    z-index: 9 !important;
+    background-color: #fff !important;
+
+}
+
+#sidebar-v2 a:hover {
+    background: #fff !important;
+}
+
+#sidebar-v2 a:hover i {
+    color: #fff !important;
+}
+
+#OpportunitiesList a {
+    color: #1e0000 !important;
+}
+
+.main_container1012 {
+    transform: translate(1%, 0) scale(0.73) !important;
+    width: 110vw !important;
+    top: 4rem !important;
+}
+
+body:has(.v2-collapse) .main_container1012 {
+    transform: translate(-6%, 0) scale(0.73) !important;
+    width: 120vw !important;
+    top: 4rem !important;
+}
+
+@media screen and (min-width:1800px) {
+    .main_container1012 {
+        transform: translate(0%, 0) scale(0.73) !important;
+        width: 112vw !important;
+        top: 5rem !important;
+    }
+
+    body:has(.v2-collapse) .main_container1012 {
+        transform: translate(-7%, 0) scale(0.73) !important;
+        width: 122vw !important;
+        top: 5rem !important;
+    }
+}
+
+@media screen and (max-width:1700px) {
+    .main_container1012 {
+        transform: translate(3%, 0) scale(0.73) !important;
+        width: 107vw !important;
+        top: 5rem !important;
+
+    }
+
+    body:has(.v2-collapse) .main_container1012 {
+        transform: translate(-5%, 0) scale(0.73) !important;
+        width: 118vw !important;
+        top: 5rem !important;
+    }
+}
+
+
+@media screen and (max-width:1500px) {
+    .main_container1012 {
+        transform: translate(5%, 0) scale(0.73) !important;
+        width: 105vw !important;
+        top: 5rem !important;
+    }
+
+    body:has(.v2-collapse) .main_container1012 {
+        transform: translate(-4%, 0) scale(0.73) !important;
+        width: 116vw !important;
+        top: 5rem !important;
+    }
+}
+
+@media screen and (max-width:1300px) {
+    .main_container1012 {
+        transform: translate(8%, 0) scale(0.73) !important;
+        width: 101vw !important;
+        top: 5rem !important;
+    }
+
+    body:has(.v2-collapse) .main_container1012 {
+        transform: translate(-3%, 0) scale(0.73) !important;
+        width: 115vw !important;
+        top: 5rem !important;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .main_container1012 {
+        transform: translate(11%, 0) scale(0.73) !important;
+        width: 98vw !important;
+        top: 5rem !important;
+    }
+
+    body:has(.v2-collapse) .main_container1012 {
+        transform: translate(-1%, 0) scale(0.73) !important;
+        width: 112vw !important;
+        top: 5rem !important;
+    }
+}
+
+@media screen and (max-width:1050px) {
+    .main_container1012 {
+        transform: translate(11%, 0) scale(0.73) !important;
+        width: 100vw !important;
+        top: 5rem !important;
+    }
+
+    body:has(.v2-collapse) .main_container1012 {
+        transform: translate(2%, 0) scale(0.73) !important;
+        width: 107vw !important;
+        top: 5rem !important;
+    }
+}
+
+.sidebar-v2-location .hl_allphonenumber--container {
+
+    padding-top: 83px !important;
+}
+
+/* ameer hamza code */
+
+
+.sidebar-v2-location #sidebar-v2 .hl_nav-header-without-footer nav a:hover {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255/var(--tw-text-opacity));
+    opacity: 1;
+    background: #1f3fad !important;
+}
+
+#sidebar-v2 a.active span {
+    color: #fff !important;
+}
+
+#sidebar-v2 a.active {
+    background: #1f3fad !important;
+}
+
+.sidebar-v2-location #sidebar-v2 .default-bg-color {
+    background-color: #808080 !important;
+}
+
+#sidebar-v2 a:hover span {
+    color: #fff !important;
+}
+
+.sidebar-v2-location #sidebar-v2 .hl_nav-header-without-footer nav a.active.divider,
+.sidebar-v2-location #sidebar-v2 .hl_nav-header-without-footer nav a:hover.divider {
+    background: #808080 !important;
+}
+
+#sidebar-v2 a:hover {
+    background: #1f3fad !important;
+}
+
+#recent_activities-toggle {
+    background-color: #F3F3F3 !important;
+    border: 1px solid #EAEAEA !important;
+    padding: 19px !important;
+}
+
+#recent_activities-toggle i {
+    color: #555a64c2 !important;
+    font-size: 13px;
+}
+
+
+.v2-collapse #conversations {
+    width: calc(113vw - 14rem) !important;
+}
+
+.sidebar-v2-location .hl_topbar-tabs {
+    padding-top: 122px !important;
+}
+
+
+.sidebar-v2-location:has(#OpportunitiesList) .hl_topbar-tabs {
+    padding-top: 122px !important;
+}
+
+#OpportunitiesList .hl-card.\!border-t-2 .hl-card-content div {
+    color: #fff !important;
+}
+
+.sidebar-v2-location:has(#funnels) .hl_topbar-tabs {
+    padding-top: 100px !important;
+}
+
+#conversations .hl_conversations--message-header button svg path {
+    stroke: #fff !important;
+}
+
+#OpportunitiesList .min-h-0 .h-full.flex.flex-col .opportunitiesCard.max-h-2xl.borderColor.mb-\[16px\].max-h-28.\!rounded.\!border-0.\!border-t-2.\!border-solid.ui-card {
+    border: none !important;
+    color: #fff !important;
+    box-shadow: none !important;
+    min-width: max-content !important
+}
+
+#OpportunitiesList .min-h-0 .h-full.flex.flex-col .opportunitiesCard.max-h-2xl.borderColor.mb-\[16px\].max-h-28.\!rounded.\!border-0.\!border-t-2.\!border-solid.ui-card .text-xs.text-gray-500,
+#OpportunitiesList .min-h-0 .h-full.flex.flex-col .opportunitiesCard.max-h-2xl.borderColor.mb-\[16px\].max-h-28.\!rounded.\!border-0.\!border-t-2.\!border-solid.ui-card .text-ellipsis {
+    color: #fff !important;
+}
+
+#agency_location .hl_location--header h3 {
+    font-size: 20px !important;
+    width: 100% !important;
+    font-weight: 500 !important;
+}
+
+#agency_location {
+    padding-top: 30px !important;
+}
+
+
+#sb_agency-dashboard::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/66f1b981a0088a9dfa3f78b9.svg);
+    filter: brightness(0.4) !important;
+}
+
+#sb_location-prospect::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/66f41e69f701a051872295d6.svg);
+}
+
+#sb_agency-accounts:nth-child(3)::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/66f1b9777afc867c13324511.svg);
+    filter: brightness(0.4) !important;
+}
+
+#sb_agency-account-snapshots::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/66f1b95dd383b86714bd25c7.svg);
+    filter: brightness(0.4) !important;
+}
+
+#sb_agency-account-reselling::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/66f1b955b841ec99c3bb9877.svg);
+    filter: brightness(0.4) !important;
+}
+
+#sb_agency-marketplace::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/66f1b946d383b8f9babd25c0.svg);
+    filter: brightness(0.4) !important;
+}
+
+#sb_agency-affiliate-portal::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/66f41e698693db5526eb7b86.svg);
+}
+
+#sb_agency-template-library::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/66f41e692734f47fed11b2d3.svg);
+}
+
+#sb_agency-partners::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/66f1b92f9eb7325c93d88918.svg);
+    filter: brightness(0.4);
+}
+
+#sb_agency-university::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/66f41e69c75d540e2888ae68.svg);
+}
+
+#sb_saas-education::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/66f1b927d34e7eb7fceee215.svg);
+    filter: brightness(0.4);
+}
+
+#sb_ghl-swag::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/66f41e69d1853ed9c8408697.svg);
+}
+
+#sb_agency-ideas::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/66f1b914ad25682f419cbdad.svg);
+    filter: brightness(0.4) !important;
+}
+
+#sb_mobile-app-customiser::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/66f1b90d7afc864af23244fa.svg);
+    filter: brightness(0.4) !important;
+}
+
+#sb_agency-accounts::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/66f1b9020b3af861374e7f05.svg);
+    filter: brightness(0.4) !important;
+}
+
+
+#sb_launchpad::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/643ef0dea88a2a538786afd8.svg+xml) !important;
+    filter: brightness(0.4) !important;
+}
+
+#sb_dashboard::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/643ee8fef231177d98252e6c.svg+xml) !important;
+    filter: brightness(0.4) !important;
+}
+
+#sb_conversations::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/643ef12ef23117eb91253588.svg+xml) !important;
+    filter: brightness(0.4) !important;
+}
+
+#sb_calendars::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/643ef164f231179a862535c6.svg+xml) !important;
+    filter: brightness(0.4) !important;
+}
+
+#sb_contacts::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/643ef182a88a2aa93186b07f.svg+xml) !important;
+    filter: brightness(0.4) !important;
+}
+
+#sb_opportunities::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/643ef1a17fc7632d3e12707c.svg+xml) !important;
+    filter: brightness(0.4) !important;
+}
+
+#sb_payments::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/643ef1e37fc7633e3e1270c3.svg+xml) !important;
+    filter: brightness(0.4) !important;
+}
+
+#sb_payments+div+a::before {
+    content: url("https://storage.googleapis.com/msgsndr/jy2CakbntNUtQfQg4zZx/media/68c59e1deca95a91bc1ab43a.svg") !important;
+}
+
+#sb_email-marketing::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/643ef2067fc76385f4127101.svg+xml) !important;
+    filter: brightness(0.4) !important;
+}
+
+#sb_automation::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/643ef232de934225b2753814.svg+xml) !important;
+    filter: brightness(0.4) !important;
+}
+
+#sb_sites::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/643ef285a88a2a470486b109.svg+xml) !important;
+    filter: brightness(0.4) !important;
+}
+
+#sb_reputation::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/643ef2aa7fc76337551271aa.svg+xml) !important;
+    filter: brightness(0.4) !important;
+}
+
+#sb_reporting::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/643ef2c2a88a2a05bd86b1f0.svg+xml) !important;
+    filter: brightness(0.4) !important;
+}
+
+#sb_settings::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/643ef2db7fc763c3381271b4.svg+xml) !important;
+    filter: brightness(0.4) !important;
+}
+
+/* not */
+#sb_memberships::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/64a582995cd1137cad50686f.svg+xml) !important;
+    filter: brightness(0.4) !important;
+}
+
+#sb_app-marketplace::before {
+    content: url(https://storage.googleapis.com/msgsndr/jy2CakbntNUtQfQg4zZx/media/68c59b2e657c0db72c6c8ad5.svg) !important;
+    filter: brightness(0.8) !important;
+}
+
+#sb_AI Agents::before {
+    content: url(https://storage.googleapis.com/msgsndr/jy2CakbntNUtQfQg4zZx/media/68c59e1deca95a91bc1ab43a.svg) !important;
+}
+
+#sb_app-media::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/6772ebd7f5b72908755eaa36.svg) !important;
+    filter: brightness(0.4) !important;
+}
+
+#sb_location-mobile-app::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/6772eab2f67b08db8c85d5e6.svg) !important;
+    filter: brightness(0.4) !important;
+}
+
+.sidebar-v2-agency #sidebar-v2 .hl_nav-header nav a::before {
+    width: 20px !important;
+}
+
+#contact-details {
+    margin-top: 8px;
+    transform: scale(0.9) translateX(-4vw) !important;
+    -webkit-transform: scale(0.9) translateX(-4vw) !important;
+    -moz-transform: scale(0.9) translateX(-4vw) !important;
+    -ms-transform: scale(0.9) translateX(-4vw) !important;
+    -o-transform: scale(0.9) translateX(-4vw) !important;
+}
+
+.hl_topbar-tabs #OpportunitiesList .overflow-x-scroll .opportunities-scroll {
+    height: calc(100vh - 290px) !important;
+    overflow-y: hidden !important;
+}
+
+#location-dashboard svg g path[d="M146 4.1A77.9 77.9 0 1 1 145.9922 4.1M146 17.1A64.9 64.9 0 1 0 146.0065 17.1Z"] {
+    fill: #1f3fad !important;
+}
+
+#location-dashboard svg path[fill="#53B1FD"] {
+    fill: #1f3fad !important;
+}
+
+#location-dashboard svg path[fill="rgb(83,177,253)"] {
+    fill: #1f3fad !important;
+}
+
+#location-dashboard svg path[fill="rgb(91,194,255)"] {
+    fill: #1f3fad !important;
+}
+
+#location-dashboard div[class="echarts chart h-96"] svg path:hover {
+    fill: #1f3fad !important;
+}
+
+#scoring,
+#CustomObjectsSchema {
+    padding-top: 20px !important;
+}
+
+#dashboard-wrapper {
+    z-index: 9 !important;
+}
+
+.message-bubble {
+    border-radius: 10px !important;
+}
+
+header .hl_header--controls #template-power-dialer button.bg-success-600::before {
+    content: url(https://storage.googleapis.com/msgsndr/MLvKvVyGos8j4OV4y4Zt/media/68c1b67f7886d6b5294e1d05.svg) !important;
+    margin-top: 8px !important;
+}
+
+#chat-connect:has(#launchpad-stripe-connect) {
+    display: none !important
+}
+
+.sidebar-v2-location .hl_header .topmenu-nav .topmenu-navitem.divider {
+    padding: 1px !important;
+}
+
+.sidebar-v2-location #sidebar-v2.default-bg-color.hl_fixed-width #sb_calendars::before {
+    display: none !important;
+}
+
+#CalendarPage {
+    transform: scale(0.9) translateX(-4vw) !important;
+    -webkit-transform: scale(0.9) translateX(-4vw) !important;
+    -moz-transform: scale(0.9) translateX(-4vw) !important;
+    -ms-transform: scale(0.9) translateX(-4vw) !important;
+    -o-transform: scale(0.9) translateX(-4vw) !important;
+}
+
+#clientportal-builder {
+    padding-top: 10px !important;
+}
+
+#sb_agency-settings:hover img {
+    filter: brightness() !important;
+}
+
+#conversations .hl_conversations--messages-list-v2 div[style="border: 1px solid rgba(209, 213, 219, 0.5);"] {
+    border: none !important;
+}
+
+#sb_opportunities span,
+#sb_contacts span,
+#sb_launchpad span {
+    display: none !important;
+}
+
+.v2-collapse #sb_opportunities:after,
+.v2-collapse #sb_contacts:after,
+.v2-collapse #sb_launchpad:after {
+    display: none !important;
+}
+
+#sb_opportunities:after {
+    Content: 'Pipeline' !important;
+}
+
+#sb_launchpad:after {
+    Content: 'OnRamp' !important;
+}
+
+#sb_contacts:after {
+    Content: 'clients' !important;
+}
+
+#sb_opportunities:after,
+#sb_contacts:after,
+#sb_launchpad:after {
+    Visibility: visible !important;
+    Top: 0 !important;
+    Left: 0 !important;
+    Position: relative !important;
+    font-size: 12px !important;
+    color: #FFFFFFCC !important;
+    font-weight: 600 !important;
+    line-height: 24px !important;
+    text-transform: uppercase !important;
+}
+
+#sb_opportunities:hover:after,
+#sb_contacts:hover:after,
+#sb_launchpad:hover:after {
+    color: #fff !important;
+}
+
+#sb_opportunities.active:after,
+#sb_contacts.active:after,
+#sb_launchpad.active:after {
+    color: #fff !important;
+}
+
+a#canny_logs-toggle.btn-changelog {
+    background-color: #F3F3F3 !important;
+    border: 1px solid #EAEAEA !important;
+    padding: 3px 25px 35px 15px !important;
+}
+
+a#canny_logs-toggle.btn-changelog i {
+    color: #555a64c2 !important;
+}
+
+
+body:has(#bulkActionsList) .topmenu-navtitle,
+body:has(#crm-opportunities-pipelines-view) .topmenu-navtitle,
+body:has(#OpportunitiesList) .topmenu-navtitle,
+body:has(#smartlists) .topmenu-navtitle,
+body:has(#contact-restore-dashboard) .topmenu-navtitle,
+body:has(#CustomObjectsList) .topmenu-navtitle,
+body:has(#BusinessList) .topmenu-navtitle,
+body:has(#bulkActionsList) .topmenu-navtitle {
+    color: transparent !important;
+    position: relative !important;
+}
+
+body:has(#contact-restore-dashboard) .topmenu-navtitle::before,
+body:has(#CustomObjectsList) .topmenu-navtitle::before,
+body:has(#BusinessList) .topmenu-navtitle::before,
+body:has(#bulkActionsList) .topmenu-navtitle::before,
+body:has(#smartlists) .topmenu-navtitle::before {
+    content: "clients" !important;
+    color: #fff !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    text-transform: uppercase !important;
+}
+
+body:has(#bulkActionsList) .topmenu-navtitle::before,
+body:has(#crm-opportunities-pipelines-view) .topmenu-navtitle::before,
+body:has(#OpportunitiesList) .topmenu-navtitle::before {
+    content: "pipeline" !important;
+    color: #fff !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    text-transform: uppercase !important;
+}
+
+.topmenu-navtitle {
+    text-transform: uppercase !important;
+}
+
+.sidebar-v2-location #sidebar-v2 #location-switcher-sidbar-v2 .hl_text-overflow {
+    color: #000 !important;
+}
+
+.hl-header-content .title {
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+}
+
+#location-dashboard .dashboard-divider {
+    display: none !important;
+}
+
+#location-dashboard,
+#location_dashboard-main-content {
+    background: #f2f4f7 !important;
+}
+
+#location-dashboard .hl-card-header .hl-text-md-medium {
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+}
+
+body:has(#bulkActionsList) .topmenu-navtitle,
+body:has(#crm-opportunities-pipelines-view) .topmenu-navtitle,
+body:has(#OpportunitiesList) .topmenu-navtitle {
+    max-width: 100px !important;
+}
+
+#OpportunitiesList .scrollable .card .cardWrapper .opportunitiesCard {
+    border-radius: 20px !important;
+
+}
+
+#OpportunitiesList .scrollable .card .cardWrapper {
+    border-top: 2px solid #1f3fad !important;
+    border-radius: 20px !important;
+}
+
+#newTopBar .pipeline-ribbon {
+    border: 1px solid #EAEAEA !important;
+    border-radius: 20px !important;
+    background: #F3F3F3 !important;
+    max-width: 98% !important;
+    margin: 0 auto !important;
+}
+
+#newTopBar .pipeline-ribbon .count {
+    border-radius: 10px !important;
+    padding: 18px !important;
+}
+
+#newTopBar .pipeline-ribbon .hr-base-selection__border,
+#newTopBar .pipeline-ribbon .hr-base-selection__state-border {
+    border: none !important;
+}
+
+body:has(#notification_banner-top_bar) .main_container1012 {
+    top: 7rem !important;
+}
+
+body:has(#notification_banner-top_bar) #tooglecss {
+    top: 66px !important;
+}
+
+body:has(#notification_banner-top_bar) .flex.mb-4.h-7.flex-row.md\:flex-col.lg\:flex-row.xl\:flex-row.items-start.justify-between.px-2 {
+    top: 57px !important;
+}
+
+#OpportunitiesList .min-h-0 .h-full.flex.flex-col .opportunitiesCard.max-h-2xl.borderColor.mb-\[16px\].max-h-28.\!rounded.\!border-0.\!border-t-2.\!border-solid.ui-card {
+    position: relative;
+    background: linear-gradient(to right,
+            #445bbb 0 15px,
+            /* pehle 15px red */
+            #445bbb 15px 30px,
+            /* agle 15px #f9fafb */
+            #445bbb 30px,
+            /* gradient start */
+            #4628C5 calc(100% - 30px),
+            /* gradient end */
+            #f9fafb calc(100% - 30px) 100%
+            /* right 30px same */
+        );
+
+    padding: 15px 0px 15px 40px !important;
+    margin-left: -10px !important;
+    z-index: 0 !important;
+}
+
+#OpportunitiesList .scrollable .target .min-h-0:nth-child(1) .opportunitiesCard.max-h-2xl.borderColor.mb-\[16px\].max-h-28.\!rounded.\!border-0.\!border-t-2.\!border-solid.ui-card::before {
+    display: none !important;
+}
+
+#OpportunitiesList .min-h-0 .h-full.flex.flex-col .opportunitiesCard.max-h-2xl.borderColor.mb-\[16px\].max-h-28.\!rounded.\!border-0.\!border-t-2.\!border-solid.ui-card::before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 52px solid transparent;
+    border-left: 40px solid #f9fafb;
+}
+
+#OpportunitiesList .min-h-0 .h-full.flex.flex-col .opportunitiesCard.max-h-2xl.borderColor.mb-\[16px\].max-h-28.\!rounded.\!border-0.\!border-t-2.\!border-solid.ui-card::after {
+    content: '';
+    position: absolute;
+    right: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 45px solid transparent;
+    border-bottom: 45px solid transparent;
+    border-left: 30px solid #4628C5;
+    z-index: 5 !important;
+}
+
+.hr-base-selection:hover .hr-base-selection__state-border {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+button.n-button.n-button--primary-type.n-button--medium-type:hover .n-button__state-border,
+.n-button.n-button--default-type.n-button--medium-type:hover .n-button__state-border {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+button:hover .hr-button__state-border {
+    border: 1px solid transparent !important;
+}
+
+
+#location-dashboard svg path[fill="#22CCEE"],
+#location-dashboard svg path[fill="rgb(34,204,238)"],
+#location-dashboard svg path[fill="rgb(37,224,255)"] {
+    fill: #9CD7EC !important;
+    stroke: none !important;
+}
+
+#location-dashboard svg path[fill="rgb(128,152,249)"],
+#location-dashboard svg path[fill="rgb(140,167,255)"],
+#location-dashboard svg path[fill="#8098F9"] {
+    fill: #217D99 !important;
+    stroke: none !important;
+}
+
+#location-dashboard svg path[fill="rgb(164,138,251)"],
+#location-dashboard svg path[fill="rgb(180,151,255)"],
+#location-dashboard svg path[fill="#A48AFB"] {
+    fill: #224BA1 !important;
+    stroke: none !important;
+}
+
+#location-dashboard div[style="height: calc(100% - 108px);"] #chart svg path:hover,
+#location-dashboard svg path[fill="rgb(91,194,255)"],
+#location-dashboard svg path[fill="rgb(83,177,253)"],
+#location-dashboard svg path[fill="#53B1FD"] {
+    fill: #1f3fad !important;
+    stroke: none !important;
+}
+
+body:has(#notification_banner-top_bar) #OpportunitiesList {
+    padding-top: 3rem !important;
+}
+
+body:has(#notification_banner-top_bar) #social-planner-mf {
+    padding-top: 2rem !important;
+}
+
+body:has(#notification_banner-top_bar) .hl_allphonenumber--container.notification-banner-wrapper {
+    padding-top: 7rem !important;
+}
+
+body:has(#notification_banner-top_bar) #smartlists {
+    padding-top: 3rem !important;
+}
+
+body:has(#notification_banner-top_bar) #CRMSettings {
+    padding-top: 5rem !important;
+}
+
+body:has(#notification_banner-top_bar) .hl_settings--body.hl_v2_stettings--body.notification-banner-wrapper {
+    padding-top: 11rem !important;
+}
+
+body:has(#notification_banner-top_bar) #location-custom-reports,
+body:has(#notification_banner-top_bar) #workflowBuilder {
+    padding-top: 1rem !important;
+}
+
+body:has(#notification_banner-top_bar) #snippets-app-container {
+    padding-top: 140px !important;
+}
+
+body:has(#notification_banner-top_bar) #trigger-links,
+body:has(#notification_banner-top_bar) #customers {
+    padding-top: 40px !important;
+}
+
+body:has(#notification_banner-top_bar) #BusinessList,
+body:has(#notification_banner-top_bar) #CustomObjectsList {
+    padding-top: 20px !important;
+}
+
+body:has(#notification_banner-top_bar) #bulkActionsList .n-config-provider,
+body:has(#notification_banner-top_bar) #pipeline-page {
+    padding-top: 1rem !important;
+}
+
+body:has(#notification_banner-top_bar) #location_prospect_micro_app {
+    padding-top: 4rem !important;
+}
+
+body:has(#notification_banner-top_bar) #certificates,
+body:has(#notification_banner-top_bar) #ProposalEstimatesTemplateListApp,
+body:has(#notification_banner-top_bar) #ProposalEstimatesListApp,
+body:has(#notification_banner-top_bar) #reporting-agent-dashboard {
+    padding-top: 3rem !important;
+}
+
+body:has(#notification_banner-top_bar) #recurring_listing,
+body:has(#notification_banner-top_bar) #invoice_listing {
+    padding-top: 1rem !important;
+}
+
+body:has(#notification_banner-top_bar) #paymentlinksDashboardApp {
+    padding-top: 11rem !important;
+}
+
+body:has(#notification_banner-top_bar) #widgets-container,
+body:has(#notification_banner-top_bar) #reviews-container,
+body:has(#notification_banner-top_bar) #review-requests-container,
+body:has(#notification_banner-top_bar) #reputation-dashboard-container,
+body:has(#notification_banner-top_bar) #knowledge-base-listing {
+    padding-top: 10rem !important;
+}
+
+body:has(#notification_banner-top_bar) #SubscriptionsListPage,
+body:has(#notification_banner-top_bar) #CouponsListPage,
+body:has(#notification_banner-top_bar) #OrdersListPage,
+body:has(#notification_banner-top_bar) #estimatesDashboardApp {
+    padding-top: 9rem !important;
+}
+
+#sidebar-v2 nav a i.fas.fa-globe {
+    color: #FFFFFFCC !important;
+    font-size: 20px !important;
+}
+
+.hl-title-container .hl-text-lg-medium {
+    font-size: 15px !important
+}
+
+body:has(#notification_banner-top_bar) #AppointmentList {
+    padding-top: 30px !important;
+}
+
+#widget_68a7d43ff76b6963b58db5c0 .hl-card-header .justify-end {
+    max-width: 175px;
+}
+
+#location_dashboard-datepicker-dashboard_header_range input {
+    font-size: 12px !important;
+}
+
+#OpportunitiesList .scrollable .target .min-h-0:nth-child(1) .card .cardWrapper {
+    border-top: 2px solid #F5AF29 !important;
+}
+
+#OpportunitiesList .scrollable .target .min-h-0:nth-child(2) .card .cardWrapper {
+    border-top: 2px solid #1f3fad !important;
+}
+
+#OpportunitiesList .scrollable .target .min-h-0:nth-child(3) .card .cardWrapper {
+    border-top: 2px solid #9A89B5 !important;
+}
+
+#OpportunitiesList .scrollable .target .min-h-0:nth-child(4) .card .cardWrapper {
+    border-top: 2px solid #A6B12F !important;
+}
+
+#hl_header--copilot-icon svg path {
+    stroke: #fff !important;
+}
+
+a[id="3f2485c4-068c-40b7-965b-1945cbf4d194"] span {
+    padding-left: 3px;
+}
+
+a[id="3f2485c4-068c-40b7-965b-1945cbf4d194"] span.nav-title {
+    padding-left: 6px;
+}
+
+.v2-collapse .agency-logo-container img {
+    margin-left: 116px !important
+}
+
+#OpportunitiesList .cardWrapper.h-full.relative .absolute.inset-0.z-10.flex.items-center.justify-center.pointer-events-none.mt-\[60px\].bg-\[\#f9fafb\] {
+    margin-top: 85px !important;
+}
+
+.hl_v2-location_switcher {
+    z-index: 999999 !important;
+}
+
+#sidebar-v2 a span i {
+    color: #FFFFFFCC !important;
+}
+
+#sidebar-v2 a[id="sb_AI Agents"] img {
+    display: block !important;
+}
+
+body .sidebar-v2-location #sidebar-v2 .hl_nav-header nav a.active img {
+    filter: invert(0) !important;
+}
+
+body .sidebar-v2-location #sidebar-v2 .hl_nav-header nav a.active img {
+    filter: invert(0) !important;
+}
+
+/*  NAVBAR REDESIGN: sidebar -> top navbar  */
+
+/* ---- Row 1: header stays full width, makes room on the left ---- */
+.v2-open .hl_header,
+.v2-collapse .hl_header {
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    z-index: 1000 !important;
+}
+
+.v2-collapse .hl_header {
+    width: 100% !important;
+}
+
+/* neutralize old collapsed-mode absolute hacks for search/quick actions,
+   since the header layout is now uniform regardless of sidebar state */
+.v2-collapse #globalSearchOpener {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+}
+
+.v2-collapse #quickActions {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+}
+
+/* Logo, pulled out of the sidebar and fixed into row 1, far left */
+#sidebar-v2 .agency-logo-container {
+    position: fixed !important;
+    top: 10px !important;
+    left: 20px !important;
+    width: auto !important;
+    height: 40px !important;
+    margin: 0 !important;
+    justify-content: flex-start !important;
+    z-index: 1003 !important;
+}
+
+#sidebar-v2 .agency-logo-container img,
+.v2-collapse .agency-logo-container img {
+    max-height: 36px !important;
+    max-width: 130px !important;
+    margin-left: 0 !important;
+    filter: none !important;
+}
+
+/* Location switcher, pulled out of the sidebar and fixed into row 1, after the logo */
+.v2-open #location-switcher-sidbar-v2,
+.v2-collapse #location-switcher-sidbar-v2 {
+    position: fixed !important;
+    top: 6px !important;
+    left: 160px !important;
+    max-width: 190px !important;
+    margin: 0 !important;
+    z-index: 1003 !important;
+}
+
+.v2-collapse #location-switcher-sidbar-v2::after {
+    display: flex !important;
+}
+
+/* Search bar: also a descendant of #sidebar-v2 (GHL renders it there and the
+   original CSS always pulled it into the header with position:absolute).
+   Fixed positioning here makes it immune to #sidebar-v2's own box changes. */
+.flex.mb-4.h-7.flex-row.md\:flex-col.lg\:flex-row.xl\:flex-row.items-start.justify-between.px-2 {
+    position: fixed !important;
+    left: 370px !important;
+    top: 10px !important;
+    z-index: 1003 !important;
+}
+
+/* ---- Row 2: the sidebar itself becomes a fixed horizontal navbar ---- */
+.v2-open #sidebar-v2,
+.v2-collapse #sidebar-v2 {
+    position: fixed !important;
+    top: 60px !important;
+    left: 0 !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    height: 56px !important;
+    z-index: 1001 !important;
+    background: #1f3fad !important;
+    overflow: visible !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+.v2-open #sidebar-v2 .h-screen,
+.v2-collapse #sidebar-v2 .h-screen {
+    flex-direction: row !important;
+    height: 56px !important;
+    min-width: 100% !important;
+    width: 100% !important;
+    align-items: center !important;
+}
+
+/* collapse button repurposed as a "next" chevron pinned to the right edge,
+   replacing the visible scrollbar. Nav still scrolls via wheel/trackpad/drag. */
+#sidebar-v2>div.absolute.z-50 {
+    display: none !important;
+}
+
+#sidebar-v2>div.absolute.z-50 button {
+    background: rgba(255, 255, 255, 0.18) !important;
+    border-radius: 50% !important;
+    width: 28px !important;
+    height: 28px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+#sidebar-v2>div.absolute.z-50 button i.hl_collapse-button {
+    color: #fff !important;
+    font-size: 16px !important;
+    transform: rotate(180deg) !important;
+}
+
+#sidebar-v2 nav {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    flex: 1 1 auto !important;
+    width: auto !important;
+    height: 100% !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    gap: 4px !important;
+    padding-left: 12px !important;
+    padding-right: 44px !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+}
+
+#sidebar-v2 nav::-webkit-scrollbar {
+    display: none !important;
+    height: 0 !important;
+}
+
+.v2-open #sidebar-v2 nav a,
+.v2-collapse #sidebar-v2 nav a,
+.hl_nav-settings nav a {
+    width: auto !important;
+    max-width: none !important;
+    flex: 0 0 auto !important;
+    flex-direction: row !important;
+    white-space: nowrap !important;
+    padding: 8px 14px !important;
+    margin: 0 !important;
+    border-radius: 8px !important;
+}
+
+#sidebar-v2 nav a img,
+.hl_nav-settings nav a img {
+    margin-right: 8px !important;
+    filter: brightness(0) invert(1) opacity(0.75) !important;
+}
+
+.v2-open #sidebar-v2 nav a::before,
+.v2-collapse #sidebar-v2 nav a::before,
+.hl_nav-settings nav a::before {
+    filter: brightness(0) invert(1) opacity(0.75) !important;
+}
+
+#sidebar-v2 nav a span.nav-title,
+.hl_nav-settings nav a span.nav-title {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+#sidebar-v2 nav a:hover,
+#sidebar-v2 nav a.active,
+.hl_nav-settings nav a:hover,
+.hl_nav-settings nav a#sb_settings:hover {
+    background: #10287d !important;
+}
+
+#sidebar-v2 nav a:hover img,
+#sidebar-v2 nav a.active img,
+#sidebar-v2 nav a:hover::before,
+#sidebar-v2 nav a.active::before {
+    filter: brightness(0) invert(1) opacity(1) !important;
+}
+
+#sidebar-v2 nav a:hover span.nav-title,
+#sidebar-v2 nav a.active span.nav-title {
+    color: #fff !important;
+}
+
+#sidebar-v2 a#sb_divider-1 {
+    display: none !important;
+}
+
+/* Settings link: pushed to the far right end of the navbar */
+.hl_nav-settings {
+    position: static !important;
+    width: auto !important;
+    height: 100% !important;
+    margin-left: auto !important;
+    flex-shrink: 0 !important;
+    background: transparent !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.hl_nav-settings nav {
+    display: flex !important;
+    overflow: visible !important;
+    height: auto !important;
+}
+
+.hl_nav-settings nav a#sb_settings {
+    width: auto !important;
+}
+
+/* ---- Page content: clear header (60px) + new navbar (56px) ---- */
+section.w-full {
+    padding-top: 56px !important;
+}
+
+#conversations,
+.v2-collapse #conversations {
+    width: 100% !important;
+}
+
+.v2-open #sidebar-v2 .h-screen {
+    padding-top: 4px !important;
+}
+
+#app .topmenu-nav {
+    margin-top: 60px !important;
+}
+
+#sidebar-v2 .w-full.group.px-3.flex.items-center.justify-start.lg\:justify-start.xl\:justify-start.text-sm.font-medium.rounded-md.text-gray-300.font-normal.cursor-text.divider {
+    display: none !important;
+}
+
+/* ---- Page content width fix: ---- */
+#app #funnels,
+#app .hl_wrapper,
+#location_prospect_micro_app,
+#app #clientportal-builder,
+#app #marketplace-app,
+.sidebar-v2-location .hl_wrapper,
+.sidebar-v2-location .wrapper,
+.sidebar-v2-location .hl_settings--body {
+    width: 100% !important;
+}
+
+#account-snapshots,
+main #settings,
+#marketplace-app,
+#university-app,
+#reselling-dashboard-app,
+#locations-list {
+    padding-top: 60px !important;
+}
+
+#location-dashboard {
+    padding-top: 60px !important;
+}
+
+#app .sidebar-v2-location .hl_wrapper.hl_topbar-tabs,
+#app .sidebar-v2-location .hl_topbar-tabs {
+    padding-top: 120px !important;
+}
+
+#mobileAppCustomiser,
+.hl_affiliate--header,
+.hl_agency.hl_agency-sales-resources,
+#location_prospect_micro_app {
+    padding-top: 80px !important;
+}
+
+/* ---- Page content height fix: ---- */
+.sidebar-v2-location .hl_wrapper,
+.sidebar-v2-location .hl_topbar-tabs {
+    height: calc(100vh - 56px) !important;
+}
+
+/* ---- Pipeline (Opportunities) ---- */
+#app #funnels,
+.sidebar-v2-location .wrapper.opportunityPage.crm-opportunities-content {
+    max-width: 100% !important;
+}
+
+a#sb_ask-ai span {
+    color: #ffffffcc !important;
+}
+
+/* Dashboard Card Main Container */
+.grid-stack-item-content .hr-card {
+    border: none !important;
+    border-radius: 15px !important;
+    box-shadow: 0 10px 20px 0 rgba(231, 236, 238, 0.6) !important;
+    overflow: hidden !important;
+    /* Rounded corners smooth rakhne ke liye */
+}
+
+/* Card Header Styling */
+.grid-stack-item-content .hr-card-header {
+    border-bottom: 1px solid rgba(231, 236, 238, 0.5) !important;
+    padding: 16px !important;
+}
+
+/* Card Body Content */
+.grid-stack-item-content .hr-card-content {
+    padding: 16px !important;
+}
+
+/* Specifically target only the Dashboard switcher label text */
+#location_dashboard-btn-dashboard_switcher-label .truncate {
+    color: #ffffff !important;
+}
+
+/* ---- Calendars page: /height ---- */
+#CalendarPage {
+    transform: none !important;
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    --calendar-height: 68% !important;
+}
+
+#calendar-page-parent-container {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* ---- Popups/drawers ---- */
+.hr-drawer-container,
+.n-modal-container,
+.n-drawer-container {
+    z-index: 2000 !important;
+}
+
+#record-details-new-ui {
+    padding-top: 105px !important;
+}
+
+#app:has(#BusinessList) .hl_wrapper,
+#app:has(#CustomObjectsList) .hl_wrapper {
+    padding-top: 0 !important;
+}
+
+#Labs {
+    padding-top: 50px !important;
+}
+
+#domainReselling {
+    padding-top: 10px !important;
+}
+
+#Labs,
+#bulkImport,
+#app:has(#phone-system-app) .hl_allphonenumber--container,
+#app .hl_wrapper--inner,
+#app:has(#ForecastDashboard) .wrapper,
+#app:has(#ad-manager-dashboard) .hl_topbar-tabs,
+#app:has(#BusinessList) .wrapper,
+#app:has(#CustomObjectsList) .wrapper {
+    max-width: 100% !important;
+    width: 100%;
+}
+
+/* ---- Fix: pages (e.g. Workflows---- */
+.sidebar-v2-location .hl_wrapper,
+.sidebar-v2-location .hl_topbar-tabs {
+    box-sizing: border-box !important;
+}
+
+.sidebar-v2-location .hl_topbar-tabs #workflowBuilder {
+    height: calc(100vh - 176px) !important;
+}
+
+/* ---- Fix: Workflows ---- */
+#marketplace-app {
+    height: calc(100vh - 100px) !important;
+}
+
+/* ============================================================
+   DARK MODE COLOR OVERRIDES
+   Everything above this line is the shared structural CSS
+   (layout, spacing, hide/show, custom icons) copied from the
+   light stylesheet unchanged. Everything below recolors it
+   for dark mode. Built + verified page by page against the
+   live site (Chrome), starting with Dashboard.
+   ============================================================ */
+
+/* ---- banner offset fix: fixed header/navbar ignore the in-flow
+   notification banner's height, so they visually collide with it.
+   Push them down by the banner's height (~48px) when it's present. ---- */
+body:has(#notification_banner-top_bar) #sidebar-v2 .agency-logo-container { top: 58px !important; }
+body:has(#notification_banner-top_bar) .v2-open #location-switcher-sidbar-v2,
+body:has(#notification_banner-top_bar) .v2-collapse #location-switcher-sidbar-v2 { top: 54px !important; }
+body:has(#notification_banner-top_bar) .flex.mb-4.h-7.flex-row.md\:flex-col.lg\:flex-row.xl\:flex-row.items-start.justify-between.px-2 { top: 58px !important; }
+body:has(#notification_banner-top_bar) .v2-open #sidebar-v2,
+body:has(#notification_banner-top_bar) .v2-collapse #sidebar-v2 { top: 108px !important; }
+body:has(#notification_banner-top_bar) section.w-full { padding-top: 104px !important; }
+body:has(#notification_banner-top_bar) #location-dashboard { padding-top: 108px !important; }
+
+/* ---- notification banner ---- */
+#notification_banner-top_bar {
+    background: #2a2410 !important;
+    color: #f2d98a !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+#notification_banner-top_bar * {
+    color: #f2d98a !important;
+}
+
+#notification_banner-top_bar button,
+#notification_banner-top_bar a.btn,
+#notification_banner-top_bar [class*="btn"] {
+    background: #f2d98a !important;
+    color: #1a1608 !important;
+}
+
+/* ---- app / page background ---- */
+body,
+#app {
+    background: #101213 !important;
+}
+
+/* the fixed header bar itself carries a white background baked into
+   its own component (children usually cover it, but it shows through
+   as a sliver/flash on some pages) */
+.hl_header {
+    background: #101213 !important;
+}
+
+#dashboard-container,
+#location-dashboard,
+#location_dashboard-main-content {
+    background: #101213 !important;
+}
+
+.location-dashboard-wrapper.hl-wrapper-container .n-config-provider {
+    background-color: #101213 !important;
+}
+
+/* ---- fixed navbar chrome (top tab bar) ---- */
+.v2-open #sidebar-v2,
+.v2-collapse #sidebar-v2 {
+    background: #101213 !important;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06) !important;
+}
+
+#sidebar-v2 nav a span.nav-title,
+.hl_nav-settings nav a span.nav-title {
+    color: rgba(255, 255, 255, 0.55) !important;
+}
+
+#sidebar-v2 nav a:hover,
+#sidebar-v2 nav a.active,
+.hl_nav-settings nav a:hover,
+.hl_nav-settings nav a#sb_settings:hover {
+    background: #ffffff !important;
+}
+
+#sidebar-v2 nav a:hover span.nav-title,
+#sidebar-v2 nav a.active span.nav-title {
+    color: #101213 !important;
+}
+
+#sidebar-v2 nav a:hover img,
+#sidebar-v2 nav a.active img,
+#sidebar-v2 nav a:hover::before,
+#sidebar-v2 nav a.active::before {
+    filter: brightness(0) invert(0) opacity(1) !important;
+}
+
+/* ---- header row: logo / location switcher / search / quick actions ---- */
+#location-switcher-sidbar-v2 {
+    background: #1a1a1a !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.sidebar-v2-location #sidebar-v2 #location-switcher-sidbar-v2 .hl_text-overflow,
+.sidebar-v2-agency #sidebar-v2 .menu-title,
+.sidebar-v2-location #sidebar-v2 .menu-title {
+    color: #e5e7eb !important;
+}
+
+div#globalSearchOpener {
+    background: #1a1a1a !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+span.search-placeholder {
+    color: #9aa0a6 !important;
+}
+
+span.search-placeholder::before {
+    filter: invert(1) opacity(0.6) !important;
+}
+
+div#quickActions {
+    background: #1a1a1a !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ---- Dashboard page ---- */
+#location-dashboard .hl-card,
+#location-dashboard .n-config-provider {
+    background-color: #101213 !important;
+}
+
+#dashboard-wrapper,
+#dashboard-wrapper.bg-gray-100,
+#location-dashboard [class*="bg-gray-"],
+#location-dashboard [class*="bg-white"] {
+    background-color: #101213 !important;
+}
+
+#location-dashboard .hr-card,
+#location-dashboard .grid-stack-item-content .hr-card {
+    background-color: #1a1a1a !important;
+}
+
+#location-dashboard input,
+#location-dashboard select,
+#location-dashboard .hr-base-selection,
+#location-dashboard [class*="hr-input"] {
+    background-color: #1a1a1a !important;
+    color: #e5e7eb !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* text: broad default, then re-brighten headings, then restore
+   any element that deliberately carries a semantic/arbitrary
+   tailwind color (status pills, danger/success labels, chart legend) */
+#location-dashboard,
+#location-dashboard * {
+    color: #d7dade !important;
+}
+
+#location-dashboard h1,
+#location-dashboard h2,
+#location-dashboard h3,
+#location-dashboard h4,
+#location-dashboard .hr-text-2xl,
+#location-dashboard .card-header h2,
+#location-dashboard .hr-card-header,
+#location-dashboard .text-3xl {
+    color: #f5f5f7 !important;
+}
+
+#location-dashboard [class*="text-["],
+#location-dashboard [class*="text-red-"],
+#location-dashboard [class*="text-green-"],
+#location-dashboard [class*="text-yellow-"],
+#location-dashboard [class*="text-orange-"],
+#location-dashboard [class*="text-emerald-"] {
+    color: revert !important;
+}
+
+#location-dashboard [class*="text-\[\#FF4D4F\]"] {
+    color: #FF6B6B !important;
+}
+
+/* SVG chart text uses `fill`, not `color` - some charts hardcode
+   fill via inline style, which needs its own override */
+#location-dashboard svg text {
+    fill: #f5f5f7 !important;
+}
+
+/* chart hover-highlight rectangles hardcode a white fill */
+#location-dashboard svg rect[fill="white"],
+#location-dashboard svg rect[fill="#fff"],
+#location-dashboard svg rect[fill="#ffffff"] {
+    fill: #ffffff10 !important;
+}
+
+/* the numeric-KPI chart's own <svg> box carries a light background */
+#location-dashboard svg.location-dashboard-numeric-chart-text,
+#location-dashboard .location-dashboard-numeric-chart-text {
+    background-color: transparent !important;
+}
+
+/* ---- global popups/dropdowns/popovers/selects/date-pickers
+   (naiveUI components, teleported to <body> via .v-binder-follower-container -
+   this single fix covers these floating menus across the WHOLE app,
+   not just the dashboard) ---- */
+.v-binder-follower-container [class*="hr-dropdown"],
+.v-binder-follower-container [class*="hr-popover"],
+.v-binder-follower-container [class*="hr-select-menu"],
+.v-binder-follower-container [class*="hr-base-select"] {
+    background-color: #1c1d21 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6) !important;
+}
+
+.v-binder-follower-container,
+.v-binder-follower-container * {
+    color: #d7dade !important;
+}
+
+.v-binder-follower-container [class*="bg-white"],
+.v-binder-follower-container [class*="bg-gray-"] {
+    background-color: transparent !important;
+}
+
+.v-binder-follower-container [class*="hover\:bg-gray"]:hover,
+.v-binder-follower-container [class*="cursor-pointer"]:hover {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.v-binder-follower-container [class*="border-gray-"] {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.v-binder-follower-container [class*="text-["],
+.v-binder-follower-container [class*="text-red-"],
+.v-binder-follower-container [class*="text-green-"],
+.v-binder-follower-container [class*="text-yellow-"],
+.v-binder-follower-container [class*="text-orange-"],
+.v-binder-follower-container [class*="text-emerald-"] {
+    color: revert !important;
+}
+
+.v-binder-follower-container [class*="text-\[\#FF4D4F\]"] {
+    color: #FF6B6B !important;
+}
+
+/* ---- global drawers / modals (recent activities panel, side
+   drawers, dialogs) - also site-wide, not dashboard-specific ---- */
+.drawer-panel,
+.drawer,
+.hr-drawer-container,
+.n-drawer-container,
+.n-modal-container {
+    background-color: #1a1a1a !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.drawer-panel,
+.drawer-panel *,
+.hr-drawer-container *,
+.n-drawer-container *,
+.n-modal-container * {
+    color: #d7dade !important;
+}
+
+.drawer-panel h1,
+.drawer-panel h2,
+.drawer-panel h3,
+.drawer-heading {
+    color: #f5f5f7 !important;
+}
+
+.drawer-panel [class*="bg-white"],
+.drawer-panel [class*="bg-gray-"] {
+    background-color: transparent !important;
+}
+
+.drawer-panel [class*="border-gray-"],
+.drawer-panel [class*="border-b"] {
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.drawer-panel input,
+.drawer-panel select,
+.drawer-panel textarea,
+.drawer-panel [class*="hr-input"] {
+    background-color: #1c1d21 !important;
+    color: #e5e7eb !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.drawer-panel [class*="bg-gray-50"],
+.drawer-panel [class*="bg-gray-100"] {
+    background-color: #1c1d21 !important;
+}
+
+/* ---- global module wrapper  ---- */
+.hr-wrapper-container,
+.hr-wrapper-container * {
+    color: #d7dade !important;
+}
+
+.hr-wrapper-container {
+    background: #101213 !important;
+}
+
+.hr-wrapper-container [class*="bg-white"],
+.hr-wrapper-container [class*="bg-gray-"],
+.hr-wrapper-container [class*="bg-\["] {
+    background-color: #1a1a1a !important;
+}
+
+.hr-wrapper-container [class*="border-gray-"] {
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.hr-wrapper-container input,
+.hr-wrapper-container select,
+.hr-wrapper-container textarea {
+    background-color: #1c1d21 !important;
+    color: #e5e7eb !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.hr-wrapper-container [class*="text-["],
+.hr-wrapper-container [class*="text-red-"],
+.hr-wrapper-container [class*="text-green-"],
+.hr-wrapper-container [class*="text-blue-"] {
+    color: revert !important;
+}
+
+.hr-wrapper-container .hr-data-table__cell-header,
+.hr-wrapper-container thead {
+    background: #0C0F15 !important;
+}
+
+.hr-wrapper-container thead * {
+    color: #fff !important;
+}
+
+.hr-wrapper-container h1,
+.hr-wrapper-container h2,
+.hr-wrapper-container h3 {
+    color: #f5f5f7 !important;
+}
+
+.hr-wrapper-container tbody tr:hover {
+    background: rgba(255, 255, 255, 0.04) !important;
+}
+
+/* ---- global module wrapper ---- */
+.hl-wrapper-container,
+.hl-wrapper-container * {
+    color: #d7dade !important;
+}
+
+.hl-wrapper-container {
+    background: #101213 !important;
+}
+
+.hl-wrapper-container [class*="bg-white"],
+.hl-wrapper-container [class*="bg-gray-"],
+.hl-wrapper-container [class*="bg-\["] {
+    background-color: #1a1a1a !important;
+}
+
+.hl-wrapper-container [class*="border-gray-"] {
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.hl-wrapper-container input,
+.hl-wrapper-container select,
+.hl-wrapper-container textarea {
+    background-color: #1c1d21 !important;
+    color: #e5e7eb !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.hl-wrapper-container [class*="text-["],
+.hl-wrapper-container [class*="text-red-"],
+.hl-wrapper-container [class*="text-green-"],
+.hl-wrapper-container [class*="text-blue-"] {
+    color: revert !important;
+}
+
+.hl-wrapper-container thead {
+    background: #0C0F15 !important;
+}
+
+.hl-wrapper-container thead * {
+    color: #fff !important;
+}
+
+.hl-wrapper-container h1,
+.hl-wrapper-container h2,
+.hl-wrapper-container h3 {
+    color: #f5f5f7 !important;
+}
+
+/* ---- .hl-card: a reusable card component (see the structural
+   `.hl-card{border-radius:15px; box-shadow:...}` rule near the top
+   of this file) that GHL gives a plain white background by default.
+   Global because it's used across many modules, not just one page. ---- */
+.hl-card {
+    background-color: #1a1a1a !important;
+}
+
+.hl-card * {
+    color: #d7dade !important;
+}
+
+/* ---- .hr-card: same idea as .hl-card, but for the "hr-" kit
+   (confirmed on Reputation's Overview report cards). Note this is
+   broader than the #location-dashboard-scoped .hr-card rule
+   earlier in this file - that one still applies too, redundantly
+   but harmlessly, since it was written before this was found global. ---- */
+.hr-card {
+    background-color: #1a1a1a !important;
+}
+
+.hr-card * {
+    color: #d7dade !important;
+}
+
+/* ---- legacy Bootstrap-based modules (confirmed on Automation's
+   Campaign tab, .hl_customer-acquisition--table) - a third,
+   older UI generation alongside the hr-/hl- kits. ".card" is a
+   generic Bootstrap class name, but here it consistently means
+   the same "surface" component as .hr-card/.hl-card do elsewhere. ---- */
+.hl_wrapper--inner,
+.hl_wrapper--inner * {
+    color: #d7dade !important;
+}
+
+.hl_wrapper--inner {
+    background: #101213 !important;
+}
+
+.card {
+    background-color: #1a1a1a !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.card * {
+    color: #d7dade !important;
+}
+
+.hl_wrapper--inner table thead th,
+.card table thead th {
+    background: #0C0F15 !important;
+    color: #fff !important;
+}
+
+/* ============================================================
+   CONVERSATIONS PAGE
+   New conversations UI lives under #conversations-workspace
+   (not the older #conversations / .hl_conversations--* selectors
+   above, which belong to a previous version of this screen but
+   are kept in case that markup is still served anywhere).
+   ============================================================ */
+#conversations-workspace,
+#conversations-workspace * {
+    color: #d7dade !important;
+}
+
+#conversations-workspace [class*="bg-\["],
+#conversations-workspace [class*="bg-white"],
+#conversations-workspace [class*="bg-gray-"] {
+    background-color: #1a1a1a !important;
+}
+
+#conversations-workspace h1,
+#conversations-workspace h2,
+#conversations-workspace h3,
+#conversations-workspace [class*="text-gray-900"] {
+    color: #f5f5f7 !important;
+}
+
+#conversations-workspace input,
+#conversations-workspace textarea,
+#conversations-workspace select {
+    background-color: #1c1d21 !important;
+    color: #e5e7eb !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+#conversations-workspace [class*="border-gray-"],
+#conversations-workspace [class*="border-b"],
+#conversations-workspace [class*="border-t"] {
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+#conversations-workspace [class*="text-["],
+#conversations-workspace [class*="text-red-"],
+#conversations-workspace [class*="text-green-"],
+#conversations-workspace [class*="text-blue-"],
+#conversations-workspace [class*="text-yellow-"],
+#conversations-workspace [class*="text-orange-"] {
+    color: revert !important;
+}
+
+#conversations-workspace svg text {
+    fill: #f5f5f7 !important;
+}
+
+/* record detail / contact-fields form (right-hand Contact Details
+   panel and any other .hr-input form embedded in conversations) */
+#conversations-workspace .hr-input,
+#conversations-workspace [class*="hr-input"] {
+    background-color: #1c1d21 !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* doubled ID beats a same-specificity (ID + class) rule the
+   record-detail form injects dynamically per field at runtime,
+   which otherwise wins the cascade by appearing later in <head> */
+#conversations-workspace#conversations-workspace .hr-input__input-el,
+#conversations-workspace#conversations-workspace input.hr-input__input-el {
+    color: #e5e7eb !important;
+    -webkit-text-fill-color: #e5e7eb !important;
+    background-color: #1a1a1a !important;
+}
+
+/* ============================================================
+   CALENDARS PAGE (FullCalendar-based grid)
+   ============================================================ */
+#CalendarPage,
+#calendar-page-parent-container {
+    background: #101213 !important;
+}
+
+#CalendarPage,
+#CalendarPage * {
+    color: #d7dade !important;
+}
+
+#CalendarPage [class*="bg-white"],
+#CalendarPage [class*="bg-gray-"],
+#CalendarPage [class*="bg-\["] {
+    background-color: #1a1a1a !important;
+}
+
+#CalendarPage [class*="border-gray-"],
+#CalendarPage [class*="border-b"],
+#CalendarPage [class*="border-r"],
+#CalendarPage [class*="border-t"],
+#CalendarPage [class*="border-l"] {
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+#CalendarPage h1,
+#CalendarPage h2,
+#CalendarPage h3,
+#CalendarPage .topmenu-navtitle {
+    color: #f5f5f7 !important;
+}
+
+#CalendarPage input,
+#CalendarPage select,
+#CalendarPage textarea {
+    background-color: #1c1d21 !important;
+    color: #e5e7eb !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+#CalendarPage [class*="text-["],
+#CalendarPage [class*="text-red-"],
+#CalendarPage [class*="text-green-"],
+#CalendarPage [class*="text-blue-"] {
+    color: revert !important;
+}
+
+#CalendarPage svg text {
+    fill: #f5f5f7 !important;
+}
+
+/* the calendar grid itself lives outside #CalendarPage, in its own
+   white-background container, and FullCalendar's theme reads from
+   its own CSS custom properties rather than plain background rules */
+#fc-calendar-container-v2 {
+    background: #101213 !important;
+}
+
+#CalendarPage {
+    --fc-page-bg-color: #101213;
+    --fc-neutral-bg-color: #1a1a1a;
+    --fc-border-color: rgba(255, 255, 255, 0.1);
+    --fc-list-event-hover-bg-color: #1c1d21;
+}
+
+#CalendarPage .fc-timegrid-slot-lane,
+#CalendarPage .fc-timegrid-col,
+#CalendarPage .fc-daygrid-day,
+#CalendarPage td,
+#CalendarPage th {
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ============================================================
+   CONTACTS / CLIENTS PAGE
+   ============================================================ */
+#crm-contacts-view,
+#crm-contacts-view * {
+    color: #d7dade !important;
+}
+
+#crm-contacts-view {
+    background: #101213 !important;
+}
+
+#crm-contacts-view [class*="bg-white"],
+#crm-contacts-view [class*="bg-gray-"],
+#crm-contacts-view [class*="bg-\["] {
+    background-color: #1a1a1a !important;
+}
+
+#crm-contacts-view [class*="border-gray-"],
+#crm-contacts-view [class*="border-b"],
+#crm-contacts-view [class*="border-t"] {
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+#crm-contacts-view h1,
+#crm-contacts-view h2,
+#crm-contacts-view h3,
+#crm-contacts-view .hr-text-2xl {
+    color: #f5f5f7 !important;
+}
+
+#crm-contacts-view input,
+#crm-contacts-view select,
+#crm-contacts-view textarea {
+    background-color: #1c1d21 !important;
+    color: #e5e7eb !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+#crm-contacts-view [class*="text-["],
+#crm-contacts-view [class*="text-red-"],
+#crm-contacts-view [class*="text-green-"],
+#crm-contacts-view [class*="text-blue-"] {
+    color: revert !important;
+}
+
+#crm-contacts-view table thead th {
+    background: #0C0F15 !important;
+    color: #fff !important;
+}
+
+#crm-contacts-view tbody tr:hover {
+    background: rgba(255, 255, 255, 0.04) !important;
+}
+
+/* ============================================================
+   PIPELINE / OPPORTUNITIES PAGE
+   ============================================================ */
+#OpportunitiesList,
+#OpportunitiesList * {
+    color: #d7dade !important;
+}
+
+#OpportunitiesList {
+    background: #101213 !important;
+}
+
+#OpportunitiesList [class*="bg-white"],
+#OpportunitiesList [class*="bg-gray-"],
+#OpportunitiesList [class*="bg-\["] {
+    background-color: #1a1a1a !important;
+}
+
+#OpportunitiesList [class*="border-gray-"],
+#OpportunitiesList [class*="border-b"],
+#OpportunitiesList [class*="border-t"] {
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+#OpportunitiesList h1,
+#OpportunitiesList h2,
+#OpportunitiesList h3 {
+    color: #f5f5f7 !important;
+}
+
+#OpportunitiesList input,
+#OpportunitiesList select,
+#OpportunitiesList textarea {
+    background-color: #1c1d21 !important;
+    color: #e5e7eb !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+#OpportunitiesList [class*="text-["],
+#OpportunitiesList [class*="text-red-"],
+#OpportunitiesList [class*="text-green-"],
+#OpportunitiesList [class*="text-blue-"] {
+    color: revert !important;
+}
+
+#OpportunitiesList .opportunitiesCard,
+#OpportunitiesList .hl-card,
+#OpportunitiesList .ui-card {
+    background: #1a1a1a !important;
+}
+
+#OpportunitiesList table thead th {
+    background: #0C0F15 !important;
+    color: #fff !important;
+}
+
+/* the board sits inside its own wrapper, outside #OpportunitiesList's
+   own box, with a light background baked in by the structural CSS */
+.crm-opportunities-content,
+.wrapper.opportunityPage {
+    background: #101213 !important;
+}
+
+.pipeline-ribbon {
+    background: #1a1a1a !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+#newTopBar,
+#views-bar {
+    background: transparent !important;
+    color: #d7dade !important;
+}
+
+#newTopBar *,
+#views-bar * {
+    color: #d7dade !important;
+}
+
+/* opportunity-card contact-name links: the structural CSS forces
+   #OpportunitiesList a { color: #1e0000 !important } (line ~1147,
+   copied verbatim from the light sheet) - a near-black maroon meant
+   for light cards. Beat it with a higher-specificity selector rather
+   than editing that shared rule, since GHL re-mounts these cards
+   with their own runtime style tag after initial page load, which
+   otherwise wins any same-specificity tie by source order. */
+#OpportunitiesList a.block.truncate.text-sm,
+#OpportunitiesList a[class*="truncate"] {
+    color: #e5e7eb !important;
+}
+
+/* ============================================================
+   PAYMENTS MODULE (Invoices, Estimates, Orders, Subscriptions,
+   Payment Links, Transactions, Products, Coupons, Gift Cards)
+   All subpages share the same "ui-" prefixed component kit
+   (ui-statistic, ui-table, ui-card), which is targeted globally
+   below rather than per-page since it's unique to this module.
+   Root IDs are the same ones the structural CSS already lists
+   in its `body:has(#notification_banner-top_bar) ...` rules.
+   ============================================================ */
+#listInvoices,
+#invoice_listing,
+#estimatesDashboardApp,
+#OrdersListPage,
+#SubscriptionsListPage,
+#CouponsListPage,
+#paymentlinksDashboardApp,
+#recurring_listing,
+#SubscriptionsListApp,
+#estimates-app,
+#transactions-app,
+#ProductsListApp,
+#GiftCardsApp,
+#listInvoices *,
+#invoice_listing *,
+#estimatesDashboardApp *,
+#OrdersListPage *,
+#SubscriptionsListPage *,
+#CouponsListPage *,
+#paymentlinksDashboardApp *,
+#recurring_listing *,
+#SubscriptionsListApp *,
+#estimates-app *,
+#transactions-app *,
+#ProductsListApp *,
+#GiftCardsApp * {
+    color: #d7dade !important;
+}
+
+#listInvoices,
+#invoice_listing,
+#estimatesDashboardApp,
+#OrdersListPage,
+#SubscriptionsListPage,
+#CouponsListPage,
+#paymentlinksDashboardApp,
+#recurring_listing,
+#SubscriptionsListApp,
+#estimates-app,
+#transactions-app,
+#ProductsListApp,
+#GiftCardsApp {
+    background: #101213 !important;
+}
+
+[class*="ui-statistic"],
+[class*="ui-table"],
+[class*="ui-card"],
+[class*="ui-panel"] {
+    background-color: #1a1a1a !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+[class*="ui-table"] thead,
+[class*="ui-table-header"] {
+    background: #0C0F15 !important;
+}
+
+[class*="ui-table"] thead * {
+    color: #fff !important;
+}
+
+[class*="ui-statistic"] *,
+[class*="ui-table"] *,
+[class*="ui-card"] * {
+    color: #d7dade !important;
+}
+
+#listInvoices [class*="bg-white"], #invoice_listing [class*="bg-white"],
+#estimatesDashboardApp [class*="bg-white"], #OrdersListPage [class*="bg-white"],
+#SubscriptionsListPage [class*="bg-white"], #CouponsListPage [class*="bg-white"],
+#paymentlinksDashboardApp [class*="bg-white"], #recurring_listing [class*="bg-white"],
+#listInvoices [class*="bg-gray-"], #invoice_listing [class*="bg-gray-"],
+#estimatesDashboardApp [class*="bg-gray-"], #OrdersListPage [class*="bg-gray-"],
+#SubscriptionsListPage [class*="bg-gray-"], #CouponsListPage [class*="bg-gray-"],
+#paymentlinksDashboardApp [class*="bg-gray-"], #recurring_listing [class*="bg-gray-"] {
+    background-color: #1a1a1a !important;
+}
+
+#listInvoices [class*="border-gray-"], #invoice_listing [class*="border-gray-"],
+#estimatesDashboardApp [class*="border-gray-"], #OrdersListPage [class*="border-gray-"],
+#SubscriptionsListPage [class*="border-gray-"], #CouponsListPage [class*="border-gray-"] {
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+#listInvoices input, #invoice_listing input, #estimatesDashboardApp input,
+#OrdersListPage input, #SubscriptionsListPage input, #CouponsListPage input,
+#paymentlinksDashboardApp input, #recurring_listing input,
+#listInvoices select, #invoice_listing select, #estimatesDashboardApp select,
+#OrdersListPage select, #SubscriptionsListPage select {
+    background-color: #1c1d21 !important;
+    color: #e5e7eb !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+#listInvoices [class*="text-["], #invoice_listing [class*="text-["],
+#estimatesDashboardApp [class*="text-["], #OrdersListPage [class*="text-["],
+#listInvoices [class*="text-red-"], #invoice_listing [class*="text-red-"],
+#listInvoices [class*="text-green-"], #invoice_listing [class*="text-green-"] {
+    color: revert !important;
+}
